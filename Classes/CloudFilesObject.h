@@ -19,6 +19,7 @@
 
 	NSMutableArray *objects;
 	NSString *object;
+	
 }
 
 @property (nonatomic, retain) NSString *name;

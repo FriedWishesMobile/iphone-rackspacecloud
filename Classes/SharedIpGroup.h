@@ -12,7 +12,7 @@
 @interface SharedIpGroup : NSObject {
 	NSString *sharedIpGroupId;
 	NSString *sharedIpGroupName;
-	NSMutableArray *servers;
+	NSMutableArray *servers;	
 }
 
 @property (nonatomic, retain) NSString *sharedIpGroupId;
@@ -20,4 +20,5 @@
 @property (nonatomic, retain) NSMutableArray *servers;
 
 -(void)count;
+
 @end

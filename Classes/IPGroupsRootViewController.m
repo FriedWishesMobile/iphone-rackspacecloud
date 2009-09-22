@@ -30,7 +30,21 @@ BOOL ipGroupsLoaded = NO;
 		[ObjectiveResourceConfig setAuthToken:app.authToken];
 		[ObjectiveResourceConfig setResponseType:JSONResponse];	
 		
-		self.ipGroups = [NSMutableArray arrayWithArray:[SharedIpGroup findAllRemoteWithResponse:nil]];
+		//self.ipGroups = [NSMutableArray arrayWithArray:[SharedIpGroup findAllRemoteWithResponse:nil]];
+		
+		NSMutableArray *response = [NSMutableArray arrayWithArray:[SharedIpGroup findAllRemoteWithResponse:nil]];
+		self.ipGroups = [[NSMutableArray alloc] initWithCapacity:[response count] / 2];
+		
+		// sometimes arrays show up, so get rid of them
+		for (int i = 0; i < [response count]; i++) {
+			id obj = [response objectAtIndex:i];
+			if ([obj class] == NSClassFromString(@"SharedIpGroup")) {
+				[self.ipGroups addObject:obj];
+			} else {
+				((SharedIpGroup *) [self.ipGroups lastObject]).servers = obj;
+			}
+		}
+		
 		
 		ipGroupsLoaded = YES;
 		self.tableView.userInteractionEnabled = YES;

@@ -25,6 +25,8 @@ NSDictionary *sharedIpGroupAttributes;
 BOOL parsingPublicAddresses = NO;
 BOOL parsingPrivateAddresses = NO;
 
+BOOL parsingIPGroups = NO;
+
 @synthesize targetClass, parsedObject, currentPropertyName, contentOfCurrentProperty, unclosedProperties, currentPropertyType;
 
 + (FromXMLElementDelegate *)delegateForClass:(Class)targetClass {
@@ -33,26 +35,19 @@ BOOL parsingPrivateAddresses = NO;
 	return delegate;
 }
 
-
 - (id)init {
 	super;
 	self.unclosedProperties = [NSMutableArray array];
 	return self;
 }
 
-
-- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
-{	
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
 	
-	//NSString *fakeResponse = @"
-	//<sharedIpGroups xmlns=\"http://docs.rackspacecloud.com/servers/api/v1.0\">
-	//	<sharedIpGroup id=\"1234\" name=\"Shared IP Group 1\">
-	//		<servers><server id=\"422\" /><server id=\"3445\" /></servers>
-	//	</sharedIpGroup>
-	//	<sharedIpGroup id=\"5678\" name=\"Shared IP Group 2\">
-	//		<servers><server id=\"23203\"/><server id=\"2456\" /><server id=\"9891\" /></servers>
-	//	</sharedIpGroup>
-	//</sharedIpGroups>";
+	//NSLog(@"didStartElement: elementName=%@", elementName);
+	
+	if ([@"sharedIpGroups" isEqualToString:elementName]) {
+		parsingIPGroups = YES;
+	}
 	
 	if ([@"server" isEqualToString:elementName]) {
 		// we end up losing the attributeDict before allocating a server, so back it up here.
@@ -65,13 +60,23 @@ BOOL parsingPrivateAddresses = NO;
 			}
 			Server *server = [[Server alloc] init];
 			server.serverId = [serverAttributes objectForKey:@"id"];
-			//[((SharedIpGroup *)self.parsedObject).servers addObject:server];
 			[servers addObject:server];
 		}
 	}
 	
 	if ([@"sharedIpGroup" isEqualToString:elementName]) {
 		sharedIpGroupAttributes = attributeDict;
+		
+		
+		SharedIpGroup *ipGroup = [[SharedIpGroup alloc] init];
+		ipGroup.sharedIpGroupId = [sharedIpGroupAttributes objectForKey:@"id"];
+		ipGroup.sharedIpGroupName = [sharedIpGroupAttributes objectForKey:@"name"];
+		ipGroup.servers = [[NSMutableArray alloc] initWithCapacity:1];
+		sharedIpGroupAttributes = nil;
+		
+		[self.parsedObject addObject:ipGroup];
+		
+		
 	}
 	
 	if ([@"flavor" isEqualToString:elementName]) {
@@ -126,60 +131,41 @@ BOOL parsingPrivateAddresses = NO;
 	
 	if ([@"nil-classes" isEqualToString:elementName]) {
 		//empty result set, do nothing
-	} else if ([@"sharedIpGroups" isEqualToString:elementName] || ([@"servers" isEqualToString:elementName] && ![@"sharedIpGroup" isEqualToString:self.currentPropertyName]) || [@"flavors" isEqualToString:elementName] || [@"images" isEqualToString:elementName]) {
-		// sharedIpGroup
+	} else if ([@"sharedIpGroups" isEqualToString:elementName] 
+					|| [@"servers" isEqualToString:elementName]
+					//|| ([@"servers" isEqualToString:elementName] && ![@"sharedIpGroup" isEqualToString:self.currentPropertyName]) 
+					|| [@"flavors" isEqualToString:elementName] || [@"images" isEqualToString:elementName]) {
 		
-		self.parsedObject = [NSMutableArray array];
+		if (!parsingIPGroups) {
+			self.parsedObject = [NSMutableArray array];
+		} else {
+			//NSLog(@"servers under a shared ip group");
+		}
 		[self.unclosedProperties addObject:[NSArray arrayWithObjects:elementName, self.parsedObject, nil]];
-		self.currentPropertyName = elementName;
-		
-		//Start of an array type
+		self.currentPropertyName = elementName;		
 	} else if ([@"array" isEqualToString:[attributeDict objectForKey:@"type"]]) {
 		self.parsedObject = [NSMutableArray array];
 		[self.unclosedProperties addObject:[NSArray arrayWithObjects:elementName, self.parsedObject, nil]];
 		self.currentPropertyName = elementName;
-		
-		
-	} else if ([@"server" isEqualToString:elementName] && self.currentPropertyName == nil) {
-		
+	} else if ([@"server" isEqualToString:elementName] && self.currentPropertyName == nil) {		
 		Server *server = [[Server alloc] init];
 		server.serverId = [serverAttributes objectForKey:@"id"];
 		server.serverName = [serverAttributes objectForKey:@"name"];
 		server.flavorId = [serverAttributes objectForKey:@"flavorId"];
 		server.status = [serverAttributes objectForKey:@"status"];
 		server.progress = [serverAttributes objectForKey:@"progress"];
-		
 		self.parsedObject = server;
-		
-		//Start of the root object
     } else if (parsedObject == nil && [elementName isEqualToString:[self.targetClass xmlElementName]]) {
         self.parsedObject = [[[self.targetClass alloc] init] autorelease];
 		[self.unclosedProperties addObject:[NSArray arrayWithObjects:elementName, self.parsedObject, nil]];
 		self.currentPropertyName = elementName;
-    }
-	
-	else {
-		
-		// i hate having to hack objective resource :(
-		//		if (self.currentPropertyName != nil && [elementName isEqualToString:@"object"]) {
-		//			
-		//			NSLog(@"caught an object!");
-		//			self.parsedObject = [[[CloudFilesObject alloc] init] autorelease];
-		//			[self.unclosedProperties addObject:[NSArray arrayWithObjects:self.currentPropertyName, self.parsedObject, nil]];
-		//			self.currentPropertyName = elementName;
-		//			
-		//			
-		//		} else 
-		
+    } else {
 		//if we are inside another element and it is not the current parent object, 
 		// then create an object for that parent element
 		if (self.currentPropertyName != nil && (![self.currentPropertyName isEqualToString:[[self.parsedObject class] xmlElementName]]) ) {
-			//				&& (![self.currentPropertyName isEqualToString:@"object"])) {
 			Class elementClass = NSClassFromString([currentPropertyName toClassName]);
 			if (elementClass != nil) {
 				//classname matches, instantiate a new instance of the class and set it as the current parent object
-				
-				
 				
 				if ([currentPropertyName isEqualToString:@"object"]) {
 					if ([self.parsedObject class] != NSClassFromString(@"CloudFilesObject")) {
@@ -216,6 +202,7 @@ BOOL parsingPrivateAddresses = NO;
 						SharedIpGroup *ipGroup = (SharedIpGroup *) self.parsedObject;
 						ipGroup.sharedIpGroupId = [sharedIpGroupAttributes objectForKey:@"id"];
 						ipGroup.sharedIpGroupName = [sharedIpGroupAttributes objectForKey:@"name"];
+						ipGroup.servers = [[NSMutableArray alloc] initWithCapacity:1];
 						sharedIpGroupAttributes = nil;
 					}
 				}
@@ -249,8 +236,7 @@ BOOL parsingPrivateAddresses = NO;
 
 // Characters (i.e. an element value - retarded, I know) are given to us in chunks,
 // so we need to append them onto the current property value.
-- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
-{
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
 	
 	// If the current property is nil, then we know we're currently at
 	// an element that we don't know about or don't care about
@@ -305,17 +291,9 @@ BOOL parsingPrivateAddresses = NO;
 
 // We're done receiving the value of a particular element, so take the value we've collected and
 // set it on the current object
-- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
-{    
+- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {    
 	
-	// i hate having to hack objective resource :(
-	//	if (self.currentPropertyName != nil && [elementName isEqualToString:@"object"]) {
-	//		
-	//		NSLog(@"caught an object!");
-	//		Container *c = (Container *) self.parsedObject;
-	//		c.object = self.contentOfCurrentProperty;
-	//		
-	//	} else 
+	//NSLog(@"didEndElement:   elementName=%@", elementName);
 	
 	if ([@"flavor" isEqualToString:elementName] || [@"image" isEqualToString:elementName]) {
 		// meh
@@ -330,15 +308,32 @@ BOOL parsingPrivateAddresses = NO;
 		//check for a parent object on the stack
 		if ([self.unclosedProperties count] > 0) {
 			//handle arrays as a special case
-			if ([[[self.unclosedProperties lastObject] objectAtIndex:1] isKindOfClass:[NSArray class]]) {
-				[[[self.unclosedProperties lastObject] objectAtIndex:1] addObject:self.parsedObject];
-			}
-			else {
-				//if (![@"sharedIpGroup" isEqualToString:elementName]) {
-				[[[self.unclosedProperties lastObject] objectAtIndex:1] setValue:self.parsedObject forKey:[self convertElementName:[elementName camelize]]];
+			
+			NSArray *obj = [self.unclosedProperties lastObject];
+			
+			//NSLog(@"obj is a %@ with count %i", [obj class], [obj count]);
+			
+//			if ([[[self.unclosedProperties lastObject] objectAtIndex:1] isKindOfClass:[NSArray class]]) {
+//				[[[self.unclosedProperties lastObject] objectAtIndex:1] addObject:self.parsedObject];
+			if ([[[self.unclosedProperties lastObject] lastObject] isKindOfClass:[NSArray class]]) {
+				[[[self.unclosedProperties lastObject] lastObject] addObject:self.parsedObject];
+			} else {
+				
+				//|| ([@"servers" isEqualToString:elementName] && ![@"sharedIpGroup" isEqualToString:self.currentPropertyName]) 				
+				
+				//if (![@"sharedIpGroups" isEqualToString:elementName]) {
+				//[[[self.unclosedProperties lastObject] objectAtIndex:1] setValue:self.parsedObject forKey:[self convertElementName:[elementName camelize]]];
+				//if ([obj count] != 1) {
+					[[[self.unclosedProperties lastObject] lastObject] setValue:self.parsedObject forKey:[self convertElementName:[elementName camelize]]];
+				//} else {
+				//	obj = [[NSMutableArray alloc] initWithCapacity:1];
+				//}
 				//}
 			}
-			self.parsedObject = [[self.unclosedProperties lastObject] objectAtIndex:1];
+				
+			//self.parsedObject = [[self.unclosedProperties lastObject] objectAtIndex:1];
+			self.parsedObject = [[self.unclosedProperties lastObject] lastObject];
+				
 		}
 	}
 	
