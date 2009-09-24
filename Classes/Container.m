@@ -33,16 +33,16 @@
 	} else if (b >= 1024) {
 		result = [NSString stringWithFormat:@"%.2f KB", b / 1024.0];
 	} else {
-		result = [NSString stringWithFormat:@"%@ bytes", self.bytes];
+		result = [NSString stringWithFormat:@"%@ %@", self.bytes, NSLocalizedString(@"bytes", @"bytes")];
 	}
 	return result;
 }
 
 -(NSString *)humanizedCount {
 	NSInteger c = [self.count intValue];
-	NSString *noun = @"files";
+	NSString *noun = NSLocalizedString(@"files", @"files");
 	if (c == 1) {
-		noun = @"file";
+		noun = NSLocalizedString(@"file", @"file");
 	}
 	return [NSString stringWithFormat:@"%i %@", c, noun];
 }

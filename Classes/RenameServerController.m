@@ -18,7 +18,7 @@
 #pragma mark Table Methods
 
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
-	return @"Server Name";
+	return NSLocalizedString(@"Server Name", @"Rename Server Server Name table section header");
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -37,7 +37,7 @@
 	if (cell == nil) {
 		cell = [[EditableCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier];
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
-		cell.labelField.text = @"Name";		
+		cell.labelField.text = NSLocalizedString(@"Name", @"Server Name cell label");
 	}
 	
 	cell.textField.text = self.server.serverName;

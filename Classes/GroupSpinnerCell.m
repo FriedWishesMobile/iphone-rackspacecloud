@@ -19,7 +19,7 @@
 		message = [[UILabel alloc] initWithFrame:CGRectZero];
 		message.textColor = [UIColor grayColor];
         message.backgroundColor = [UIColor clearColor];
-		message.text = @"Loading...";
+		message.text = NSLocalizedString(@"Loading...", @"Loading...");
 		spinner = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(90, 0, 20.0, 20.0)];
 		spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
 		spinner.autoresizingMask = (UIViewAutoresizingFlexibleLeftMargin |

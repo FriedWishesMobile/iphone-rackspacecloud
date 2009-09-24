@@ -26,8 +26,8 @@ NSString *selectedFlavorId;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         // Custom initialization
-		self.navigationItem.title = @"Resize Server";
-		self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStyleBordered target:self action:@selector(saveButtonPressed:)];		
+		self.navigationItem.title = NSLocalizedString(@"Resize Server", @"Resize Server navigation title");
+		self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Save", @"Resize Server Save button") style:UIBarButtonItemStyleBordered target:self action:@selector(saveButtonPressed:)];		
 		self.navigationItem.rightBarButtonItem.enabled = NO;
     }
     return self;
@@ -53,7 +53,7 @@ NSString *selectedFlavorId;
 #pragma mark Table Methods
 
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
-	return @"Choose a Flavor";
+	return NSLocalizedString(@"Choose a Flavor", @"Choose a Flavor table section header");
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -87,7 +87,7 @@ NSString *selectedFlavorId;
 		cell.textLabel.textColor = [UIColor blackColor];
 	}
 	
-	cell.detailTextLabel.text = [NSString stringWithFormat:@"%@MB RAM - %@GB Disk", flavor.ram, flavor.disk];
+	cell.detailTextLabel.text = [NSString stringWithFormat:@"%@MB %@ - %@GB %@", flavor.ram, NSLocalizedString(@"RAM", @"RAM"), flavor.disk, NSLocalizedString(@"Disk", @"Flavor disk space subtext")];
 	
 	return cell;
 }
@@ -173,13 +173,13 @@ NSString *selectedFlavorId;
 	} else {
 		UIAlertView *av;
 		if (overRateLimit) {
-			av = [[UIAlertView alloc] initWithTitle:@"Error Saving" 
-											message:@"Your server was not resized because you have exceeded the API rate limit.  Please contact the Rackspace Cloud to increase your limit or try again later." 
-										   delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+			av = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error Saving", @"Error Saving server resize alert title") 
+											message:NSLocalizedString(@"Your server was not resized because you have exceeded the API rate limit.  Please contact the Rackspace Cloud to increase your limit or try again later.", @"Error Saving server resize due to API rate limit alert message")
+										   delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles:nil];
 		} else {
-			av = [[UIAlertView alloc] initWithTitle:@"Error Saving" 
-											message:@"Your server was not resized.  Please check your connection or the data you entered." 
-										   delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+			av = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error Saving", @"Error Saving server resize alert title")
+											message:NSLocalizedString(@"Your server was not resized.  Please check your connection or the data you entered.", @"Error Saving server resize due to connection or other error alert message") 
+										   delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles:nil];
 		}
 	    [av show];
 		[av release];

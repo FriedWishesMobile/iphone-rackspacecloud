@@ -19,7 +19,7 @@
 #pragma mark Table Methods
 
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
-	return @"Choose a file type";
+	return NSLocalizedString(@"Choose a file type", @"Choose a file type table section header");
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -44,13 +44,13 @@
 	
 	switch (indexPath.row) {
 		case 0:
-			cell.textLabel.text = @"Text File";
+			cell.textLabel.text = NSLocalizedString(@"Text File", @"Text File button");
 			break;
 		case 1:
-			cell.textLabel.text = @"Image from Photo Library";
+			cell.textLabel.text = NSLocalizedString(@"Image from Photo Library", @"Image from Photo Library button");
 			break;
 		case 2:
-			cell.textLabel.text = @"Image from Camera";
+			cell.textLabel.text = NSLocalizedString(@"Image from Camera", @"Image from Camera button");
 			break;
 		default:
 			break;

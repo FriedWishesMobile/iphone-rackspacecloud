@@ -41,7 +41,7 @@
 #pragma mark Table Delegate Methods
 
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
-	return @"Enter your server name";
+	return NSLocalizedString(@"Enter your server name", @"Enter server name table section header");
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -62,13 +62,13 @@
 	}
 	
 	if (indexPath.row == 0) {
-		cell.textLabel.text = @"Name";
+		cell.textLabel.text = NSLocalizedString(@"Name", @"Server Name cell label");
 		cell.detailTextLabel.text = @"";
 	} else if (indexPath.row == 1) {
-		cell.textLabel.text = @"Flavor";
+		cell.textLabel.text = NSLocalizedString(@"Flavor", @"Server Flavor cell label");
 		cell.detailTextLabel.text = @"";
 	} else if (indexPath.row == 2) {
-		cell.textLabel.text = @"Image";
+		cell.textLabel.text = NSLocalizedString(@"Image", @"Server Image cell label");
 		cell.detailTextLabel.text = @"";
 	}
 		

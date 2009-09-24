@@ -22,7 +22,7 @@ BOOL sendingRequest = NO;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         // Custom initialization
-		self.navigationItem.title = @"Verify Resize";
+		self.navigationItem.title = NSLocalizedString(@"Verify Resize", @"Verify Resize navigation title");
     }
     return self;
 }
@@ -31,17 +31,17 @@ BOOL sendingRequest = NO;
 
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
 	if (section == 0) {
-		return @"Is everything working properly?";
+		return NSLocalizedString(@"Is everything working properly?", @"Confirm resize verification table section header");
 	} else {
-		return @"Would you like to revert back to the original size?";
+		return NSLocalizedString(@"Would you like to revert back to the original size?", @"Confirm resize verification table section header");
 	} 
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
 	if (section == 0) {
-		return @"After verification, the old server will be deleted and will be billed at a prorated amount.";
+		return NSLocalizedString(@"After verification, the old server will be deleted and will be billed at a prorated amount.", @"Confirm resize deletion warning");
 	} else {
-		return @"If no verification is made, the resize will be automatically verified after 12 hours.";
+		return NSLocalizedString(@"If no verification is made, the resize will be automatically verified after 12 hours.", @"Confirm resize auto-confirmation warning");
 	}
 }
 
@@ -70,10 +70,10 @@ BOOL sendingRequest = NO;
 	[cell addSubview:spinner];
 	
 	if (indexPath.section == 0) {
-		cell.textLabel.text = @"Confirm Resize";
+		cell.textLabel.text = NSLocalizedString(@"Confirm Resize", @"Confirm Resize button");
 		self.confirmSpinner = spinner;
 	} else {
-		cell.textLabel.text = @"Rollback Resize";
+		cell.textLabel.text = NSLocalizedString(@"Rollback Resize", @"Rollback Resize button");
 		self.rollbackSpinner = spinner;
 	}	
 	
@@ -139,13 +139,13 @@ BOOL sendingRequest = NO;
 	} else {
 		UIAlertView *alert;
 		if (response.statusCode == 413) {
-			alert = [[UIAlertView alloc] initWithTitle:@"Error Confirming" 
-											   message:@"Your resize was not confirmed because you have exceeded the API rate limit.  Please contact the Rackspace Cloud to increase your limit or try again later." 
-											  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+			alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error Confirming", @"Error Confirming server resize alert title")
+											   message:NSLocalizedString(@"Your resize was not confirmed because you have exceeded the API rate limit.  Please contact the Rackspace Cloud to increase your limit or try again later.", @"Error confirming resize due to API rate limit alert message") 
+											  delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles:nil];
 		} else {
-			alert = [[UIAlertView alloc] initWithTitle:@"Error Confirming" 
-											   message:@"Your resize was not confirmed.  Please check your connection and try again." 
-											  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+			alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error Confirming", @"Error Confirming server resize alert title")
+											   message:NSLocalizedString(@"Your resize was not confirmed.  Please check your connection and try again.", @"Error confirming resize due to connection or other error alert message") 
+											  delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles:nil];
 		}
 		[alert show];
 		[alert release];
@@ -180,13 +180,13 @@ BOOL sendingRequest = NO;
 	} else {
 		UIAlertView *alert;
 		if (response.statusCode == 413) {
-			alert = [[UIAlertView alloc] initWithTitle:@"Error Reverting" 
-											   message:@"Your resize was not reverted because you have exceeded the API rate limit.  Please contact the Rackspace Cloud to increase your limit or try again later." 
-											  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+			alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error Reverting", @"Error Reverting server resize alert title")
+											   message:NSLocalizedString(@"Your resize was not reverted because you have exceeded the API rate limit.  Please contact the Rackspace Cloud to increase your limit or try again later.", @"Error reverting resize due to API rate limit alert message") 
+											  delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles:nil];
 		} else {
-			alert = [[UIAlertView alloc] initWithTitle:@"Error Reverting" 
-											   message:@"Your resize was not reverted.  Please check your connection and try again." 
-											  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+			alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error Reverting", @"Error Reverting server resize alert title")
+											   message:NSLocalizedString(@"Your resize was not reverted.  Please check your connection and try again.", @"Error reverting server resize due to connection or other error alert message") 
+											  delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles:nil];
 		}
 		[alert show];
 		[alert release];

@@ -27,7 +27,7 @@
 		name.font = [name.font fontWithSize:12];
 		name.textColor = [UIColor grayColor];
         name.backgroundColor = [UIColor clearColor];
-		name.text = @"Loading...";
+		name.text = NSLocalizedString(@"Loading...", @"Loading...");
         
 		spinner = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(150, 12, 18.0, 18.0)];
 		spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;

@@ -56,7 +56,7 @@
 		saving.textAlignment = UITextAlignmentCenter;
 		saving.opaque = NO;
 		saving.alpha = 1.0;
-		saving.text = @"Saving";
+		saving.text = NSLocalizedString(@"Saving", @"Saving message");
 		[self addSubview:saving];
 		
 		// add spinner

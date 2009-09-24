@@ -25,10 +25,10 @@
 		self.passwordCell = [[SecureEditableCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"PasswordCell"];
 		self.confirmPasswordCell = [[SecureEditableCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"ConfirmPasswordCell"];
 		
-		self.passwordCell.labelField.text = @"Password";
-		self.confirmPasswordCell.labelField.text = @"Confirm Password";
+		self.passwordCell.labelField.text = NSLocalizedString(@"Password", @"Password cell label");
+		self.confirmPasswordCell.labelField.text = NSLocalizedString(@"Confirm Password", @"Confirm password cell label");
 		
-		self.navigationItem.title = @"Reset Password";
+		self.navigationItem.title = NSLocalizedString(@"Reset Password", @"Reset Password navigation title");
 		
 		self.passwordCell.textField.keyboardType = UIKeyboardTypeDefault;
 		self.passwordCell.textField.delegate = self;	
@@ -72,11 +72,11 @@
 #pragma mark Table Methods
 
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
-	return @"Enter a new password";
+	return NSLocalizedString(@"Enter a new password", @"Enter a new password table section header");
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
-	return @"The root password will be updated and the server will be restarted. Please note that this process will only work if you have a user line for \"root\" in your passwd or shadow file.";
+	return NSLocalizedString(@"The root password will be updated and the server will be restarted. Please note that this process will only work if you have a user line for \"root\" in your passwd or shadow file.", @"Change password warning");
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -127,12 +127,12 @@
 	
 	// see if they match, and if so, set it and pop the view controller
 	if ([self.passwordCell.textField.text isEqualToString:@""] || [self.confirmPasswordCell.textField.text isEqualToString:@""]) {
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"The password and confirmation cannot be blank and must be the same value." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"The password and confirmation cannot be blank and must be the same value.", @"Password validation alert message") delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles:nil];
 		[alert show];
 		[alert release];
 		return;
 	} else if (![self.passwordCell.textField.text isEqualToString:self.confirmPasswordCell.textField.text]) {
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"The password and confirmation cannot be blank and must be the same value." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"The password and confirmation cannot be blank and must be the same value.", @"Password validation alert message") delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles:nil];
 		[alert show];
 		[alert release];
 		return;
@@ -155,13 +155,13 @@
 	if (!success) {
 		UIAlertView *av;
 		if (overRateLimit) {
-			av = [[UIAlertView alloc] initWithTitle:@"Error Saving" 
-											message:@"Your new password was not saved because you have exceeded the API rate limit.  Please contact the Rackspace Cloud to increase your limit or try again later." 
-										   delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+			av = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error Saving", @"Error saving server password change alert title") 
+											message:NSLocalizedString(@"Your new password was not saved because you have exceeded the API rate limit.  Please contact the Rackspace Cloud to increase your limit or try again later.", @"Error saving password change due to API rate limit alert message") 
+										   delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles:nil];
 		} else {
-			av = [[UIAlertView alloc] initWithTitle:@"Error Saving" 
-											message:@"Your new password was not saved.  Please check your connection or the data you entered." 
-										   delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+			av = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error Saving", @"Error saving server password change alert title") 
+											message:NSLocalizedString(@"Your new password was not saved.  Please check your connection or the data you entered.", @"Error saving password change due to connection or other error alert message") 
+										   delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles:nil];
 		}
 	    [av show];
 		[av release];

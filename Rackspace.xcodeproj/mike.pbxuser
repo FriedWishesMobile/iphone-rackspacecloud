@@ -263,31 +263,31 @@
 	};
 	272EF03B101593DD00DB17A1 /* AddServerViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1231, 464}}";
-			sepNavSelRange = "{126, 0}";
-			sepNavVisRange = "{0, 741}";
+			sepNavIntBoundsRect = "{{0, 0}, {877, 464}}";
+			sepNavSelRange = "{152, 0}";
+			sepNavVisRange = "{0, 785}";
 		};
 	};
 	272EF03C101593DD00DB17A1 /* AddServerViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1231, 5504}}";
-			sepNavSelRange = "{126, 0}";
-			sepNavVisRange = "{0, 567}";
+			sepNavIntBoundsRect = "{{0, 0}, {1510, 5600}}";
+			sepNavSelRange = "{1440, 2}";
+			sepNavVisRange = "{774, 1597}";
 			sepNavWindowFrame = "{{33, 160}, {1095, 663}}";
 		};
 	};
 	272EF0AB1015999800DB17A1 /* ServerNameController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1231, 393}}";
-			sepNavSelRange = "{123, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {877, 453}}";
+			sepNavSelRange = "{244, 0}";
 			sepNavVisRange = "{0, 446}";
 		};
 	};
 	272EF0AC1015999800DB17A1 /* ServerNameController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1231, 1600}}";
-			sepNavSelRange = "{123, 0}";
-			sepNavVisRange = "{0, 684}";
+			sepNavIntBoundsRect = "{{0, 0}, {1146, 1552}}";
+			sepNavSelRange = "{1315, 2}";
+			sepNavVisRange = "{828, 984}";
 		};
 	};
 	272EF0E810159B4700DB17A1 /* AddServerViewController.m:227 */ = {
@@ -323,7 +323,7 @@
 		fRef = 272EF03C101593DD00DB17A1 /* AddServerViewController.m */;
 		name = "AddServerViewController.m: 206";
 		rLen = 0;
-		rLoc = 7474;
+		rLoc = 7824;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 0;
@@ -383,7 +383,7 @@
 		fRef = 272EF0AC1015999800DB17A1 /* ServerNameController.m */;
 		name = "ServerNameController.m: 46";
 		rLen = 0;
-		rLoc = 1299;
+		rLoc = 1361;
 		rType = 0;
 		vrLen = 1167;
 		vrLoc = 0;
@@ -731,7 +731,7 @@
 		fRef = 2793CA581016D5BD009EB8C3 /* ResizeServerController.m */;
 		name = "ResizeServerController.m: 167";
 		rLen = 0;
-		rLoc = 5425;
+		rLoc = 5678;
 		rType = 0;
 		vrLen = 1153;
 		vrLoc = 5654;
@@ -771,7 +771,7 @@
 		fRef = 2777B581101BF9AB0043D3C1 /* ConfirmResizeServerController.m */;
 		name = "ConfirmResizeServerController.m: 173";
 		rLen = 0;
-		rLoc = 5861;
+		rLoc = 6628;
 		rType = 0;
 		vrLen = 1205;
 		vrLoc = 6282;
@@ -791,7 +791,7 @@
 		fRef = 2777BA86101C40010043D3C1 /* ResetPasswordController.m */;
 		name = "ResetPasswordController.m: 99";
 		rLen = 0;
-		rLoc = 3243;
+		rLoc = 3504;
 		rType = 0;
 		vrLen = 1174;
 		vrLoc = 5224;
@@ -811,7 +811,7 @@
 		fRef = 2786B6700FFEC75B002B852B /* IPGroupViewController.m */;
 		name = "IPGroupViewController.m: 146";
 		rLen = 0;
-		rLoc = 4861;
+		rLoc = 5042;
 		rType = 0;
 		vrLen = 1196;
 		vrLoc = 4240;
@@ -978,16 +978,16 @@
 	};
 	275ACB460FFEFDE200EEB366 /* ObjectViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {877, 647}}";
+			sepNavIntBoundsRect = "{{0, 0}, {877, 453}}";
 			sepNavSelRange = "{255, 0}";
 			sepNavVisRange = "{0, 560}";
 		};
 	};
 	275ACB470FFEFDE200EEB366 /* ObjectViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1069, 4704}}";
-			sepNavSelRange = "{4995, 0}";
-			sepNavVisRange = "{4680, 1726}";
+			sepNavIntBoundsRect = "{{0, 0}, {894, 4880}}";
+			sepNavSelRange = "{646, 0}";
+			sepNavVisRange = "{334, 1010}";
 			sepNavWindowFrame = "{{38, 189}, {1095, 663}}";
 		};
 	};
@@ -1066,7 +1066,7 @@
 		fRef = 4C9989960FEF48AA005D12B7 /* ListObjectsViewController.m */;
 		name = "ListObjectsViewController.m: 235";
 		rLen = 0;
-		rLoc = 7776;
+		rLoc = 8119;
 		rType = 0;
 		vrLen = 1555;
 		vrLoc = 7101;
@@ -1144,7 +1144,7 @@
 		fRef = 275ACB470FFEFDE200EEB366 /* ObjectViewController.m */;
 		name = "ObjectViewController.m: 172";
 		rLen = 0;
-		rLoc = 4995;
+		rLoc = 5216;
 		rType = 0;
 		vrLen = 1726;
 		vrLoc = 4680;
@@ -1411,16 +1411,16 @@
 	};
 	2777B580101BF9AB0043D3C1 /* ConfirmResizeServerController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {877, 670}}";
+			sepNavIntBoundsRect = "{{0, 0}, {877, 453}}";
 			sepNavSelRange = "{437, 0}";
 			sepNavVisRange = "{0, 708}";
 		};
 	};
 	2777B581101BF9AB0043D3C1 /* ConfirmResizeServerController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1503, 3616}}";
-			sepNavSelRange = "{5861, 0}";
-			sepNavVisRange = "{6282, 1205}";
+			sepNavIntBoundsRect = "{{0, 0}, {2084, 3424}}";
+			sepNavSelRange = "{841, 2}";
+			sepNavVisRange = "{322, 1462}";
 			sepNavWindowFrame = "{{130, 105}, {1095, 663}}";
 		};
 	};
@@ -1470,44 +1470,44 @@
 	};
 	2777BA85101C40010043D3C1 /* ResetPasswordController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {877, 670}}";
+			sepNavIntBoundsRect = "{{0, 0}, {877, 544}}";
 			sepNavSelRange = "{947, 0}";
-			sepNavVisRange = "{0, 953}";
+			sepNavVisRange = "{50, 903}";
 		};
 	};
 	2777BA86101C40010043D3C1 /* ResetPasswordController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1510, 3136}}";
-			sepNavSelRange = "{3243, 0}";
-			sepNavVisRange = "{5224, 1174}";
+			sepNavIntBoundsRect = "{{0, 0}, {1146, 3392}}";
+			sepNavSelRange = "{1114, 0}";
+			sepNavVisRange = "{220, 1507}";
 		};
 	};
 	2777BB9A101C57F20043D3C1 /* AddServerFlavorController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1231, 393}}";
-			sepNavSelRange = "{128, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {877, 453}}";
+			sepNavSelRange = "{487, 0}";
 			sepNavVisRange = "{0, 487}";
 		};
 	};
 	2777BB9B101C57F20043D3C1 /* AddServerFlavorController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1231, 960}}";
-			sepNavSelRange = "{128, 0}";
-			sepNavVisRange = "{0, 725}";
+			sepNavIntBoundsRect = "{{0, 0}, {1146, 928}}";
+			sepNavSelRange = "{110, 0}";
+			sepNavVisRange = "{0, 845}";
 		};
 	};
 	2777BB9F101C57FC0043D3C1 /* AddServerImageController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1231, 393}}";
-			sepNavSelRange = "{127, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {877, 453}}";
+			sepNavSelRange = "{174, 0}";
 			sepNavVisRange = "{0, 485}";
 		};
 	};
 	2777BBA0101C57FC0043D3C1 /* AddServerImageController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1231, 976}}";
-			sepNavSelRange = "{127, 0}";
-			sepNavVisRange = "{0, 720}";
+			sepNavIntBoundsRect = "{{0, 0}, {1146, 1024}}";
+			sepNavSelRange = "{722, 0}";
+			sepNavVisRange = "{662, 723}";
 		};
 	};
 	2777BCE2101D5C410043D3C1 /* AddServerViewController.m:277 */ = {
@@ -1823,17 +1823,17 @@
 	};
 	2786B0650FFC6B5D002B852B /* ServerViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {877, 670}}";
-			sepNavSelRange = "{540, 0}";
-			sepNavVisRange = "{0, 1110}";
+			sepNavIntBoundsRect = "{{0, 0}, {877, 560}}";
+			sepNavSelRange = "{147, 0}";
+			sepNavVisRange = "{0, 955}";
 			sepNavWindowFrame = "{{38, 189}, {1095, 663}}";
 		};
 	};
 	2786B0660FFC6B5D002B852B /* ServerViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1531, 9504}}";
-			sepNavSelRange = "{3565, 0}";
-			sepNavVisRange = "{3444, 1576}";
+			sepNavIntBoundsRect = "{{0, 0}, {1573, 10400}}";
+			sepNavSelRange = "{754, 0}";
+			sepNavVisRange = "{619, 1353}";
 			sepNavWindowFrame = "{{76, 173}, {1095, 663}}";
 		};
 	};
@@ -2169,10 +2169,9 @@
 	};
 	2786B6700FFEC75B002B852B /* IPGroupViewController.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{665, 504}\";\n            s = 0;\n        },\n                {\n            r = \"{1213, 855}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 5436}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {936, 2080}}";
-			sepNavSelRange = "{3504, 0}";
-			sepNavVisRange = "{2883, 1196}";
+			sepNavIntBoundsRect = "{{0, 0}, {877, 2848}}";
+			sepNavSelRange = "{2228, 2}";
+			sepNavVisRange = "{1349, 978}";
 			sepNavWindowFrame = "{{15, 210}, {1095, 663}}";
 		};
 	};
@@ -2181,7 +2180,7 @@
 		fRef = 2786B0660FFC6B5D002B852B /* ServerViewController.m */;
 		name = "ServerViewController.m: 102";
 		rLen = 0;
-		rLoc = 3565;
+		rLoc = 3873;
 		rType = 0;
 		vrLen = 1576;
 		vrLoc = 3444;
@@ -2786,16 +2785,16 @@
 	};
 	278D8B561013E56F0060DBA1 /* AddObjectViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1167, 647}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1167, 453}}";
 			sepNavSelRange = "{347, 0}";
 			sepNavVisRange = "{0, 396}";
 		};
 	};
 	278D8B571013E56F0060DBA1 /* AddObjectViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {908, 2176}}";
-			sepNavSelRange = "{384, 0}";
-			sepNavVisRange = "{0, 1371}";
+			sepNavIntBoundsRect = "{{0, 0}, {877, 2336}}";
+			sepNavSelRange = "{535, 0}";
+			sepNavVisRange = "{152, 914}";
 			sepNavWindowFrame = "{{130, 105}, {1095, 663}}";
 		};
 	};
@@ -2837,32 +2836,32 @@
 	};
 	2793CA571016D5BD009EB8C3 /* ResizeServerController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {877, 670}}";
-			sepNavSelRange = "{778, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {877, 453}}";
+			sepNavSelRange = "{117, 0}";
 			sepNavVisRange = "{0, 785}";
 			sepNavWindowFrame = "{{153, 84}, {1095, 663}}";
 		};
 	};
 	2793CA581016D5BD009EB8C3 /* ResizeServerController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1468, 3488}}";
-			sepNavSelRange = "{5425, 0}";
-			sepNavVisRange = "{5654, 1153}";
+			sepNavIntBoundsRect = "{{0, 0}, {1664, 3632}}";
+			sepNavSelRange = "{980, 0}";
+			sepNavVisRange = "{319, 1289}";
 			sepNavWindowFrame = "{{236, 215}, {1095, 663}}";
 		};
 	};
 	27A3C4E11019762500198388 /* RenameServerController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {877, 670}}";
+			sepNavIntBoundsRect = "{{0, 0}, {877, 453}}";
 			sepNavSelRange = "{381, 35}";
 			sepNavVisRange = "{0, 424}";
 		};
 	};
 	27A3C4E21019762500198388 /* RenameServerController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {877, 1232}}";
-			sepNavSelRange = "{326, 0}";
-			sepNavVisRange = "{880, 875}";
+			sepNavIntBoundsRect = "{{0, 0}, {877, 1152}}";
+			sepNavSelRange = "{324, 0}";
+			sepNavVisRange = "{148, 802}";
 			sepNavWindowFrame = "{{15, 210}, {1095, 663}}";
 		};
 	};
@@ -3126,7 +3125,7 @@
 	};
 	27FEADA6104A06470042BBFC /* WebFileViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {877, 670}}";
+			sepNavIntBoundsRect = "{{0, 0}, {877, 453}}";
 			sepNavSelRange = "{725, 0}";
 			sepNavVisRange = "{0, 732}";
 		};
@@ -3817,16 +3816,16 @@
 	};
 	4C9982B30FEE0EFB005D12B7 /* ServersRootViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {877, 670}}";
+			sepNavIntBoundsRect = "{{0, 0}, {877, 453}}";
 			sepNavSelRange = "{352, 0}";
 			sepNavVisRange = "{0, 496}";
 		};
 	};
 	4C9982B40FEE0EFB005D12B7 /* ServersRootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {877, 4416}}";
-			sepNavSelRange = "{1446, 0}";
-			sepNavVisRange = "{1066, 1418}";
+			sepNavIntBoundsRect = "{{0, 0}, {1146, 4304}}";
+			sepNavSelRange = "{1162, 2}";
+			sepNavVisRange = "{616, 1029}";
 			sepNavWindowFrame = "{{20, 320}, {750, 558}}";
 		};
 	};
@@ -3839,8 +3838,8 @@
 	};
 	4C9982B80FEE0F23005D12B7 /* IPGroupsRootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1286, 3520}}";
-			sepNavSelRange = "{3087, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1286, 3488}}";
+			sepNavSelRange = "{2935, 0}";
 			sepNavVisRange = "{2495, 1659}";
 		};
 	};
@@ -3908,32 +3907,32 @@
 	};
 	4C9985FB0FEEE1F2005D12B7 /* ContainersRootViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {877, 670}}";
+			sepNavIntBoundsRect = "{{0, 0}, {877, 453}}";
 			sepNavSelRange = "{481, 0}";
 			sepNavVisRange = "{0, 487}";
 		};
 	};
 	4C9985FC0FEEE1F2005D12B7 /* ContainersRootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1036, 2928}}";
-			sepNavSelRange = "{5368, 0}";
-			sepNavVisRange = "{4750, 1021}";
+			sepNavIntBoundsRect = "{{0, 0}, {943, 2928}}";
+			sepNavSelRange = "{929, 2}";
+			sepNavVisRange = "{401, 1283}";
 			sepNavWindowFrame = "{{61, 168}, {1095, 663}}";
 		};
 	};
 	4C9989950FEF48AA005D12B7 /* ListObjectsViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1230, 647}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1230, 592}}";
 			sepNavSelRange = "{236, 0}";
-			sepNavVisRange = "{0, 1092}";
+			sepNavVisRange = "{0, 924}";
 			sepNavWindowFrame = "{{15, 77}, {1168, 796}}";
 		};
 	};
 	4C9989960FEF48AA005D12B7 /* ListObjectsViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1223, 8288}}";
-			sepNavSelRange = "{7776, 0}";
-			sepNavVisRange = "{7101, 1555}";
+			sepNavIntBoundsRect = "{{0, 0}, {2035, 8704}}";
+			sepNavSelRange = "{1632, 0}";
+			sepNavVisRange = "{1117, 1495}";
 			sepNavWindowFrame = "{{90, 177}, {1095, 663}}";
 		};
 	};

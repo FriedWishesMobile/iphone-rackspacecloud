@@ -99,9 +99,9 @@
 	self.spinnerView.alpha = 0.0;
 	[UIView commitAnimations];
 	
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Authentication Failure" 
-											  message:@"Please check your User Name and API Key."
-											  delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Authentication Failure", @"Auth failure alert title") 
+											  message:NSLocalizedString(@"Please check your User Name and API Key.", @"Auth failure alert message")
+											  delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles: nil];
 	[alert show];
 	[alert release];
 	
@@ -116,9 +116,9 @@
 	self.spinnerView.alpha = 0.0;
 	[UIView commitAnimations];
 	
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Failure" 
-													message:@"Please check your connection and try again."
-												   delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Connection Failure", @"Connection Failure alert title") 
+													message:NSLocalizedString(@"Please check your connection and try again.", @"Connectin Failure alert message")
+												   delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles: nil];
 	[alert show];
 	[alert release];
 }
@@ -222,10 +222,10 @@
 	
     // Set up the cell...
 	if (indexPath.row == 0) {
-		usernameCell.labelField.text = @"User Name";
+		usernameCell.labelField.text = NSLocalizedString(@"User Name", @"User Name cell label");
 		return usernameCell;
 	} else {
-		apiKeyCell.labelField.text = @"API Key";
+		apiKeyCell.labelField.text = NSLocalizedString(@"API Key", @"API Key cell label");
 		return apiKeyCell;
 	}
 }

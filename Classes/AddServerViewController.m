@@ -43,15 +43,15 @@ static UIImage *rhelImage = nil;
 		self.server.flavorId = @"";
 		self.server.imageId = @"";
 		self.nameCell = [[EditableCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"NameCell"];
-		self.nameCell.labelField.text = @"Name";
+		self.nameCell.labelField.text = NSLocalizedString(@"Name", @"Server Name cell label");
 		self.nameCell.textField.placeholder = @"";
 		self.nameCell.accessoryType = UITableViewCellAccessoryNone;		
 
 		self.nameCell.textField.keyboardType = UIKeyboardTypeDefault;
 		self.nameCell.textField.delegate = self;
 		
-		self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancelle" style:UIBarButtonItemStyleBordered target:self action:@selector(cancelButtonPressed:)];
-		self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStyleBordered target:self action:@selector(saveButtonPressed:)];
+		self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Cancel", @"Cancel") style:UIBarButtonItemStyleBordered target:self action:@selector(cancelButtonPressed:)];
+		self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Save", @"Save") style:UIBarButtonItemStyleBordered target:self action:@selector(saveButtonPressed:)];
 	}
     return self;
 }
@@ -136,11 +136,11 @@ static UIImage *rhelImage = nil;
 
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
 	if (section == kServerDetails) {
-		return @"Server Details";
+		return NSLocalizedString(@"Server Details", @"Server Details table section header");
 	} else if (section == kFlavor) {
-		return @"Choose a Flavor";
+		return NSLocalizedString(@"Choose a Flavor", @"Choose a Flavor table section header");
 	} else if (section == kImage) {
-		return @"Choose an Image";
+		return NSLocalizedString(@"Choose an Image", @"Choose an Image table section header");
 	} else {
 		return @"";
 	}
@@ -184,7 +184,7 @@ static UIImage *rhelImage = nil;
 	} else if (indexPath.section == kFlavor) {
 		Flavor *flavor = (Flavor *) [app.flavors objectAtIndex:indexPath.row];
 		flavorCell.textLabel.text = flavor.flavorName;
-		flavorCell.detailTextLabel.text = [NSString stringWithFormat:@"%@MB RAM - %@GB Disk", flavor.ram, flavor.disk];
+		flavorCell.detailTextLabel.text = [NSString stringWithFormat:@"%@MB %@ - %@GB %@", flavor.ram, NSLocalizedString(@"RAM", @"RAM"), flavor.disk, NSLocalizedString(@"Disk", @"Disk")];
 		
 		// show or hide selection style
 		if ([flavor.flavorId isEqualToString:self.server.flavorId]) {
@@ -284,20 +284,20 @@ static UIImage *rhelImage = nil;
 			// handle 413 for rate limit, or isSuccess
 			UIAlertView *alert;			
 			if (response.statusCode == 413) {				
-				alert = [[UIAlertView alloc] initWithTitle:@"Error Saving" 
-												   message:@"Your server was not saved because you have exceeded the API rate limit.  Please contact the Rackspace Cloud to increase your limit or try again later." 
-												  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+				alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error Saving", @"Error Saving alert title") 
+												   message:NSLocalizedString(@"Your server was not saved because you have exceeded the API rate limit.  Please contact the Rackspace Cloud to increase your limit or try again later.", @"Error saving new server due to API rate limit alert message") 
+												  delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles:nil];
 			} else {
-				alert = [[UIAlertView alloc] initWithTitle:@"Error Saving" 
-												   message:@"Your server was not saved.  Please check your connection or the data you entered and try again." 
-												  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+				alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error Saving", @"Error Saving alert title") 
+												   message:NSLocalizedString(@"Your server was not saved.  Please check your connection or the data you entered and try again.", @"Error saving new server due to connection or other error alert message") 
+												  delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles:nil];
 			}
 			[alert show];
 			[alert release];
 		}
 		
 	} else { // it's not valid to post
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"All fields are required." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"All fields are required.", @"New server validation alert message") delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles:nil];
 		[alert show];
 		[alert release];
 	}

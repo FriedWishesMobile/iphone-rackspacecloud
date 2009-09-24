@@ -51,13 +51,13 @@ BOOL objectsLoaded = NO;
 - (void)showSaveError:(Response *)response {
 	UIAlertView *alert;
 	if (response.statusCode == 413) {
-		alert = [[UIAlertView alloc] initWithTitle:@"Error Saving" 
-										   message:@"This container was not saved because you have exceeded the API rate limit.  Please contact the Rackspace Cloud to increase your limit or try again later."
-										  delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+		alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error Saving", @"Error Saving container alert title") 
+										   message:NSLocalizedString(@"This container was not saved because you have exceeded the API rate limit.  Please contact the Rackspace Cloud to increase your limit or try again later.", @"Error saving container due to API rate limit alert message")
+										  delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles: nil];
 	} else {
-		alert = [[UIAlertView alloc] initWithTitle:@"Error Saving" 
-										   message:@"This container was not saved.  Please check your connection or data and try again."
-										  delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+		alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error Saving", @"Error Saving container alert title") 
+										   message:NSLocalizedString(@"This container was not saved.  Please check your connection or data and try again.", @"Error saving container due to connection or other error alert message")
+										  delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"OK") otherButtonTitles: nil];
 	}
 	[alert show];
 	[alert release];	
@@ -266,11 +266,11 @@ BOOL objectsLoaded = NO;
 
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
 	if (section == kContainerDetails) {
-		return @"Container Details";
+		return NSLocalizedString(@"Container Details", @"Container Details table section header");
 	} else if (section == kCDN) {
-		return @"Content Delivery Network";
+		return NSLocalizedString(@"Content Delivery Network", @"CDN table section header");
 	} else if (section == kFiles) {
-		return @"Files";
+		return NSLocalizedString(@"Files", @"Container Files table section header");
 	} else {
 		return @"";
 	}
@@ -314,11 +314,11 @@ BOOL objectsLoaded = NO;
 		
 		switch (indexPath.row) {
 			case 0:
-				cell.textLabel.text = @"Name";
+				cell.textLabel.text = NSLocalizedString(@"Name", @"Container Name label");
 				cell.detailTextLabel.text = self.container.name;
 				break;
 			case 1:
-				cell.textLabel.text = @"Size";
+				cell.textLabel.text = NSLocalizedString(@"Size", @"Container Size label");
 				cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", [self.container humanizedCount], [self.container humanizedBytes]];
 				break;
 		}
@@ -371,7 +371,7 @@ BOOL objectsLoaded = NO;
 		
 		switch (indexPath.row) {
 			case 0:
-				cdnSwitchCell.textLabel.text = @"Publish to CDN";
+				cdnSwitchCell.textLabel.text = NSLocalizedString(@"Publish to CDN", @"Publish to CDN cell label");
 				//cell.detailTextLabel.text = self.container.cdnEnabled;
 				if (self.container.cdnEnabled && [self.container.cdnEnabled isEqualToString:@"True"]) {
 					cdnSwitch.on = YES;
@@ -380,7 +380,7 @@ BOOL objectsLoaded = NO;
 				return cdnSwitchCell;
 				break;
 			case 1:
-				logSwitchCell.textLabel.text = @"Log Retention";
+				logSwitchCell.textLabel.text = NSLocalizedString(@"Log Retention", @"Log Retention cell label");
 				//cell.detailTextLabel.text = self.container.logRetention;
 				if (self.container.logRetention && [self.container.logRetention isEqualToString:@"True"]) {
 					logSwitch.on = YES;
@@ -389,11 +389,11 @@ BOOL objectsLoaded = NO;
 				return logSwitchCell;
 				break;
 			case 2:
-				cell.textLabel.text = @"TTL";
+				cell.textLabel.text = NSLocalizedString(@"TTL", @"TTL cell label");
 				cell.detailTextLabel.text = self.container.ttl;
 				break;
 			case 3:
-				cdnURLCell.labelField.text = @"CDN URL";
+				cdnURLCell.labelField.text = NSLocalizedString(@"CDN URL", @"CDN URL label");
 				cdnURLCell.textField.text = self.container.cdnUrl;
 				return cdnURLCell;
 				break;

@@ -33,7 +33,7 @@
 	} else if (b >= 1024) {
 		result = [NSString stringWithFormat:@"%.2f KB", b / 1024.0];
 	} else {
-		result = [NSString stringWithFormat:@"%@ bytes", self.bytes];
+		result = [NSString stringWithFormat:@"%@ %@", self.bytes, NSLocalizedString(@"bytes", @"bytes")];
 	}
 	return result;
 }

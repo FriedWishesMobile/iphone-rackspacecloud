@@ -108,7 +108,7 @@ SpinnerAccessoryCell *attachCell;
 
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
 	if (section == kFileDetails) {
-		return @"File Details";
+		return NSLocalizedString(@"File Details", @"File Details table section header");
 	} else {
 		return @"";
 	}
@@ -153,19 +153,19 @@ SpinnerAccessoryCell *attachCell;
 		
 		switch (indexPath.row) {
 			case 0:
-				cell.textLabel.text = @"Name";
+				cell.textLabel.text = NSLocalizedString(@"Name", @"Object Name label");
 				cell.detailTextLabel.text = self.cfObject.name;
 				break;
 			case 1:
-				cell.textLabel.text = @"Size";
+				cell.textLabel.text = NSLocalizedString(@"Size", @"Object Size label");
 				cell.detailTextLabel.text = [self.cfObject humanizedBytes];
 				break;
 			case 2:
-				cell.textLabel.text = @"File Type";
+				cell.textLabel.text = NSLocalizedString(@"File Type", @"Object File Type label");
 				cell.detailTextLabel.text = self.cfObject.contentType;
 				break;
 			case 3:
-				cell.textLabel.text = @"Object";
+				cell.textLabel.text = NSLocalizedString(@"Object", @"Object label");
 				cell.detailTextLabel.text = self.cfObject.object;
 				break;
 		}
@@ -189,11 +189,11 @@ SpinnerAccessoryCell *attachCell;
 		}
 		
 		if (indexPath.row == previewRowIndex) {
-			cell.textLabel.text = @"Preview File";
+			cell.textLabel.text = NSLocalizedString(@"Preview File", @"Preview File button");
 		} else if (indexPath.row == emailLinkRowIndex) {
-			cell.textLabel.text = @"Email Link to File";
+			cell.textLabel.text = NSLocalizedString(@"Email Link to File", @"Email Link button");
 		} else if (indexPath.row == emailFileRowIndex) {
-			attachCell.textLabel.text = @"Email File as Attachment";
+			attachCell.textLabel.text = NSLocalizedString(@"Email File as Attachment", @"Email attachment button");
 //			if (isLoadingAttachment) {
 //				[attachCell.spinner startAnimating];
 //			}
