@@ -101,15 +101,15 @@ BOOL ipGroupsLoaded = NO;
 		cell.detailTextLabel.text = [s.servers description];
 		
 		if ([s.servers class] == NSClassFromString(@"NSCFString") || [s.servers count] == 0) {
-			cell.detailTextLabel.text = @"0 servers"; // i have no idea why this happens
+			cell.detailTextLabel.text = NSLocalizedString(@"0 servers", @"Server count for IP Groups tab table cell subtext"); // i have no idea why this happens
 			cell.accessoryType = UITableViewCellAccessoryNone;
 			cell.selectionStyle = UITableViewCellSelectionStyleNone;
 		} else if ([s.servers count] == 1) {
-			cell.detailTextLabel.text = [NSString stringWithFormat:@"%i server", [s.servers count]];
+			cell.detailTextLabel.text = [NSString stringWithFormat:NSLocalizedString(@"%i server", @"Singular server count for IP Groups tab table cell subtext"), [s.servers count]];
 			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 			cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 		} else {
-			cell.detailTextLabel.text = [NSString stringWithFormat:@"%i servers", [s.servers count]];
+			cell.detailTextLabel.text = [NSString stringWithFormat:NSLocalizedString(@"%i servers", @"Server count for IP Groups tab table cell subtext"), [s.servers count]];
 			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 			cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 		}
