@@ -37,14 +37,14 @@ NSString *initialFlavorId;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
 		// make and disable the save button
-		self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStyleBordered target:self action:@selector(saveButtonPressed:)];
+		self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Save", @"Save Server button") style:UIBarButtonItemStyleBordered target:self action:@selector(saveButtonPressed:)];
 		self.saveButton = self.navigationItem.rightBarButtonItem;
 		self.navigationItem.rightBarButtonItem.enabled = NO;
 
 		// set up editable cell for server name
 		serverNameCell = [[EditableCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"ServerNameCell"];
 		serverNameCell.selectionStyle = UITableViewCellSelectionStyleNone;
-		serverNameCell.labelField.text = @"Name";		
+		serverNameCell.labelField.text = NSLocalizedString(@"Name", @"Server Name cell label");
 		
 		serverNameCell.textField.keyboardType = UIKeyboardTypeDefault;
 		serverNameCell.textField.delegate = self;
@@ -83,13 +83,13 @@ NSString *initialFlavorId;
 
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
 	if (section == kServerDetails) {
-		return @"Server Details";
+		return NSLocalizedString(@"Server Details", @"Server Details table section header");
 	} else if (section == kPublicIPs) {
-		return @"Public IP Addresses";
+		return NSLocalizedString(@"Public IP Addresses", @"Public IPs table section header");
 	} else if (section == kPrivateIPs) {
-		return @"Private IP Addresses";
+		return NSLocalizedString(@"Private IP Addresses", @"Private IPs table section header");
 	} else if (section == kActions) {
-		return @"Actions";
+		return NSLocalizedString(@"Actions", @"Actions table section header");
 	} else {
 		return @"";
 	}
@@ -174,13 +174,13 @@ NSString *initialFlavorId;
 			statusCell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:@"StatusCell"] autorelease];
 			statusCell.selectionStyle = UITableViewCellSelectionStyleNone;
 			statusCell.accessoryType = UITableViewCellAccessoryNone;
-			statusCell.textLabel.text = @"Status";
+			statusCell.textLabel.text = NSLocalizedString(@"Status", @"Server Status cell label");
 		}
 		
 		if (indexPath.row == 0) {	
 			return serverNameCell;
 		} else if (indexPath.row == 1) {
-			cell.textLabel.text = @"Flavor";
+			cell.textLabel.text = NSLocalizedString(@"Flavor", @"Server Flavor cell label");
 			cell.detailTextLabel.text = [self.server flavorName];
 			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 			cell.selectionStyle = UITableViewCellSelectionStyleBlue;
@@ -192,23 +192,23 @@ NSString *initialFlavorId;
 			}
 			
 		} else if (indexPath.row == 2) {
-			cell.textLabel.text = @"Image";
+			cell.textLabel.text = NSLocalizedString(@"Image", @"Server Image cell label");
 			cell.detailTextLabel.text = [self.server imageName];
 			cell.accessoryType = UITableViewCellAccessoryNone;
 		} else if (indexPath.row == 3) {
-			cell.textLabel.text = @"Memory";
+			cell.textLabel.text = NSLocalizedString(@"Memory", @"Server Memory cell label");
 			cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ MB", flavor.ram];
 			cell.accessoryType = UITableViewCellAccessoryNone;
 		} else if (indexPath.row == 4) {
-			cell.textLabel.text = @"Disk";
+			cell.textLabel.text = NSLocalizedString(@"Disk", @"Server Disk Space cell label");
 			cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ GB", flavor.disk];
 			cell.accessoryType = UITableViewCellAccessoryNone;
 		} else if (indexPath.row == 5) {
 			statusCell.selectionStyle == UITableViewCellSelectionStyleNone;
 			if ([self.server.status isEqualToString:@"ACTIVE"]) {
 				statusCell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:@"StatusCell2"] autorelease];
-				statusCell.textLabel.text = @"Status";
-				statusCell.detailTextLabel.text = @"Active";
+				statusCell.textLabel.text = NSLocalizedString(@"Status", @"Server Status cell label");
+				statusCell.detailTextLabel.text = NSLocalizedString(@"Active", @"Server Active Status");
 				statusCell.selectionStyle == UITableViewCellSelectionStyleNone;
 				statusCell.userInteractionEnabled = NO;
 			} else {
@@ -225,33 +225,33 @@ NSString *initialFlavorId;
 					// progress goes up to 33.3%
 					pv.progress = ([self.server.progress intValue] / 3.0 * 0.01);
 					
-					statusCell.detailTextLabel.text = @"Resizing...";
+					statusCell.detailTextLabel.text = NSLocalizedString(@"Resizing...", @"Server Resizing Status");
 					[statusCell addSubview:pv];
 				} else if ([self.server.status isEqualToString:@"PREP_RESIZE"]) {
 					// progress goes up to 66.7%
 					pv.progress = 0.333 + (([self.server.progress intValue] / 3.0) * 0.01);
-					statusCell.detailTextLabel.text = @"Resizing...";
+					statusCell.detailTextLabel.text = NSLocalizedString(@"Resizing...", @"Server Resizing Status");
 					[statusCell addSubview:pv];
 				} else if ([self.server.status isEqualToString:@"RESIZE"]) {
 					// progress goes up to 100%
 					pv.progress = 0.667 + (([self.server.progress intValue] / 3.0) * 0.01);
 					
-					statusCell.detailTextLabel.text = @"Resizing...";
+					statusCell.detailTextLabel.text = NSLocalizedString(@"Resizing...", @"Server Resizing Status");
 					[statusCell addSubview:pv];
 				} else if ([self.server.status isEqualToString:@"VERIFY_RESIZE"]) {
 					
 					// hiding the progress view doesn't work, so reallocate without it
 					//[statusCell release];
 					statusCell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:@"StatusCell3"] autorelease];
-					statusCell.textLabel.text = @"Status";
-					statusCell.detailTextLabel.text = @"Resize Complete";
+					statusCell.textLabel.text = NSLocalizedString(@"Status", @"Server Status cell label");
+					statusCell.detailTextLabel.text = NSLocalizedString(@"Resize Complete", @"Server Resize Complete Status");
 					statusCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 					statusCell.selectionStyle = UITableViewCellSelectionStyleBlue;
 					statusCell.userInteractionEnabled = YES;
 				} else if ([self.server.status isEqualToString:@"BUILD"]) {
 					pv.progress = [self.server.progress intValue] * 0.01;
 					
-					statusCell.detailTextLabel.text = @"Building...";
+					statusCell.detailTextLabel.text = NSLocalizedString(@"Building...", @"Server Building Status");
 					[statusCell addSubview:pv];
 				} else {
 					// no need for the progress view
@@ -270,7 +270,7 @@ NSString *initialFlavorId;
 			return statusCell;
 			
 		} else if (indexPath.row == 6) { // TODO: implement backups!
-			cell.textLabel.text = @"Backups";
+			cell.textLabel.text = NSLocalizedString(@"Backups", @"Server Backups cell label");
 			cell.detailTextLabel.text = @"Weekdays at 4:00 PM";
 			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 		}
@@ -290,12 +290,12 @@ NSString *initialFlavorId;
 		}
 		
 		if (indexPath.row == 0) {
-			cell.textLabel.text = @"Reset Password";
+			cell.textLabel.text = NSLocalizedString(@"Reset Password", @"Server Reset Password button");
 			cell.textLabel.textColor = [UIColor blackColor];
 			cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 		} else if (indexPath.row == 1) {
-			cell.textLabel.text = @"Resize Server";
+			cell.textLabel.text = NSLocalizedString(@"Resize Server", @"Server Resize Server button");
 			// if resizing, disable
 			if ([self.server.status isEqualToString:@"QUEUE_RESIZE"] || [self.server.status isEqualToString:@"PREP_RESIZE"] || [self.server.status isEqualToString:@"RESIZE"] || [self.server.status isEqualToString:@"VERIFY_RESIZE"]) {
 				cell.textLabel.textColor = [UIColor grayColor];
@@ -307,7 +307,7 @@ NSString *initialFlavorId;
 				cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 			}
 		} else if (indexPath.row == 2) {
-			cell.textLabel.text = @"Launch SSH Client";
+			cell.textLabel.text = NSLocalizedString(@"Launch SSH Client", @"Server Launch SSH Client button");
 			cell.textLabel.textColor = [UIColor blackColor];
 			cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -439,14 +439,14 @@ NSString *initialFlavorId;
 	NSString *title;
 	
 	if ([@"soft" isEqualToString:rebootMode]) {
-		title = @"Are you sure you want to perform a soft reboot?";
+		title = NSLocalizedString(@"Are you sure you want to perform a soft reboot?", @"Soft Reboot confirmation warning");
 	} else { // hard
-		title = @"Are you sure you want to perform a hard reboot?";
+		title = NSLocalizedString(@"Are you sure you want to perform a hard reboot?", @"Hard Reboot confirmation warning");
 	}
 	
 	// open a dialog with two custom buttons
 	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:title
-															 delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Reboot Server"
+															 delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel", @"Cancel Reboot button") destructiveButtonTitle:NSLocalizedString(@"Reboot Server", @"Reboot Server button")
 															 otherButtonTitles:nil];
 	actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
 	[actionSheet showInView:self.tabBarController.view]; // if it's not over the tab bar, the bottom half of the cancel button isn't touchable
@@ -456,13 +456,13 @@ NSString *initialFlavorId;
 - (void)handleFailedReboot:(Response *)response {
 	UIAlertView *alert;
 	if (response.statusCode == 413) {
-		alert = [[UIAlertView alloc] initWithTitle:@"Reboot Failure" 
-										   message:@"This server was not rebooted because you have exceeded the API rate limit.  Please contact the Rackspace Cloud to increase your limit or try again later."
-										  delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+		alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Reboot Failure", @"Reboot Failure alert title")
+										   message:NSLocalizedString(@"This server was not rebooted because you have exceeded the API rate limit.  Please contact the Rackspace Cloud to increase your limit or try again later.", @"Reboot failed due to rate limit alert message")
+										  delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"Reboot Failure alert message OK button") otherButtonTitles: nil];
 	} else {
-		alert = [[UIAlertView alloc] initWithTitle:@"Reboot Failure" 
-										   message:@"This server was not rebooted.  Please check your connection or server and try again."
-										  delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+		alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Reboot Failure", @"Reboot Failure alert title")
+										   message:NSLocalizedString(@"This server was not rebooted.  Please check your connection or server and try again.", @"Reboot failed due to connection or other error alert message")
+										  delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"Reboot Failure alert message OK button") otherButtonTitles: nil];
 	}
 	[alert show];
 	[alert release];	
@@ -552,13 +552,13 @@ NSString *initialFlavorId;
 	} else {
 		UIAlertView *av;
 		if (overRateLimit) {
-			av = [[UIAlertView alloc] initWithTitle:@"Error Saving" 
-											message:@"Your changes were not saved because you have exceeded the API rate limit.  Please contact the Rackspace Cloud to increase your limit or try again later." 
-										   delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+			av = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error Saving", @"Error Saving Server alert message title")
+											message:NSLocalizedString(@"Your changes were not saved because you have exceeded the API rate limit.  Please contact the Rackspace Cloud to increase your limit or try again later.", @"Server save failed due to API rate limit alert message") 
+										   delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"Server Save error alert message OK button") otherButtonTitles:nil];
 		} else {
-			av = [[UIAlertView alloc] initWithTitle:@"Error Saving" 
-											message:@"Your changes were not saved.  Please check your connection or the data you entered." 
-										   delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+			av = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error Saving", @"Error Saving Server alert message title")
+											message:NSLocalizedString(@"Your changes were not saved.  Please check your connection or the data you entered.", @"Server save failed due to connection or other error alert message")  
+										   delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"Server Save error alert message OK button") otherButtonTitles:nil];
 		}
 	    [av show];
 		[av release];

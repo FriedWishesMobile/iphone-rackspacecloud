@@ -71,9 +71,9 @@ static UIImage *rhelImage = nil;
 
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
 	if (section == kIPGroupDetails) {
-		return @"IP Group Details";
+		return NSLocalizedString(@"IP Group Details", @"IP Group Details table section header");
 	} else if (section == kServers) {
-		return @"Servers";
+		return NSLocalizedString(@"Servers", @"IP Group server list table section header");
 	} else {
 		return @"";
 	}
@@ -105,7 +105,7 @@ static UIImage *rhelImage = nil;
 			cell.selectionStyle = UITableViewCellSelectionStyleNone;
 		}
 		
-		cell.textLabel.text = @"Name";
+		cell.textLabel.text = NSLocalizedString(@"Name", @"Shared IP Group Name cell label");
 		cell.detailTextLabel.text = self.ipGroup.sharedIpGroupName;
 		
 		return cell;

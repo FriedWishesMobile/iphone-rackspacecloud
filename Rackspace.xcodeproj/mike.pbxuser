@@ -2162,7 +2162,7 @@
 	};
 	2786B66F0FFEC75B002B852B /* IPGroupViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {877, 670}}";
+			sepNavIntBoundsRect = "{{0, 0}, {877, 453}}";
 			sepNavSelRange = "{174, 0}";
 			sepNavVisRange = "{0, 345}";
 		};
@@ -3832,16 +3832,16 @@
 	};
 	4C9982B70FEE0F23005D12B7 /* IPGroupsRootViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {877, 670}}";
+			sepNavIntBoundsRect = "{{0, 0}, {877, 453}}";
 			sepNavSelRange = "{266, 0}";
 			sepNavVisRange = "{0, 438}";
 		};
 	};
 	4C9982B80FEE0F23005D12B7 /* IPGroupsRootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {877, 3696}}";
-			sepNavSelRange = "{150, 0}";
-			sepNavVisRange = "{0, 755}";
+			sepNavIntBoundsRect = "{{0, 0}, {1286, 3520}}";
+			sepNavSelRange = "{3087, 0}";
+			sepNavVisRange = "{2495, 1659}";
 		};
 	};
 	4C9984250FEEB502005D12B7 /* Auth.h */ = {
