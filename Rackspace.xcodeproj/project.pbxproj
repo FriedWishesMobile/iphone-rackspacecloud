@@ -48,6 +48,7 @@
 		27A3C4E41019762500198388 /* RenameServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A3C4E21019762500198388 /* RenameServerController.m */; };
 		27A3C4E51019762500198388 /* RenameServerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A3C4E31019762500198388 /* RenameServerController.xib */; };
 		27D86F781041DDCA00B805A9 /* ObjectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D86F771041DDCA00B805A9 /* ObjectView.xib */; };
+		27DA9063106C70F600D6A2AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27DA9061106C70F600D6A2AA /* Localizable.strings */; };
 		27FEADA9104A06470042BBFC /* WebFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FEADA7104A06470042BBFC /* WebFileViewController.m */; };
 		27FEADAA104A06470042BBFC /* WebFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27FEADA8104A06470042BBFC /* WebFileViewController.xib */; };
 		28216C970DB411BC00E5133A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28216C960DB411BC00E5133A /* FirstViewController.m */; };
@@ -190,6 +191,9 @@
 		27A3C4E21019762500198388 /* RenameServerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenameServerController.m; sourceTree = "<group>"; };
 		27A3C4E31019762500198388 /* RenameServerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RenameServerController.xib; path = Classes/RenameServerController.xib; sourceTree = "<group>"; };
 		27D86F771041DDCA00B805A9 /* ObjectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObjectView.xib; sourceTree = "<group>"; };
+		27DA9062106C70F600D6A2AA /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		27DA9069106C713B00D6A2AA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		27DA906A106C714700D6A2AA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		27FEADA6104A06470042BBFC /* WebFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebFileViewController.h; sourceTree = "<group>"; };
 		27FEADA7104A06470042BBFC /* WebFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebFileViewController.m; sourceTree = "<group>"; };
 		27FEADA8104A06470042BBFC /* WebFileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WebFileViewController.xib; path = Classes/WebFileViewController.xib; sourceTree = "<group>"; };
@@ -619,6 +623,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				27DA9061106C70F600D6A2AA /* Localizable.strings */,
 				2786B0680FFC6B6D002B852B /* User Interfaces */,
 				4C9985950FEED9C9005D12B7 /* Tab Bar Icons */,
 				4C9982EA0FEE132F005D12B7 /* OS Icons */,
@@ -927,6 +932,8 @@
 				German,
 				Spanish,
 				es,
+				en,
+				fr,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Rackspace */;
 			projectDirPath = "";
@@ -975,6 +982,7 @@
 				2777BBA3101C57FC0043D3C1 /* AddServerImageController.xib in Resources */,
 				27D86F781041DDCA00B805A9 /* ObjectView.xib in Resources */,
 				27FEADAA104A06470042BBFC /* WebFileViewController.xib in Resources */,
+				27DA9063106C70F600D6A2AA /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1114,6 +1122,16 @@
 				27199C4B106B319500944AA9 /* Spanish */,
 			);
 			name = AddObject.xib;
+			sourceTree = "<group>";
+		};
+		27DA9061106C70F600D6A2AA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27DA9062106C70F600D6A2AA /* en */,
+				27DA9069106C713B00D6A2AA /* fr */,
+				27DA906A106C714700D6A2AA /* es */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
