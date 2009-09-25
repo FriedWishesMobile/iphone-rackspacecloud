@@ -178,6 +178,7 @@ NSString *initialFlavorId;
 		}
 		
 		if (indexPath.row == 0) {	
+			serverNameCell.selectionStyle = UITableViewCellSelectionStyleNone;
 			return serverNameCell;
 		} else if (indexPath.row == 1) {
 			cell.textLabel.text = NSLocalizedString(@"Flavor", @"Server Flavor cell label");
@@ -319,13 +320,7 @@ NSString *initialFlavorId;
 
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	if (indexPath.section == kServerDetails) {
-		if (indexPath.row == 0) { // server name
-			RenameServerController *vc = [[RenameServerController alloc] initWithNibName:@"RenameServerController" bundle:nil];
-			vc.server = self.server;
-			[self.navigationController pushViewController:vc animated:YES];
-			[vc release];
-			[aTableView deselectRowAtIndexPath:indexPath animated:NO];
-		} else if (indexPath.row == 1) { // flavor
+		if (indexPath.row == 1) { // flavor
 			// if resizing, do nothing
 			if (!([self.server.status isEqualToString:@"QUEUE_RESIZE"] || [self.server.status isEqualToString:@"PREP_RESIZE"] || [self.server.status isEqualToString:@"RESIZE"] || [self.server.status isEqualToString:@"VERIFY_RESIZE"])) {
 				ResizeServerController *vc = [[ResizeServerController alloc] initWithNibName:@"ResizeServerController" bundle:nil];
