@@ -16,7 +16,7 @@
 #import "ObjectViewController.h"
 #import "RoundedRectView.h"
 #import "Response.h"
-#import "EditableCell.h"
+#import "TextFieldCell.h"
 
 #define kContainerDetails 0
 #define kCDN -1
@@ -348,19 +348,18 @@ BOOL objectsLoaded = NO;
 		}
 		
 		static NSString *CDNURLCellIdentifier = @"CDNURLCell";
-		cdnURLCell = (EditableCell *) [aTableView dequeueReusableCellWithIdentifier:CDNURLCellIdentifier];
+		cdnURLCell = (TextFieldCell *) [aTableView dequeueReusableCellWithIdentifier:CDNURLCellIdentifier];
 		if (cdnURLCell == nil) {
-			cdnURLCell = [[EditableCell alloc] initWithFrame:CGRectZero reuseIdentifier:CDNURLCellIdentifier];
-			cdnURLCell.selectionStyle = UITableViewCellSelectionStyleNone;
+			cdnURLCell = [[TextFieldCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CDNURLCellIdentifier];
 			cdnURLCell.textField.delegate = self;
 			
 			// hide the clear button, since this field is not editable
 			cdnURLCell.textField.clearButtonMode = UITextFieldViewModeNever;
 			
 			// move the text over a little bit
-			CGRect labelRect = cdnURLCell.labelField.frame;
+			CGRect labelRect = cdnURLCell.textLabel.frame;
 			labelRect.origin.x -= 15;
-			cdnURLCell.labelField.frame = labelRect;
+			cdnURLCell.textLabel.frame = labelRect;
 			
 			CGRect textRect = cdnURLCell.textField.frame;
 			textRect.origin.x += 10;
@@ -393,7 +392,7 @@ BOOL objectsLoaded = NO;
 				cell.detailTextLabel.text = self.container.ttl;
 				break;
 			case 3:
-				cdnURLCell.labelField.text = NSLocalizedString(@"CDN URL", @"CDN URL label");
+				cdnURLCell.textLabel.text = NSLocalizedString(@"CDN URL", @"CDN URL label");
 				cdnURLCell.textField.text = self.container.cdnUrl;
 				return cdnURLCell;
 				break;

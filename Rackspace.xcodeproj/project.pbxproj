@@ -57,7 +57,6 @@
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		4C0F82C10FE4D9BC001946C7 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C0F82C00FE4D9BC001946C7 /* Icon.png */; };
 		4C0F83980FE4F31C001946C7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C0F83970FE4F31C001946C7 /* Default.png */; };
-		4C3B1D220FDA14CA00AE2133 /* EditableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B1D1D0FDA14CA00AE2133 /* EditableCell.m */; };
 		4C3B1D230FDA14CA00AE2133 /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B1D1F0FDA14CA00AE2133 /* DetailCell.m */; };
 		4C3B1D240FDA14CA00AE2133 /* SecureEditableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B1D210FDA14CA00AE2133 /* SecureEditableCell.m */; };
 		4C3B1D290FDA14F300AE2133 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B1D280FDA14F300AE2133 /* LoginViewController.m */; };
@@ -214,8 +213,6 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C0F82C00FE4D9BC001946C7 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		4C0F83970FE4F31C001946C7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		4C3B1D1C0FDA14CA00AE2133 /* EditableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditableCell.h; sourceTree = "<group>"; };
-		4C3B1D1D0FDA14CA00AE2133 /* EditableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableCell.m; sourceTree = "<group>"; };
 		4C3B1D1E0FDA14CA00AE2133 /* DetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCell.h; sourceTree = "<group>"; };
 		4C3B1D1F0FDA14CA00AE2133 /* DetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCell.m; sourceTree = "<group>"; };
 		4C3B1D200FDA14CA00AE2133 /* SecureEditableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecureEditableCell.h; sourceTree = "<group>"; };
@@ -669,8 +666,6 @@
 				4C99822C0FEE0AA7005D12B7 /* ServerCell.m */,
 				4C9982220FEE0A98005D12B7 /* ProgressCell.h */,
 				4C9982230FEE0A98005D12B7 /* ProgressCell.m */,
-				4C3B1D1C0FDA14CA00AE2133 /* EditableCell.h */,
-				4C3B1D1D0FDA14CA00AE2133 /* EditableCell.m */,
 				4C3B1D1E0FDA14CA00AE2133 /* DetailCell.h */,
 				4C3B1D1F0FDA14CA00AE2133 /* DetailCell.m */,
 				4C3B1D200FDA14CA00AE2133 /* SecureEditableCell.h */,
@@ -1005,7 +1000,6 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* RackspaceAppDelegate.m in Sources */,
 				28216C970DB411BC00E5133A /* FirstViewController.m in Sources */,
-				4C3B1D220FDA14CA00AE2133 /* EditableCell.m in Sources */,
 				4C3B1D230FDA14CA00AE2133 /* DetailCell.m in Sources */,
 				4C3B1D240FDA14CA00AE2133 /* SecureEditableCell.m in Sources */,
 				4C3B1D290FDA14F300AE2133 /* LoginViewController.m in Sources */,

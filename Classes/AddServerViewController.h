@@ -8,18 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@class Server, EditableCell, ServersRootViewController;
+@class Server, TextFieldCell, ServersRootViewController;
 
 @interface AddServerViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate> {
 	Server *server;
-	EditableCell *nameCell;
+	TextFieldCell *nameCell;
 	UITableViewCell *flavorCell;
 	UITableViewCell *imageCell;
 	ServersRootViewController *serversRootViewController;
 }
 
 @property (nonatomic, retain) Server *server;
-@property (nonatomic, retain) EditableCell *nameCell;
+@property (nonatomic, retain) TextFieldCell *nameCell;
 @property (nonatomic, retain) ServersRootViewController *serversRootViewController;
 
 -(void) cancelButtonPressed:(id)sender;

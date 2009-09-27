@@ -15,6 +15,9 @@
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+		
+		self.selectionStyle = UITableViewCellSelectionStyleNone;
+		
 		// place the text field where the text label belongs	
 		CGRect rect = CGRectInset(self.contentView.bounds, 18, 12);
 		rect.origin.x += 75;

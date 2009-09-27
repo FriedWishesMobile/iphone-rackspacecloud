@@ -10,7 +10,6 @@
 #import "Server.h"
 #import "ResizeServerController.h"
 #import "RenameServerController.h"
-#import "EditableCell.h"
 #import "RackspaceAppDelegate.h"
 #import "Flavor.h"
 #import "ConfirmResizeServerController.h"
@@ -43,11 +42,8 @@ NSString *initialFlavorId;
 		self.navigationItem.rightBarButtonItem.enabled = NO;
 
 		// set up editable cell for server name
-		//serverNameCell = [[EditableCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"ServerNameCell"];
 		serverNameCell = [[TextFieldCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:@"ServerNameCell"];
-		serverNameCell.selectionStyle = UITableViewCellSelectionStyleNone;
 		serverNameCell.textLabel.text = NSLocalizedString(@"Name", @"Server Name cell label");
-		//serverNameCell.labelField.text = NSLocalizedString(@"Name", @"Server Name cell label");
 		
 		serverNameCell.textField.keyboardType = UIKeyboardTypeDefault;
 		serverNameCell.textField.delegate = self;

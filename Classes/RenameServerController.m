@@ -9,7 +9,7 @@
 #import "RenameServerController.h"
 #import "RackspaceAppDelegate.h"
 #import "Server.h"
-#import "EditableCell.h"
+#import "TextFieldCell.h"
 
 @implementation RenameServerController
 
@@ -33,11 +33,10 @@
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 	static NSString *CellIdentifier = @"EditServerNameCell";
-	EditableCell *cell = (EditableCell *) [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	TextFieldCell *cell = (TextFieldCell *) [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
-		cell = [[EditableCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier];
-		cell.selectionStyle = UITableViewCellSelectionStyleNone;
-		cell.labelField.text = NSLocalizedString(@"Name", @"Server Name cell label");
+		cell = [[TextFieldCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier];
+		cell.textLabel.text = NSLocalizedString(@"Name", @"Server Name cell label");
 	}
 	
 	cell.textField.text = self.server.serverName;

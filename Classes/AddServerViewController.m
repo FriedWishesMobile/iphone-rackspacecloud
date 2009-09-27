@@ -9,7 +9,7 @@
 #import "AddServerViewController.h"
 #import "Server.h"
 #import "ServerNameController.h"
-#import "EditableCell.h"
+#import "TextFieldCell.h"
 #import "AddServerFlavorController.h"
 #import "AddServerImageController.h"
 #import "RackspaceAppDelegate.h"
@@ -42,8 +42,8 @@ static UIImage *rhelImage = nil;
 		self.server.serverName = @"";
 		self.server.flavorId = @"";
 		self.server.imageId = @"";
-		self.nameCell = [[EditableCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"NameCell"];
-		self.nameCell.labelField.text = NSLocalizedString(@"Name", @"Server Name cell label");
+		self.nameCell = [[TextFieldCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:@"NameCell"];
+		self.nameCell.textLabel.text = NSLocalizedString(@"Name", @"Server Name cell label");
 		self.nameCell.textField.placeholder = @"";
 		self.nameCell.accessoryType = UITableViewCellAccessoryNone;		
 

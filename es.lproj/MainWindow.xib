@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="138"/>
+			<integer value="128"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -55,18 +55,18 @@
 			<object class="IBUITabBarController" id="1034742383">
 				<object class="IBUISimulatedTabBarMetrics" key="IBUISimulatedBottomBarMetrics"/>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
-				<object class="IBUINavigationController" key="IBUISelectedViewController" id="651538930">
-					<object class="IBUITabBarItem" key="IBUITabBarItem" id="383613480">
-						<string key="IBUITitle">Servidores</string>
+				<object class="IBUINavigationController" key="IBUISelectedViewController" id="797453152">
+					<object class="IBUITabBarItem" key="IBUITabBarItem" id="948598800">
+						<string key="IBUITitle">Archivos de Nube</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">servers.png</string>
+							<string key="NSResourceName">cloud-files.png</string>
 						</object>
 						<reference key="IBUITabBar"/>
 					</object>
 					<reference key="IBUIParentViewController" ref="1034742383"/>
 					<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
-					<object class="IBUINavigationBar" key="IBUINavigationBar" id="371112184">
+					<object class="IBUINavigationBar" key="IBUINavigationBar" id="385642874">
 						<nil key="NSNextResponder"/>
 						<int key="NSvFlags">256</int>
 						<string key="NSFrameSize">{0, 0}</string>
@@ -80,8 +80,8 @@
 					</object>
 					<object class="NSMutableArray" key="IBUIViewControllers">
 						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="IBUIViewController" id="844997417">
-							<object class="IBUITableView" key="IBUIView" id="1040895999">
+						<object class="IBUIViewController" id="316762261">
+							<object class="IBUITableView" key="IBUIView" id="16857751">
 								<reference key="NSNextResponder"/>
 								<int key="NSvFlags">274</int>
 								<string key="NSFrameSize">{320, 367}</string>
@@ -101,24 +101,69 @@
 								<float key="IBUISectionHeaderHeight">22</float>
 								<float key="IBUISectionFooterHeight">22</float>
 							</object>
-							<object class="IBUINavigationItem" key="IBUINavigationItem" id="22406121">
+							<object class="IBUINavigationItem" key="IBUINavigationItem" id="182301461">
 								<reference key="IBUINavigationBar"/>
-								<string key="IBUITitle">Servidores</string>
-								<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="45367590">
-									<int key="IBUIStyle">1</int>
-									<int key="IBUISystemItemIdentifier">4</int>
-								</object>
+								<string key="IBUITitle">Contenedores</string>
 							</object>
-							<reference key="IBUIParentViewController" ref="651538930"/>
+							<reference key="IBUIParentViewController" ref="797453152"/>
 						</object>
 					</object>
 				</object>
 				<object class="NSMutableArray" key="IBUIViewControllers">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<reference ref="651538930"/>
+					<object class="IBUINavigationController" id="651538930">
+						<object class="IBUITabBarItem" key="IBUITabBarItem" id="383613480">
+							<string key="IBUITitle">Servidores</string>
+							<object class="NSCustomResource" key="IBUIImage">
+								<string key="NSClassName">NSImage</string>
+								<string key="NSResourceName">servers.png</string>
+							</object>
+							<reference key="IBUITabBar"/>
+						</object>
+						<reference key="IBUIParentViewController" ref="1034742383"/>
+						<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
+						<object class="IBUINavigationBar" key="IBUINavigationBar" id="371112184">
+							<nil key="NSNextResponder"/>
+							<int key="NSvFlags">256</int>
+							<string key="NSFrameSize">{0, 0}</string>
+							<bool key="IBUIOpaque">NO</bool>
+							<bool key="IBUIClipsSubviews">YES</bool>
+							<bool key="IBUIMultipleTouchEnabled">YES</bool>
+							<reference key="IBUITintColor" ref="381719783"/>
+						</object>
+						<object class="NSMutableArray" key="IBUIViewControllers">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBUIViewController" id="844997417">
+								<object class="IBUITableView" key="IBUIView" id="1040895999">
+									<nil key="NSNextResponder"/>
+									<int key="NSvFlags">274</int>
+									<string key="NSFrameSize">{320, 367}</string>
+									<reference key="IBUIBackgroundColor" ref="378340342"/>
+									<bool key="IBUIOpaque">NO</bool>
+									<bool key="IBUIClipsSubviews">YES</bool>
+									<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
+									<bool key="IBUIBouncesZoom">NO</bool>
+									<int key="IBUISeparatorStyle">1</int>
+									<int key="IBUISectionIndexMinimumDisplayRowCount">0</int>
+									<bool key="IBUIShowsSelectionImmediatelyOnTouchBegin">YES</bool>
+									<float key="IBUIRowHeight">44</float>
+									<float key="IBUISectionHeaderHeight">22</float>
+									<float key="IBUISectionFooterHeight">22</float>
+								</object>
+								<object class="IBUINavigationItem" key="IBUINavigationItem" id="22406121">
+									<string key="IBUITitle">Servidores</string>
+									<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="45367590">
+										<int key="IBUIStyle">1</int>
+										<int key="IBUISystemItemIdentifier">4</int>
+									</object>
+								</object>
+								<reference key="IBUIParentViewController" ref="651538930"/>
+							</object>
+						</object>
+					</object>
 					<object class="IBUINavigationController" id="700056745">
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="513539273">
-							<string key="IBUITitle">IP Groups</string>
+							<string key="IBUITitle">Grupos IP</string>
 							<object class="NSCustomResource" key="IBUIImage">
 								<string key="NSClassName">NSImage</string>
 								<string key="NSResourceName">ip-groups.png</string>
@@ -156,58 +201,13 @@
 									<float key="IBUISectionFooterHeight">22</float>
 								</object>
 								<object class="IBUINavigationItem" key="IBUINavigationItem" id="239222427">
-									<string key="IBUITitle">IP Groups</string>
+									<string key="IBUITitle">Grupos IP</string>
 								</object>
 								<reference key="IBUIParentViewController" ref="700056745"/>
 							</object>
 						</object>
 					</object>
-					<object class="IBUINavigationController" id="797453152">
-						<object class="IBUITabBarItem" key="IBUITabBarItem" id="948598800">
-							<string key="IBUITitle">Cloud Files</string>
-							<object class="NSCustomResource" key="IBUIImage">
-								<string key="NSClassName">NSImage</string>
-								<string key="NSResourceName">cloud-files.png</string>
-							</object>
-							<reference key="IBUITabBar"/>
-						</object>
-						<reference key="IBUIParentViewController" ref="1034742383"/>
-						<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
-						<object class="IBUINavigationBar" key="IBUINavigationBar" id="385642874">
-							<nil key="NSNextResponder"/>
-							<int key="NSvFlags">256</int>
-							<string key="NSFrameSize">{0, 0}</string>
-							<bool key="IBUIOpaque">NO</bool>
-							<bool key="IBUIClipsSubviews">YES</bool>
-							<bool key="IBUIMultipleTouchEnabled">YES</bool>
-							<reference key="IBUITintColor" ref="381719783"/>
-						</object>
-						<object class="NSMutableArray" key="IBUIViewControllers">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUIViewController" id="316762261">
-								<object class="IBUITableView" key="IBUIView" id="16857751">
-									<nil key="NSNextResponder"/>
-									<int key="NSvFlags">274</int>
-									<string key="NSFrameSize">{320, 367}</string>
-									<reference key="IBUIBackgroundColor" ref="378340342"/>
-									<bool key="IBUIOpaque">NO</bool>
-									<bool key="IBUIClipsSubviews">YES</bool>
-									<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
-									<bool key="IBUIBouncesZoom">NO</bool>
-									<int key="IBUISeparatorStyle">1</int>
-									<int key="IBUISectionIndexMinimumDisplayRowCount">0</int>
-									<bool key="IBUIShowsSelectionImmediatelyOnTouchBegin">YES</bool>
-									<float key="IBUIRowHeight">44</float>
-									<float key="IBUISectionHeaderHeight">22</float>
-									<float key="IBUISectionFooterHeight">22</float>
-								</object>
-								<object class="IBUINavigationItem" key="IBUINavigationItem" id="182301461">
-									<string key="IBUITitle">Containers</string>
-								</object>
-								<reference key="IBUIParentViewController" ref="797453152"/>
-							</object>
-						</object>
-					</object>
+					<reference ref="797453152"/>
 				</object>
 				<object class="IBUITabBar" key="IBUITabBar" id="795333663">
 					<nil key="NSNextResponder"/>
