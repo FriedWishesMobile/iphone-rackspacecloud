@@ -19,6 +19,7 @@
 #import "Response.h"
 #import "ResetPasswordController.h"
 #import "Image.h"
+#import "TextFieldCell.h"
 
 #define kServerDetails 0
 #define kPublicIPs 1
@@ -30,7 +31,7 @@
 @synthesize server, footerView, statusCell, spinnerView, serversRootViewController, saveButton;
 
 NSString *rebootMode;
-EditableCell *serverNameCell;
+TextFieldCell *serverNameCell;
 NSString *initialFlavorId;
 
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -42,9 +43,11 @@ NSString *initialFlavorId;
 		self.navigationItem.rightBarButtonItem.enabled = NO;
 
 		// set up editable cell for server name
-		serverNameCell = [[EditableCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"ServerNameCell"];
+		//serverNameCell = [[EditableCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"ServerNameCell"];
+		serverNameCell = [[TextFieldCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:@"ServerNameCell"];
 		serverNameCell.selectionStyle = UITableViewCellSelectionStyleNone;
-		serverNameCell.labelField.text = NSLocalizedString(@"Name", @"Server Name cell label");
+		serverNameCell.textLabel.text = NSLocalizedString(@"Name", @"Server Name cell label");
+		//serverNameCell.labelField.text = NSLocalizedString(@"Name", @"Server Name cell label");
 		
 		serverNameCell.textField.keyboardType = UIKeyboardTypeDefault;
 		serverNameCell.textField.delegate = self;
@@ -177,7 +180,7 @@ NSString *initialFlavorId;
 			statusCell.textLabel.text = NSLocalizedString(@"Status", @"Server Status cell label");
 		}
 		
-		if (indexPath.row == 0) {	
+		if (indexPath.row == 0) {
 			serverNameCell.selectionStyle = UITableViewCellSelectionStyleNone;
 			return serverNameCell;
 		} else if (indexPath.row == 1) {

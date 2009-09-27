@@ -19,6 +19,7 @@
 		27199C49106B318300944AA9 /* AddObject.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27199C48106B318300944AA9 /* AddObject.xib */; };
 		271ADAE0106DAC0300066137 /* AddServer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 271ADADF106DAC0300066137 /* AddServer.xib */; };
 		271ADB0B106DAF0D00066137 /* ResetPasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 271ADB0A106DAF0D00066137 /* ResetPasswordController.xib */; };
+		271ADB31106EECF500066137 /* TextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 271ADB30106EECF500066137 /* TextFieldCell.m */; };
 		272EF03D101593DD00DB17A1 /* AddServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 272EF03C101593DD00DB17A1 /* AddServerViewController.m */; };
 		272EF0AE1015999800DB17A1 /* ServerNameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 272EF0AC1015999800DB17A1 /* ServerNameController.m */; };
 		272EF0AF1015999800DB17A1 /* ServerNameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 272EF0AD1015999800DB17A1 /* ServerNameController.xib */; };
@@ -134,6 +135,8 @@
 		271ADAE2106DAC0A00066137 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/AddServer.xib; sourceTree = "<group>"; };
 		271ADB0C106DAF1100066137 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = Classes/es.lproj/ResetPasswordController.xib; sourceTree = "<group>"; };
 		271ADB0D106DAF1300066137 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = Classes/fr.lproj/ResetPasswordController.xib; sourceTree = "<group>"; };
+		271ADB2F106EECF500066137 /* TextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldCell.h; sourceTree = "<group>"; };
+		271ADB30106EECF500066137 /* TextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldCell.m; sourceTree = "<group>"; };
 		272EF038101593B500DB17A1 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/AddServer.xib; sourceTree = "<group>"; };
 		272EF03B101593DD00DB17A1 /* AddServerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddServerViewController.h; sourceTree = "<group>"; };
 		272EF03C101593DD00DB17A1 /* AddServerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddServerViewController.m; sourceTree = "<group>"; };
@@ -680,6 +683,8 @@
 				276968FC1055EDBE00D64A7B /* SpinnerAccessoryCell.m */,
 				2743D0971060B22C00EF51D1 /* GroupSpinnerCell.h */,
 				2743D0981060B22C00EF51D1 /* GroupSpinnerCell.m */,
+				271ADB2F106EECF500066137 /* TextFieldCell.h */,
+				271ADB30106EECF500066137 /* TextFieldCell.m */,
 			);
 			name = "Table Cells";
 			sourceTree = "<group>";
@@ -1072,6 +1077,7 @@
 				27FEADA9104A06470042BBFC /* WebFileViewController.m in Sources */,
 				276968FD1055EDBE00D64A7B /* SpinnerAccessoryCell.m in Sources */,
 				2743D0991060B22C00EF51D1 /* GroupSpinnerCell.m in Sources */,
+				271ADB31106EECF500066137 /* TextFieldCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
