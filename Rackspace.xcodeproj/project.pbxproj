@@ -20,6 +20,7 @@
 		271ADAE0106DAC0300066137 /* AddServer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 271ADADF106DAC0300066137 /* AddServer.xib */; };
 		271ADB0B106DAF0D00066137 /* ResetPasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 271ADB0A106DAF0D00066137 /* ResetPasswordController.xib */; };
 		271ADB31106EECF500066137 /* TextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 271ADB30106EECF500066137 /* TextFieldCell.m */; };
+		271ADC2D1070610400066137 /* WebFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 271ADC2C1070610400066137 /* WebFileViewController.xib */; };
 		272EF03D101593DD00DB17A1 /* AddServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 272EF03C101593DD00DB17A1 /* AddServerViewController.m */; };
 		272EF0AE1015999800DB17A1 /* ServerNameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 272EF0AC1015999800DB17A1 /* ServerNameController.m */; };
 		272EF0AF1015999800DB17A1 /* ServerNameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 272EF0AD1015999800DB17A1 /* ServerNameController.xib */; };
@@ -51,7 +52,6 @@
 		27D86F781041DDCA00B805A9 /* ObjectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D86F771041DDCA00B805A9 /* ObjectView.xib */; };
 		27DA9063106C70F600D6A2AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27DA9061106C70F600D6A2AA /* Localizable.strings */; };
 		27FEADA9104A06470042BBFC /* WebFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FEADA7104A06470042BBFC /* WebFileViewController.m */; };
-		27FEADAA104A06470042BBFC /* WebFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27FEADA8104A06470042BBFC /* WebFileViewController.xib */; };
 		28216C970DB411BC00E5133A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28216C960DB411BC00E5133A /* FirstViewController.m */; };
 		282CCBFE0DB6C98000C4EA27 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282CCBFD0DB6C98000C4EA27 /* SecondView.xib */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
@@ -131,11 +131,10 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27038BA8100EC3B600063204 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		271ADAE1106DAC0700066137 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/AddServer.xib; sourceTree = "<group>"; };
-		271ADAE2106DAC0A00066137 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/AddServer.xib; sourceTree = "<group>"; };
 		271ADB0C106DAF1100066137 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = Classes/es.lproj/ResetPasswordController.xib; sourceTree = "<group>"; };
-		271ADB0D106DAF1300066137 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = Classes/fr.lproj/ResetPasswordController.xib; sourceTree = "<group>"; };
 		271ADB2F106EECF500066137 /* TextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldCell.h; sourceTree = "<group>"; };
 		271ADB30106EECF500066137 /* TextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldCell.m; sourceTree = "<group>"; };
+		271ADC2E1070610800066137 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = Classes/es.lproj/WebFileViewController.xib; sourceTree = "<group>"; };
 		272EF038101593B500DB17A1 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/AddServer.xib; sourceTree = "<group>"; };
 		272EF03B101593DD00DB17A1 /* AddServerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddServerViewController.h; sourceTree = "<group>"; };
 		272EF03C101593DD00DB17A1 /* AddServerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddServerViewController.m; sourceTree = "<group>"; };
@@ -185,7 +184,6 @@
 		27A3C4E31019762500198388 /* RenameServerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RenameServerController.xib; path = Classes/RenameServerController.xib; sourceTree = "<group>"; };
 		27D86F771041DDCA00B805A9 /* ObjectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObjectView.xib; sourceTree = "<group>"; };
 		27DA9062106C70F600D6A2AA /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		27DA9069106C713B00D6A2AA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		27DA906A106C714700D6A2AA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		27EF49A6106C78A800EEDAC3 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/AddObject.xib; sourceTree = "<group>"; };
 		27EF49A7106C78A800EEDAC3 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/ImageView.xib; sourceTree = "<group>"; };
@@ -197,14 +195,9 @@
 		27EF49B7106C78BB00EEDAC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LoginView.xib; sourceTree = "<group>"; };
 		27EF49B8106C78BB00EEDAC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		27EF49B9106C78BB00EEDAC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ServerView.xib; sourceTree = "<group>"; };
-		27EF49BA106C78C800EEDAC3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/AddObject.xib; sourceTree = "<group>"; };
-		27EF49BB106C78C800EEDAC3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/ImageView.xib; sourceTree = "<group>"; };
-		27EF49BC106C78C800EEDAC3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/LoginView.xib; sourceTree = "<group>"; };
-		27EF49BD106C78C800EEDAC3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		27EF49BE106C78C800EEDAC3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/ServerView.xib; sourceTree = "<group>"; };
 		27FEADA6104A06470042BBFC /* WebFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebFileViewController.h; sourceTree = "<group>"; };
 		27FEADA7104A06470042BBFC /* WebFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebFileViewController.m; sourceTree = "<group>"; };
-		27FEADA8104A06470042BBFC /* WebFileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WebFileViewController.xib; path = Classes/WebFileViewController.xib; sourceTree = "<group>"; };
+		27FEADA8104A06470042BBFC /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Classes/English.lproj/WebFileViewController.xib; sourceTree = "<group>"; };
 		28216C950DB411BC00E5133A /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		28216C960DB411BC00E5133A /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		282CCBFD0DB6C98000C4EA27 /* SecondView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondView.xib; sourceTree = "<group>"; };
@@ -542,7 +535,7 @@
 		2786B0680FFC6B6D002B852B /* User Interfaces */ = {
 			isa = PBXGroup;
 			children = (
-				27FEADA8104A06470042BBFC /* WebFileViewController.xib */,
+				271ADC2C1070610400066137 /* WebFileViewController.xib */,
 				2793CA561016D56D009EB8C3 /* Edit Server */,
 				272EF0AA1015997900DB17A1 /* Add Server */,
 				27199C2D106B30BB00944AA9 /* LoginView.xib */,
@@ -985,7 +978,7 @@
 				2777BB9E101C57F20043D3C1 /* AddServerFlavorController.xib in Resources */,
 				2777BBA3101C57FC0043D3C1 /* AddServerImageController.xib in Resources */,
 				27D86F781041DDCA00B805A9 /* ObjectView.xib in Resources */,
-				27FEADAA104A06470042BBFC /* WebFileViewController.xib in Resources */,
+				271ADC2D1070610400066137 /* WebFileViewController.xib in Resources */,
 				27DA9063106C70F600D6A2AA /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1083,7 +1076,6 @@
 			children = (
 				27EF49A9106C78A800EEDAC3 /* es */,
 				27EF49B8106C78BB00EEDAC3 /* en */,
-				27EF49BD106C78C800EEDAC3 /* fr */,
 			);
 			name = MainWindow.xib;
 			sourceTree = "<group>";
@@ -1093,7 +1085,6 @@
 			children = (
 				27EF49A8106C78A800EEDAC3 /* es */,
 				27EF49B7106C78BB00EEDAC3 /* en */,
-				27EF49BC106C78C800EEDAC3 /* fr */,
 			);
 			name = LoginView.xib;
 			sourceTree = "<group>";
@@ -1103,7 +1094,6 @@
 			children = (
 				27EF49AA106C78A800EEDAC3 /* es */,
 				27EF49B9106C78BB00EEDAC3 /* en */,
-				27EF49BE106C78C800EEDAC3 /* fr */,
 			);
 			name = ServerView.xib;
 			sourceTree = "<group>";
@@ -1113,7 +1103,6 @@
 			children = (
 				27EF49A7106C78A800EEDAC3 /* es */,
 				27EF49B6106C78BB00EEDAC3 /* en */,
-				27EF49BB106C78C800EEDAC3 /* fr */,
 			);
 			name = ImageView.xib;
 			sourceTree = "<group>";
@@ -1123,7 +1112,6 @@
 			children = (
 				27EF49A6106C78A800EEDAC3 /* es */,
 				27EF49B5106C78BB00EEDAC3 /* en */,
-				27EF49BA106C78C800EEDAC3 /* fr */,
 			);
 			name = AddObject.xib;
 			sourceTree = "<group>";
@@ -1133,7 +1121,6 @@
 			children = (
 				272EF038101593B500DB17A1 /* English */,
 				271ADAE1106DAC0700066137 /* es */,
-				271ADAE2106DAC0A00066137 /* fr */,
 			);
 			name = AddServer.xib;
 			sourceTree = "<group>";
@@ -1143,16 +1130,23 @@
 			children = (
 				2777BA87101C40010043D3C1 /* English */,
 				271ADB0C106DAF1100066137 /* es */,
-				271ADB0D106DAF1300066137 /* fr */,
 			);
 			name = ResetPasswordController.xib;
+			sourceTree = "<group>";
+		};
+		271ADC2C1070610400066137 /* WebFileViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27FEADA8104A06470042BBFC /* English */,
+				271ADC2E1070610800066137 /* es */,
+			);
+			name = WebFileViewController.xib;
 			sourceTree = "<group>";
 		};
 		27DA9061106C70F600D6A2AA /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				27DA9062106C70F600D6A2AA /* en */,
-				27DA9069106C713B00D6A2AA /* fr */,
 				27DA906A106C714700D6A2AA /* es */,
 			);
 			name = Localizable.strings;
