@@ -882,7 +882,7 @@
 		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1286, 670}}";
-			sepNavSelRange = "{381, 0}";
+			sepNavSelRange = "{382, 0}";
 			sepNavVisRange = "{0, 382}";
 		};
 	};
@@ -3024,9 +3024,9 @@
 	};
 	27E6F95C107084B900E97AF1 /* Root.strings */ = {
 		isa = PBXFileReference;
-		lastKnownFileType = text.plist.strings;
-		path = Root.strings;
-		sourceTree = "<group>";
+		name = Root.strings;
+		path = /Users/mike/workspace/personal/rackphone/Settings.bundle/es.lproj/Root.strings;
+		sourceTree = "<absolute>";
 	};
 	27E6F961107084C900E97AF1 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -3070,7 +3070,7 @@
 		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1286, 670}}";
-			sepNavSelRange = "{400, 0}";
+			sepNavSelRange = "{399, 0}";
 			sepNavVisRange = "{0, 400}";
 		};
 	};
@@ -3411,7 +3411,7 @@
 					659,
 					60,
 					20,
-					48.16259765625,
+					48,
 					43,
 					43,
 				);
@@ -3584,7 +3584,7 @@
 	4C3B1D1F0FDA14CA00AE2133 /* DetailCell.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {877, 1408}}";
-			sepNavSelRange = "{1206, 0}";
+			sepNavSelRange = "{664, 0}";
 			sepNavVisRange = "{0, 1773}";
 		};
 	};
@@ -3616,6 +3616,13 @@
 			sepNavVisRange = "{0, 1332}";
 			sepNavWindowFrame = "{{40, 137}, {1095, 663}}";
 		};
+	};
+	4C3B1D730FDA1D0E00AE2133 /* Default-old.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Default-old.png";
+		path = "/Users/mike/workspace/personal/rackphone/Default-old.png";
+		sourceTree = "<absolute>";
 	};
 	4C3B1E430FDC3D5300AE2133 /* NSString+SBJSON.m */ = {
 		uiCtxt = {

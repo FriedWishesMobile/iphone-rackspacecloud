@@ -60,7 +60,6 @@
 		4C3B1D230FDA14CA00AE2133 /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B1D1F0FDA14CA00AE2133 /* DetailCell.m */; };
 		4C3B1D240FDA14CA00AE2133 /* SecureEditableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B1D210FDA14CA00AE2133 /* SecureEditableCell.m */; };
 		4C3B1D290FDA14F300AE2133 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B1D280FDA14F300AE2133 /* LoginViewController.m */; };
-		4C3B1D740FDA1D0E00AE2133 /* Default-old.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C3B1D730FDA1D0E00AE2133 /* Default-old.png */; };
 		4C3B1E6C0FDC3D5300AE2133 /* NSString+InflectionSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B1E340FDC3D5300AE2133 /* NSString+InflectionSupport.m */; };
 		4C3B1E6D0FDC3D5300AE2133 /* NSData+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B1E360FDC3D5300AE2133 /* NSData+Additions.m */; };
 		4C3B1E6E0FDC3D5300AE2133 /* NSObject+PropertySupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B1E380FDC3D5300AE2133 /* NSObject+PropertySupport.m */; };
@@ -212,7 +211,6 @@
 		4C3B1D210FDA14CA00AE2133 /* SecureEditableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecureEditableCell.m; sourceTree = "<group>"; };
 		4C3B1D270FDA14F300AE2133 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		4C3B1D280FDA14F300AE2133 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		4C3B1D730FDA1D0E00AE2133 /* Default-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-old.png"; sourceTree = "<group>"; };
 		4C3B1E310FDC3D5300AE2133 /* CoreSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreSupport.h; sourceTree = "<group>"; };
 		4C3B1E330FDC3D5300AE2133 /* NSString+InflectionSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+InflectionSupport.h"; sourceTree = "<group>"; };
 		4C3B1E340FDC3D5300AE2133 /* NSString+InflectionSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+InflectionSupport.m"; sourceTree = "<group>"; };
@@ -626,7 +624,6 @@
 				4C9982EA0FEE132F005D12B7 /* OS Icons */,
 				4C0F83970FE4F31C001946C7 /* Default.png */,
 				4C0F82C00FE4D9BC001946C7 /* Icon.png */,
-				4C3B1D730FDA1D0E00AE2133 /* Default-old.png */,
 				8D1107310486CEB800E47090 /* Rackspace-Info.plist */,
 				4C3B1F220FDCA21400AE2133 /* Settings.bundle */,
 				27038BA8100EC3B600063204 /* Entitlements.plist */,
@@ -948,7 +945,6 @@
 			files = (
 				27199C13106B2E5600944AA9 /* MainWindow.xib in Resources */,
 				282CCBFE0DB6C98000C4EA27 /* SecondView.xib in Resources */,
-				4C3B1D740FDA1D0E00AE2133 /* Default-old.png in Resources */,
 				27199C2E106B30BB00944AA9 /* LoginView.xib in Resources */,
 				4C3B1F230FDCA21400AE2133 /* Settings.bundle in Resources */,
 				4C0F82C10FE4D9BC001946C7 /* Icon.png in Resources */,
