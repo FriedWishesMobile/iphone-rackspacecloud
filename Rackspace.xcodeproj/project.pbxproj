@@ -173,6 +173,10 @@
 		2786B66F0FFEC75B002B852B /* IPGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPGroupViewController.h; sourceTree = "<group>"; };
 		2786B6700FFEC75B002B852B /* IPGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPGroupViewController.m; sourceTree = "<group>"; };
 		2786B6750FFEC7A1002B852B /* IPGroupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IPGroupView.xib; sourceTree = "<group>"; };
+		2788DB3A10731F95004482C9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2788DB3B10731FAF004482C9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = Classes/fr.lproj/WebFileViewController.xib; sourceTree = "<group>"; };
+		2788DB3D10732005004482C9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = Classes/fr.lproj/ResetPasswordController.xib; sourceTree = "<group>"; };
+		2788DB3F10732029004482C9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/AddServer.xib; sourceTree = "<group>"; };
 		278D8B561013E56F0060DBA1 /* AddObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddObjectViewController.h; sourceTree = "<group>"; };
 		278D8B571013E56F0060DBA1 /* AddObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddObjectViewController.m; sourceTree = "<group>"; };
 		2793CA571016D5BD009EB8C3 /* ResizeServerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResizeServerController.h; sourceTree = "<group>"; };
@@ -182,7 +186,7 @@
 		27A3C4E21019762500198388 /* RenameServerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenameServerController.m; sourceTree = "<group>"; };
 		27A3C4E31019762500198388 /* RenameServerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RenameServerController.xib; path = Classes/RenameServerController.xib; sourceTree = "<group>"; };
 		27D86F771041DDCA00B805A9 /* ObjectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObjectView.xib; sourceTree = "<group>"; };
-		27DA9062106C70F600D6A2AA /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		27DA9062106C70F600D6A2AA /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		27DA906A106C714700D6A2AA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		27EF49A6106C78A800EEDAC3 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/AddObject.xib; sourceTree = "<group>"; };
 		27EF49A7106C78A800EEDAC3 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/ImageView.xib; sourceTree = "<group>"; };
@@ -1117,6 +1121,7 @@
 			children = (
 				272EF038101593B500DB17A1 /* English */,
 				271ADAE1106DAC0700066137 /* es */,
+				2788DB3F10732029004482C9 /* fr */,
 			);
 			name = AddServer.xib;
 			sourceTree = "<group>";
@@ -1126,6 +1131,7 @@
 			children = (
 				2777BA87101C40010043D3C1 /* English */,
 				271ADB0C106DAF1100066137 /* es */,
+				2788DB3D10732005004482C9 /* fr */,
 			);
 			name = ResetPasswordController.xib;
 			sourceTree = "<group>";
@@ -1135,6 +1141,7 @@
 			children = (
 				27FEADA8104A06470042BBFC /* English */,
 				271ADC2E1070610800066137 /* es */,
+				2788DB3B10731FAF004482C9 /* fr */,
 			);
 			name = WebFileViewController.xib;
 			sourceTree = "<group>";
@@ -1144,6 +1151,7 @@
 			children = (
 				27DA9062106C70F600D6A2AA /* en */,
 				27DA906A106C714700D6A2AA /* es */,
+				2788DB3A10731F95004482C9 /* fr */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
