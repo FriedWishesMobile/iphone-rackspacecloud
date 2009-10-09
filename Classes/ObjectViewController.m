@@ -29,9 +29,9 @@ SpinnerAccessoryCell *attachCell;
 - (BOOL)fileIsAudioOrVideo {
 	NSArray *audioContentTypes = [NSArray arrayWithObjects:@"application/octet-stream", nil];
 	NSArray *audioFileExtensions = [NSArray arrayWithObjects:@"m4a", @"mp3", @"wav", @"aiff", @"aac", @"aif", @"aifc", @"amr",
-									@"caf", @"m2a", @"m4p", @"mov", @"mpg", nil];
+									@"caf", @"m2a", @"m4p", nil];
 	BOOL isAudio = [self.cfObject.contentType rangeOfString:@"audio/"].location == 0;
-	BOOL isVideo = [self.cfObject.contentType rangeOfString:@"video/"].location == 0;
+	//BOOL isVideo = [self.cfObject.contentType rangeOfString:@"video/"].location == 0;
 	
 	BOOL hasAudioContentType = NO;
 	for (int i = 0; i < [audioContentTypes count]; i++) {
@@ -49,7 +49,7 @@ SpinnerAccessoryCell *attachCell;
 		}
 	}
 	
-	return isAudio || isVideo || hasAudioContentType || hasAudioFileExtension;
+	return isAudio || hasAudioContentType || hasAudioFileExtension;
 }
 
 - (BOOL)canPreviewFile {
