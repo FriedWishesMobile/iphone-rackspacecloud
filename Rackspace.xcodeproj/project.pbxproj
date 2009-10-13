@@ -188,6 +188,17 @@
 		27A3C4E11019762500198388 /* RenameServerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenameServerController.h; sourceTree = "<group>"; };
 		27A3C4E21019762500198388 /* RenameServerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenameServerController.m; sourceTree = "<group>"; };
 		27A3C4E31019762500198388 /* RenameServerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RenameServerController.xib; path = Classes/RenameServerController.xib; sourceTree = "<group>"; };
+		27C9C1E81084452600729797 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		27C9C2021084473F00729797 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = Classes/de.lproj/WebFileViewController.xib; sourceTree = "<group>"; };
+		27C9C2041084476700729797 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = Classes/de.lproj/ResetPasswordController.xib; sourceTree = "<group>"; };
+		27C9C2061084479600729797 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/AddServer.xib; sourceTree = "<group>"; };
+		27C9C20A108447C000729797 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/LoginView.xib; sourceTree = "<group>"; };
+		27C9C20C108447E300729797 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		27C9C20E1084482900729797 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/ServerView.xib; sourceTree = "<group>"; };
+		27C9C2111084485200729797 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/ImageView.xib; sourceTree = "<group>"; };
+		27C9C2121084485400729797 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/ImageView.xib; sourceTree = "<group>"; };
+		27C9C2141084486E00729797 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/AddObject.xib; sourceTree = "<group>"; };
+		27C9C2151084487000729797 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/AddObject.xib; sourceTree = "<group>"; };
 		27D86F771041DDCA00B805A9 /* ObjectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObjectView.xib; sourceTree = "<group>"; };
 		27DA9062106C70F600D6A2AA /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		27DA906A106C714700D6A2AA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -937,6 +948,7 @@
 				en,
 				fr,
 				it,
+				de,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Rackspace */;
 			projectDirPath = "";
@@ -1082,6 +1094,7 @@
 				27EF49A9106C78A800EEDAC3 /* es */,
 				27EF49B8106C78BB00EEDAC3 /* en */,
 				277EE585107DC2BD00C793A3 /* fr */,
+				27C9C20C108447E300729797 /* de */,
 			);
 			name = MainWindow.xib;
 			sourceTree = "<group>";
@@ -1092,6 +1105,7 @@
 				27EF49A8106C78A800EEDAC3 /* es */,
 				27EF49B7106C78BB00EEDAC3 /* en */,
 				277EE56B107DC13F00C793A3 /* fr */,
+				27C9C20A108447C000729797 /* de */,
 			);
 			name = LoginView.xib;
 			sourceTree = "<group>";
@@ -1102,6 +1116,7 @@
 				27EF49AA106C78A800EEDAC3 /* es */,
 				27EF49B9106C78BB00EEDAC3 /* en */,
 				277EE570107DC17F00C793A3 /* fr */,
+				27C9C20E1084482900729797 /* de */,
 			);
 			name = ServerView.xib;
 			sourceTree = "<group>";
@@ -1111,6 +1126,8 @@
 			children = (
 				27EF49A7106C78A800EEDAC3 /* es */,
 				27EF49B6106C78BB00EEDAC3 /* en */,
+				27C9C2111084485200729797 /* fr */,
+				27C9C2121084485400729797 /* de */,
 			);
 			name = ImageView.xib;
 			sourceTree = "<group>";
@@ -1120,6 +1137,8 @@
 			children = (
 				27EF49A6106C78A800EEDAC3 /* es */,
 				27EF49B5106C78BB00EEDAC3 /* en */,
+				27C9C2141084486E00729797 /* fr */,
+				27C9C2151084487000729797 /* de */,
 			);
 			name = AddObject.xib;
 			sourceTree = "<group>";
@@ -1130,6 +1149,7 @@
 				272EF038101593B500DB17A1 /* en */,
 				271ADAE1106DAC0700066137 /* es */,
 				2788DB3F10732029004482C9 /* fr */,
+				27C9C2061084479600729797 /* de */,
 			);
 			name = AddServer.xib;
 			sourceTree = "<group>";
@@ -1140,6 +1160,7 @@
 				2777BA87101C40010043D3C1 /* en */,
 				271ADB0C106DAF1100066137 /* es */,
 				2788DB3D10732005004482C9 /* fr */,
+				27C9C2041084476700729797 /* de */,
 			);
 			name = ResetPasswordController.xib;
 			sourceTree = "<group>";
@@ -1150,6 +1171,7 @@
 				27FEADA8104A06470042BBFC /* en */,
 				271ADC2E1070610800066137 /* es */,
 				2788DB3B10731FAF004482C9 /* fr */,
+				27C9C2021084473F00729797 /* de */,
 			);
 			name = WebFileViewController.xib;
 			sourceTree = "<group>";
@@ -1160,6 +1182,7 @@
 				27DA9062106C70F600D6A2AA /* en */,
 				27DA906A106C714700D6A2AA /* es */,
 				2788DB3A10731F95004482C9 /* fr */,
+				27C9C1E81084452600729797 /* de */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
