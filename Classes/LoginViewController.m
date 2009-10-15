@@ -66,6 +66,7 @@
 	app.images = [NSMutableArray arrayWithArray:[Image findAllRemoteWithResponse:nil]];
 	
 	NSMutableArray *newImages = [[NSMutableArray alloc] initWithCapacity:10];
+	
 	// remove images that don't have status of ACTIVE
 	for (int i = 0; i < [app.images count]; i++) {
 		Image *image = (Image *) [app.images objectAtIndex:i];
@@ -75,7 +76,12 @@
 	}
 	
 	app.images = [NSMutableArray arrayWithArray:newImages];
-	
+
+	// translate "server"
+	for (int i = 0; i < [app.flavors count]; i++) {
+		Flavor *flavor = (Flavor *) [app.flavors objectAtIndex:i];
+		flavor.flavorName = [flavor.flavorName stringByReplacingOccurrencesOfString:@"server" withString:NSLocalizedString(@"server", @"server")];
+	}	
 	
 	[UIView beginAnimations:nil context:NULL];
 	[UIView setAnimationDuration:0.25];
