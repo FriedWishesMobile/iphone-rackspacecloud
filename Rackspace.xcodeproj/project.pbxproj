@@ -1236,12 +1236,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Michael Mayo";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Michael Mayo";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "463E958A-049E-4AE2-AA4E-1EF305F3F343";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1BCC2A80-25DD-4543-BB8B-8BB506B72DD8";
 				SDKROOT = iphoneos3.0;
 			};
 			name = Release;
