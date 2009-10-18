@@ -212,7 +212,7 @@ SpinnerAccessoryCell *attachCell;
 			if ([self fileIsAudioOrVideo]) {
 				// let's assume it's audio or video... try and play it!
 				RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];
-				NSString *urlString = [NSString stringWithFormat:@"%@/%@", self.container.cdnUrl, self.cfObject.name];
+				NSString *urlString = [NSString stringWithFormat:@"%@/%@", self.container.cdnUrl, [Container urlencode:self.cfObject.name]];
 				NSURL *url = [[NSURL alloc] initWithString:urlString];
 				[app initAndPlayMovie:url];
 			} else {

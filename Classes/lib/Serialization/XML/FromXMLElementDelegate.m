@@ -309,7 +309,7 @@ BOOL parsingIPGroups = NO;
 		if ([self.unclosedProperties count] > 0) {
 			//handle arrays as a special case
 			
-			NSArray *obj = [self.unclosedProperties lastObject];
+			//NSArray *obj = [self.unclosedProperties lastObject];
 			
 			//NSLog(@"obj is a %@ with count %i", [obj class], [obj count]);
 			

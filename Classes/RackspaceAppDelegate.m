@@ -139,8 +139,8 @@ NSString *kBackgroundColorKey	= @"backgroundColor";
 		 */
 		
 		NSMutableDictionary *appDefaults = [NSMutableDictionary dictionaryWithCapacity:3];
-		[appDefaults setObject:scalingModeDefault forKey:kScalingModeKey];
-		[appDefaults setObject:controlModeDefault forKey:kControlModeKey];
+		//[appDefaults setObject:scalingModeDefault forKey:kScalingModeKey];
+		//[appDefaults setObject:controlModeDefault forKey:kControlModeKey];
 		[appDefaults setObject:backgroundColorDefault forKey:kBackgroundColorKey];
         
 //        [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
