@@ -49,7 +49,7 @@ SpinnerAccessoryCell *attachCell;
 		}
 	}
 	
-	return isAudio || hasAudioContentType || hasAudioFileExtension;
+	return isAudio || (hasAudioContentType && hasAudioFileExtension);
 }
 
 - (BOOL)canPreviewFile {
