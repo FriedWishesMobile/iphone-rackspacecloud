@@ -222,8 +222,10 @@
     }
     	
 	usernameCell.textField.keyboardType = UIKeyboardTypeDefault;
+	usernameCell.selectionStyle = UITableViewCellSelectionStyleNone;
 	usernameCell.textField.delegate = self;	
 	apiKeyCell.textField.keyboardType = UIKeyboardTypeDefault;
+	apiKeyCell.selectionStyle = UITableViewCellSelectionStyleNone;
 	apiKeyCell.textField.delegate = self;	
 	
     // Set up the cell...
