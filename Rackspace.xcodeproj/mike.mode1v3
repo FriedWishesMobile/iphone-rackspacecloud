@@ -266,12 +266,6 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
-								<string>2786B0640FFC6B46002B852B</string>
-								<string>2738C3881050B17E007D6C85</string>
-								<string>272EF02E1015937A00DB17A1</string>
-								<string>2738C38A1050B1A9007D6C85</string>
-								<string>29B97317FDCFA39411CA2CEA</string>
-								<string>4C3B1F220FDCA21400AE2133</string>
 								<string>29B97323FDCFA39411CA2CEA</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
@@ -280,12 +274,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>10</integer>
-									<integer>8</integer>
-									<integer>6</integer>
-									<integer>5</integer>
-									<integer>3</integer>
-									<integer>1</integer>
+									<integer>20</integer>
+									<integer>19</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -309,7 +299,7 @@
 							<real>251</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>636 464 1105 678 0 0 1920 1178 </string>
+						<string>216 480 1105 678 0 0 1920 1178 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -339,7 +329,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>270ED787108EC07000AE67DE</string>
+										<string>270ED88C108ECA8F00AE67DE</string>
 										<key>history</key>
 										<array>
 											<string>2786AE080FFC368D002B852B</string>
@@ -456,12 +446,12 @@
 											<string>270ED6B6108EAFAA00AE67DE</string>
 											<string>270ED6C7108EB53D00AE67DE</string>
 											<string>270ED6C8108EB53D00AE67DE</string>
-											<string>270ED6D5108EB98E00AE67DE</string>
 											<string>270ED72B108EBC3C00AE67DE</string>
 											<string>270ED72D108EBC3C00AE67DE</string>
 											<string>270ED72E108EBC3C00AE67DE</string>
 											<string>270ED72F108EBC3C00AE67DE</string>
-											<string>270ED766108EBCE100AE67DE</string>
+											<string>270ED7C2108EC44E00AE67DE</string>
+											<string>270ED7C3108EC44E00AE67DE</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -475,7 +465,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {832, 632}}</string>
 								<key>RubberWindowFrame</key>
-								<string>636 464 1105 678 0 0 1920 1178 </string>
+								<string>216 480 1105 678 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -495,7 +485,7 @@
 								<key>Frame</key>
 								<string>{{0, 637}, {832, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>636 464 1105 678 0 0 1920 1178 </string>
+								<string>216 480 1105 678 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -666,7 +656,7 @@
 		<string>/Users/mike/src/rackspace/iphone-rackspacecloud/Rackspace.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>636 464 1105 678 0 0 1920 1178 </string>
+	<string>216 480 1105 678 0 0 1920 1178 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
