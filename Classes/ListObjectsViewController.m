@@ -304,6 +304,8 @@ BOOL objectsLoaded = NO;
 
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+	//NSLog(@"section: %i\t\trow: %i", indexPath.section, indexPath.row);
+	
 	if (indexPath.section == kContainerDetails) {
 		static NSString *CellIdentifier = @"ContainerDetailsCell";
 		UITableViewCell *cell = (UITableViewCell *) [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -403,10 +405,9 @@ BOOL objectsLoaded = NO;
 	} else if (indexPath.section == kFiles) {
 		if (objectsLoaded) {
 			
-			static NSString *CellIdentifier = @"ObjectCell";
-			UITableViewCell *cell = (UITableViewCell *) [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
+			UITableViewCell *cell = (UITableViewCell *) [aTableView dequeueReusableCellWithIdentifier:@"ObjectCell"];
 			if (cell == nil) {
-				cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+				cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"ObjectCell"] autorelease];
 				
 				if (kRackspaceVersion >= 1.1) {
 					cell.selectionStyle = UITableViewCellSelectionStyleBlue;
@@ -418,24 +419,14 @@ BOOL objectsLoaded = NO;
 			CloudFilesObject *o = (CloudFilesObject *) [container.objects objectAtIndex:indexPath.row];	
 			cell.textLabel.text = o.name;
 			cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", o.contentType, [o humanizedBytes]];
-
-			if (kRackspaceVersion >= 1.1) {
-	//			if ([o.contentType rangeOfString:@"image/"].location == 0) {
-					cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-	//			} else {
-	//				cell.accessoryType = UITableViewCellAccessoryNone;
-	//			}
-			} else {
-				cell.accessoryType = UITableViewCellAccessoryNone;
-			}
+			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 			
 			return cell;
 			
 		} else { // show the spinner cell
-			static NSString *CellIdentifier = @"SpinnerCell";
-			GroupSpinnerCell *cell = (GroupSpinnerCell *) [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
+			GroupSpinnerCell *cell = (GroupSpinnerCell *) [aTableView dequeueReusableCellWithIdentifier:@"SpinnerCell"];
 			if (cell == nil) {
-				cell = [[[GroupSpinnerCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
+				cell = [[[GroupSpinnerCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"SpinnerCell"] autorelease];
 				cell.userInteractionEnabled = NO;
 				self.tableView.userInteractionEnabled = NO;
 			}

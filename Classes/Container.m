@@ -102,7 +102,7 @@
 	
 	elementId = [Container urlencode:elementId];
 	
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@?format=xml", app.storageUrl, [elementId stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];		
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@?format=xml&limit=200", app.storageUrl, [elementId stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];		
 	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
 	
 	Response *res = [ORConnection sendRequest:request withAuthToken:app.authToken];	

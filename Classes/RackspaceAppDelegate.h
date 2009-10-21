@@ -55,6 +55,7 @@
 
 @property (readwrite, retain) MPMoviePlayerController *moviePlayer;
 
+-(void)loadSettings;
 -(void)initAndPlayMovie:(NSURL *)movieURL;
 -(void)setMoviePlayerUserSettings;
 

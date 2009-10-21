@@ -108,6 +108,8 @@ NSString *initialFlavorId;
 		return [[server.addresses objectForKey:@"private"] count];
 	} else if (section == kActions) {
 		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];	
+		
+		
 		NSString *protocol = [defaults stringForKey:@"ssh_app_protocol_preference"];
 		if (!protocol) {
 			protocol = @"ssh://";

@@ -43,27 +43,36 @@ NSString *kBackgroundColorKey	= @"backgroundColor";
 	loginViewController = [[LoginViewController alloc] initWithNibName:@"LoginView" bundle:nil];	
 	[window addSubview:loginViewController.view];
 	
+	// register user defaults in case the Rackspace Cloud screen in the Settings app has not yet been loaded
+	[self loadSettings];
+	
 	// Register to receive a notification that the movie is now in memory and ready to play
-	[[NSNotificationCenter defaultCenter] addObserver:self 
-											 selector:@selector(moviePreloadDidFinish:) 
-												 name:MPMoviePlayerContentPreloadDidFinishNotification 
-											   object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePreloadDidFinish:) name:MPMoviePlayerContentPreloadDidFinishNotification object:nil];
 	
 	// Register to receive a notification when the movie has finished playing. 
-	[[NSNotificationCenter defaultCenter] addObserver:self 
-											 selector:@selector(moviePlayBackDidFinish:) 
-												 name:MPMoviePlayerPlaybackDidFinishNotification 
-											   object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayBackDidFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
 	
 	// Register to receive a notification when the movie scaling mode has changed. 
-	[[NSNotificationCenter defaultCenter] addObserver:self 
-											 selector:@selector(movieScalingModeDidChange:) 
-												 name:MPMoviePlayerScalingModeDidChangeNotification 
-											   object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(movieScalingModeDidChange:) name:MPMoviePlayerScalingModeDidChangeNotification object:nil];
 }
 
--(void)initAndPlayMovie:(NSURL *)movieURL
-{
+-(void)loadSettings {
+	
+	NSString *testValue = [[NSUserDefaults standardUserDefaults] stringForKey:@"ssh_app_protocol_preference"];
+	
+	if (testValue == nil) {
+		
+		// settings haven't been created, so let's create them here
+		NSDictionary *appDefaults = [NSDictionary dictionaryWithObjectsAndKeys:
+									 @"ssh://", @"ssh_app_protocol_preference",
+									 [NSNumber numberWithBool:YES], @"ssh_enabled_preference",
+									 nil];
+		[[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
+		[[NSUserDefaults standardUserDefaults] synchronize];
+	}	
+}
+
+-(void)initAndPlayMovie:(NSURL *)movieURL {
 	// Initialize a movie player object with the specified URL
 	MPMoviePlayerController *mp = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
 	if (mp)
