@@ -1241,12 +1241,12 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Michael Mayo";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rackspace Hosting";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5370AB6B-CC4A-4C6A-B6D4-C8B912CFC1A0";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "14D56F73-D2D3-4CAC-A840-B3060335BC64";
 				SDKROOT = iphoneos3.0;
 			};
 			name = Release;
