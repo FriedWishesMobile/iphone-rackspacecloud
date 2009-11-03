@@ -233,9 +233,7 @@ BOOL objectsLoaded = NO;
 - (void)viewDidLoad {
     [super viewDidLoad];	
 
-	// TODO: add back when ready to add files
-	//self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonPressed)];
-	//self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"gradient.jpg"]];
+	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonPressed)];
 
 	// show a rounded rect view
 	self.spinnerView = [[RoundedRectView alloc] initWithDefaultFrame];
