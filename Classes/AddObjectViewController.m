@@ -9,8 +9,13 @@
 #import "AddObjectViewController.h"
 #import "RackspaceAppDelegate.h"
 #import "CloudFilesObject.h"
+#import "CFAccount.h"
+#import "Container.h"
+#import "ListObjectsViewController.h"
 
 @implementation AddObjectViewController
+
+@synthesize account, container, listObjectsViewController;
 
 - (void) cancelButtonPressed:(id)sender {
 	[self dismissModalViewControllerAnimated:YES];
@@ -87,33 +92,143 @@
 	[aTableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
+#pragma mark Image Correction
+
+// Return the image rotated to the correct orientation
+- (UIImage *)scaleAndRotateImage:(UIImage *)image {
+	
+	CGImageRef imgRef = image.CGImage;
+	
+	CGFloat width = CGImageGetWidth(imgRef);
+	CGFloat height = CGImageGetHeight(imgRef);
+	CGFloat maxWidth = width;
+	CGFloat maxHeight = height;
+	
+	CGAffineTransform transform = CGAffineTransformIdentity;
+	CGRect bounds = CGRectMake(0, 0, width, height);
+	if (width > maxWidth || height > maxHeight) {
+		CGFloat ratio = width/height;
+		if (ratio > 1) {
+			bounds.size.width = maxWidth;
+			bounds.size.height = bounds.size.width / ratio;
+		}
+		else {
+			bounds.size.height = maxHeight;
+			bounds.size.width = bounds.size.height * ratio;
+		}
+	}
+	
+	CGFloat scaleRatio = bounds.size.width / width;
+	CGSize imageSize = CGSizeMake(CGImageGetWidth(imgRef), CGImageGetHeight(imgRef));
+	CGFloat boundHeight;
+	UIImageOrientation orient = image.imageOrientation;
+	switch(orient) {
+			
+		case UIImageOrientationUp: //EXIF = 1
+			transform = CGAffineTransformIdentity;
+			break;
+			
+		case UIImageOrientationUpMirrored: //EXIF = 2
+			transform = CGAffineTransformMakeTranslation(imageSize.width, 0.0);
+			transform = CGAffineTransformScale(transform, -1.0, 1.0);
+			break;
+			
+		case UIImageOrientationDown: //EXIF = 3
+			transform = CGAffineTransformMakeTranslation(imageSize.width, imageSize.height);
+			transform = CGAffineTransformRotate(transform, M_PI);
+			break;
+			
+		case UIImageOrientationDownMirrored: //EXIF = 4
+			transform = CGAffineTransformMakeTranslation(0.0, imageSize.height);
+			transform = CGAffineTransformScale(transform, 1.0, -1.0);
+			break;
+			
+		case UIImageOrientationLeftMirrored: //EXIF = 5
+			boundHeight = bounds.size.height;
+			bounds.size.height = bounds.size.width;
+			bounds.size.width = boundHeight;
+			transform = CGAffineTransformMakeTranslation(imageSize.height, imageSize.width);
+			transform = CGAffineTransformScale(transform, -1.0, 1.0);
+			transform = CGAffineTransformRotate(transform, 3.0 * M_PI / 2.0);
+			break;
+			
+		case UIImageOrientationLeft: //EXIF = 6
+			boundHeight = bounds.size.height;
+			bounds.size.height = bounds.size.width;
+			bounds.size.width = boundHeight;
+			transform = CGAffineTransformMakeTranslation(0.0, imageSize.width);
+			transform = CGAffineTransformRotate(transform, 3.0 * M_PI / 2.0);
+			break;
+			
+		case UIImageOrientationRightMirrored: //EXIF = 7
+			boundHeight = bounds.size.height;
+			bounds.size.height = bounds.size.width;
+			bounds.size.width = boundHeight;
+			transform = CGAffineTransformMakeScale(-1.0, 1.0);
+			transform = CGAffineTransformRotate(transform, M_PI / 2.0);
+			break;
+			
+		case UIImageOrientationRight: //EXIF = 8
+			boundHeight = bounds.size.height;
+			bounds.size.height = bounds.size.width;
+			bounds.size.width = boundHeight;
+			transform = CGAffineTransformMakeTranslation(imageSize.height, 0.0);
+			transform = CGAffineTransformRotate(transform, M_PI / 2.0);
+			break;
+			
+		default:
+			break;
+			//[NSException raise :NSInternalInconsistencyExceptionformat:@"Invalid image orientation"];
+			
+	}
+	
+	UIGraphicsBeginImageContext(bounds.size);
+	
+	CGContextRef context = UIGraphicsGetCurrentContext();
+	
+	if (orient == UIImageOrientationRight || orient == UIImageOrientationLeft) {
+		CGContextScaleCTM(context, -scaleRatio, scaleRatio);
+		CGContextTranslateCTM(context, -height, 0);
+	}
+	else {
+		CGContextScaleCTM(context, scaleRatio, -scaleRatio);
+		CGContextTranslateCTM(context, 0, -height);
+	}
+	
+	CGContextConcatCTM(context, transform);
+	
+	CGContextDrawImage(UIGraphicsGetCurrentContext(), CGRectMake(0, 0, width, height), imgRef);
+	UIImage *imageCopy = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	
+	return imageCopy;
+}
+
 #pragma mark Camera Methods
 
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-	[picker dismissModalViewControllerAnimated:YES];	
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {	
+	[picker dismissModalViewControllerAnimated:YES];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-	NSLog(@"showed an image!");
+
+	[picker dismissModalViewControllerAnimated:YES];
+	[self dismissModalViewControllerAnimated:YES];
+	
 	UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
-	UIImageView *iv = [[UIImageView alloc] initWithImage:image];
-	//RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];
-	//[app.window addSubview:iv];
+	RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];
 	
-	// TODO: use this to PUT to Cloud Files
+	image = [self scaleAndRotateImage:image];
+	
 	NSData *imageData = UIImagePNGRepresentation(image);
-	
 	CloudFilesObject *co = [[CloudFilesObject alloc] init];
-	
-	co.name = @"miketest.png";
+	co.name = [NSString stringWithFormat:@"cloudapp_upload_%@.png", [[[NSDate date] description] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 	co.contentType = @"image/png";
 	co.data = imageData;
-	[co createFileWithAccountName:@"MossoCloudFS_56ad0327-43d6-4ac4-9883-797f5690238e" andContainerName:@"overhrd.com"];
+	[co createFileWithAccountName:app.cloudFilesAccountName andContainerName:self.container.name];
 	
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:3.75];
-	iv.alpha = 0.0;
-	[UIView commitAnimations];
+	// refresh files list in container view
+	[self.listObjectsViewController refreshFileList];
 }
 
 
@@ -131,6 +246,9 @@
 
 
 - (void)dealloc {
+	[account release];
+	[container release];
+	[listObjectsViewController release];
     [super dealloc];
 }
 

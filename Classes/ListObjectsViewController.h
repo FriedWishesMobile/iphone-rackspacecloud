@@ -32,5 +32,6 @@
 
 - (void)showSpinnerView;
 - (void)hideSpinnerView;
+- (void)refreshFileList;
 
 @end

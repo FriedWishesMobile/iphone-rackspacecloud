@@ -25,6 +25,7 @@
 	NSString *storageUrl;
 	NSString *cdnManagementUrl;
 	NSString *authToken;
+	NSString *cloudFilesAccountName;
 	
 	NSString *usernamePreference;
 	NSString *apiKeyPreference;
@@ -47,6 +48,7 @@
 @property (nonatomic, retain) NSString *storageUrl;
 @property (nonatomic, retain) NSString *cdnManagementUrl;
 @property (nonatomic, retain) NSString *authToken;
+@property (nonatomic, retain) NSString *cloudFilesAccountName;
 
 @property (nonatomic, retain) NSString *usernamePreference;
 @property (nonatomic, retain) NSString *apiKeyPreference;

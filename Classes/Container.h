@@ -43,5 +43,6 @@
 +(NSString *)urlencode: (NSString *) url;
 
 -(Response *)save;
+-(Response *)create;
 
 @end

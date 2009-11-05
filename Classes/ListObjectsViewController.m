@@ -19,8 +19,8 @@
 #import "TextFieldCell.h"
 
 #define kContainerDetails 0
-#define kCDN -1
-#define kFiles 1
+#define kCDN 1
+#define kFiles 2
 
 @implementation ListObjectsViewController
 
@@ -73,8 +73,12 @@ BOOL objectsLoaded = NO;
 	} else {
 		self.container.cdnEnabled = @"False";
 	}
-	Response *response = [self.container save];
+	//Response *response = [self.container save];
+	Response *response = [self.container create];
 	[self hideSpinnerView];
+	
+	NSLog(@"status code = %i", response.statusCode);
+	
 	if (![response isSuccess]) {
 		[self showSaveError:response];
 	}
@@ -214,6 +218,9 @@ BOOL objectsLoaded = NO;
 
 - (void)addButtonPressed {
 	AddObjectViewController *vc = [[AddObjectViewController alloc] initWithNibName:@"AddObject" bundle:nil];
+	vc.listObjectsViewController = self;
+	vc.account = self.account;
+	vc.container = self.container;
 	[self presentModalViewController:vc animated:YES];	
 }
 
@@ -259,7 +266,7 @@ BOOL objectsLoaded = NO;
 //}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-	return 2;
+	return 3;
 }
 
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
@@ -451,6 +458,15 @@ BOOL objectsLoaded = NO;
 	[textField resignFirstResponder];
 }
 
+#pragma mark -
+#pragma mark Refresh File List
+
+- (void) refreshFileList {
+	objectsLoaded = NO;
+	[self.tableView reloadData];		
+	[NSThread detachNewThreadSelector:@selector(loadObjects) toTarget:self withObject:nil];	
+}
+
 #pragma mark Shake Feature
 - (void) accelerometer:(UIAccelerometer*)accelerometer didAccelerate:(UIAcceleration*)acceleration {
 	UIAccelerationValue length, x, y, z;
@@ -470,10 +486,7 @@ BOOL objectsLoaded = NO;
 	// see if they shook hard enough to refresh
 	if (length >= 3.0) {
 		//do what you want when there is a big shake here
-		objectsLoaded = NO;
-		[self.tableView reloadData];		
-		[NSThread detachNewThreadSelector:@selector(loadObjects) toTarget:self withObject:nil];	
-		
+		[self refreshFileList];		
 	}
 }
 

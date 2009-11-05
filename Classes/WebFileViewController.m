@@ -17,7 +17,7 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 	self.navigationItem.title = NSLocalizedString(@"Preview", @"Preview file navigation title");
-	NSString *urlString = [NSString stringWithFormat:@"%@/%@", self.container.cdnUrl, self.cfObject.name];
+	NSString *urlString = [NSString stringWithFormat:@"%@/%@", self.container.cdnUrl, [self.cfObject.name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
 	
 	NSURLRequest *request = [[NSURLRequest alloc] initWithURL: url]; 

@@ -227,7 +227,7 @@ SpinnerAccessoryCell *attachCell;
 			MFMailComposeViewController *vc = [[MFMailComposeViewController alloc] init];
 			vc.mailComposeDelegate = self;		
 			[vc setSubject:self.cfObject.name];
-			NSString *emailBody = [NSString stringWithFormat:@"%@/%@", self.container.cdnUrl, self.cfObject.name];
+			NSString *emailBody = [NSString stringWithFormat:@"%@/%@", self.container.cdnUrl, [self.cfObject.name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 			[vc setMessageBody:emailBody isHTML:NO];
 			
 			[self presentModalViewController:vc animated:YES];
@@ -242,7 +242,7 @@ SpinnerAccessoryCell *attachCell;
 			vc.mailComposeDelegate = self;
 			[vc setSubject:self.cfObject.name];
 			
-			NSString *urlString = [NSString stringWithFormat:@"%@/%@", self.container.cdnUrl, self.cfObject.name];
+			NSString *urlString = [NSString stringWithFormat:@"%@/%@", self.container.cdnUrl, [self.cfObject.name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 			NSURL *url = [NSURL URLWithString:urlString];
 			NSData *attachmentData = [NSData dataWithContentsOfURL:url];
 			[vc addAttachmentData:attachmentData mimeType:self.cfObject.contentType fileName:self.cfObject.name];

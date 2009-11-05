@@ -24,6 +24,8 @@
 		272EF03D101593DD00DB17A1 /* AddServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 272EF03C101593DD00DB17A1 /* AddServerViewController.m */; };
 		272EF0AE1015999800DB17A1 /* ServerNameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 272EF0AC1015999800DB17A1 /* ServerNameController.m */; };
 		272EF0AF1015999800DB17A1 /* ServerNameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 272EF0AD1015999800DB17A1 /* ServerNameController.xib */; };
+		2738EF3B10A24A51006EEF21 /* AddContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2738EF3910A24A51006EEF21 /* AddContainerViewController.m */; };
+		2738EF3C10A24A51006EEF21 /* AddContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2738EF3A10A24A51006EEF21 /* AddContainerViewController.xib */; };
 		2743D0991060B22C00EF51D1 /* GroupSpinnerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743D0981060B22C00EF51D1 /* GroupSpinnerCell.m */; };
 		275ACB480FFEFDE200EEB366 /* ObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275ACB470FFEFDE200EEB366 /* ObjectViewController.m */; };
 		27687767105A0A7600E0655C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27687766105A0A7600E0655C /* MediaPlayer.framework */; };
@@ -141,6 +143,9 @@
 		272EF0AB1015999800DB17A1 /* ServerNameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerNameController.h; sourceTree = "<group>"; };
 		272EF0AC1015999800DB17A1 /* ServerNameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerNameController.m; sourceTree = "<group>"; };
 		272EF0AD1015999800DB17A1 /* ServerNameController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ServerNameController.xib; path = Classes/ServerNameController.xib; sourceTree = "<group>"; };
+		2738EF3810A24A51006EEF21 /* AddContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContainerViewController.h; sourceTree = "<group>"; };
+		2738EF3910A24A51006EEF21 /* AddContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContainerViewController.m; sourceTree = "<group>"; };
+		2738EF3A10A24A51006EEF21 /* AddContainerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddContainerViewController.xib; path = Classes/AddContainerViewController.xib; sourceTree = "<group>"; };
 		2743D0971060B22C00EF51D1 /* GroupSpinnerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupSpinnerCell.h; sourceTree = "<group>"; };
 		2743D0981060B22C00EF51D1 /* GroupSpinnerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupSpinnerCell.m; sourceTree = "<group>"; };
 		275ACB460FFEFDE200EEB366 /* ObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectViewController.h; sourceTree = "<group>"; };
@@ -497,6 +502,8 @@
 			isa = PBXGroup;
 			children = (
 				2738C3931050B289007D6C85 /* List Containers */,
+				2738EF3810A24A51006EEF21 /* AddContainerViewController.h */,
+				2738EF3910A24A51006EEF21 /* AddContainerViewController.m */,
 			);
 			name = Containers;
 			sourceTree = "<group>";
@@ -553,6 +560,7 @@
 		2786B0680FFC6B6D002B852B /* User Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				2738EF3A10A24A51006EEF21 /* AddContainerViewController.xib */,
 				271ADC2C1070610400066137 /* WebFileViewController.xib */,
 				2793CA561016D56D009EB8C3 /* Edit Server */,
 				272EF0AA1015997900DB17A1 /* Add Server */,
@@ -1001,6 +1009,7 @@
 				271ADC2D1070610400066137 /* WebFileViewController.xib in Resources */,
 				27DA9063106C70F600D6A2AA /* Localizable.strings in Resources */,
 				278B71A0108C1D270073C19B /* IconBeta.png in Resources */,
+				2738EF3C10A24A51006EEF21 /* AddContainerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1086,6 +1095,7 @@
 				276968FD1055EDBE00D64A7B /* SpinnerAccessoryCell.m in Sources */,
 				2743D0991060B22C00EF51D1 /* GroupSpinnerCell.m in Sources */,
 				271ADB31106EECF500066137 /* TextFieldCell.m in Sources */,
+				2738EF3B10A24A51006EEF21 /* AddContainerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1241,12 +1251,12 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rackspace Hosting";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Michael Mayo";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "14D56F73-D2D3-4CAC-A840-B3060335BC64";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5370AB6B-CC4A-4C6A-B6D4-C8B912CFC1A0";
 				SDKROOT = iphoneos3.0;
 			};
 			name = Release;

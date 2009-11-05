@@ -61,6 +61,9 @@
 	app.cdnManagementUrl = [response.headers objectForKey:@"X-Cdn-Management-Url"];
 	app.authToken = [response.headers objectForKey:@"X-Auth-Token"];
 	
+	NSArray *components = [app.cdnManagementUrl componentsSeparatedByString:@"/"];							
+	app.cloudFilesAccountName = [components lastObject]; // account name needed to create files
+	
 	// load flavors and images here
 	app.flavors = [NSMutableArray arrayWithArray:[Flavor findAllRemoteWithResponse:nil]];
 	app.images = [NSMutableArray arrayWithArray:[Image findAllRemoteWithResponse:nil]];

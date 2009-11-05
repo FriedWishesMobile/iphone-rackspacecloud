@@ -113,7 +113,7 @@
 	return [self performSelector:@selector(fromXMLData:) withObject:res.body];
 }
 
-- (Response *)save {
+- (Response *)create {
 	RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];	
 
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@", app.storageUrl, [self.name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];	
@@ -121,7 +121,25 @@
 	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
 	[request setHTTPMethod:@"PUT"];
 	
-	[request setValue:self.ttl forHTTPHeaderField:@"X-TTL"];
+	//[request setValue:self.ttl forHTTPHeaderField:@"X-TTL"];
+	[request setValue:self.cdnEnabled forHTTPHeaderField:@"X-CDN-Enabled"];
+	
+	NSString *body = @""; //[NSString stringWithFormat:@"{ \"resize\" : { \"flavorId\" : %@ } }", self.flavorId];
+	[request setHTTPBody:[body dataUsingEncoding:NSASCIIStringEncoding]];		
+	
+	// look for X-CDN-URI header
+	return [ORConnection sendRequest:request withAuthToken:app.authToken];
+}
+
+- (Response *)save {
+	RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];	
+	
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@", app.storageUrl, [self.name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];	
+	
+	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+	[request setHTTPMethod:@"POST"];
+	
+	//[request setValue:self.ttl forHTTPHeaderField:@"X-TTL"];
 	[request setValue:self.cdnEnabled forHTTPHeaderField:@"X-CDN-Enabled"];
 	
 	NSString *body = @""; //[NSString stringWithFormat:@"{ \"resize\" : { \"flavorId\" : %@ } }", self.flavorId];

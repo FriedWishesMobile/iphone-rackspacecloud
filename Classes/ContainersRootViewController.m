@@ -13,6 +13,7 @@
 #import "SpinnerCell.h"
 #import "Response.h"
 #import "ListObjectsViewController.h"
+#import "AddContainerViewController.h"
 
 @implementation ContainersRootViewController
 
@@ -59,7 +60,16 @@ BOOL containersLoaded = NO;
 }
 
 
+- (void)addButtonPressed {
+	AddContainerViewController *vc = [[AddContainerViewController alloc] initWithNibName:@"AddContainerViewController" bundle:nil];
+	vc.containersRootViewController = self;
+	[self presentModalViewController:vc animated:YES];	
+}
+
 - (void)viewWillAppear:(BOOL)animated {
+	
+	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonPressed)];
+	
 	// set up the accelerometer for the "shake to refresh" feature
 	[[UIAccelerometer sharedAccelerometer] setUpdateInterval:(1.0 / 25)];
 	[[UIAccelerometer sharedAccelerometer] setDelegate:self];		
@@ -134,6 +144,13 @@ BOOL containersLoaded = NO;
 }
 
 #pragma mark Shake Feature
+
+- (void) refreshContainerList {
+	containersLoaded = NO;
+	[self.tableView reloadData];
+	[NSThread detachNewThreadSelector:@selector(loadContainers) toTarget:self withObject:nil];	
+}
+
 - (void) accelerometer:(UIAccelerometer*)accelerometer didAccelerate:(UIAcceleration*)acceleration {
 	UIAccelerationValue length, x, y, z;
 	
@@ -152,10 +169,7 @@ BOOL containersLoaded = NO;
 	// see if they shook hard enough to refresh
 	if (length >= 3.0) {
 		//do what you want when there is a big shake here
-		containersLoaded = NO;
-		[self.tableView reloadData];
-		[NSThread detachNewThreadSelector:@selector(loadContainers) toTarget:self withObject:nil];	
-		
+		[self refreshContainerList];
 	}
 }
 

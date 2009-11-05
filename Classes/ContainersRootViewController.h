@@ -19,4 +19,6 @@
 @property (nonatomic, retain) CFAccount *account;
 @property (nonatomic, retain) CFAccount *cdnAccount;
 
+- (void) refreshContainerList;
+
 @end
