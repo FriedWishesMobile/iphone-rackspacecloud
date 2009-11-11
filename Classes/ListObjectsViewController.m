@@ -287,7 +287,7 @@ BOOL objectsLoaded = NO;
 	if (section == kContainerDetails) {
 		rows = 2;
 	} else if (section == kCDN) {
-		rows = 3;
+		rows = 2;
 	} else { // if (section == kFiles) {		
 		if (objectsLoaded) {
 			rows = [container.objects count];
@@ -385,7 +385,7 @@ BOOL objectsLoaded = NO;
 				[cdnSwitchCell.contentView addSubview:self.cdnSwitch];
 				return cdnSwitchCell;
 				break;
-			case 1:
+			case -1: // don't show.  perhaps bring this back later
 				logSwitchCell.textLabel.text = NSLocalizedString(@"Log Retention", @"Log Retention cell label");
 				//cell.detailTextLabel.text = self.container.logRetention;
 				if (self.container.logRetention && [self.container.logRetention isEqualToString:@"True"]) {
@@ -394,7 +394,7 @@ BOOL objectsLoaded = NO;
 				[logSwitchCell.contentView addSubview:self.logSwitch];
 				return logSwitchCell;
 				break;
-			case 2:
+			case 1:
 				cell.textLabel.text = NSLocalizedString(@"TTL", @"TTL cell label");
 				cell.detailTextLabel.text = self.container.ttl;
 				break;
