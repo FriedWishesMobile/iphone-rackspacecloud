@@ -74,10 +74,11 @@ BOOL objectsLoaded = NO;
 		self.container.cdnEnabled = @"False";
 	}
 	//Response *response = [self.container save];
-	Response *response = [self.container create];
+	//Response *response = [self.container create];
+	Response *response = [self.container updateCdnAttributes];
 	[self hideSpinnerView];
 	
-	NSLog(@"status code = %i", response.statusCode);
+	NSLog(@"switch status code = %i", response.statusCode);
 	
 	if (![response isSuccess]) {
 		[self showSaveError:response];

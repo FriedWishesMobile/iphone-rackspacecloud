@@ -44,5 +44,6 @@
 
 -(Response *)save;
 -(Response *)create;
+-(Response *)updateCdnAttributes;
 
 @end

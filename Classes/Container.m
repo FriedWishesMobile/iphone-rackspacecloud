@@ -117,7 +117,7 @@
 	RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];	
 
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@", app.storageUrl, [self.name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];	
-
+	
 	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
 	[request setHTTPMethod:@"PUT"];
 	
@@ -140,6 +140,27 @@
 	[request setHTTPMethod:@"POST"];
 	
 	//[request setValue:self.ttl forHTTPHeaderField:@"X-TTL"];
+	[request setValue:self.cdnEnabled forHTTPHeaderField:@"X-CDN-Enabled"];
+	
+	NSString *body = @""; //[NSString stringWithFormat:@"{ \"resize\" : { \"flavorId\" : %@ } }", self.flavorId];
+	[request setHTTPBody:[body dataUsingEncoding:NSASCIIStringEncoding]];		
+	
+	// look for X-CDN-URI header
+	return [ORConnection sendRequest:request withAuthToken:app.authToken];
+}
+
+- (Response *)updateCdnAttributes {
+	RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];	
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@", app.cdnManagementUrl, [self.name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];	
+	
+	// PUT first time, then POST... kinda weird
+	
+	NSLog(@"update cdn url: %@", [NSString stringWithFormat:@"%@/%@", app.cdnManagementUrl, [self.name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]);
+	
+	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+	[request setHTTPMethod:@"POST"];
+	
+	[request setValue:self.ttl forHTTPHeaderField:@"X-TTL"];
 	[request setValue:self.cdnEnabled forHTTPHeaderField:@"X-CDN-Enabled"];
 	
 	NSString *body = @""; //[NSString stringWithFormat:@"{ \"resize\" : { \"flavorId\" : %@ } }", self.flavorId];
