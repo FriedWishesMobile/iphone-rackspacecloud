@@ -49,6 +49,7 @@ static UIImage *rhelImage = nil;
 
 		self.nameCell.textField.keyboardType = UIKeyboardTypeDefault;
 		self.nameCell.textField.delegate = self;
+		self.nameCell.textField.returnKeyType = UIReturnKeyDone;
 		
 		self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Cancel", @"Cancel") style:UIBarButtonItemStyleBordered target:self action:@selector(cancelButtonPressed:)];
 		self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Save", @"Save") style:UIBarButtonItemStyleBordered target:self action:@selector(saveButtonPressed:)];

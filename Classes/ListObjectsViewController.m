@@ -24,7 +24,7 @@
 
 @implementation ListObjectsViewController
 
-@synthesize account, container, containerName, cdnSwitch, logSwitch, spinnerView, objectsContainer;
+@synthesize account, container, containerName, cdnSwitch, logSwitch, spinnerView, objectsContainer, ttlCell;
 
 BOOL objectsLoaded = NO;
 
@@ -312,6 +312,16 @@ BOOL objectsLoaded = NO;
     
 	//NSLog(@"section: %i\t\trow: %i", indexPath.section, indexPath.row);
 	
+	if (self.ttlCell == nil) {
+		self.ttlCell = [[TextFieldCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:@"NameCell"];
+		self.ttlCell.textField.placeholder = @"86400";
+		self.ttlCell.accessoryType = UITableViewCellAccessoryNone;		
+		
+		self.ttlCell.textField.keyboardType = UIKeyboardTypeDefault;
+		self.ttlCell.textField.delegate = self;
+		self.ttlCell.textField.returnKeyType = UIReturnKeyDone;
+	}
+	
 	if (indexPath.section == kContainerDetails) {
 		static NSString *CellIdentifier = @"ContainerDetailsCell";
 		UITableViewCell *cell = (UITableViewCell *) [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -396,8 +406,9 @@ BOOL objectsLoaded = NO;
 				return logSwitchCell;
 				break;
 			case 1:
-				cell.textLabel.text = NSLocalizedString(@"TTL", @"TTL cell label");
-				cell.detailTextLabel.text = self.container.ttl;
+				ttlCell.textLabel.text = NSLocalizedString(@"TTL", @"TTL cell label");
+				ttlCell.textField.text = self.container.ttl;
+				return ttlCell;
 				break;
 			case 3:
 				cdnURLCell.textLabel.text = NSLocalizedString(@"CDN URL", @"CDN URL label");
@@ -520,6 +531,7 @@ BOOL objectsLoaded = NO;
 	[logSwitch release];
 	[spinnerView release];
 	[objectsContainer release];
+	[ttlCell release];
     [super dealloc];
 }
 

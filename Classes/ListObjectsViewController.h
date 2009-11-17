@@ -20,6 +20,7 @@
 	UISwitch *logSwitch;
 	RoundedRectView *spinnerView;
 	TextFieldCell *cdnURLCell;
+	TextFieldCell *ttlCell;
 }
 
 @property (nonatomic, retain) NSString *containerName;
@@ -29,6 +30,8 @@
 @property (nonatomic, retain) UISwitch *cdnSwitch;
 @property (nonatomic, retain) UISwitch *logSwitch;
 @property (nonatomic, retain) RoundedRectView *spinnerView;
+@property (nonatomic, retain) TextFieldCell *ttlCell;
+
 
 - (void)showSpinnerView;
 - (void)hideSpinnerView;
