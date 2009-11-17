@@ -252,7 +252,7 @@ static UIImage *rhelImage = nil;
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
 	self.server.serverName = textField.text;
-	NSLog([NSString stringWithFormat:@"server name = %@", self.server.serverName]);
+	NSLog(@"server name = %@", self.server.serverName);
 	[textField resignFirstResponder];
 	return YES;
 }

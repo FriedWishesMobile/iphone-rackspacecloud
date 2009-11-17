@@ -260,6 +260,34 @@ BOOL objectsLoaded = NO;
 	[super viewWillAppear:animated];
 }
 
+#pragma mark -
+#pragma mark Keyboard Methods
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+	self.container.ttl = textField.text;
+	return YES;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+	self.container.ttl = textField.text;
+	[textField resignFirstResponder];
+	
+	[self showSpinnerView];
+	
+	Response *response = [self.container updateCdnAttributes];
+	[self hideSpinnerView];
+	
+	NSLog(@"ttl return status code = %i", response.statusCode);
+	
+	if (![response isSuccess]) {
+		[self showSaveError:response];
+	}
+	
+	
+	return YES;
+}
+
+#pragma mark -
 #pragma mark Table Methods
 
 //- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -452,22 +480,6 @@ BOOL objectsLoaded = NO;
 		}
 	} 
 	return nil;
-}
-
-#pragma mark Text Field Delegate Methods for CDN URL Cell
-
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-	[textField resignFirstResponder];
-	return NO; // contents are not editable.  it's a text field to allow users to easily copy/paste
-}
-
-- (BOOL)textFieldShouldClear:(UITextField *)textField {
-	[textField resignFirstResponder];
-	return NO; // contents are not editable.  it's a text field to allow users to easily copy/paste
-}
-
-- (void)textFieldDidBeginEditing:(UITextField *)textField {
-	[textField resignFirstResponder];
 }
 
 #pragma mark -

@@ -202,47 +202,6 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>275ED3D910B266FE00DE1E4B</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>AddServerViewController.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>275ED3DA10B266FE00DE1E4B</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>AddServerViewController.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>275ED40210B267D900DE1E4B</string>
-						<key>history</key>
-						<array>
-							<string>275ED3DB10B266FE00DE1E4B</string>
-							<string>275ED3DC10B266FE00DE1E4B</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {750, 461}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>38 650 750 502 0 0 1920 1178 </string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
 				<string>270AECDA10B1266B00C7BF82</string>
 				<key>PBXProjectModuleLabel</key>
 				<string>Container.m</string>
@@ -257,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>275ED40310B267D900DE1E4B</string>
+						<string>275ED42A10B2694800DE1E4B</string>
 						<key>history</key>
 						<array>
 							<string>270AECDC10B1266B00C7BF82</string>
@@ -417,7 +376,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>275ED40110B267D900DE1E4B</string>
+										<string>275ED42910B2694800DE1E4B</string>
 										<key>history</key>
 										<array>
 											<string>2786AE080FFC368D002B852B</string>
@@ -540,7 +499,7 @@
 											<string>2738EFF610A274DB006EEF21</string>
 											<string>27E0AF1110AA8C57000055A8</string>
 											<string>275ED3D610B266FE00DE1E4B</string>
-											<string>275ED3F610B2677A00DE1E4B</string>
+											<string>275ED42410B2692A00DE1E4B</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -736,14 +695,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>275ED40410B267D900DE1E4B</string>
+		<string>275ED42710B2692A00DE1E4B</string>
 		<string>275ED3C910B259F800DE1E4B</string>
 		<string>275ED3CA10B259F800DE1E4B</string>
 		<string>1CD10A99069EF8BA00B06720</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>27B6C6280FF0B97C006C965F</string>
 		<string>270AECDA10B1266B00C7BF82</string>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>275ED3D910B266FE00DE1E4B</string>
 		<string>/Users/mike/src/rackspace/iphone-rackspacecloud/Rackspace.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -763,12 +721,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>ListObjectsViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -1116,7 +1076,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
