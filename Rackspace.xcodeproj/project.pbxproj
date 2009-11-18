@@ -503,6 +503,7 @@
 		2738C3921050B276007D6C85 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				27A15CA510B3D5F800165D24 /* Add Object */,
 				276964D31055CCF400D64A7B /* View Object */,
 				2738C3941050B299007D6C85 /* List Objects */,
 				278D8470101173430060DBA1 /* File Viewers */,
@@ -543,8 +544,6 @@
 				4C3B1D260FDA14DA00AE2133 /* Login and Settings */,
 				2738C3881050B17E007D6C85 /* Cloud Servers */,
 				2738C3891050B184007D6C85 /* Cloud Files */,
-				278D8B561013E56F0060DBA1 /* AddObjectViewController.h */,
-				278D8B571013E56F0060DBA1 /* AddObjectViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -612,6 +611,15 @@
 				2793CA591016D5BD009EB8C3 /* ResizeServerController.xib */,
 			);
 			name = "Edit Server";
+			sourceTree = "<group>";
+		};
+		27A15CA510B3D5F800165D24 /* Add Object */ = {
+			isa = PBXGroup;
+			children = (
+				278D8B561013E56F0060DBA1 /* AddObjectViewController.h */,
+				278D8B571013E56F0060DBA1 /* AddObjectViewController.m */,
+			);
+			name = "Add Object";
 			sourceTree = "<group>";
 		};
 		29B97314FDCFA39411CA2CEA /* Rackspace */ = {

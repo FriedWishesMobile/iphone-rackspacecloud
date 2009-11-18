@@ -77,6 +77,8 @@ static UIImage *rhelImage = nil;
 		return archImage;
 	} else if ([s.imageId isEqualToString:@"4056"]) {
 		return fedoraImage;
+	} else if ([s.imageId isEqualToString:@"14362"]) {
+		return ubuntuImage;
 	} else {		
 		// might be a backup image, so look for the server id in the image
 		// if a server is there, call imageForServer on it
@@ -124,6 +126,8 @@ static UIImage *rhelImage = nil;
 		return archImage;
 	} else if ([i.imageId isEqualToString:@"4056"]) {
 		return fedoraImage;
+	} else if ([i.imageId isEqualToString:@"14362"]) {
+		return ubuntuImage;
 	} else {		
 		// might be a backup image, so look for the server id in the image
 		// if a server is there, call imageForServer on it
