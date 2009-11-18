@@ -19,6 +19,23 @@
 
 @synthesize ipGroup;
 
+#pragma mark -
+#pragma mark View Stuff
+
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad {
+	self.navigationItem.title = self.ipGroup.sharedIpGroupName;
+    [super viewDidLoad];
+}
+
+- (void)viewDidUnload {
+	// Release any retained subviews of the main view.
+	// e.g. self.myOutlet = nil;
+}
+
+#pragma mark -
+#pragma mark Table Methods
+
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
 	if (section == kIPGroupDetails) {
 		return NSLocalizedString(@"IP Group Details", @"IP Group Details table section header");
@@ -94,11 +111,8 @@
 	}
 }
 
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-	self.navigationItem.title = self.ipGroup.sharedIpGroupName;
-    [super viewDidLoad];
-}
+#pragma mark -
+#pragma mark Memory Management
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
@@ -106,12 +120,6 @@
 	
 	// Release any cached data, images, etc that aren't in use.
 }
-
-- (void)viewDidUnload {
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
-}
-
 
 - (void)dealloc {
 	[ipGroup release];

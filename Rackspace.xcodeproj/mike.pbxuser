@@ -543,7 +543,7 @@
 		fRef = 2786B6700FFEC75B002B852B /* IPGroupViewController.m */;
 		name = "IPGroupViewController.m: 74";
 		rLen = 2;
-		rLoc = 560;
+		rLoc = 957;
 		rType = 0;
 		vrLen = 1276;
 		vrLoc = 3;
@@ -2018,16 +2018,16 @@
 	};
 	2786B66F0FFEC75B002B852B /* IPGroupViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {877, 670}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1103, 788}}";
 			sepNavSelRange = "{174, 0}";
 			sepNavVisRange = "{0, 345}";
 		};
 	};
 	2786B6700FFEC75B002B852B /* IPGroupViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1231, 1952}}";
-			sepNavSelRange = "{1932, 10}";
-			sepNavVisRange = "{1673, 705}";
+			sepNavIntBoundsRect = "{{0, 0}, {1103, 2160}}";
+			sepNavSelRange = "{442, 0}";
+			sepNavVisRange = "{442, 1625}";
 			sepNavWindowFrame = "{{15, 210}, {1095, 663}}";
 		};
 	};
@@ -2977,7 +2977,7 @@
 		isa = PBXTextBookmark;
 		fRef = 2786B6700FFEC75B002B852B /* IPGroupViewController.m */;
 		rLen = 10;
-		rLoc = 1932;
+		rLoc = 2329;
 		rType = 0;
 	};
 	27A15C9010B3D49800165D24 /* PBXTextBookmark */ = {
@@ -2985,7 +2985,7 @@
 		fRef = 2786B6700FFEC75B002B852B /* IPGroupViewController.m */;
 		name = "IPGroupViewController.m: 65";
 		rLen = 10;
-		rLoc = 1932;
+		rLoc = 2329;
 		rType = 0;
 		vrLen = 705;
 		vrLoc = 1673;
@@ -3005,7 +3005,7 @@
 		fRef = 2786B6700FFEC75B002B852B /* IPGroupViewController.m */;
 		name = "IPGroupViewController.m: 75";
 		rLen = 0;
-		rLoc = 2501;
+		rLoc = 2898;
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 2497;
@@ -3049,6 +3049,56 @@
 		rType = 0;
 		vrLen = 2043;
 		vrLoc = 7872;
+	};
+	27A15C9E10B3D5B200165D24 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 272EF03C101593DD00DB17A1 /* AddServerViewController.m */;
+		name = "AddServerViewController.m: 56";
+		rLen = 0;
+		rLoc = 2141;
+		rType = 0;
+		vrLen = 2043;
+		vrLoc = 7872;
+	};
+	27A15C9F10B3D5B200165D24 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2786B66F0FFEC75B002B852B /* IPGroupViewController.h */;
+		name = "IPGroupViewController.h: 10";
+		rLen = 0;
+		rLoc = 174;
+		rType = 0;
+		vrLen = 345;
+		vrLoc = 0;
+	};
+	27A15CA010B3D5B200165D24 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2786B6700FFEC75B002B852B /* IPGroupViewController.m */;
+		name = "IPGroupViewController.m: 24";
+		rLen = 0;
+		rLoc = 442;
+		rType = 0;
+		vrLen = 1625;
+		vrLoc = 442;
+	};
+	27A15CA110B3D5B200165D24 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4C9982B70FEE0F23005D12B7 /* IPGroupsRootViewController.h */;
+		name = "IPGroupsRootViewController.h: 12";
+		rLen = 0;
+		rLoc = 266;
+		rType = 0;
+		vrLen = 438;
+		vrLoc = 0;
+	};
+	27A15CA210B3D5B200165D24 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4C9982B80FEE0F23005D12B7 /* IPGroupsRootViewController.m */;
+		name = "IPGroupsRootViewController.m: 97";
+		rLen = 0;
+		rLoc = 2935;
+		rType = 0;
+		vrLen = 1872;
+		vrLoc = 4151;
 	};
 	27A3C4E11019762500198388 /* RenameServerController.h */ = {
 		uiCtxt = {
@@ -3685,6 +3735,11 @@
 			27A15C9910B3D53D00165D24 /* PBXTextBookmark */ = 27A15C9910B3D53D00165D24 /* PBXTextBookmark */;
 			27A15C9A10B3D53D00165D24 /* PBXTextBookmark */ = 27A15C9A10B3D53D00165D24 /* PBXTextBookmark */;
 			27A15C9B10B3D53D00165D24 /* PBXTextBookmark */ = 27A15C9B10B3D53D00165D24 /* PBXTextBookmark */;
+			27A15C9E10B3D5B200165D24 /* PBXTextBookmark */ = 27A15C9E10B3D5B200165D24 /* PBXTextBookmark */;
+			27A15C9F10B3D5B200165D24 /* PBXTextBookmark */ = 27A15C9F10B3D5B200165D24 /* PBXTextBookmark */;
+			27A15CA010B3D5B200165D24 /* PBXTextBookmark */ = 27A15CA010B3D5B200165D24 /* PBXTextBookmark */;
+			27A15CA110B3D5B200165D24 /* PBXTextBookmark */ = 27A15CA110B3D5B200165D24 /* PBXTextBookmark */;
+			27A15CA210B3D5B200165D24 /* PBXTextBookmark */ = 27A15CA210B3D5B200165D24 /* PBXTextBookmark */;
 			27A3C62F101986FC00198388 = 27A3C62F101986FC00198388 /* PBXTextBookmark */;
 			27BCEA121005206A00404C15 = 27BCEA121005206A00404C15 /* PBXTextBookmark */;
 			27C9C02B10841EDA00729797 = 27C9C02B10841EDA00729797 /* PBXTextBookmark */;
@@ -4084,16 +4139,16 @@
 	};
 	4C9982B70FEE0F23005D12B7 /* IPGroupsRootViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {877, 670}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1103, 788}}";
 			sepNavSelRange = "{266, 0}";
 			sepNavVisRange = "{0, 438}";
 		};
 	};
 	4C9982B80FEE0F23005D12B7 /* IPGroupsRootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1231, 3616}}";
-			sepNavSelRange = "{7362, 0}";
-			sepNavVisRange = "{7155, 362}";
+			sepNavIntBoundsRect = "{{0, 0}, {1468, 3520}}";
+			sepNavSelRange = "{2935, 0}";
+			sepNavVisRange = "{4151, 1872}";
 		};
 	};
 	4C9984250FEEB502005D12B7 /* Auth.h */ = {
