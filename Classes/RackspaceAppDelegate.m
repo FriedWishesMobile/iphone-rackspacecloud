@@ -10,10 +10,20 @@
 #import "LoginViewController.h"
 #import "ObjectiveResource.h"
 #import "ServersRootViewController.h"
+#import "Server.h"
+#import "Image.h"
 
 NSString *kScalingModeKey	= @"scalingMode";
 NSString *kControlModeKey	= @"controlMode";
 NSString *kBackgroundColorKey	= @"backgroundColor";
+
+static UIImage *debianImage = nil;
+static UIImage *gentooImage = nil;
+static UIImage *ubuntuImage = nil;
+static UIImage *archImage = nil;
+static UIImage *centosImage = nil;
+static UIImage *fedoraImage = nil;
+static UIImage *rhelImage = nil;
 
 @implementation RackspaceAppDelegate
 
@@ -31,8 +41,113 @@ NSString *kBackgroundColorKey	= @"backgroundColor";
 @synthesize imageScrollView;
 @synthesize moviePlayer;
 
+- (void)loadOperatingSystemLogos {
+	debianImage = [[UIImage imageNamed:@"debian.png"] retain];
+	gentooImage = [[UIImage imageNamed:@"gentoo.png"] retain];
+	ubuntuImage = [[UIImage imageNamed:@"ubuntu.png"] retain];
+	archImage = [[UIImage imageNamed:@"arch.png"] retain];
+	centosImage = [[UIImage imageNamed:@"centos.png"] retain];
+	fedoraImage = [[UIImage imageNamed:@"fedora.png"] retain];
+	rhelImage = [[UIImage imageNamed:@"rhel.png"] retain];	
+}
+
+- (UIImage *)imageForServer:(Server *)s {
+	
+	if ([s.imageId isEqualToString:@"2"]) {
+		return centosImage;
+	} else if ([s.imageId isEqualToString:@"3"]) {
+		return gentooImage;
+	} else if ([s.imageId isEqualToString:@"4"]) {
+		return debianImage;
+	} else if ([s.imageId isEqualToString:@"5"]) {
+		return fedoraImage;
+	} else if ([s.imageId isEqualToString:@"7"]) {
+		return centosImage;
+	} else if ([s.imageId isEqualToString:@"8"]) {
+		return ubuntuImage;
+	} else if ([s.imageId isEqualToString:@"9"]) {
+		return archImage;
+	} else if ([s.imageId isEqualToString:@"10"]) {
+		return ubuntuImage;
+	} else if ([s.imageId isEqualToString:@"11"]) {
+		return ubuntuImage;
+	} else if ([s.imageId isEqualToString:@"12"]) {
+		return rhelImage;
+	} else if ([s.imageId isEqualToString:@"13"]) {
+		return archImage;
+	} else if ([s.imageId isEqualToString:@"4056"]) {
+		return fedoraImage;
+	} else {		
+		// might be a backup image, so look for the server id in the image
+		// if a server is there, call imageForServer on it
+		
+		RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];
+		
+		s.imageId;
+		
+		Image *image = [Image findLocalWithImageId:s.imageId];
+		if (image && image.serverId) {
+			
+			// find the image for the serverId
+			// call imageForServer on that server
+			Server *server = (Server *) [app.servers objectForKey:image.serverId];
+			return [self imageForServer:server];
+		}
+	}
+	
+	return nil;
+}
+
+- (UIImage *)imageForImage:(Image *)i {
+	
+	if ([i.imageId isEqualToString:@"2"]) {
+		return centosImage;
+	} else if ([i.imageId isEqualToString:@"3"]) {
+		return gentooImage;
+	} else if ([i.imageId isEqualToString:@"4"]) {
+		return debianImage;
+	} else if ([i.imageId isEqualToString:@"5"]) {
+		return fedoraImage;
+	} else if ([i.imageId isEqualToString:@"7"]) {
+		return centosImage;
+	} else if ([i.imageId isEqualToString:@"8"]) {
+		return ubuntuImage;
+	} else if ([i.imageId isEqualToString:@"9"]) {
+		return archImage;
+	} else if ([i.imageId isEqualToString:@"10"]) {
+		return ubuntuImage;
+	} else if ([i.imageId isEqualToString:@"11"]) {
+		return ubuntuImage;
+	} else if ([i.imageId isEqualToString:@"12"]) {
+		return rhelImage;
+	} else if ([i.imageId isEqualToString:@"13"]) {
+		return archImage;
+	} else if ([i.imageId isEqualToString:@"4056"]) {
+		return fedoraImage;
+	} else {		
+		// might be a backup image, so look for the server id in the image
+		// if a server is there, call imageForServer on it
+		
+		RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];
+		
+		
+		Server *aServer = (Server *) [app.servers objectForKey:i.serverId];
+		Image *image = [Image findLocalWithImageId:aServer.imageId];
+		if (image) { // && image.serverId) {
+			
+			// find the image for the serverId
+			// call imageForServer on that server
+			return [self imageForImage:image];
+		}
+	}		
+	return nil;
+}
+
+
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
-    	
+	
+	[self loadOperatingSystemLogos];
+	
 	[ObjectiveResourceConfig setResponseType:JSONResponse];	
 	
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];	

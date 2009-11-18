@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
 
-@class LoginViewController, ServersRootViewController;
+@class LoginViewController, ServersRootViewController, Server, Image;
 
 @interface RackspaceAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
     UIWindow *window;
@@ -60,5 +60,7 @@
 -(void)loadSettings;
 -(void)initAndPlayMovie:(NSURL *)movieURL;
 -(void)setMoviePlayerUserSettings;
+-(UIImage *)imageForServer:(Server *)s;
+-(UIImage *)imageForImage:(Image *)i;
 
 @end

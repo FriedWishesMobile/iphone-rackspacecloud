@@ -105,7 +105,6 @@
 		4C99822D0FEE0AA7005D12B7 /* SpinnerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9982260FEE0AA7005D12B7 /* SpinnerCell.m */; };
 		4C99822E0FEE0AA7005D12B7 /* DetailSpinnerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9982280FEE0AA7005D12B7 /* DetailSpinnerCell.m */; };
 		4C99822F0FEE0AA7005D12B7 /* IPCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C99822A0FEE0AA7005D12B7 /* IPCell.m */; };
-		4C9982300FEE0AA7005D12B7 /* ServerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C99822C0FEE0AA7005D12B7 /* ServerCell.m */; };
 		4C9982B50FEE0EFB005D12B7 /* ServersRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9982B40FEE0EFB005D12B7 /* ServersRootViewController.m */; };
 		4C9982B90FEE0F23005D12B7 /* IPGroupsRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9982B80FEE0F23005D12B7 /* IPGroupsRootViewController.m */; };
 		4C9982F10FEE132F005D12B7 /* debian.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9982EB0FEE132F005D12B7 /* debian.png */; };
@@ -328,8 +327,6 @@
 		4C9982280FEE0AA7005D12B7 /* DetailSpinnerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailSpinnerCell.m; sourceTree = "<group>"; };
 		4C9982290FEE0AA7005D12B7 /* IPCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPCell.h; sourceTree = "<group>"; };
 		4C99822A0FEE0AA7005D12B7 /* IPCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPCell.m; sourceTree = "<group>"; };
-		4C99822B0FEE0AA7005D12B7 /* ServerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerCell.h; sourceTree = "<group>"; };
-		4C99822C0FEE0AA7005D12B7 /* ServerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerCell.m; sourceTree = "<group>"; };
 		4C9982B30FEE0EFB005D12B7 /* ServersRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServersRootViewController.h; sourceTree = "<group>"; };
 		4C9982B40FEE0EFB005D12B7 /* ServersRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServersRootViewController.m; sourceTree = "<group>"; };
 		4C9982B70FEE0F23005D12B7 /* IPGroupsRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPGroupsRootViewController.h; sourceTree = "<group>"; };
@@ -681,8 +678,6 @@
 				4C9982280FEE0AA7005D12B7 /* DetailSpinnerCell.m */,
 				4C9982290FEE0AA7005D12B7 /* IPCell.h */,
 				4C99822A0FEE0AA7005D12B7 /* IPCell.m */,
-				4C99822B0FEE0AA7005D12B7 /* ServerCell.h */,
-				4C99822C0FEE0AA7005D12B7 /* ServerCell.m */,
 				4C9982220FEE0A98005D12B7 /* ProgressCell.h */,
 				4C9982230FEE0A98005D12B7 /* ProgressCell.m */,
 				4C3B1D1E0FDA14CA00AE2133 /* DetailCell.h */,
@@ -1067,7 +1062,6 @@
 				4C99822D0FEE0AA7005D12B7 /* SpinnerCell.m in Sources */,
 				4C99822E0FEE0AA7005D12B7 /* DetailSpinnerCell.m in Sources */,
 				4C99822F0FEE0AA7005D12B7 /* IPCell.m in Sources */,
-				4C9982300FEE0AA7005D12B7 /* ServerCell.m in Sources */,
 				4C9982B50FEE0EFB005D12B7 /* ServersRootViewController.m in Sources */,
 				4C9982B90FEE0F23005D12B7 /* IPGroupsRootViewController.m in Sources */,
 				4C9984270FEEB502005D12B7 /* Auth.m in Sources */,

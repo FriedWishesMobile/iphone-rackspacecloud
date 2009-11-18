@@ -7,7 +7,6 @@
 //
 
 #import "ServersRootViewController.h"
-#import "ServerCell.h"
 #import "SpinnerCell.h"
 #import "Server.h"
 #import "RackspaceAppDelegate.h"
@@ -15,35 +14,12 @@
 #import "AddServerViewController.h"
 #import "Image.h"
 
-static UIImage *debianImage = nil;
-static UIImage *gentooImage = nil;
-static UIImage *ubuntuImage = nil;
-static UIImage *archImage = nil;
-static UIImage *centosImage = nil;
-static UIImage *fedoraImage = nil;
-static UIImage *rhelImage = nil;
-
 @implementation ServersRootViewController
 
 @synthesize servers, serversLoaded;
 
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-	self.navigationItem.rightBarButtonItem.enabled = NO;	
-	[super viewDidLoad];
-}
-
-+ (void)initialize {
-    // The images are cached as part of the class, so they need to be explicitly retained.
-	debianImage = [[UIImage imageNamed:@"debian.png"] retain];
-	gentooImage = [[UIImage imageNamed:@"gentoo.png"] retain];
-	ubuntuImage = [[UIImage imageNamed:@"ubuntu.png"] retain];
-	archImage = [[UIImage imageNamed:@"arch.png"] retain];
-	centosImage = [[UIImage imageNamed:@"centos.png"] retain];
-	fedoraImage = [[UIImage imageNamed:@"fedora.png"] retain];
-	rhelImage = [[UIImage imageNamed:@"rhel.png"] retain];
-}
+#pragma mark -
+#pragma mark Load Servers
 
 // thread to load servers
 - (void) loadServers {
@@ -75,6 +51,24 @@ static UIImage *rhelImage = nil;
 	
 }
 
+#pragma mark -
+#pragma mark View Stuff
+
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad {
+	self.navigationItem.rightBarButtonItem.enabled = NO;	
+	[super viewDidLoad];
+}
+
+// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        // Custom initialization
+		serversLoaded = NO;
+    }
+    return self;
+}
+
 - (void)viewWillAppear:(BOOL)animated {
 	
 	// set up the accelerometer for the "shake to refresh" feature
@@ -90,7 +84,8 @@ static UIImage *rhelImage = nil;
 	[super viewWillAppear:animated];
 }
 
-#pragma mark Shake Feature
+#pragma mark -
+#pragma mark Shake To Refresh
 - (void) accelerometer:(UIAccelerometer*)accelerometer didAccelerate:(UIAcceleration*)acceleration {
 	UIAccelerationValue length, x, y, z;
 	
@@ -108,7 +103,6 @@ static UIImage *rhelImage = nil;
 	
 	// see if they shook hard enough to refresh
 	if (length >= 3.0) {
-		//do what you want when there is a big shake here
 		serversLoaded = NO;
 		self.navigationItem.rightBarButtonItem.enabled = NO;
 		[self.tableView reloadData];
@@ -119,17 +113,7 @@ static UIImage *rhelImage = nil;
 	}
 }
 
-
-
- // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
-		serversLoaded = NO;
-    }
-    return self;
-}
-
+#pragma mark -
 #pragma mark Table Methods
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -153,53 +137,6 @@ static UIImage *rhelImage = nil;
 	}
 }
 
-- (UIImage *)imageForServer:(Server *)s {
-	
-	if ([s.imageId isEqualToString:@"2"]) {
-		return centosImage;
-	} else if ([s.imageId isEqualToString:@"3"]) {
-		return gentooImage;
-	} else if ([s.imageId isEqualToString:@"4"]) {
-		return debianImage;
-	} else if ([s.imageId isEqualToString:@"5"]) {
-		return fedoraImage;
-	} else if ([s.imageId isEqualToString:@"7"]) {
-		return centosImage;
-	} else if ([s.imageId isEqualToString:@"8"]) {
-		return ubuntuImage;
-	} else if ([s.imageId isEqualToString:@"9"]) {
-		return archImage;
-	} else if ([s.imageId isEqualToString:@"10"]) {
-		return ubuntuImage;
-	} else if ([s.imageId isEqualToString:@"11"]) {
-		return ubuntuImage;
-	} else if ([s.imageId isEqualToString:@"12"]) {
-		return rhelImage;
-	} else if ([s.imageId isEqualToString:@"13"]) {
-		return archImage;
-	} else if ([s.imageId isEqualToString:@"4056"]) {
-		return fedoraImage;
-	} else {		
-		// might be a backup image, so look for the server id in the image
-		// if a server is there, call imageForServer on it
-		
-		RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];
-
-		s.imageId;
-		
-		Image *image = [Image findLocalWithImageId:s.imageId];
-		if (image && image.serverId) {
-			
-			// find the image for the serverId
-			// call imageForServer on that server
-			Server *server = (Server *) [app.servers objectForKey:image.serverId];
-			return [self imageForServer:server];
-		}
-	}
-	
-	return nil;
-}
-
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
 	if (serversLoaded) {
@@ -210,10 +147,11 @@ static UIImage *rhelImage = nil;
 			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 		}
 		
+		RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];
 		Server *s = (Server *) [servers objectAtIndex:indexPath.row];
 		cell.textLabel.text = s.serverName;
 		cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", [s flavorName], [s imageName]];
-		cell.imageView.image = [self imageForServer:s];
+		cell.imageView.image = [app imageForServer:s];
 		
 		return cell;
 		
@@ -239,6 +177,7 @@ static UIImage *rhelImage = nil;
 	[aTableView deselectRowAtIndexPath:indexPath animated:NO];		
 }
 
+#pragma mark -
 #pragma mark Button Handlers
 
 -(void) addButtonPressed:(id)sender {
@@ -248,18 +187,15 @@ static UIImage *rhelImage = nil;
 	[vc release];
 }
 
+#pragma mark -
+#pragma mark Memory Management
+
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
 	
 	// Release any cached data, images, etc that aren't in use.
 }
-
-- (void)viewDidUnload {
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
-}
-
 
 - (void)dealloc {
 	[servers release];

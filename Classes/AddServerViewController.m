@@ -22,14 +22,6 @@
 #define kFlavor 1
 #define kImage 2
 
-static UIImage *debianImage = nil;
-static UIImage *gentooImage = nil;
-static UIImage *ubuntuImage = nil;
-static UIImage *archImage = nil;
-static UIImage *centosImage = nil;
-static UIImage *fedoraImage = nil;
-static UIImage *rhelImage = nil;
-
 @implementation AddServerViewController
 
 @synthesize server, nameCell, serversRootViewController;
@@ -56,63 +48,6 @@ static UIImage *rhelImage = nil;
 	}
     return self;
 }
-
-+ (void)initialize {
-    // The images are cached as part of the class, so they need to be explicitly retained.
-	debianImage = [[UIImage imageNamed:@"debian.png"] retain];
-	gentooImage = [[UIImage imageNamed:@"gentoo.png"] retain];
-	ubuntuImage = [[UIImage imageNamed:@"ubuntu.png"] retain];
-	archImage = [[UIImage imageNamed:@"arch.png"] retain];
-	centosImage = [[UIImage imageNamed:@"centos.png"] retain];
-	fedoraImage = [[UIImage imageNamed:@"fedora.png"] retain];
-	rhelImage = [[UIImage imageNamed:@"rhel.png"] retain];
-}
-
-- (UIImage *)imageForImage:(Image *)i {
-	
-	if ([i.imageId isEqualToString:@"2"]) {
-		return centosImage;
-	} else if ([i.imageId isEqualToString:@"3"]) {
-		return gentooImage;
-	} else if ([i.imageId isEqualToString:@"4"]) {
-		return debianImage;
-	} else if ([i.imageId isEqualToString:@"5"]) {
-		return fedoraImage;
-	} else if ([i.imageId isEqualToString:@"7"]) {
-		return centosImage;
-	} else if ([i.imageId isEqualToString:@"8"]) {
-		return ubuntuImage;
-	} else if ([i.imageId isEqualToString:@"9"]) {
-		return archImage;
-	} else if ([i.imageId isEqualToString:@"10"]) {
-		return ubuntuImage;
-	} else if ([i.imageId isEqualToString:@"11"]) {
-		return ubuntuImage;
-	} else if ([i.imageId isEqualToString:@"12"]) {
-		return rhelImage;
-	} else if ([i.imageId isEqualToString:@"13"]) {
-		return archImage;
-	} else if ([i.imageId isEqualToString:@"4056"]) {
-		return fedoraImage;
-	} else {		
-		// might be a backup image, so look for the server id in the image
-		// if a server is there, call imageForServer on it
-		
-		RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];
-		
-		
-		Server *aServer = (Server *) [app.servers objectForKey:i.serverId];
-		Image *image = [Image findLocalWithImageId:aServer.imageId];
-		if (image) { // && image.serverId) {
-			
-			// find the image for the serverId
-			// call imageForServer on that server
-			return [self imageForImage:image];
-		}
-	}		
-	return nil;
-}
-
 
 /*
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
@@ -203,8 +138,9 @@ static UIImage *rhelImage = nil;
 	} else if (indexPath.section == kImage) {
 		Image *image = (Image *) [app.images objectAtIndex:indexPath.row];
 		
+		RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];
 		imageCell.textLabel.text = image.imageName;
-		imageCell.imageView.image = [self imageForImage:image];
+		imageCell.imageView.image = [app imageForImage:image];
 
 		// show or hide selection style
 		if ([image.imageId isEqualToString:self.server.imageId]) {

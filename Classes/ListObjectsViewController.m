@@ -509,7 +509,6 @@ BOOL objectsLoaded = NO;
 	
 	// see if they shook hard enough to refresh
 	if (length >= 3.0) {
-		//do what you want when there is a big shake here
 		[self refreshFileList];		
 	}
 }
