@@ -49,26 +49,13 @@
     return self;
 }
 
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
-}
-*/
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)viewDidUnload {
+	// Release any retained subviews of the main view.
+	// e.g. self.myOutlet = nil;
 }
 
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
-
-#pragma mark Table Delegate Methods
+#pragma mark -
+#pragma mark Table Methods
 
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
 	if (section == kServerDetails) {
@@ -179,6 +166,7 @@
 	//[aTableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+#pragma mark -
 #pragma mark Keyboard Methods
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
@@ -193,6 +181,7 @@
 	return YES;
 }
 
+#pragma mark -
 #pragma mark Button Handlers
 
 -(void) cancelButtonPressed:(id)sender {
@@ -241,8 +230,7 @@
 	
 }
 
-
-
+#pragma mark -
 #pragma mark Memory Management
 
 - (void)didReceiveMemoryWarning {
@@ -251,12 +239,6 @@
 	
 	// Release any cached data, images, etc that aren't in use.
 }
-
-- (void)viewDidUnload {
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
-}
-
 
 - (void)dealloc {
 	[server release];

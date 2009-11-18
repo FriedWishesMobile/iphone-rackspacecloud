@@ -647,9 +647,9 @@
 	};
 	272EF03C101593DD00DB17A1 /* AddServerViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1516, 4192}}";
-			sepNavSelRange = "{5793, 0}";
-			sepNavVisRange = "{4978, 494}";
+			sepNavIntBoundsRect = "{{0, 0}, {2380, 4032}}";
+			sepNavSelRange = "{2141, 0}";
+			sepNavVisRange = "{7872, 2043}";
 			sepNavWindowFrame = "{{38, 594}, {750, 558}}";
 		};
 	};
@@ -666,24 +666,6 @@
 			sepNavSelRange = "{1315, 2}";
 			sepNavVisRange = "{0, 1167}";
 		};
-	};
-	272EF0E810159B4700DB17A1 /* AddServerViewController.m:164 */ = {
-		isa = PBXFileBreakpoint;
-		actions = (
-		);
-		breakpointStyle = 0;
-		continueAfterActions = 0;
-		countType = 0;
-		delayBeforeContinue = 0;
-		fileReference = 272EF03C101593DD00DB17A1 /* AddServerViewController.m */;
-		functionName = "-tableView:didSelectRowAtIndexPath:";
-		hitCount = 0;
-		ignoreCount = 0;
-		lineNumber = 164;
-		location = Rackspace;
-		modificationTime = 280220567.077266;
-		originalNumberOfMultipleMatches = 0;
-		state = 2;
 	};
 	2738C3821050B08F007D6C85 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -975,24 +957,6 @@
 		rType = 0;
 		vrLen = 401;
 		vrLoc = 0;
-	};
-	274EADDF1022AF6500D3D2C7 /* AddServerViewController.m:223 */ = {
-		isa = PBXFileBreakpoint;
-		actions = (
-		);
-		breakpointStyle = 0;
-		continueAfterActions = 0;
-		countType = 0;
-		delayBeforeContinue = 0;
-		fileReference = 272EF03C101593DD00DB17A1 /* AddServerViewController.m */;
-		functionName = "-saveButtonPressed:";
-		hitCount = 0;
-		ignoreCount = 0;
-		lineNumber = 223;
-		location = Rackspace;
-		modificationTime = 280220567.077464;
-		originalNumberOfMultipleMatches = 1;
-		state = 1;
 	};
 	274EADF71022B0F600D3D2C7 /* FromXMLElementDelegate.m:18 */ = {
 		isa = PBXFileBreakpoint;
@@ -1483,60 +1447,6 @@
 			sepNavSelRange = "{722, 0}";
 			sepNavVisRange = "{289, 1219}";
 		};
-	};
-	2777BCE2101D5C410043D3C1 /* AddServerViewController.m:214 */ = {
-		isa = PBXFileBreakpoint;
-		actions = (
-		);
-		breakpointStyle = 0;
-		continueAfterActions = 0;
-		countType = 0;
-		delayBeforeContinue = 0;
-		fileReference = 272EF03C101593DD00DB17A1 /* AddServerViewController.m */;
-		functionName = "-saveButtonPressed:";
-		hitCount = 0;
-		ignoreCount = 0;
-		lineNumber = 214;
-		location = Rackspace;
-		modificationTime = 280220567.077391;
-		originalNumberOfMultipleMatches = 0;
-		state = 2;
-	};
-	2777BCF1101D5C810043D3C1 /* AddServerViewController.m:193 */ = {
-		isa = PBXFileBreakpoint;
-		actions = (
-		);
-		breakpointStyle = 0;
-		continueAfterActions = 0;
-		countType = 0;
-		delayBeforeContinue = 0;
-		fileReference = 272EF03C101593DD00DB17A1 /* AddServerViewController.m */;
-		functionName = "-textFieldShouldReturn:";
-		hitCount = 0;
-		ignoreCount = 0;
-		lineNumber = 193;
-		location = Rackspace;
-		modificationTime = 280220567.077408;
-		originalNumberOfMultipleMatches = 0;
-		state = 2;
-	};
-	2777BD01101D5D350043D3C1 /* AddServerViewController.m:204 */ = {
-		isa = PBXFileBreakpoint;
-		actions = (
-		);
-		breakpointStyle = 0;
-		continueAfterActions = 0;
-		countType = 0;
-		delayBeforeContinue = 0;
-		fileReference = 272EF03C101593DD00DB17A1 /* AddServerViewController.m */;
-		functionName = "-saveButtonPressed:";
-		hitCount = 0;
-		ignoreCount = 0;
-		lineNumber = 204;
-		location = Rackspace;
-		modificationTime = 280220567.077418;
-		originalNumberOfMultipleMatches = 0;
-		state = 2;
 	};
 	2784F7A50FF8435000D060C3 /* FromXMLElementDelegate.m:18 */ = {
 		isa = PBXFileBreakpoint;
@@ -2963,7 +2873,7 @@
 		fRef = 272EF03C101593DD00DB17A1 /* AddServerViewController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 142;
+		rLoc = 129;
 		rType = 1;
 	};
 	27A15C7D10B3D43100165D24 /* PBXTextBookmark */ = {
@@ -2971,7 +2881,7 @@
 		fRef = 272EF03C101593DD00DB17A1 /* AddServerViewController.m */;
 		name = "AddServerViewController.m: 142";
 		rLen = 0;
-		rLoc = 5793;
+		rLoc = 5352;
 		rType = 0;
 		vrLen = 465;
 		vrLoc = 5381;
@@ -2991,7 +2901,7 @@
 		fRef = 272EF03C101593DD00DB17A1 /* AddServerViewController.m */;
 		name = "AddServerViewController.m: 143";
 		rLen = 0;
-		rLoc = 5793;
+		rLoc = 5352;
 		rType = 0;
 		vrLen = 494;
 		vrLoc = 4978;
@@ -3028,7 +2938,7 @@
 		fRef = 272EF03C101593DD00DB17A1 /* AddServerViewController.m */;
 		name = "AddServerViewController.m: 143";
 		rLen = 0;
-		rLoc = 5793;
+		rLoc = 5352;
 		rType = 0;
 		vrLen = 494;
 		vrLoc = 4978;
@@ -3079,6 +2989,66 @@
 		rType = 0;
 		vrLen = 705;
 		vrLoc = 1673;
+	};
+	27A15C9610B3D53D00165D24 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4C9982B40FEE0EFB005D12B7 /* ServersRootViewController.m */;
+		name = "ServersRootViewController.m: 143";
+		rLen = 0;
+		rLoc = 4438;
+		rType = 0;
+		vrLen = 1712;
+		vrLoc = 3999;
+	};
+	27A15C9710B3D53D00165D24 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2786B6700FFEC75B002B852B /* IPGroupViewController.m */;
+		name = "IPGroupViewController.m: 75";
+		rLen = 0;
+		rLoc = 2501;
+		rType = 0;
+		vrLen = 1450;
+		vrLoc = 2497;
+	};
+	27A15C9810B3D53D00165D24 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* RackspaceAppDelegate.m */;
+		name = "RackspaceAppDelegate.m: 34";
+		rLen = 0;
+		rLoc = 898;
+		rType = 0;
+		vrLen = 1534;
+		vrLoc = 0;
+	};
+	27A15C9910B3D53D00165D24 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* RackspaceAppDelegate.h */;
+		name = "RackspaceAppDelegate.h: 12";
+		rLen = 0;
+		rLoc = 279;
+		rType = 0;
+		vrLen = 1572;
+		vrLoc = 0;
+	};
+	27A15C9A10B3D53D00165D24 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 272EF03C101593DD00DB17A1 /* AddServerViewController.m */;
+		name = "AddServerViewController.m: 143";
+		rLen = 3;
+		rLoc = 5383;
+		rType = 0;
+		vrLen = 2363;
+		vrLoc = 4694;
+	};
+	27A15C9B10B3D53D00165D24 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 272EF03C101593DD00DB17A1 /* AddServerViewController.m */;
+		name = "AddServerViewController.m: 56";
+		rLen = 0;
+		rLoc = 2141;
+		rType = 0;
+		vrLen = 2043;
+		vrLoc = 7872;
 	};
 	27A3C4E11019762500198388 /* RenameServerController.h */ = {
 		uiCtxt = {
@@ -3179,24 +3149,6 @@
 		vrLen = 310;
 		vrLoc = 0;
 	};
-	27C12C141024D51000C843EC /* AddServerViewController.m:51 */ = {
-		isa = PBXFileBreakpoint;
-		actions = (
-		);
-		breakpointStyle = 0;
-		continueAfterActions = 0;
-		countType = 0;
-		delayBeforeContinue = 0;
-		fileReference = 272EF03C101593DD00DB17A1 /* AddServerViewController.m */;
-		functionName = "-imageForImage:";
-		hitCount = 0;
-		ignoreCount = 0;
-		lineNumber = 51;
-		location = Rackspace;
-		modificationTime = 280220567.077508;
-		originalNumberOfMultipleMatches = 0;
-		state = 2;
-	};
 	27C12C1E1024D5C000C843EC /* FromXMLElementDelegate.m:18 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
@@ -3220,7 +3172,7 @@
 		fRef = 272EF03C101593DD00DB17A1 /* AddServerViewController.m */;
 		name = "AddServerViewController.m: 257";
 		rLen = 0;
-		rLoc = 7768;
+		rLoc = 7342;
 		rType = 0;
 		vrLen = 1442;
 		vrLoc = 9265;
@@ -3506,17 +3458,11 @@
 			278D8ACA1013DA060060DBA1 /* ImageViewController.m:394 */,
 			278D8AD11013DA240060DBA1 /* ImageViewController.m:399 */,
 			278D8C2A1013F1150060DBA1 /* ORConnection.m:175 */,
-			272EF0E810159B4700DB17A1 /* AddServerViewController.m:164 */,
 			27A3C61B101986B000198388 /* Response.m:47 */,
 			2777B47D101B8D8C0043D3C1 /* FromXMLElementDelegate.m:18 */,
 			2777B47F101B8DC70043D3C1 /* FromXMLElementDelegate.m:18 */,
 			2777B4AE101B90020043D3C1 /* FromXMLElementDelegate.m:18 */,
-			2777BCE2101D5C410043D3C1 /* AddServerViewController.m:214 */,
-			2777BCF1101D5C810043D3C1 /* AddServerViewController.m:193 */,
-			2777BD01101D5D350043D3C1 /* AddServerViewController.m:204 */,
-			274EADDF1022AF6500D3D2C7 /* AddServerViewController.m:223 */,
 			274EADF71022B0F600D3D2C7 /* FromXMLElementDelegate.m:18 */,
-			27C12C141024D51000C843EC /* AddServerViewController.m:51 */,
 			27C12C1E1024D5C000C843EC /* FromXMLElementDelegate.m:18 */,
 			27E58F101040624400A4F32C /* ImageViewController.m:81 */,
 			27E58F121040624E00A4F32C /* ImageViewController.m:322 */,
@@ -3733,6 +3679,12 @@
 			27A15C8E10B3D49800165D24 /* PBXTextBookmark */ = 27A15C8E10B3D49800165D24 /* PBXTextBookmark */;
 			27A15C8F10B3D49800165D24 /* PBXTextBookmark */ = 27A15C8F10B3D49800165D24 /* PBXTextBookmark */;
 			27A15C9010B3D49800165D24 /* PBXTextBookmark */ = 27A15C9010B3D49800165D24 /* PBXTextBookmark */;
+			27A15C9610B3D53D00165D24 /* PBXTextBookmark */ = 27A15C9610B3D53D00165D24 /* PBXTextBookmark */;
+			27A15C9710B3D53D00165D24 /* PBXTextBookmark */ = 27A15C9710B3D53D00165D24 /* PBXTextBookmark */;
+			27A15C9810B3D53D00165D24 /* PBXTextBookmark */ = 27A15C9810B3D53D00165D24 /* PBXTextBookmark */;
+			27A15C9910B3D53D00165D24 /* PBXTextBookmark */ = 27A15C9910B3D53D00165D24 /* PBXTextBookmark */;
+			27A15C9A10B3D53D00165D24 /* PBXTextBookmark */ = 27A15C9A10B3D53D00165D24 /* PBXTextBookmark */;
+			27A15C9B10B3D53D00165D24 /* PBXTextBookmark */ = 27A15C9B10B3D53D00165D24 /* PBXTextBookmark */;
 			27A3C62F101986FC00198388 = 27A3C62F101986FC00198388 /* PBXTextBookmark */;
 			27BCEA121005206A00404C15 = 27BCEA121005206A00404C15 /* PBXTextBookmark */;
 			27C9C02B10841EDA00729797 = 27C9C02B10841EDA00729797 /* PBXTextBookmark */;
