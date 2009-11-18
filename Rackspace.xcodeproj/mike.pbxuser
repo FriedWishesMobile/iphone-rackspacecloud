@@ -647,9 +647,9 @@
 	};
 	272EF03C101593DD00DB17A1 /* AddServerViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {2380, 4032}}";
-			sepNavSelRange = "{2141, 0}";
-			sepNavVisRange = "{7872, 2043}";
+			sepNavIntBoundsRect = "{{0, 0}, {1516, 3952}}";
+			sepNavSelRange = "{5352, 0}";
+			sepNavVisRange = "{3876, 494}";
 			sepNavWindowFrame = "{{38, 594}, {750, 558}}";
 		};
 	};
@@ -2025,9 +2025,9 @@
 	};
 	2786B6700FFEC75B002B852B /* IPGroupViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1103, 2160}}";
-			sepNavSelRange = "{442, 0}";
-			sepNavVisRange = "{442, 1625}";
+			sepNavIntBoundsRect = "{{0, 0}, {1231, 2032}}";
+			sepNavSelRange = "{2329, 10}";
+			sepNavVisRange = "{1698, 591}";
 			sepNavWindowFrame = "{{15, 210}, {1095, 663}}";
 		};
 	};
@@ -3100,6 +3100,26 @@
 		vrLen = 1872;
 		vrLoc = 4151;
 	};
+	27A15CA310B3D5CD00165D24 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 272EF03C101593DD00DB17A1 /* AddServerViewController.m */;
+		name = "AddServerViewController.m: 130";
+		rLen = 0;
+		rLoc = 5352;
+		rType = 0;
+		vrLen = 494;
+		vrLoc = 3876;
+	};
+	27A15CA410B3D5CD00165D24 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2786B6700FFEC75B002B852B /* IPGroupViewController.m */;
+		name = "IPGroupViewController.m: 82";
+		rLen = 10;
+		rLoc = 2329;
+		rType = 0;
+		vrLen = 591;
+		vrLoc = 1698;
+	};
 	27A3C4E11019762500198388 /* RenameServerController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {877, 670}}";
@@ -3423,16 +3443,28 @@
 		};
 	};
 	28216C950DB411BC00E5133A /* FirstViewController.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = FirstViewController.h;
+		path = "/Users/mike/src/rackspace/iphone-rackspacecloud/Classes/FirstViewController.h";
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {771, 600}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1103, 788}}";
 			sepNavSelRange = "{227, 0}";
 			sepNavVisRange = "{0, 236}";
 		};
 	};
 	28216C960DB411BC00E5133A /* FirstViewController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = FirstViewController.m;
+		path = "/Users/mike/src/rackspace/iphone-rackspacecloud/Classes/FirstViewController.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {771, 600}}";
-			sepNavSelRange = "{100, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1103, 788}}";
+			sepNavSelRange = "{409, 0}";
 			sepNavVisRange = "{0, 568}";
 		};
 	};
@@ -3740,6 +3772,8 @@
 			27A15CA010B3D5B200165D24 /* PBXTextBookmark */ = 27A15CA010B3D5B200165D24 /* PBXTextBookmark */;
 			27A15CA110B3D5B200165D24 /* PBXTextBookmark */ = 27A15CA110B3D5B200165D24 /* PBXTextBookmark */;
 			27A15CA210B3D5B200165D24 /* PBXTextBookmark */ = 27A15CA210B3D5B200165D24 /* PBXTextBookmark */;
+			27A15CA310B3D5CD00165D24 /* PBXTextBookmark */ = 27A15CA310B3D5CD00165D24 /* PBXTextBookmark */;
+			27A15CA410B3D5CD00165D24 /* PBXTextBookmark */ = 27A15CA410B3D5CD00165D24 /* PBXTextBookmark */;
 			27A3C62F101986FC00198388 = 27A3C62F101986FC00198388 /* PBXTextBookmark */;
 			27BCEA121005206A00404C15 = 27BCEA121005206A00404C15 /* PBXTextBookmark */;
 			27C9C02B10841EDA00729797 = 27C9C02B10841EDA00729797 /* PBXTextBookmark */;
@@ -4146,8 +4180,8 @@
 	};
 	4C9982B80FEE0F23005D12B7 /* IPGroupsRootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1468, 3520}}";
-			sepNavSelRange = "{2935, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1468, 3552}}";
+			sepNavSelRange = "{5134, 0}";
 			sepNavVisRange = "{4151, 1872}";
 		};
 	};

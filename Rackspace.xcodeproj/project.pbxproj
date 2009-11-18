@@ -55,7 +55,6 @@
 		27D86F781041DDCA00B805A9 /* ObjectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D86F771041DDCA00B805A9 /* ObjectView.xib */; };
 		27DA9063106C70F600D6A2AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27DA9061106C70F600D6A2AA /* Localizable.strings */; };
 		27FEADA9104A06470042BBFC /* WebFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FEADA7104A06470042BBFC /* WebFileViewController.m */; };
-		28216C970DB411BC00E5133A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28216C960DB411BC00E5133A /* FirstViewController.m */; };
 		282CCBFE0DB6C98000C4EA27 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282CCBFD0DB6C98000C4EA27 /* SecondView.xib */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		4C0F82C10FE4D9BC001946C7 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C0F82C00FE4D9BC001946C7 /* Icon.png */; };
@@ -221,8 +220,6 @@
 		27FEADA6104A06470042BBFC /* WebFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebFileViewController.h; sourceTree = "<group>"; };
 		27FEADA7104A06470042BBFC /* WebFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebFileViewController.m; sourceTree = "<group>"; };
 		27FEADA8104A06470042BBFC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = Classes/en.lproj/WebFileViewController.xib; sourceTree = "<group>"; };
-		28216C950DB411BC00E5133A /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		28216C960DB411BC00E5133A /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		282CCBFD0DB6C98000C4EA27 /* SecondView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondView.xib; sourceTree = "<group>"; };
 		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AB4B0D9B1048005BE974 /* Rackspace_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rackspace_Prefix.pch; sourceTree = "<group>"; };
@@ -379,8 +376,6 @@
 				4C3B1EAD0FDC3D9F00AE2133 /* Models */,
 				4C3B1E830FDC3D7500AE2133 /* ObjectiveResource */,
 				4C3B1E2F0FDC3D5300AE2133 /* lib */,
-				28216C950DB411BC00E5133A /* FirstViewController.h */,
-				28216C960DB411BC00E5133A /* FirstViewController.m */,
 				1D3623240D0F684500981E51 /* RackspaceAppDelegate.h */,
 				1D3623250D0F684500981E51 /* RackspaceAppDelegate.m */,
 			);
@@ -1017,7 +1012,6 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* RackspaceAppDelegate.m in Sources */,
-				28216C970DB411BC00E5133A /* FirstViewController.m in Sources */,
 				4C3B1D230FDA14CA00AE2133 /* DetailCell.m in Sources */,
 				4C3B1D240FDA14CA00AE2133 /* SecureEditableCell.m in Sources */,
 				4C3B1D290FDA14F300AE2133 /* LoginViewController.m in Sources */,
