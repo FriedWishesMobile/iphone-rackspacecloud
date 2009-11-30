@@ -23,6 +23,8 @@
 @synthesize account, container, listObjectsViewController, tableView;
 
 NSUInteger state = kChoosingFileType;
+BOOL imageIsPng = YES;
+NSTimeInterval placeholderTimeInterval;
 
 #pragma mark -
 #pragma mark View Methods
@@ -69,13 +71,35 @@ NSUInteger state = kChoosingFileType;
 		return NSLocalizedString(@"Choose a file type", @"Choose a file type table section header");
 	} else {
 		// TODO: localize these strings
-		return @"Name and Upload File";
+		if (section == 0) {
+			return @"Name and Upload File";
+		} else {
+			return @"File Type";
+		}
 	}
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	if (state == kNamingTextFile || state == kNamingImageFile) {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+	if (state == kChoosingFileType) {
 		return 1;
+	} else if (state == kNamingImageFile) {
+		return 2; // file name and type
+	} else if (state == kNamingTextFile) {
+		return 1;
+	} else {
+		return 0;
+	}	
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+	if (state == kNamingTextFile) {
+		return 1;
+	} else if (state == kNamingImageFile) {
+		if (section == 0) {
+			return 1;
+		} else {
+			return 2;
+		}
 	} else {	
 		NSInteger rows = 1;
 		if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
@@ -83,7 +107,7 @@ NSUInteger state = kChoosingFileType;
 		}
 		if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
 			rows++;
-		}	
+		}
 		return rows;
 	}
 }
@@ -115,19 +139,53 @@ NSUInteger state = kChoosingFileType;
 
 - (UITableViewCell *)tableView:(UITableView *)aTableView imageFileCellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	// TODO: allow choice between jpeg and png in second table section
-	static NSString *CellIdentifier = @"ImageFileCell";
-	TextFieldCell *cell = (TextFieldCell *) [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
-	if (cell == nil) {
-		cell = [[[TextFieldCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier] autorelease];
-		// TODO: localize string
-		cell.textLabel.text = @"File Name";
-		cell.textField.placeholder = [NSString stringWithFormat:@"upload_%d.png", [[NSDate date] timeIntervalSince1970]];		
-		cell.textField.keyboardType = UIKeyboardTypeDefault;
-		cell.textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-		cell.textField.returnKeyType = UIReturnKeyDone;
-		cell.textField.delegate = self;
-	}
-	return cell;
+	
+	if (indexPath.section == 0) {
+		static NSString *CellIdentifier = @"ImageFileCell";
+		TextFieldCell *cell = (TextFieldCell *) [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
+		if (cell == nil) {
+			cell = [[[TextFieldCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier] autorelease];
+			// TODO: localize string
+			cell.textLabel.text = @"File Name";
+			cell.textField.keyboardType = UIKeyboardTypeDefault;
+			cell.textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+			cell.textField.returnKeyType = UIReturnKeyDone;
+			cell.textField.delegate = self;
+			placeholderTimeInterval = [[NSDate date] timeIntervalSince1970];
+		}
+		
+		if (imageIsPng) {
+			cell.textField.placeholder = [NSString stringWithFormat:@"upload_%.0f.png", placeholderTimeInterval];
+		} else {
+			cell.textField.placeholder = [NSString stringWithFormat:@"upload_%.0f.jpeg", placeholderTimeInterval];
+		}
+		return cell;
+	} else { // if (indexPath.section == 1) {
+		static NSString *CellIdentifier = @"ImageFileTypeCell";
+		UITableViewCell *cell = (UITableViewCell *) [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
+		if (cell == nil) {
+			cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+			cell.accessoryType = UITableViewCellAccessoryNone;
+		}
+		
+		if (indexPath.row == 0) {
+			cell.textLabel.text = @"jpeg";
+			if (imageIsPng) {
+				cell.accessoryType = UITableViewCellAccessoryNone;
+			} else {
+				cell.accessoryType = UITableViewCellAccessoryCheckmark;
+			}
+		} else if (indexPath.row == 1) {
+			cell.textLabel.text = @"png";
+			if (imageIsPng) {
+				cell.accessoryType = UITableViewCellAccessoryCheckmark;
+			} else {
+				cell.accessoryType = UITableViewCellAccessoryNone;
+			}
+		}
+		
+		return cell;		
+	}	
 }
 
 - (UITableViewCell *)tableView:(UITableView *)aTableView textFileCellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -158,25 +216,29 @@ NSUInteger state = kChoosingFileType;
 
 
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	
-	if (indexPath.row == 0) {
-		// TODO: handle text files
-	} else if (indexPath.row == 1) {
-		if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
-			UIImagePickerController *camera = [[UIImagePickerController alloc] init];		
-			camera.delegate = self;
-			camera.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-			[self presentModalViewController:camera animated:YES];
-			[camera release];
+	if (indexPath.section == 0) {
+		if (indexPath.row == 0) {
+			// TODO: handle text files
+		} else if (indexPath.row == 1) {
+			if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+				UIImagePickerController *camera = [[UIImagePickerController alloc] init];		
+				camera.delegate = self;
+				camera.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+				[self presentModalViewController:camera animated:YES];
+				[camera release];
+			}
+		} else if (indexPath.row == 2) {
+			if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+				UIImagePickerController *camera = [[UIImagePickerController alloc] init];		
+				camera.delegate = self;
+				camera.sourceType = UIImagePickerControllerSourceTypeCamera;
+				[self presentModalViewController:camera animated:YES];
+				[camera release];
+			}
 		}
-	} else if (indexPath.row == 2) {
-		if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-			UIImagePickerController *camera = [[UIImagePickerController alloc] init];		
-			camera.delegate = self;
-			camera.sourceType = UIImagePickerControllerSourceTypeCamera;
-			[self presentModalViewController:camera animated:YES];
-			[camera release];
-		}
+	} else {
+		imageIsPng = indexPath.row == 1;
+		[self.tableView reloadData];
 	}
 	
 	[aTableView deselectRowAtIndexPath:indexPath animated:NO];
