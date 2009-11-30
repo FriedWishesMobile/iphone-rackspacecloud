@@ -26,6 +26,7 @@ NSUInteger state = kChoosingFileType;
 BOOL imageIsPng = YES;
 NSTimeInterval placeholderTimeInterval;
 UIImage *selectedImage = nil;
+NSString *filename = @"";
 
 #pragma mark -
 #pragma mark View Methods
@@ -73,7 +74,7 @@ UIImage *selectedImage = nil;
 	if (imageIsPng) {
 		imageData = UIImagePNGRepresentation(selectedImage);
 	} else {
-		imageData = UIImageJPEGRepresentation(selectedImage, 0.7); // TODO: should we provide a slider to choose quality?
+		imageData = UIImageJPEGRepresentation(selectedImage, 0.65); // TODO: should we provide a slider to choose quality?
 	}
 	
 	CloudFilesObject *co = [[CloudFilesObject alloc] init];
