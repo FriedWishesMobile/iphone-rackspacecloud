@@ -137,7 +137,7 @@ NSUInteger state = kChoosingFileType;
 		cell = [[[TextFieldCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier] autorelease];
 		// TODO: localize string
 		cell.textLabel.text = @"File Name";
-		cell.textField.placeholder = [NSString stringWithFormat:@"upload_%d.png", [[NSDate date] timeIntervalSince1970]];		
+		cell.textField.placeholder = [NSString stringWithFormat:@"upload_%d.txt", [[NSDate date] timeIntervalSince1970]];		
 		cell.textField.keyboardType = UIKeyboardTypeDefault;
 		cell.textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
 		cell.textField.returnKeyType = UIReturnKeyDone;

@@ -2304,10 +2304,10 @@
 	};
 	278D8B571013E56F0060DBA1 /* AddObjectViewController.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{6399, 3585}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 11575}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1103, 3680}}";
-			sepNavSelRange = "{3234, 0}";
-			sepNavVisRange = "{4542, 1861}";
+			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{2268, 780}\";\n            s = 0;\n        },\n                {\n            r = \"{6399, 3585}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 11575}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1103, 3488}}";
+			sepNavSelRange = "{3718, 0}";
+			sepNavVisRange = "{2011, 2449}";
 			sepNavWindowFrame = "{{130, 105}, {1095, 663}}";
 		};
 	};
@@ -3241,6 +3241,16 @@
 		vrLen = 5445;
 		vrLoc = 4542;
 	};
+	27F5828610C36C2E00DB2692 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
+		name = "AddObjectViewController.m: 140";
+		rLen = 0;
+		rLoc = 4497;
+		rType = 0;
+		vrLen = 3228;
+		vrLoc = 2011;
+	};
 	27FEADA6104A06470042BBFC /* WebFileViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {771, 577}}";
@@ -3556,6 +3566,7 @@
 			27F5828210C36B9300DB2692 /* PBXTextBookmark */ = 27F5828210C36B9300DB2692 /* PBXTextBookmark */;
 			27F5828310C36B9300DB2692 /* PBXTextBookmark */ = 27F5828310C36B9300DB2692 /* PBXTextBookmark */;
 			27F5828510C36BDC00DB2692 /* PBXTextBookmark */ = 27F5828510C36BDC00DB2692 /* PBXTextBookmark */;
+			27F5828610C36C2E00DB2692 /* PBXTextBookmark */ = 27F5828610C36C2E00DB2692 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 27B6C62A0FF0B97C006C965F /* Source Control */;
 		userBuildSettings = {
