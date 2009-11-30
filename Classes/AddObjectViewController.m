@@ -28,6 +28,7 @@ NSUInteger state = kChoosingFileType;
 
 - (void)viewDidLoad {
 	state = kChoosingFileType;
+	[super viewDidLoad];
 }
 
 - (void)viewDidUnload {

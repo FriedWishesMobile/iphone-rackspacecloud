@@ -274,6 +274,7 @@
 								<string>27A15CA510B3D5F800165D24</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>2786B0680FFC6B6D002B852B</string>
+								<string>27199C3D106B313700944AA9</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
@@ -281,14 +282,16 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>46</integer>
-									<integer>34</integer>
-									<integer>31</integer>
+									<integer>16</integer>
+									<integer>15</integer>
+									<integer>10</integer>
+									<integer>7</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 124}, {251, 807}}</string>
+							<string>{{0, 284}, {251, 807}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -337,7 +340,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>27F5825010C366A000DB2692</string>
+										<string>27F5825710C3682300DB2692</string>
 										<key>history</key>
 										<array>
 											<string>2786AE080FFC368D002B852B</string>
@@ -458,9 +461,8 @@
 											<string>27A15CCB10B3D73300165D24</string>
 											<string>27F581CA10C35FAF00DB2692</string>
 											<string>27F5823010C365C000DB2692</string>
-											<string>27F5823110C365C000DB2692</string>
 											<string>27F5824010C3662400DB2692</string>
-											<string>27F5824110C3662400DB2692</string>
+											<string>27F5825610C3682300DB2692</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -656,7 +658,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>27F5824F10C3668E00DB2692</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>27F5823610C365C000DB2692</string>
 		<string>27F581D810C35FAF00DB2692</string>

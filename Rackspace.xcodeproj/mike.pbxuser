@@ -2304,10 +2304,10 @@
 	};
 	278D8B571013E56F0060DBA1 /* AddObjectViewController.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{3956, 3585}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 9132}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1308, 2976}}";
-			sepNavSelRange = "{3974, 0}";
-			sepNavVisRange = "{0, 1104}";
+			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{3978, 3585}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 9154}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1103, 3104}}";
+			sepNavSelRange = "{683, 0}";
+			sepNavVisRange = "{531, 1363}";
 			sepNavWindowFrame = "{{130, 105}, {1095, 663}}";
 		};
 	};
@@ -2500,7 +2500,7 @@
 		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
 		name = "AddObjectViewController.m: 222";
 		rLen = 0;
-		rLoc = 8220;
+		rLoc = 8242;
 		rType = 0;
 		vrLen = 1704;
 		vrLoc = 6388;
@@ -2993,7 +2993,7 @@
 		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
 		name = "AddObjectViewController.m: 46";
 		rLen = 0;
-		rLoc = 1013;
+		rLoc = 1035;
 		rType = 0;
 		vrLen = 1633;
 		vrLoc = 915;
@@ -3003,7 +3003,7 @@
 		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
 		name = "AddObjectViewController.m: 59";
 		rLen = 0;
-		rLoc = 1591;
+		rLoc = 1613;
 		rType = 0;
 		vrLen = 1695;
 		vrLoc = 803;
@@ -3023,7 +3023,7 @@
 		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
 		name = "AddObjectViewController.m: 59";
 		rLen = 0;
-		rLoc = 1591;
+		rLoc = 1613;
 		rType = 0;
 		vrLen = 1695;
 		vrLoc = 803;
@@ -3043,7 +3043,7 @@
 		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
 		name = "AddObjectViewController.m: 54";
 		rLen = 0;
-		rLoc = 1174;
+		rLoc = 1196;
 		rType = 0;
 		vrLen = 1695;
 		vrLoc = 803;
@@ -3053,7 +3053,7 @@
 		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
 		name = "AddObjectViewController.m: 283";
 		rLen = 0;
-		rLoc = 9101;
+		rLoc = 9123;
 		rType = 0;
 		vrLen = 1520;
 		vrLoc = 7504;
@@ -3063,7 +3063,7 @@
 		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
 		name = "AddObjectViewController.m: 263";
 		rLen = 0;
-		rLoc = 8557;
+		rLoc = 8579;
 		rType = 0;
 		vrLen = 1520;
 		vrLoc = 7504;
@@ -3073,7 +3073,7 @@
 		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
 		name = "AddObjectViewController.m: 263";
 		rLen = 0;
-		rLoc = 8557;
+		rLoc = 8579;
 		rType = 0;
 		vrLen = 1521;
 		vrLoc = 7503;
@@ -3083,7 +3083,7 @@
 		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
 		name = "AddObjectViewController.m: 44";
 		rLen = 0;
-		rLoc = 965;
+		rLoc = 987;
 		rType = 0;
 		vrLen = 1119;
 		vrLoc = 222;
@@ -3093,10 +3093,30 @@
 		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
 		name = "AddObjectViewController.m: 270";
 		rLen = 0;
-		rLoc = 8740;
+		rLoc = 8762;
 		rType = 0;
 		vrLen = 5192;
 		vrLoc = 3733;
+	};
+	27F5825610C3682300DB2692 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
+		name = "AddObjectViewController.m: 245";
+		rLen = 0;
+		rLoc = 7580;
+		rType = 0;
+		vrLen = 1104;
+		vrLoc = 0;
+	};
+	27F5825710C3682300DB2692 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
+		name = "AddObjectViewController.m: 31";
+		rLen = 0;
+		rLoc = 683;
+		rType = 0;
+		vrLen = 1363;
+		vrLoc = 531;
 	};
 	27FEADA6104A06470042BBFC /* WebFileViewController.h */ = {
 		uiCtxt = {
@@ -3399,6 +3419,8 @@
 			27F5824810C3665400DB2692 /* PBXTextBookmark */ = 27F5824810C3665400DB2692 /* PBXTextBookmark */;
 			27F5824E10C3668E00DB2692 /* PBXTextBookmark */ = 27F5824E10C3668E00DB2692 /* PBXTextBookmark */;
 			27F5825010C366A000DB2692 /* PBXTextBookmark */ = 27F5825010C366A000DB2692 /* PBXTextBookmark */;
+			27F5825610C3682300DB2692 /* PBXTextBookmark */ = 27F5825610C3682300DB2692 /* PBXTextBookmark */;
+			27F5825710C3682300DB2692 /* PBXTextBookmark */ = 27F5825710C3682300DB2692 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 27B6C62A0FF0B97C006C965F /* Source Control */;
 		userBuildSettings = {
