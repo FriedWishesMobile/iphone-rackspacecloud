@@ -14,11 +14,13 @@
 	CFAccount *account;
 	Container *container;
 	ListObjectsViewController *listObjectsViewController;
+	IBOutlet UITableView *tableView;
 }
 
 @property (nonatomic, retain) CFAccount *account;
 @property (nonatomic, retain) Container *container;
 @property (nonatomic, retain) ListObjectsViewController *listObjectsViewController;
+@property (nonatomic, retain) IBOutlet UITableView *tableView;
 
 - (void) cancelButtonPressed:(id)sender;
 

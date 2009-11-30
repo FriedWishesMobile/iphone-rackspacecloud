@@ -580,6 +580,7 @@
 		278D89301013BD330060DBA1 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				27F5820010C361C900DB2692 /* View Controllers */,
 				4C3B1D1B0FDA14CA00AE2133 /* Table Cells */,
 				2777B722101C15D00043D3C1 /* RoundedRectView.h */,
 				2777B723101C15D00043D3C1 /* RoundedRectView.m */,
@@ -620,6 +621,13 @@
 				278D8B571013E56F0060DBA1 /* AddObjectViewController.m */,
 			);
 			name = "Add Object";
+			sourceTree = "<group>";
+		};
+		27F5820010C361C900DB2692 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 		29B97314FDCFA39411CA2CEA /* Rackspace */ = {

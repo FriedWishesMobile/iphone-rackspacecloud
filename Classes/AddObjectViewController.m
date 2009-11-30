@@ -13,29 +13,68 @@
 #import "Container.h"
 #import "ListObjectsViewController.h"
 
+#define kChoosingFileType 0
+#define kNamingImageFile  1
+#define kNamingTextFile   2
+
 @implementation AddObjectViewController
 
-@synthesize account, container, listObjectsViewController;
+@synthesize account, container, listObjectsViewController, tableView;
+
+NSUInteger state = kChoosingFileType;
+
+#pragma mark -
+#pragma mark View Methods
+
+- (void)viewDidLoad {
+	state = kChoosingFileType;
+}
+
+- (void)viewDidUnload {
+	// Release any retained subviews of the main view.
+	// e.g. self.myOutlet = nil;
+}
+
+/*
+- (void)viewWillAppear:(BOOL)animated {
+	// overriding so that we can reload the table based on the view controller state
+	[self.tableView reloadData];
+	[super viewWillAppear:animated];
+}
+*/
+
+#pragma mark -
+#pragma mark Button Handlers
 
 - (void) cancelButtonPressed:(id)sender {
 	[self dismissModalViewControllerAnimated:YES];
 }
 
+#pragma mark -
 #pragma mark Table Methods
 
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
-	return NSLocalizedString(@"Choose a file type", @"Choose a file type table section header");
+	if (state == kChoosingFileType) {
+		return NSLocalizedString(@"Choose a file type", @"Choose a file type table section header");
+	} else {
+		// TODO: localize these strings
+		return @"Name and upload file";
+	}
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	NSInteger rows = 1;
-	if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-		rows++;
+	if (state == kNamingTextFile || state == kNamingImageFile) {
+		return 1;
+	} else {	
+		NSInteger rows = 1;
+		if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+			rows++;
+		}
+		if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+			rows++;
+		}	
+		return rows;
 	}
-	if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
-		rows++;
-	}	
-	return rows;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -65,12 +104,10 @@
 }
 
 
-// TODO: make sure you cover ipod touch with the camera stuff
-
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 	if (indexPath.row == 0) {
-		
+		// TODO: handle text files
 	} else if (indexPath.row == 1) {
 		if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
 			UIImagePickerController *camera = [[UIImagePickerController alloc] init];		
@@ -92,6 +129,7 @@
 	[aTableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
+#pragma mark -
 #pragma mark Image Correction
 
 // Return the image rotated to the correct orientation
@@ -204,6 +242,7 @@
 	return imageCopy;
 }
 
+#pragma mark -
 #pragma mark Camera Methods
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {	
@@ -212,9 +251,13 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
 
+	state = kNamingImageFile;
+	[self.tableView reloadData];
+	
 	[picker dismissModalViewControllerAnimated:YES];
 	[self dismissModalViewControllerAnimated:YES];
 	
+	/*
 	UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
 	RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];
 	
@@ -229,8 +272,11 @@
 	
 	// refresh files list in container view
 	[self.listObjectsViewController refreshFileList];
+	 */
 }
 
+#pragma mark -
+#pragma mark Memory Management
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
@@ -239,16 +285,11 @@
 	// Release any cached data, images, etc that aren't in use.
 }
 
-- (void)viewDidUnload {
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
-}
-
-
 - (void)dealloc {
 	[account release];
 	[container release];
 	[listObjectsViewController release];
+	[tableView release];
     [super dealloc];
 }
 
