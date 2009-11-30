@@ -291,7 +291,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 284}, {251, 807}}</string>
+							<string>{{0, 106}, {251, 807}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -310,7 +310,7 @@
 							<real>251</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>283 265 1437 866 0 0 1920 1178 </string>
+						<string>248 279 1437 866 0 0 1920 1178 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -340,7 +340,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>27F582E410C3772400DB2692</string>
+										<string>27F5831910C3806000DB2692</string>
 										<key>history</key>
 										<array>
 											<string>2786AE080FFC368D002B852B</string>
@@ -439,7 +439,6 @@
 											<string>27A15C5D10B3D39500165D24</string>
 											<string>27A15C5E10B3D39500165D24</string>
 											<string>27A15C5F10B3D39500165D24</string>
-											<string>27A15C6010B3D39500165D24</string>
 											<string>27A15C6110B3D39500165D24</string>
 											<string>27A15C9610B3D53D00165D24</string>
 											<string>27A15C9E10B3D5B200165D24</string>
@@ -461,9 +460,10 @@
 											<string>27A15CCB10B3D73300165D24</string>
 											<string>27F581CA10C35FAF00DB2692</string>
 											<string>27F5827110C36A5600DB2692</string>
-											<string>27F5827210C36A5600DB2692</string>
 											<string>27F5828010C36B9300DB2692</string>
-											<string>27F5828210C36B9300DB2692</string>
+											<string>27F582EE10C37E0700DB2692</string>
+											<string>27F5831310C3804300DB2692</string>
+											<string>27F5831410C3804300DB2692</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -477,7 +477,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1164, 820}}</string>
 								<key>RubberWindowFrame</key>
-								<string>283 265 1437 866 0 0 1920 1178 </string>
+								<string>248 279 1437 866 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -497,7 +497,7 @@
 								<key>Frame</key>
 								<string>{{0, 825}, {1164, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>283 265 1437 866 0 0 1920 1178 </string>
+								<string>248 279 1437 866 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -668,7 +668,7 @@
 		<string>/Users/mike/src/rackspace/iphone-rackspacecloud/Rackspace.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>283 265 1437 866 0 0 1920 1178 </string>
+	<string>248 279 1437 866 0 0 1920 1178 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

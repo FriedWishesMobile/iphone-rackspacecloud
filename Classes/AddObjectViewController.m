@@ -20,17 +20,24 @@
 
 @implementation AddObjectViewController
 
-@synthesize account, container, listObjectsViewController, tableView;
+@synthesize account, container, listObjectsViewController, tableView, footerView, uploadButton, uploadSpinner;
 
 NSUInteger state = kChoosingFileType;
 BOOL imageIsPng = YES;
 NSTimeInterval placeholderTimeInterval;
+UIImage *selectedImage = nil;
 
 #pragma mark -
 #pragma mark View Methods
 
 - (void)viewDidLoad {
 	state = kChoosingFileType;
+	
+	CGRect newFrame = CGRectMake(0.0, 0.0, self.tableView.bounds.size.width, footerView.frame.size.height);
+	footerView.backgroundColor = [UIColor clearColor];
+	footerView.frame = newFrame;
+	self.tableView.tableFooterView = self.footerView;	// note this will override UITableView's 'sectionFooterHeight' property
+	
 	[super viewDidLoad];
 }
 
@@ -52,6 +59,35 @@ NSTimeInterval placeholderTimeInterval;
 
 - (void) cancelButtonPressed:(id)sender {
 	[self dismissModalViewControllerAnimated:YES];
+}
+
+- (void) uploadButtonPressed:(id)sender {
+	
+	[self.uploadSpinner startAnimating];
+	
+	RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];
+	selectedImage = [self scaleAndRotateImage:selectedImage];
+	
+	NSData *imageData = nil;
+	
+	if (imageIsPng) {
+		imageData = UIImagePNGRepresentation(selectedImage);
+	} else {
+		imageData = UIImageJPEGRepresentation(selectedImage, 0.7); // TODO: should we provide a slider to choose quality?
+	}
+	
+	CloudFilesObject *co = [[CloudFilesObject alloc] init];
+	
+	// TODO: get file name from text field!
+	co.name = [NSString stringWithFormat:@"cloudapp_upload_%@.png", [[[NSDate date] description] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+	co.contentType = @"image/png";
+	co.data = imageData;
+	[co createFileWithAccountName:app.cloudFilesAccountName andContainerName:self.container.name];
+	
+	// refresh files list in container view
+	[self.listObjectsViewController refreshFileList];
+	
+	[self.uploadSpinner stopAnimating];
 }
 
 #pragma mark -
@@ -369,25 +405,10 @@ NSTimeInterval placeholderTimeInterval;
 	state = kNamingImageFile;
 	[self.tableView reloadData];
 	
+	selectedImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+	
 	[picker dismissModalViewControllerAnimated:YES];
-	[self dismissModalViewControllerAnimated:YES];
-	
-	/*
-	UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
-	RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];
-	
-	image = [self scaleAndRotateImage:image];
-	
-	NSData *imageData = UIImagePNGRepresentation(image);
-	CloudFilesObject *co = [[CloudFilesObject alloc] init];
-	co.name = [NSString stringWithFormat:@"cloudapp_upload_%@.png", [[[NSDate date] description] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-	co.contentType = @"image/png";
-	co.data = imageData;
-	[co createFileWithAccountName:app.cloudFilesAccountName andContainerName:self.container.name];
-	
-	// refresh files list in container view
-	[self.listObjectsViewController refreshFileList];
-	 */
+	[self dismissModalViewControllerAnimated:YES];	
 }
 
 #pragma mark -
@@ -405,6 +426,9 @@ NSTimeInterval placeholderTimeInterval;
 	[container release];
 	[listObjectsViewController release];
 	[tableView release];
+	[footerView release];
+	[uploadButton release];
+	[uploadSpinner release];
     [super dealloc];
 }
 
