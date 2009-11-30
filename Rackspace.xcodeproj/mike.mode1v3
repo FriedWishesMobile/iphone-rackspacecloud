@@ -340,7 +340,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>27F5825710C3682300DB2692</string>
+										<string>27F5828510C36BDC00DB2692</string>
 										<key>history</key>
 										<array>
 											<string>2786AE080FFC368D002B852B</string>
@@ -460,9 +460,10 @@
 											<string>27A15CCA10B3D73300165D24</string>
 											<string>27A15CCB10B3D73300165D24</string>
 											<string>27F581CA10C35FAF00DB2692</string>
-											<string>27F5823010C365C000DB2692</string>
-											<string>27F5824010C3662400DB2692</string>
-											<string>27F5825610C3682300DB2692</string>
+											<string>27F5827110C36A5600DB2692</string>
+											<string>27F5827210C36A5600DB2692</string>
+											<string>27F5828010C36B9300DB2692</string>
+											<string>27F5828210C36B9300DB2692</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -897,12 +898,14 @@
 							<key>Dock</key>
 							<array>
 								<dict>
+									<key>BecomeActive</key>
+									<true/>
 									<key>ContentConfiguration</key>
 									<dict>
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>AddObjectViewController.h</string>
+										<string>AddContainerViewController.m</string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>
@@ -923,8 +926,6 @@
 							<string>253pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>

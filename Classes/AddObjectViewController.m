@@ -12,6 +12,7 @@
 #import "CFAccount.h"
 #import "Container.h"
 #import "ListObjectsViewController.h"
+#import "TextFieldCell.h"
 
 #define kChoosingFileType 0
 #define kNamingImageFile  1
@@ -52,6 +53,15 @@ NSUInteger state = kChoosingFileType;
 }
 
 #pragma mark -
+#pragma mark Text Field Methods
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+	// hide the keyboard when Done is pressed
+	[textField resignFirstResponder];
+	return NO;
+}
+
+#pragma mark -
 #pragma mark Table Methods
 
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
@@ -59,7 +69,7 @@ NSUInteger state = kChoosingFileType;
 		return NSLocalizedString(@"Choose a file type", @"Choose a file type table section header");
 	} else {
 		// TODO: localize these strings
-		return @"Name and upload file";
+		return @"Name and Upload File";
 	}
 }
 
@@ -78,8 +88,7 @@ NSUInteger state = kChoosingFileType;
 	}
 }
 
-- (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+- (UITableViewCell *)tableView:(UITableView *)aTableView fileTypeCellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	static NSString *CellIdentifier = @"Cell";
 	UITableViewCell *cell = (UITableViewCell *) [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
@@ -102,6 +111,49 @@ NSUInteger state = kChoosingFileType;
 	}
 	
 	return cell;		
+}
+
+- (UITableViewCell *)tableView:(UITableView *)aTableView imageFileCellForRowAtIndexPath:(NSIndexPath *)indexPath {
+	// TODO: allow choice between jpeg and png in second table section
+	static NSString *CellIdentifier = @"ImageFileCell";
+	TextFieldCell *cell = (TextFieldCell *) [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	if (cell == nil) {
+		cell = [[[TextFieldCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier] autorelease];
+		// TODO: localize string
+		cell.textLabel.text = @"File Name";
+		cell.textField.placeholder = [NSString stringWithFormat:@"upload_%d.png", [[NSDate date] timeIntervalSince1970]];		
+		cell.textField.keyboardType = UIKeyboardTypeDefault;
+		cell.textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+		cell.textField.returnKeyType = UIReturnKeyDone;
+		cell.textField.delegate = self;
+	}
+	return cell;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)aTableView textFileCellForRowAtIndexPath:(NSIndexPath *)indexPath {
+	static NSString *CellIdentifier = @"TextFileCell";
+	TextFieldCell *cell = (TextFieldCell *) [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	if (cell == nil) {
+		cell = [[[TextFieldCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier] autorelease];
+		// TODO: localize string
+		cell.textLabel.text = @"File Name";
+		cell.textField.placeholder = [NSString stringWithFormat:@"upload_%d.png", [[NSDate date] timeIntervalSince1970]];		
+		cell.textField.keyboardType = UIKeyboardTypeDefault;
+		cell.textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+		cell.textField.returnKeyType = UIReturnKeyDone;
+		cell.textField.delegate = self;
+	}
+	return cell;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+	if (state == kChoosingFileType) {
+		return [self tableView:aTableView fileTypeCellForRowAtIndexPath:indexPath];
+	} else if (state == kNamingImageFile) {
+		return [self tableView:aTableView imageFileCellForRowAtIndexPath:indexPath];
+	} else { // if (state == kNamingTextFile) {
+		return [self tableView:aTableView textFileCellForRowAtIndexPath:indexPath];
+	}
 }
 
 
