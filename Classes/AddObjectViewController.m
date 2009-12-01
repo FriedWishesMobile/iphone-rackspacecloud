@@ -26,7 +26,7 @@ NSUInteger state = kChoosingFileType;
 BOOL imageIsPng = YES;
 NSTimeInterval placeholderTimeInterval;
 UIImage *selectedImage = nil;
-NSString *filename = @"";
+UITextField *filenameTextField = nil;
 
 #pragma mark -
 #pragma mark View Methods
@@ -80,8 +80,17 @@ NSString *filename = @"";
 	CloudFilesObject *co = [[CloudFilesObject alloc] init];
 	
 	// TODO: get file name from text field!
-	co.name = [NSString stringWithFormat:@"cloudapp_upload_%@.png", [[[NSDate date] description] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-	co.contentType = @"image/png";
+	NSString *filename = filenameTextField.text;
+	if (!filename || [filename isEqualToString:@""]) {
+		filename = filenameTextField.placeholder;
+	}
+	
+	co.name = filename;
+	if (imageIsPng) {
+		co.contentType = @"image/png";
+	} else {
+		co.contentType = @"image/jpeg";
+	}
 	co.data = imageData;
 	[co createFileWithAccountName:app.cloudFilesAccountName andContainerName:self.container.name];
 	
@@ -89,6 +98,8 @@ NSString *filename = @"";
 	[self.listObjectsViewController refreshFileList];
 	
 	[self.uploadSpinner stopAnimating];
+	
+	[self dismissModalViewControllerAnimated:YES];
 }
 
 #pragma mark -
@@ -188,6 +199,7 @@ NSString *filename = @"";
 			cell.textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
 			cell.textField.returnKeyType = UIReturnKeyDone;
 			cell.textField.delegate = self;
+			filenameTextField = cell.textField;
 			placeholderTimeInterval = [[NSDate date] timeIntervalSince1970];
 		}
 		
@@ -406,7 +418,7 @@ NSString *filename = @"";
 	state = kNamingImageFile;
 	[self.tableView reloadData];
 	
-	selectedImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+	selectedImage = [[info objectForKey:UIImagePickerControllerOriginalImage] retain];
 	
 	[picker dismissModalViewControllerAnimated:YES];
 	[self dismissModalViewControllerAnimated:YES];	
