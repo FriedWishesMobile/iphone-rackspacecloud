@@ -52,6 +52,8 @@
 		2793CA5B1016D5BD009EB8C3 /* ResizeServerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2793CA591016D5BD009EB8C3 /* ResizeServerController.xib */; };
 		27A3C4E41019762500198388 /* RenameServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A3C4E21019762500198388 /* RenameServerController.m */; };
 		27A3C4E51019762500198388 /* RenameServerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A3C4E31019762500198388 /* RenameServerController.xib */; };
+		27D36C5310C8E4DC0047F7CB /* ListFolderObjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */; };
+		27D36C5410C8E4DC0047F7CB /* ListFolderObjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D36C5210C8E4DC0047F7CB /* ListFolderObjectsViewController.xib */; };
 		27D86F781041DDCA00B805A9 /* ObjectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D86F771041DDCA00B805A9 /* ObjectView.xib */; };
 		27DA9063106C70F600D6A2AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27DA9061106C70F600D6A2AA /* Localizable.strings */; };
 		27FEADA9104A06470042BBFC /* WebFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FEADA7104A06470042BBFC /* WebFileViewController.m */; };
@@ -204,6 +206,9 @@
 		27C9C2121084485400729797 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/ImageView.xib; sourceTree = "<group>"; };
 		27C9C2141084486E00729797 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/AddObject.xib; sourceTree = "<group>"; };
 		27C9C2151084487000729797 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/AddObject.xib; sourceTree = "<group>"; };
+		27D36C5010C8E4DC0047F7CB /* ListFolderObjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListFolderObjectsViewController.h; sourceTree = "<group>"; };
+		27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListFolderObjectsViewController.m; sourceTree = "<group>"; };
+		27D36C5210C8E4DC0047F7CB /* ListFolderObjectsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ListFolderObjectsViewController.xib; path = Classes/ListFolderObjectsViewController.xib; sourceTree = "<group>"; };
 		27D86F771041DDCA00B805A9 /* ObjectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObjectView.xib; sourceTree = "<group>"; };
 		27DA9062106C70F600D6A2AA /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		27DA906A106C714700D6A2AA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -525,6 +530,8 @@
 			children = (
 				4C9989950FEF48AA005D12B7 /* ListObjectsViewController.h */,
 				4C9989960FEF48AA005D12B7 /* ListObjectsViewController.m */,
+				27D36C5010C8E4DC0047F7CB /* ListFolderObjectsViewController.h */,
+				27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */,
 			);
 			name = "List Objects";
 			sourceTree = "<group>";
@@ -551,6 +558,7 @@
 		2786B0680FFC6B6D002B852B /* User Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				27D36C5210C8E4DC0047F7CB /* ListFolderObjectsViewController.xib */,
 				2738EF3A10A24A51006EEF21 /* AddContainerViewController.xib */,
 				271ADC2C1070610400066137 /* WebFileViewController.xib */,
 				2793CA561016D56D009EB8C3 /* Edit Server */,
@@ -1016,6 +1024,7 @@
 				27DA9063106C70F600D6A2AA /* Localizable.strings in Resources */,
 				278B71A0108C1D270073C19B /* IconBeta.png in Resources */,
 				2738EF3C10A24A51006EEF21 /* AddContainerViewController.xib in Resources */,
+				27D36C5410C8E4DC0047F7CB /* ListFolderObjectsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1100,6 +1109,7 @@
 				2743D0991060B22C00EF51D1 /* GroupSpinnerCell.m in Sources */,
 				271ADB31106EECF500066137 /* TextFieldCell.m in Sources */,
 				2738EF3B10A24A51006EEF21 /* AddContainerViewController.m in Sources */,
+				27D36C5310C8E4DC0047F7CB /* ListFolderObjectsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
