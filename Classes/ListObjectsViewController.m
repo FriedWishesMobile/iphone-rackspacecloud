@@ -20,13 +20,16 @@
 
 #define kContainerDetails 0
 #define kCDN 1
-#define kFiles 2
+#define kFolders 2
+#define kFiles 3
 
 @implementation ListObjectsViewController
 
 @synthesize account, container, containerName, cdnSwitch, logSwitch, spinnerView, objectsContainer, ttlCell;
 
 BOOL objectsLoaded = NO;
+NSMutableArray *folderedObjects = nil;
+NSMutableArray *unfolderedObjects = nil;
 
 // thread to load containers
 - (void) loadObjects {
@@ -40,6 +43,22 @@ BOOL objectsLoaded = NO;
 		// the objectsContainer is a temporary holder for the files list
 		self.objectsContainer = [Container findRemote:self.containerName withResponse:nil];
 		self.container.objects = self.objectsContainer.objects;
+		
+		folderedObjects = [[NSMutableArray alloc] init];
+		unfolderedObjects = [[NSMutableArray alloc] init];
+		
+		for (int i = 0; i < [self.container.objects count]; i++) {
+			CloudFilesObject *cfo = [self.container.objects objectAtIndex:i];
+			NSRange range = [cfo.name rangeOfString:@"/"];
+			if (range.location == NSNotFound) {
+				[unfolderedObjects addObject:cfo];
+			} else {
+				[folderedObjects addObject:cfo];
+			}
+		}
+		
+		NSLog(@"Foldered count: %i", [folderedObjects count]);
+		NSLog(@"Unfoldered count: %i", [unfolderedObjects count]);
 		
 		objectsLoaded = YES;
 		self.tableView.userInteractionEnabled = YES;
@@ -295,7 +314,7 @@ BOOL objectsLoaded = NO;
 //}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-	return 3;
+	return 4;
 }
 
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
@@ -303,6 +322,8 @@ BOOL objectsLoaded = NO;
 		return NSLocalizedString(@"Container Details", @"Container Details table section header");
 	} else if (section == kCDN) {
 		return NSLocalizedString(@"Content Delivery Network", @"CDN table section header");
+	} else if (section == kFolders) {
+		return @"Folders"; // TODO: localize
 	} else if (section == kFiles) {
 		return NSLocalizedString(@"Files", @"Container Files table section header");
 	} else {
@@ -317,9 +338,15 @@ BOOL objectsLoaded = NO;
 		rows = 2;
 	} else if (section == kCDN) {
 		rows = 2;
-	} else { // if (section == kFiles) {		
+	} else if (section == kFiles) {		
 		if (objectsLoaded) {
-			rows = [container.objects count];
+			rows = [unfolderedObjects count];
+		} else {
+			rows = 1;
+		}
+	} else { // if (section == kFolders) {
+		if (objectsLoaded) {
+			rows = [folderedObjects count];
 		} else {
 			rows = 1;
 		}
@@ -461,7 +488,38 @@ BOOL objectsLoaded = NO;
 				}
 			}
 			
-			CloudFilesObject *o = (CloudFilesObject *) [container.objects objectAtIndex:indexPath.row];	
+			CloudFilesObject *o = (CloudFilesObject *) [unfolderedObjects objectAtIndex:indexPath.row];	
+			cell.textLabel.text = o.name;
+			cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", o.contentType, [o humanizedBytes]];
+			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+			
+			return cell;
+			
+		} else { // show the spinner cell
+			GroupSpinnerCell *cell = (GroupSpinnerCell *) [aTableView dequeueReusableCellWithIdentifier:@"SpinnerCell"];
+			if (cell == nil) {
+				cell = [[[GroupSpinnerCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"SpinnerCell"] autorelease];
+				cell.userInteractionEnabled = NO;
+				self.tableView.userInteractionEnabled = NO;
+			}
+			
+			return cell;
+		}
+	} else if (indexPath.section == kFolders) {
+		if (objectsLoaded) {
+			
+			UITableViewCell *cell = (UITableViewCell *) [aTableView dequeueReusableCellWithIdentifier:@"FolderCell"];
+			if (cell == nil) {
+				cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"FolderCell"] autorelease];
+				
+				if (kRackspaceVersion >= 1.1) { // TODO: remove version check across the board
+					cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+				} else {
+					cell.selectionStyle = UITableViewCellSelectionStyleNone;
+				}
+			}
+			
+			CloudFilesObject *o = (CloudFilesObject *) [folderedObjects objectAtIndex:indexPath.row];	
 			cell.textLabel.text = o.name;
 			cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", o.contentType, [o humanizedBytes]];
 			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -543,6 +601,12 @@ BOOL objectsLoaded = NO;
 	[spinnerView release];
 	[objectsContainer release];
 	[ttlCell release];
+	if (folderedObjects) {
+		[folderedObjects release];
+	}
+	if (unfolderedObjects) {
+		[unfolderedObjects release];
+	}
     [super dealloc];
 }
 
