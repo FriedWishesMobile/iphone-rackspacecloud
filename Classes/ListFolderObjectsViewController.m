@@ -118,23 +118,25 @@ NSDictionary *subfolders = nil;
 #pragma mark Table view methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+	if ([subfolders count] > 0) {
+		return 2;
+	} else {
+		return 1;
+	}
 }
 
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
-	if (section == kFolders) {
+	if ([subfolders count] > 0 && section == kFolders) {
 		return @"Folders"; // TODO: localize
-	} else if (section == kFiles) {
+	} else { //if (section == kFiles) {
 		return NSLocalizedString(@"Files", @"Container Files table section header");
-	} else {
-		return @"";
 	}
 }
 
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	if (section == kFolders) {
+	if ([subfolders count] > 0 && section == kFolders) {
 		return [subfolders count];
 	} else { // if (section == kFiles) {
 		return [objectsOutsideFolders count];
@@ -153,7 +155,7 @@ NSDictionary *subfolders = nil;
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-	if (indexPath.section == kFolders) {
+	if ([subfolders count] > 0 && indexPath.section == kFolders) {
 		NSString *key = [[subfolders allKeys] objectAtIndex:indexPath.row];
 		NSInteger count = [[subfolders objectForKey:key] count];
 		cell.textLabel.text = key;
@@ -163,7 +165,7 @@ NSDictionary *subfolders = nil;
 			cell.detailTextLabel.text = [NSString stringWithFormat:@"%i files", count]; // TODO: localize
 		}
 		
-	} else if (indexPath.section == kFiles) {	
+	} else { //if (indexPath.section == kFiles) {	
 		CloudFilesObject *o = (CloudFilesObject *) [self.objects objectAtIndex:indexPath.row];	
 		NSString *filename = [o.name substringFromIndex:filenamePrefixLength];
 		cell.textLabel.text = filename;
@@ -176,15 +178,7 @@ NSDictionary *subfolders = nil;
 
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
-	if (indexPath.section == kFiles) {
-		CloudFilesObject *o = (CloudFilesObject *) [objectsOutsideFolders objectAtIndex:indexPath.row];	
-		ObjectViewController *vc = [[ObjectViewController alloc] initWithNibName:@"ObjectView" bundle:nil];
-		vc.cfObject = o;
-		vc.container = self.container;
-		[self.navigationController pushViewController:vc animated:YES];
-		[vc release];
-		[aTableView deselectRowAtIndexPath:indexPath animated:NO];
-	} else if (indexPath.section == kFolders) {
+	if ([subfolders count] > 0 && indexPath.section == kFolders) {
 		ListFolderObjectsViewController *vc = [[ListFolderObjectsViewController alloc] initWithNibName:@"ListFolderObjectsViewController" bundle:nil];
 		
 		NSString *key = [[subfolders allKeys] objectAtIndex:indexPath.row];
@@ -195,6 +189,14 @@ NSDictionary *subfolders = nil;
 		
 		[self.navigationController pushViewController:vc animated:YES];
 		[vc release];
+	} else { // if (indexPath.section == kFiles) {
+		CloudFilesObject *o = (CloudFilesObject *) [objectsOutsideFolders objectAtIndex:indexPath.row];	
+		ObjectViewController *vc = [[ObjectViewController alloc] initWithNibName:@"ObjectView" bundle:nil];
+		vc.cfObject = o;
+		vc.container = self.container;
+		[self.navigationController pushViewController:vc animated:YES];
+		[vc release];
+		[aTableView deselectRowAtIndexPath:indexPath animated:NO];
 	}
 }
 
