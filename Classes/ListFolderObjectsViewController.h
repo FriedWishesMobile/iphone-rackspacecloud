@@ -10,7 +10,11 @@
 
 
 @interface ListFolderObjectsViewController : UITableViewController {
-
+	NSString *title;
+	NSMutableArray *objects;
 }
+
+@property (nonatomic, retain) NSString *title;
+@property (nonatomic, retain) NSMutableArray *objects;
 
 @end

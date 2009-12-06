@@ -197,7 +197,48 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>27D36D2710CB535C0047F7CB</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>ListObjectsViewController.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>27D36D2810CB535C0047F7CB</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>ListObjectsViewController.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>27D36D5B10CB54DE0047F7CB</string>
+						<key>history</key>
+						<array>
+							<string>27D36D1F10CB530A0047F7CB</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {1095, 566}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>90 233 1095 607 0 0 1920 1178 </string>
+			</dict>
+		</dict>
+	</array>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -309,7 +350,7 @@
 							<real>251</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>414 289 1437 866 0 0 1920 1178 </string>
+						<string>369 288 1437 866 0 0 1920 1178 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -327,7 +368,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ListObjectsViewController.m</string>
+								<string>ListFolderObjectsViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -335,11 +376,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ListObjectsViewController.m</string>
+										<string>ListFolderObjectsViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>27D36C9310C8F1140047F7CB</string>
+										<string>27D36D5A10CB54DE0047F7CB</string>
 										<key>history</key>
 										<array>
 											<string>2786AE080FFC368D002B852B</string>
@@ -459,11 +500,12 @@
 											<string>27F582EE10C37E0700DB2692</string>
 											<string>277BE4DC10C4DE3200CED07B</string>
 											<string>27D36C6610C8EF140047F7CB</string>
-											<string>27D36C6710C8EF140047F7CB</string>
-											<string>27D36C6810C8EF140047F7CB</string>
 											<string>27D36C6910C8EF140047F7CB</string>
 											<string>27D36C6A10C8EF140047F7CB</string>
-											<string>27D36C6B10C8EF140047F7CB</string>
+											<string>27D36D1910CB53090047F7CB</string>
+											<string>27D36D1A10CB53090047F7CB</string>
+											<string>27D36D1B10CB53090047F7CB</string>
+											<string>27D36D3010CB53770047F7CB</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -477,7 +519,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1164, 820}}</string>
 								<key>RubberWindowFrame</key>
-								<string>414 289 1437 866 0 0 1920 1178 </string>
+								<string>369 288 1437 866 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -497,7 +539,7 @@
 								<key>Frame</key>
 								<string>{{0, 825}, {1164, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>414 289 1437 866 0 0 1920 1178 </string>
+								<string>369 288 1437 866 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -659,16 +701,18 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>27D36D5C10CB54DE0047F7CB</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>27D36C7510C8EF140047F7CB</string>
 		<string>27D36C7610C8EF140047F7CB</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>27B6C6280FF0B97C006C965F</string>
+		<string>27D36D2710CB535C0047F7CB</string>
 		<string>/Users/mike/src/rackspace/iphone-rackspacecloud/Rackspace.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>414 289 1437 866 0 0 1920 1178 </string>
+	<string>369 288 1437 866 0 0 1920 1178 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -684,12 +728,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>ListFolderObjectsViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>

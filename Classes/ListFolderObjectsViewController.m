@@ -3,13 +3,18 @@
 //  Rackspace
 //
 //  Created by Michael Mayo on 12/3/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
+//  Copyright 2009 Rackspace Hosting. All rights reserved.
 //
 
 #import "ListFolderObjectsViewController.h"
+#import "CloudFilesObject.h"
 
+#define kFolders 0
+#define kFiles 1
 
 @implementation ListFolderObjectsViewController
+
+@synthesize title, objects;
 
 /*
 - (id)initWithStyle:(UITableViewStyle)style {
@@ -20,14 +25,13 @@
 }
 */
 
-/*
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	self.navigationItem.title = self.title;
 }
-*/
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
@@ -74,13 +78,27 @@
 #pragma mark Table view methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
+}
+
+- (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
+	if (section == kFolders) {
+		return @"Folders"; // TODO: localize
+	} else if (section == kFiles) {
+		return NSLocalizedString(@"Files", @"Container Files table section header");
+	} else {
+		return @"";
+	}
 }
 
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+	if (section == kFolders) {
+		return 0;
+	} else { // if (section == kFiles) {
+		return [self.objects count];
+	}
 }
 
 
@@ -91,10 +109,18 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    // Set up the cell...
+	if (indexPath.section == kFolders) {
+		
+	} else if (indexPath.section == kFiles) {	
+		CloudFilesObject *o = (CloudFilesObject *) [self.objects objectAtIndex:indexPath.row];	
+		NSString *filename = [o.name substringFromIndex:[o.name rangeOfString:@"/"].location + 1]; // + 1 to remove /
+		cell.textLabel.text = filename;
+		cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", o.contentType, [o humanizedBytes]];
+		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+	}
 	
     return cell;
 }
@@ -149,6 +175,8 @@
 
 
 - (void)dealloc {
+	[title release];
+	[objects release];
     [super dealloc];
 }
 

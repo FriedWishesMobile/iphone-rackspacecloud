@@ -17,6 +17,7 @@
 #import "RoundedRectView.h"
 #import "Response.h"
 #import "TextFieldCell.h"
+#import "ListFolderObjectsViewController.h"
 
 #define kContainerDetails 0
 #define kCDN 1
@@ -30,6 +31,8 @@
 BOOL objectsLoaded = NO;
 NSMutableArray *folderedObjects = nil;
 NSMutableArray *unfolderedObjects = nil;
+NSDictionary *folders = nil;
+
 
 // thread to load containers
 - (void) loadObjects {
@@ -59,6 +62,19 @@ NSMutableArray *unfolderedObjects = nil;
 		
 		NSLog(@"Foldered count: %i", [folderedObjects count]);
 		NSLog(@"Unfoldered count: %i", [unfolderedObjects count]);
+		
+		// put folders files in folder
+		folders = [[NSMutableDictionary alloc] init];
+		for (int i = 0; i < [folderedObjects count]; i++) {
+			CloudFilesObject *cfo = [folderedObjects objectAtIndex:i];
+			NSString *key = [cfo.name substringToIndex:[cfo.name rangeOfString:@"/"].location];
+			NSMutableArray *folder = [folders objectForKey:key];
+			if (folder == nil) {
+				folder = [[NSMutableArray alloc] init];
+			}
+			[folder addObject:cfo];
+			[folders setValue:folder forKey:key];
+		}
 		
 		objectsLoaded = YES;
 		self.tableView.userInteractionEnabled = YES;
@@ -197,36 +213,22 @@ NSMutableArray *unfolderedObjects = nil;
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
 	if (indexPath.section == kFiles) {
+		CloudFilesObject *o = (CloudFilesObject *) [container.objects objectAtIndex:indexPath.row];	
+		ObjectViewController *vc = [[ObjectViewController alloc] initWithNibName:@"ObjectView" bundle:nil];
+		vc.cfObject = o;
+		vc.container = self.container;
+		[self.navigationController pushViewController:vc animated:YES];
+		[vc release];
+		[aTableView deselectRowAtIndexPath:indexPath animated:NO];
+	} else if (indexPath.section == kFolders) {
+		ListFolderObjectsViewController *vc = [[ListFolderObjectsViewController alloc] initWithNibName:@"ListFolderObjectsViewController" bundle:nil];
 
-		if (kRackspaceVersion >= 1.1) {
-			CloudFilesObject *o = (CloudFilesObject *) [container.objects objectAtIndex:indexPath.row];	
-			ObjectViewController *vc = [[ObjectViewController alloc] initWithNibName:@"ObjectView" bundle:nil];
-			vc.cfObject = o;
-			vc.container = self.container;
-			[self.navigationController pushViewController:vc animated:YES];
-			[vc release];
-			[aTableView deselectRowAtIndexPath:indexPath animated:NO];
-		}
+		NSString *key = [[folders allKeys] objectAtIndex:indexPath.row];
+		vc.title = key;
+		vc.objects = [folders valueForKey:key];
 		
-		/* // code to load image viewer
-		if ((kRackspaceVersion >= 1.1) && [o.contentType rangeOfString:@"image/"].location == 0) {		
-			
-			RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];
-			app.tapDetectingImageView.image = nil; // to not show previously view image behind status bar
-
-			self.navigationController.navigationBar.translucent = YES;
-			self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-
-			ImageViewController *vc = [[ImageViewController alloc] initWithNibName:@"ImageView" bundle:nil];
-			vc.account = self.account;
-			vc.container = self.container;
-			vc.containerName = self.containerName;
-			vc.cfObject = [container.objects objectAtIndex:indexPath.row];
-			[self.navigationController pushViewController:vc animated:YES];
-			[vc release];
-			[aTableView deselectRowAtIndexPath:indexPath animated:NO];		
-		}
-		*/
+		[self.navigationController pushViewController:vc animated:YES];
+		[vc release];
 	}
 }
 
@@ -346,7 +348,7 @@ NSMutableArray *unfolderedObjects = nil;
 		}
 	} else { // if (section == kFolders) {
 		if (objectsLoaded) {
-			rows = [folderedObjects count];
+			rows = [folders count];
 		} else {
 			rows = 1;
 		}
@@ -480,12 +482,7 @@ NSMutableArray *unfolderedObjects = nil;
 			UITableViewCell *cell = (UITableViewCell *) [aTableView dequeueReusableCellWithIdentifier:@"ObjectCell"];
 			if (cell == nil) {
 				cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"ObjectCell"] autorelease];
-				
-				if (kRackspaceVersion >= 1.1) {
-					cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-				} else {
-					cell.selectionStyle = UITableViewCellSelectionStyleNone;
-				}
+				cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 			}
 			
 			CloudFilesObject *o = (CloudFilesObject *) [unfolderedObjects objectAtIndex:indexPath.row];	
@@ -519,9 +516,15 @@ NSMutableArray *unfolderedObjects = nil;
 				}
 			}
 			
-			CloudFilesObject *o = (CloudFilesObject *) [folderedObjects objectAtIndex:indexPath.row];	
-			cell.textLabel.text = o.name;
-			cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", o.contentType, [o humanizedBytes]];
+			NSString *key = [[folders allKeys] objectAtIndex:indexPath.row];
+			NSInteger count = [[folders objectForKey:key] count];
+			cell.textLabel.text = key;
+			if (count == 1) {
+				cell.detailTextLabel.text = @"1 file"; // TODO: localize
+			} else {
+				cell.detailTextLabel.text = [NSString stringWithFormat:@"%i files", count]; // TODO: localize
+			}
+			
 			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 			
 			return cell;
