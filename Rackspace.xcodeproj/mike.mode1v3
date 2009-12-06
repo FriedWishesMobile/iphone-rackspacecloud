@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>27D36E0210CB5ED70047F7CB</string>
+						<string>27D36E2010CC65AB0047F7CB</string>
 						<key>history</key>
 						<array>
 							<string>27D36DDD10CB5BFD0047F7CB</string>
@@ -236,7 +236,7 @@
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>90 233 1095 607 0 0 1920 1178 </string>
+				<string>204 335 1095 607 0 0 1920 1178 </string>
 			</dict>
 		</dict>
 	</array>
@@ -351,7 +351,7 @@
 							<real>251</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>231 275 1437 866 0 0 1920 1178 </string>
+						<string>426 283 1437 866 0 0 1920 1178 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -381,7 +381,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>27D36E0110CB5ED70047F7CB</string>
+										<string>27D36E1F10CC65AB0047F7CB</string>
 										<key>history</key>
 										<array>
 											<string>2786AE080FFC368D002B852B</string>
@@ -520,7 +520,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1164, 820}}</string>
 								<key>RubberWindowFrame</key>
-								<string>231 275 1437 866 0 0 1920 1178 </string>
+								<string>426 283 1437 866 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -540,7 +540,7 @@
 								<key>Frame</key>
 								<string>{{0, 825}, {1164, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>231 275 1437 866 0 0 1920 1178 </string>
+								<string>426 283 1437 866 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -702,7 +702,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>27D36E0310CB5ED70047F7CB</string>
+		<string>27D36E2110CC65AB0047F7CB</string>
 		<string>27D36DB810CB5AC80047F7CB</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>27D36C7510C8EF140047F7CB</string>
@@ -710,11 +710,11 @@
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>27B6C6280FF0B97C006C965F</string>
-		<string>27D36D9410CB59DE0047F7CB</string>
 		<string>/Users/mike/src/rackspace/iphone-rackspacecloud/Rackspace.xcodeproj</string>
+		<string>27D36D9410CB59DE0047F7CB</string>
 	</array>
 	<key>WindowString</key>
-	<string>231 275 1437 866 0 0 1920 1178 </string>
+	<string>426 283 1437 866 0 0 1920 1178 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

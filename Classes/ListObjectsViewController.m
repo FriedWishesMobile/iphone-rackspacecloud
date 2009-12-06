@@ -212,17 +212,9 @@ NSDictionary *folders = nil;
 
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-	if (indexPath.section == kFiles) {
-		CloudFilesObject *o = (CloudFilesObject *) [unfolderedObjects objectAtIndex:indexPath.row];	
-		ObjectViewController *vc = [[ObjectViewController alloc] initWithNibName:@"ObjectView" bundle:nil];
-		vc.cfObject = o;
-		vc.container = self.container;
-		[self.navigationController pushViewController:vc animated:YES];
-		[vc release];
-		[aTableView deselectRowAtIndexPath:indexPath animated:NO];
-	} else if (indexPath.section == kFolders) {
+	if ([folders count] > 0 && indexPath.section == kFolders) {
 		ListFolderObjectsViewController *vc = [[ListFolderObjectsViewController alloc] initWithNibName:@"ListFolderObjectsViewController" bundle:nil];
-
+		
 		NSString *key = [[folders allKeys] objectAtIndex:indexPath.row];
 		vc.title = key;
 		vc.objects = [folders valueForKey:key];
@@ -231,6 +223,17 @@ NSDictionary *folders = nil;
 		
 		[self.navigationController pushViewController:vc animated:YES];
 		[vc release];
+		
+	} else { // if (indexPath.section == kFiles) {
+		CloudFilesObject *o = (CloudFilesObject *) [unfolderedObjects objectAtIndex:indexPath.row];	
+		ObjectViewController *vc = [[ObjectViewController alloc] initWithNibName:@"ObjectView" bundle:nil];
+		vc.cfObject = o;
+		vc.container = self.container;
+		[self.navigationController pushViewController:vc animated:YES];
+		[vc release];
+		[aTableView deselectRowAtIndexPath:indexPath animated:NO];
+		
+		
 	}
 }
 
@@ -318,7 +321,11 @@ NSDictionary *folders = nil;
 //}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-	return 4;
+	if ([folders count] > 0) {
+		return 4;
+	} else {
+		return 3;
+	}
 }
 
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
@@ -326,12 +333,10 @@ NSDictionary *folders = nil;
 		return NSLocalizedString(@"Container Details", @"Container Details table section header");
 	} else if (section == kCDN) {
 		return NSLocalizedString(@"Content Delivery Network", @"CDN table section header");
-	} else if (section == kFolders) {
+	} else if ([folders count] > 0 && section == kFolders) {
 		return @"Folders"; // TODO: localize
-	} else if (section == kFiles) {
+	} else { //if (section == kFiles) {
 		return NSLocalizedString(@"Files", @"Container Files table section header");
-	} else {
-		return @"";
 	}
 }
 
@@ -342,30 +347,21 @@ NSDictionary *folders = nil;
 		rows = 2;
 	} else if (section == kCDN) {
 		rows = 2;
-	} else if (section == kFiles) {		
+	} else if ([folders count] > 0 && section == kFolders) {
 		if (objectsLoaded) {
-			rows = [unfolderedObjects count];
+			rows = [folders count];
 		} else {
 			rows = 1;
 		}
-	} else { // if (section == kFolders) {
+	} else { //if (section == kFiles) {		
 		if (objectsLoaded) {
-			rows = [folders count];
+			rows = [unfolderedObjects count];
 		} else {
 			rows = 1;
 		}
 	}
 	return rows;
 }
-
-// not needed for grouped table view
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//	CGFloat height = 44; // this is the apple default	
-//	if (!objectsLoaded && indexPath.section == kFiles) {
-//		height = 460;
-//	}
-//	return height;
-//}
 
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -478,33 +474,7 @@ NSDictionary *folders = nil;
 		
 		return cell;			
 			
-	} else if (indexPath.section == kFiles) {
-		if (objectsLoaded) {
-			
-			UITableViewCell *cell = (UITableViewCell *) [aTableView dequeueReusableCellWithIdentifier:@"ObjectCell"];
-			if (cell == nil) {
-				cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"ObjectCell"] autorelease];
-				cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-			}
-			
-			CloudFilesObject *o = (CloudFilesObject *) [unfolderedObjects objectAtIndex:indexPath.row];	
-			cell.textLabel.text = o.name;
-			cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", o.contentType, [o humanizedBytes]];
-			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-			
-			return cell;
-			
-		} else { // show the spinner cell
-			GroupSpinnerCell *cell = (GroupSpinnerCell *) [aTableView dequeueReusableCellWithIdentifier:@"SpinnerCell"];
-			if (cell == nil) {
-				cell = [[[GroupSpinnerCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"SpinnerCell"] autorelease];
-				cell.userInteractionEnabled = NO;
-				self.tableView.userInteractionEnabled = NO;
-			}
-			
-			return cell;
-		}
-	} else if (indexPath.section == kFolders) {
+	} else if ([folders count] > 0 && indexPath.section == kFolders) {
 		if (objectsLoaded) {
 			
 			UITableViewCell *cell = (UITableViewCell *) [aTableView dequeueReusableCellWithIdentifier:@"FolderCell"];
@@ -527,6 +497,32 @@ NSDictionary *folders = nil;
 				cell.detailTextLabel.text = [NSString stringWithFormat:@"%i files", count]; // TODO: localize
 			}
 			
+			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+			
+			return cell;
+			
+		} else { // show the spinner cell
+			GroupSpinnerCell *cell = (GroupSpinnerCell *) [aTableView dequeueReusableCellWithIdentifier:@"SpinnerCell"];
+			if (cell == nil) {
+				cell = [[[GroupSpinnerCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"SpinnerCell"] autorelease];
+				cell.userInteractionEnabled = NO;
+				self.tableView.userInteractionEnabled = NO;
+			}
+			
+			return cell;
+		}
+	} else { //if (indexPath.section == kFiles) {
+		if (objectsLoaded) {
+			
+			UITableViewCell *cell = (UITableViewCell *) [aTableView dequeueReusableCellWithIdentifier:@"ObjectCell"];
+			if (cell == nil) {
+				cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"ObjectCell"] autorelease];
+				cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+			}
+			
+			CloudFilesObject *o = (CloudFilesObject *) [unfolderedObjects objectAtIndex:indexPath.row];	
+			cell.textLabel.text = o.name;
+			cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", o.contentType, [o humanizedBytes]];
 			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 			
 			return cell;
