@@ -213,7 +213,7 @@ NSDictionary *folders = nil;
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
 	if (indexPath.section == kFiles) {
-		CloudFilesObject *o = (CloudFilesObject *) [container.objects objectAtIndex:indexPath.row];	
+		CloudFilesObject *o = (CloudFilesObject *) [unfolderedObjects objectAtIndex:indexPath.row];	
 		ObjectViewController *vc = [[ObjectViewController alloc] initWithNibName:@"ObjectView" bundle:nil];
 		vc.cfObject = o;
 		vc.container = self.container;
@@ -226,6 +226,8 @@ NSDictionary *folders = nil;
 		NSString *key = [[folders allKeys] objectAtIndex:indexPath.row];
 		vc.title = key;
 		vc.objects = [folders valueForKey:key];
+		vc.filenamePrefixLength = [key length] + 1;
+		vc.container = self.container;
 		
 		[self.navigationController pushViewController:vc animated:YES];
 		[vc release];
