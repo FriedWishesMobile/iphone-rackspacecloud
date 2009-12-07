@@ -18,38 +18,7 @@
 
 @synthesize title, objects, filenamePrefixLength, container;
 
-NSMutableArray *objectsInFolders = nil;
-NSMutableArray *objectsOutsideFolders = nil;
-NSDictionary *subfolders = nil;
-
-NSMutableArray *stack = nil;
-
-/*
-- (id)initWithStyle:(UITableViewStyle)style {
-    // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-    if (self = [super initWithStyle:style]) {
-    }
-    return self;
-}
-*/
-
 - (void)loadSubfolders {
-	
-	if (stack == nil) {
-		stack = [[NSMutableArray alloc] init];
-	}
-	
-	
-	
-	if (objectsInFolders) {
-		[objectsInFolders release];
-	}
-	if (objectsOutsideFolders) {
-		[objectsOutsideFolders release];
-	}
-	if (subfolders) {
-		[subfolders release];
-	}
 	
 	objectsInFolders = [[NSMutableArray alloc] init];
 	objectsOutsideFolders = [[NSMutableArray alloc] init];
@@ -79,10 +48,6 @@ NSMutableArray *stack = nil;
 		[subfolders setValue:folder forKey:key];
 	}
 	
-	NSArray *stackContents = [NSArray arrayWithObjects:objectsInFolders, objectsOutsideFolders, subfolders, nil];
-	
-	[stack addObject:stackContents];
-	
 }
 
 - (void)viewDidLoad {
@@ -93,48 +58,6 @@ NSMutableArray *stack = nil;
 	self.navigationItem.title = self.title;	
 	[self loadSubfolders];	
 }
-
-/*
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-*/
-/*
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-*/
-/*
-- (void)viewWillDisappear:(BOOL)animated {
-	[super viewWillDisappear:animated];
-}
-*/
-/*
-- (void)viewDidDisappear:(BOOL)animated {
-	[super viewDidDisappear:animated];
-}
-*/
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
-
-- (void)didReceiveMemoryWarning {
-	// Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-	
-	// Release any cached data, images, etc that aren't in use.
-}
-
-- (void)viewDidUnload {
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
-}
-
 
 #pragma mark Table view methods
 
@@ -196,7 +119,6 @@ NSMutableArray *stack = nil;
     return cell;
 }
 
-
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 	if ([subfolders count] > 0 && indexPath.section == kFolders) {
@@ -207,6 +129,7 @@ NSMutableArray *stack = nil;
 		vc.objects = [subfolders valueForKey:key];
 		vc.filenamePrefixLength = [key length] + 1 + filenamePrefixLength;
 		vc.container = self.container;
+		[vc loadSubfolders];
 		
 		[self.navigationController pushViewController:vc animated:YES];
 		[vc release];
@@ -221,61 +144,13 @@ NSMutableArray *stack = nil;
 	}
 }
 
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-
 - (void)dealloc {
 	[title release];
 	[objects release];
 	[container release];
-	if (objectsInFolders) {
-		[objectsInFolders release];
-	}
-	if (objectsOutsideFolders) {
-		[objectsOutsideFolders release];
-	}
-	if (subfolders) {
-		[subfolders release];
-	}
+	[objectsInFolders release];
+	[objectsOutsideFolders release];
+	[subfolders release];
     [super dealloc];
 }
 
