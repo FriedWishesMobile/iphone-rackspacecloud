@@ -36,7 +36,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.22487;
+		modificationTime = 281851504.553977;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -54,7 +54,7 @@
 		ignoreCount = 0;
 		lineNumber = 301;
 		location = Rackspace;
-		modificationTime = 281830764.230654;
+		modificationTime = 281851504.559236;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -72,7 +72,7 @@
 		ignoreCount = 0;
 		lineNumber = 331;
 		location = Rackspace;
-		modificationTime = 281830764.235296;
+		modificationTime = 281851504.563793;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -90,7 +90,7 @@
 		ignoreCount = 0;
 		lineNumber = 331;
 		location = Rackspace;
-		modificationTime = 281830764.240633;
+		modificationTime = 281851504.577943;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -108,7 +108,7 @@
 		ignoreCount = 0;
 		lineNumber = 343;
 		location = Rackspace;
-		modificationTime = 281830764.245232;
+		modificationTime = 281851504.582922;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -126,7 +126,7 @@
 		ignoreCount = 0;
 		lineNumber = 309;
 		location = Rackspace;
-		modificationTime = 281830764.250354;
+		modificationTime = 281851504.586949;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -706,7 +706,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.403704;
+		modificationTime = 281851504.745283;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -779,7 +779,7 @@
 		ignoreCount = 0;
 		lineNumber = 17;
 		location = Rackspace;
-		modificationTime = 281830764.458102;
+		modificationTime = 281851504.800472;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -827,7 +827,7 @@
 		ignoreCount = 0;
 		lineNumber = 152;
 		location = Rackspace;
-		modificationTime = 281830764.434581;
+		modificationTime = 281851504.777508;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -885,7 +885,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.439486;
+		modificationTime = 281851504.781432;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -903,7 +903,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.450735;
+		modificationTime = 281851504.792536;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -921,7 +921,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.454401;
+		modificationTime = 281851504.796759;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -983,7 +983,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.384997;
+		modificationTime = 281851504.725733;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1001,7 +1001,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.388943;
+		modificationTime = 281851504.729936;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1029,7 +1029,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.400147;
+		modificationTime = 281851504.741087;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1159,7 +1159,7 @@
 		fRef = 278D8B561013E56F0060DBA1 /* AddObjectViewController.h */;
 		name = "AddObjectViewController.h: 34";
 		rLen = 0;
-		rLoc = 1256;
+		rLoc = 1257;
 		rType = 0;
 		vrLen = 1262;
 		vrLoc = 0;
@@ -1169,7 +1169,7 @@
 		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
 		name = "AddObjectViewController.m: 298";
 		rLen = 49;
-		rLoc = 8902;
+		rLoc = 9089;
 		rType = 0;
 		vrLen = 1493;
 		vrLoc = 8125;
@@ -1179,7 +1179,7 @@
 		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
 		name = "AddObjectViewController.m: 86";
 		rLen = 0;
-		rLoc = 2364;
+		rLoc = 2402;
 		rType = 0;
 		vrLen = 1350;
 		vrLoc = 1638;
@@ -1198,7 +1198,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.058656;
+		modificationTime = 281851504.383756;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1216,7 +1216,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.068951;
+		modificationTime = 281851504.391693;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1234,7 +1234,7 @@
 		ignoreCount = 0;
 		lineNumber = 300;
 		location = Rackspace;
-		modificationTime = 281830764.075238;
+		modificationTime = 281851504.398556;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1252,7 +1252,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.0806;
+		modificationTime = 281851504.404297;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1270,7 +1270,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.08832;
+		modificationTime = 281851504.409689;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1288,7 +1288,7 @@
 		ignoreCount = 0;
 		lineNumber = 114;
 		location = Rackspace;
-		modificationTime = 281830764.100245;
+		modificationTime = 281851504.416157;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1316,7 +1316,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.105121;
+		modificationTime = 281851504.421502;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1334,7 +1334,7 @@
 		ignoreCount = 0;
 		lineNumber = 23;
 		location = Rackspace;
-		modificationTime = 281830764.10877;
+		modificationTime = 281851504.433911;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1352,7 +1352,7 @@
 		ignoreCount = 0;
 		lineNumber = 50;
 		location = Rackspace;
-		modificationTime = 281830764.112793;
+		modificationTime = 281851504.438215;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1370,7 +1370,7 @@
 		ignoreCount = 0;
 		lineNumber = 62;
 		location = Rackspace;
-		modificationTime = 281830764.117191;
+		modificationTime = 281851504.442422;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1398,7 +1398,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.121468;
+		modificationTime = 281851504.446548;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1416,7 +1416,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.133337;
+		modificationTime = 281851504.450951;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1450,7 +1450,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.136849;
+		modificationTime = 281851504.462671;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1468,7 +1468,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.140739;
+		modificationTime = 281851504.467293;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1486,7 +1486,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.144539;
+		modificationTime = 281851504.47256;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1504,7 +1504,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.156969;
+		modificationTime = 281851504.486249;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1522,7 +1522,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.161074;
+		modificationTime = 281851504.490694;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1540,7 +1540,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.164628;
+		modificationTime = 281851504.494384;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1558,7 +1558,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.16907;
+		modificationTime = 281851504.498877;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1586,7 +1586,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.173007;
+		modificationTime = 281851504.503155;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1604,7 +1604,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.183977;
+		modificationTime = 281851504.507476;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1622,7 +1622,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.188085;
+		modificationTime = 281851504.512734;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1640,7 +1640,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.191878;
+		modificationTime = 281851504.517465;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1658,7 +1658,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.195971;
+		modificationTime = 281851504.523908;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1676,7 +1676,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.200081;
+		modificationTime = 281851504.528571;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1694,7 +1694,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.205083;
+		modificationTime = 281851504.53398;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1712,7 +1712,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.209786;
+		modificationTime = 281851504.538953;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1730,7 +1730,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.215304;
+		modificationTime = 281851504.543538;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1748,7 +1748,7 @@
 		ignoreCount = 0;
 		lineNumber = 259;
 		location = Rackspace;
-		modificationTime = 281830764.219964;
+		modificationTime = 281851504.549092;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1839,7 +1839,7 @@
 		ignoreCount = 0;
 		lineNumber = 352;
 		location = Rackspace;
-		modificationTime = 281830764.461925;
+		modificationTime = 281851504.804387;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1857,7 +1857,7 @@
 		ignoreCount = 0;
 		lineNumber = 33;
 		location = Rackspace;
-		modificationTime = 281830764.465945;
+		modificationTime = 281851504.808299;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1875,7 +1875,7 @@
 		ignoreCount = 0;
 		lineNumber = 39;
 		location = Rackspace;
-		modificationTime = 281830764.477959;
+		modificationTime = 281851504.812302;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1893,7 +1893,7 @@
 		ignoreCount = 0;
 		lineNumber = 71;
 		location = Rackspace;
-		modificationTime = 281830764.481842;
+		modificationTime = 281851504.824008;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1911,7 +1911,7 @@
 		ignoreCount = 0;
 		lineNumber = 142;
 		location = Rackspace;
-		modificationTime = 281830764.485624;
+		modificationTime = 281851504.827803;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1957,7 +1957,7 @@
 		ignoreCount = 0;
 		lineNumber = 242;
 		location = Rackspace;
-		modificationTime = 281830764.268449;
+		modificationTime = 281851504.605744;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -1975,7 +1975,7 @@
 		ignoreCount = 0;
 		lineNumber = 262;
 		location = Rackspace;
-		modificationTime = 281830764.272349;
+		modificationTime = 281851504.610887;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -2000,7 +2000,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 59;
-		modificationTime = 281830764.276962;
+		modificationTime = 281851504.615575;
 		originalNumberOfMultipleMatches = 1;
 		state = 0;
 	};
@@ -2018,7 +2018,7 @@
 		ignoreCount = 0;
 		lineNumber = 133;
 		location = Rackspace;
-		modificationTime = 281830764.289757;
+		modificationTime = 281851504.619576;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -2036,7 +2036,7 @@
 		ignoreCount = 0;
 		lineNumber = 94;
 		location = Rackspace;
-		modificationTime = 281830764.295226;
+		modificationTime = 281851504.631184;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -2053,7 +2053,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 45;
-		modificationTime = 281830764.299043;
+		modificationTime = 281851504.637032;
 		originalNumberOfMultipleMatches = 1;
 		state = 0;
 	};
@@ -2071,7 +2071,7 @@
 		ignoreCount = 0;
 		lineNumber = 242;
 		location = Rackspace;
-		modificationTime = 281830764.303227;
+		modificationTime = 281851504.640896;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -2089,7 +2089,7 @@
 		ignoreCount = 0;
 		lineNumber = 113;
 		location = Rackspace;
-		modificationTime = 281830764.307131;
+		modificationTime = 281851504.644915;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -2107,7 +2107,7 @@
 		ignoreCount = 0;
 		lineNumber = 119;
 		location = Rackspace;
-		modificationTime = 281830764.320076;
+		modificationTime = 281851504.649024;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -2125,7 +2125,7 @@
 		ignoreCount = 0;
 		lineNumber = 189;
 		location = Rackspace;
-		modificationTime = 281830764.32389;
+		modificationTime = 281851504.661195;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -2143,7 +2143,7 @@
 		ignoreCount = 0;
 		lineNumber = 189;
 		location = Rackspace;
-		modificationTime = 281830764.32766;
+		modificationTime = 281851504.665283;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -2161,7 +2161,7 @@
 		ignoreCount = 0;
 		lineNumber = 233;
 		location = Rackspace;
-		modificationTime = 281830764.332524;
+		modificationTime = 281851504.669156;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -2186,7 +2186,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 34;
-		modificationTime = 281830764.343149;
+		modificationTime = 281851504.673789;
 		originalNumberOfMultipleMatches = 1;
 		state = 0;
 	};
@@ -2203,7 +2203,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 46;
-		modificationTime = 281830764.347348;
+		modificationTime = 281851504.684822;
 		originalNumberOfMultipleMatches = 1;
 		state = 0;
 	};
@@ -2220,7 +2220,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 108;
-		modificationTime = 281830764.350993;
+		modificationTime = 281851504.689085;
 		originalNumberOfMultipleMatches = 1;
 		state = 0;
 	};
@@ -2237,7 +2237,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 224;
-		modificationTime = 281830764.354769;
+		modificationTime = 281851504.692807;
 		originalNumberOfMultipleMatches = 1;
 		state = 0;
 	};
@@ -2255,7 +2255,7 @@
 		ignoreCount = 0;
 		lineNumber = 395;
 		location = Rackspace;
-		modificationTime = 281830764.358653;
+		modificationTime = 281851504.697402;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -2273,7 +2273,7 @@
 		ignoreCount = 0;
 		lineNumber = 394;
 		location = Rackspace;
-		modificationTime = 281830764.362555;
+		modificationTime = 281851504.701359;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -2291,23 +2291,23 @@
 		ignoreCount = 0;
 		lineNumber = 399;
 		location = Rackspace;
-		modificationTime = 281830764.373481;
+		modificationTime = 281851504.712516;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
 	278D8B561013E56F0060DBA1 /* AddObjectViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1500, 788}}";
-			sepNavSelRange = "{1256, 0}";
-			sepNavVisRange = "{0, 1262}";
+			sepNavSelRange = "{234, 0}";
+			sepNavVisRange = "{0, 1263}";
 		};
 	};
 	278D8B571013E56F0060DBA1 /* AddObjectViewController.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{4311, 780}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 14320}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1103, 7072}}";
-			sepNavSelRange = "{2265, 0}";
-			sepNavVisRange = "{1638, 1336}";
+			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{4349, 780}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 14507}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1116, 6400}}";
+			sepNavSelRange = "{8030, 0}";
+			sepNavVisRange = "{7709, 1771}";
 			sepNavWindowFrame = "{{130, 105}, {1095, 663}}";
 		};
 	};
@@ -2325,7 +2325,7 @@
 		ignoreCount = 0;
 		lineNumber = 175;
 		location = Rackspace;
-		modificationTime = 281830764.377342;
+		modificationTime = 281851504.717791;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -2600,7 +2600,7 @@
 		ignoreCount = 0;
 		lineNumber = 47;
 		location = Rackspace;
-		modificationTime = 281830764.381161;
+		modificationTime = 281851504.721713;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -2684,7 +2684,7 @@
 		ignoreCount = 0;
 		lineNumber = 18;
 		location = Rackspace;
-		modificationTime = 281830764.40755;
+		modificationTime = 281851504.749078;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -2700,7 +2700,7 @@
 		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
 		name = "AddObjectViewController.m: 86";
 		rLen = 0;
-		rLoc = 2364;
+		rLoc = 2402;
 		rType = 0;
 		vrLen = 1350;
 		vrLoc = 1638;
@@ -2714,9 +2714,9 @@
 	};
 	27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1212, 4000}}";
-			sepNavSelRange = "{4460, 0}";
-			sepNavVisRange = "{3608, 1801}";
+			sepNavIntBoundsRect = "{{0, 0}, {1220, 4672}}";
+			sepNavSelRange = "{2310, 0}";
+			sepNavVisRange = "{1018, 1595}";
 		};
 	};
 	27D36C6610C8EF140047F7CB /* PBXTextBookmark */ = {
@@ -2724,7 +2724,7 @@
 		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
 		name = "AddObjectViewController.m: 83";
 		rLen = 0;
-		rLoc = 2265;
+		rLoc = 2303;
 		rType = 0;
 		vrLen = 1336;
 		vrLoc = 1638;
@@ -2914,7 +2914,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 84";
 		rLen = 0;
-		rLoc = 3913;
+		rLoc = 4337;
 		rType = 0;
 		vrLen = 1524;
 		vrLoc = 1471;
@@ -2949,7 +2949,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 169;
+		rLoc = 190;
 		rType = 1;
 	};
 	27D36D2B10CB536B0047F7CB /* PBXTextBookmark */ = {
@@ -2957,7 +2957,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 99";
 		rLen = 0;
-		rLoc = 4920;
+		rLoc = 5344;
 		rType = 0;
 		vrLen = 487;
 		vrLoc = 2423;
@@ -2968,7 +2968,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 169;
+		rLoc = 190;
 		rType = 1;
 	};
 	27D36D3110CB53770047F7CB /* PBXTextBookmark */ = {
@@ -2976,7 +2976,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 100";
 		rLen = 0;
-		rLoc = 4921;
+		rLoc = 5345;
 		rType = 0;
 		vrLen = 1915;
 		vrLoc = 1920;
@@ -2996,7 +2996,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 102";
 		rLen = 0;
-		rLoc = 4921;
+		rLoc = 5345;
 		rType = 0;
 		vrLen = 1942;
 		vrLoc = 1920;
@@ -3016,7 +3016,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 101";
 		rLen = 0;
-		rLoc = 4921;
+		rLoc = 5345;
 		rType = 0;
 		vrLen = 1944;
 		vrLoc = 1920;
@@ -3036,7 +3036,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 101";
 		rLen = 0;
-		rLoc = 4921;
+		rLoc = 5345;
 		rType = 0;
 		vrLen = 1967;
 		vrLoc = 1920;
@@ -3056,7 +3056,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 107";
 		rLen = 0;
-		rLoc = 4872;
+		rLoc = 5296;
 		rType = 0;
 		vrLen = 1775;
 		vrLoc = 1833;
@@ -3076,7 +3076,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 85";
 		rLen = 0;
-		rLoc = 3397;
+		rLoc = 3821;
 		rType = 0;
 		vrLen = 1647;
 		vrLoc = 1833;
@@ -3126,7 +3126,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 119";
 		rLen = 0;
-		rLoc = 5082;
+		rLoc = 5515;
 		rType = 0;
 		vrLen = 1847;
 		vrLoc = 2502;
@@ -3140,7 +3140,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 128";
 		rLen = 0;
-		rLoc = 5226;
+		rLoc = 5659;
 		rType = 0;
 		vrLen = 507;
 		vrLoc = 2649;
@@ -3170,7 +3170,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 124";
 		rLen = 0;
-		rLoc = 5226;
+		rLoc = 5659;
 		rType = 0;
 		vrLen = 1852;
 		vrLoc = 2502;
@@ -3180,7 +3180,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 155";
 		rLen = 0;
-		rLoc = 4614;
+		rLoc = 5038;
 		rType = 0;
 		vrLen = 1747;
 		vrLoc = 3465;
@@ -3200,7 +3200,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 136";
 		rLen = 0;
-		rLoc = 3835;
+		rLoc = 4259;
 		rType = 0;
 		vrLen = 1779;
 		vrLoc = 3465;
@@ -3220,7 +3220,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 170";
 		rLen = 0;
-		rLoc = 5226;
+		rLoc = 5659;
 		rType = 0;
 		vrLen = 307;
 		vrLoc = 3178;
@@ -3230,7 +3230,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 141";
 		rLen = 0;
-		rLoc = 3920;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1585;
 		vrLoc = 234;
@@ -3240,7 +3240,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 141";
 		rLen = 0;
-		rLoc = 3920;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1585;
 		vrLoc = 234;
@@ -3260,7 +3260,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 170";
 		rLen = 0;
-		rLoc = 5226;
+		rLoc = 5659;
 		rType = 0;
 		vrLen = 307;
 		vrLoc = 3178;
@@ -3269,7 +3269,7 @@
 		isa = PBXTextBookmark;
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		rLen = 1;
-		rLoc = 158;
+		rLoc = 179;
 		rType = 1;
 	};
 	27D36DAD10CB5AB50047F7CB /* PBXTextBookmark */ = {
@@ -3277,7 +3277,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 170";
 		rLen = 0;
-		rLoc = 5226;
+		rLoc = 5659;
 		rType = 0;
 		vrLen = 307;
 		vrLoc = 3178;
@@ -3287,7 +3287,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 144";
 		rLen = 102;
-		rLoc = 3971;
+		rLoc = 4395;
 		rType = 0;
 		vrLen = 1997;
 		vrLoc = 3484;
@@ -3297,7 +3297,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 151";
 		rLen = 0;
-		rLoc = 4449;
+		rLoc = 4873;
 		rType = 0;
 		vrLen = 1773;
 		vrLoc = 3465;
@@ -3317,7 +3317,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 170";
 		rLen = 0;
-		rLoc = 5226;
+		rLoc = 5659;
 		rType = 0;
 		vrLen = 356;
 		vrLoc = 3181;
@@ -3327,7 +3327,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 152";
 		rLen = 0;
-		rLoc = 4454;
+		rLoc = 4878;
 		rType = 0;
 		vrLen = 1773;
 		vrLoc = 3465;
@@ -3347,7 +3347,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 152";
 		rLen = 0;
-		rLoc = 4444;
+		rLoc = 4868;
 		rType = 0;
 		vrLen = 1773;
 		vrLoc = 3465;
@@ -3377,7 +3377,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 237";
 		rLen = 0;
-		rLoc = 7641;
+		rLoc = 8074;
 		rType = 0;
 		vrLen = 1270;
 		vrLoc = 6250;
@@ -3387,7 +3387,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 190";
 		rLen = 0;
-		rLoc = 6321;
+		rLoc = 6754;
 		rType = 0;
 		vrLen = 1909;
 		vrLoc = 4407;
@@ -3427,7 +3427,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 193";
 		rLen = 0;
-		rLoc = 6321;
+		rLoc = 6754;
 		rType = 0;
 		vrLen = 1932;
 		vrLoc = 4407;
@@ -3447,7 +3447,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 181";
 		rLen = 0;
-		rLoc = 5386;
+		rLoc = 5819;
 		rType = 0;
 		vrLen = 1424;
 		vrLoc = 6328;
@@ -3467,7 +3467,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 168";
 		rLen = 0;
-		rLoc = 4884;
+		rLoc = 5308;
 		rType = 0;
 		vrLen = 1959;
 		vrLoc = 3918;
@@ -3487,7 +3487,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 158";
 		rLen = 0;
-		rLoc = 4460;
+		rLoc = 4884;
 		rType = 0;
 		vrLen = 1801;
 		vrLoc = 3608;
@@ -3507,7 +3507,7 @@
 		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
 		name = "ListFolderObjectsViewController.m: 158";
 		rLen = 0;
-		rLoc = 4460;
+		rLoc = 4884;
 		rType = 0;
 		vrLen = 1801;
 		vrLoc = 3608;
@@ -3521,6 +3521,435 @@
 		rType = 0;
 		vrLen = 879;
 		vrLoc = 149;
+	};
+	27D36E2210CC68AB0047F7CB /* AddTextFileViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1103, 788}}";
+			sepNavSelRange = "{252, 0}";
+			sepNavVisRange = "{0, 253}";
+		};
+	};
+	27D36E2310CC68AB0047F7CB /* AddTextFileViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1220, 2672}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1089}";
+		};
+	};
+	27D36E2E10CC694A0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
+		name = "ListFolderObjectsViewController.m: 143";
+		rLen = 0;
+		rLoc = 4341;
+		rType = 0;
+		vrLen = 1949;
+		vrLoc = 3608;
+	};
+	27D36E2F10CC694A0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 278D8B561013E56F0060DBA1 /* AddObjectViewController.h */;
+		name = "AddObjectViewController.h: 34";
+		rLen = 0;
+		rLoc = 1257;
+		rType = 0;
+		vrLen = 1262;
+		vrLoc = 0;
+	};
+	27D36E3010CC694A0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 27D36E2210CC68AB0047F7CB /* AddTextFileViewController.h */;
+		name = "AddTextFileViewController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 253;
+		vrLoc = 0;
+	};
+	27D36E3110CC694A0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
+		name = "AddObjectViewController.m: 16";
+		rLen = 0;
+		rLoc = 396;
+		rType = 0;
+		vrLen = 1343;
+		vrLoc = 0;
+	};
+	27D36E3510CC69680047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
+		name = "AddObjectViewController.m: 268";
+		rLen = 92;
+		rLoc = 7711;
+		rType = 0;
+		vrLen = 2099;
+		vrLoc = 6889;
+	};
+	27D36E3610CC69680047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
+		name = "AddObjectViewController.m: 251";
+		rLen = 0;
+		rLoc = 7925;
+		rType = 0;
+		vrLen = 2049;
+		vrLoc = 6976;
+	};
+	27D36E3710CC697A0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
+		name = "AddObjectViewController.m: 275";
+		rLen = 0;
+		rLoc = 8837;
+		rType = 0;
+		vrLen = 1739;
+		vrLoc = 8486;
+	};
+	27D36E3C10CC69B70047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
+		name = "AddObjectViewController.m: 273";
+		rLen = 0;
+		rLoc = 8803;
+		rType = 0;
+		vrLen = 1747;
+		vrLoc = 8486;
+	};
+	27D36E4210CC6A110047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
+		name = "AddObjectViewController.m: 273";
+		rLen = 0;
+		rLoc = 8803;
+		rType = 0;
+		vrLen = 1747;
+		vrLoc = 8486;
+	};
+	27D36E4310CC6A110047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 278D8B561013E56F0060DBA1 /* AddObjectViewController.h */;
+		name = "AddObjectViewController.h: 14";
+		rLen = 0;
+		rLoc = 419;
+		rType = 0;
+		vrLen = 1295;
+		vrLoc = 0;
+	};
+	27D36E4710CC6A2A0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 278D8B561013E56F0060DBA1 /* AddObjectViewController.h */;
+		name = "AddObjectViewController.h: 14";
+		rLen = 0;
+		rLoc = 236;
+		rType = 0;
+		vrLen = 1263;
+		vrLoc = 0;
+	};
+	27D36E4E10CC6ACB0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 27D36E2310CC68AB0047F7CB /* AddTextFileViewController.m */;
+		name = "AddTextFileViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1089;
+		vrLoc = 0;
+	};
+	27D36E4F10CC6ACB0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 27D36E2210CC68AB0047F7CB /* AddTextFileViewController.h */;
+		name = "AddTextFileViewController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 253;
+		vrLoc = 0;
+	};
+	27D36E5010CC6ACB0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 278D8B561013E56F0060DBA1 /* AddObjectViewController.h */;
+		name = "AddObjectViewController.h: 12";
+		rLen = 0;
+		rLoc = 234;
+		rType = 0;
+		vrLen = 1263;
+		vrLoc = 0;
+	};
+	27D36E5110CC6ACB0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
+		name = "AddObjectViewController.m: 206";
+		rLen = 0;
+		rLoc = 6048;
+		rType = 0;
+		vrLen = 2933;
+		vrLoc = 4236;
+	};
+	27D36E5210CC6ACB0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
+		name = "AddObjectViewController.m: 273";
+		rLen = 0;
+		rLoc = 8803;
+		rType = 0;
+		vrLen = 2133;
+		vrLoc = 7668;
+	};
+	27D36E6610CC6E8E0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
+		name = "AddObjectViewController.m: 271";
+		rLen = 0;
+		rLoc = 8673;
+		rType = 0;
+		vrLen = 2254;
+		vrLoc = 7668;
+	};
+	27D36E9C10CC9BFC0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
+		name = "AddObjectViewController.m: 273";
+		rLen = 0;
+		rLoc = 8809;
+		rType = 0;
+		vrLen = 1771;
+		vrLoc = 8488;
+	};
+	27D36EA210CC9C570047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 278D8B571013E56F0060DBA1 /* AddObjectViewController.m */;
+		name = "AddObjectViewController.m: 273";
+		rLen = 0;
+		rLoc = 8809;
+		rType = 0;
+		vrLen = 1771;
+		vrLoc = 8488;
+	};
+	27D36EA310CC9C570047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
+		name = "ListFolderObjectsViewController.m: 143";
+		rLen = 0;
+		rLoc = 4341;
+		rType = 0;
+		vrLen = 1801;
+		vrLoc = 3608;
+	};
+	27D36EA410CC9C570047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
+		name = "ListFolderObjectsViewController.m: 169";
+		rLen = 0;
+		rLoc = 5411;
+		rType = 0;
+		vrLen = 1828;
+		vrLoc = 3526;
+	};
+	27D36EAA10CCA0810047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
+		name = "ListFolderObjectsViewController.m: 57";
+		rLen = 0;
+		rLoc = 2061;
+		rType = 0;
+		vrLen = 1389;
+		vrLoc = 803;
+	};
+	27D36EAC10CCA6910047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
+		name = "ListFolderObjectsViewController.m: 24";
+		rLen = 0;
+		rLoc = 586;
+		rType = 0;
+		vrLen = 1580;
+		vrLoc = 234;
+	};
+	27D36EB710CCB4DC0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
+		name = "ListFolderObjectsViewController.m: 174";
+		rLen = 0;
+		rLoc = 5659;
+		rType = 0;
+		vrLen = 364;
+		vrLoc = 3220;
+	};
+	27D36EB810CCB4DC0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4C9989960FEF48AA005D12B7 /* ListObjectsViewController.m */;
+		rLen = 31;
+		rLoc = 7334;
+		rType = 0;
+	};
+	27D36EB910CCB4DC0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4C9989960FEF48AA005D12B7 /* ListObjectsViewController.m */;
+		name = "ListObjectsViewController.m: 222";
+		rLen = 0;
+		rLoc = 7680;
+		rType = 0;
+		vrLen = 748;
+		vrLoc = 7271;
+	};
+	27D36EC010CCB57D0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 27D36E2210CC68AB0047F7CB /* AddTextFileViewController.h */;
+		name = "AddTextFileViewController.h: 16";
+		rLen = 0;
+		rLoc = 252;
+		rType = 0;
+		vrLen = 253;
+		vrLoc = 0;
+	};
+	27D36EC110CCB57D0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4C9989960FEF48AA005D12B7 /* ListObjectsViewController.m */;
+		name = "ListObjectsViewController.m: 89";
+		rLen = 0;
+		rLoc = 2788;
+		rType = 0;
+		vrLen = 1918;
+		vrLoc = 555;
+	};
+	27D36EC210CCB57D0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
+		name = "ListFolderObjectsViewController.m: 181";
+		rLen = 0;
+		rLoc = 5783;
+		rType = 0;
+		vrLen = 2092;
+		vrLoc = 4246;
+	};
+	27D36EC310CCB57D0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
+		name = "ListFolderObjectsViewController.m: 93";
+		rLen = 0;
+		rLoc = 2776;
+		rType = 0;
+		vrLen = 1235;
+		vrLoc = 3;
+	};
+	27D36EC910CCB5A80047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
+		name = "ListFolderObjectsViewController.m: 83";
+		rLen = 0;
+		rLoc = 2616;
+		rType = 0;
+		vrLen = 1495;
+		vrLoc = 1031;
+	};
+	27D36ECC10CCB5C00047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
+		name = "ListFolderObjectsViewController.m: 181";
+		rLen = 0;
+		rLoc = 5659;
+		rType = 0;
+		vrLen = 392;
+		vrLoc = 3692;
+	};
+	27D36ECD10CCB5C00047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4C9989960FEF48AA005D12B7 /* ListObjectsViewController.m */;
+		name = "ListObjectsViewController.m: 222";
+		rLen = 0;
+		rLoc = 7680;
+		rType = 0;
+		vrLen = 646;
+		vrLoc = 7271;
+	};
+	27D36ED710CCB6190047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
+		name = "ListFolderObjectsViewController.m: 190";
+		rLen = 0;
+		rLoc = 5844;
+		rType = 0;
+		vrLen = 1915;
+		vrLoc = 4691;
+	};
+	27D36EDA10CCB62F0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
+		name = "ListFolderObjectsViewController.m: 182";
+		rLen = 0;
+		rLoc = 5659;
+		rType = 0;
+		vrLen = 313;
+		vrLoc = 3780;
+	};
+	27D36EDB10CCB62F0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4C9989960FEF48AA005D12B7 /* ListObjectsViewController.m */;
+		name = "ListObjectsViewController.m: 222";
+		rLen = 0;
+		rLoc = 7680;
+		rType = 0;
+		vrLen = 646;
+		vrLoc = 7271;
+	};
+	27D36EDC10CCB6300047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
+		name = "ListFolderObjectsViewController.m: 192";
+		rLen = 0;
+		rLoc = 5987;
+		rType = 0;
+		vrLen = 1915;
+		vrLoc = 4691;
+	};
+	27D36EDF10CCB66D0047F7CB /* ListFolderObjectsViewController.m:44 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
+		functionName = "-loadSubfolders";
+		hitCount = 2;
+		ignoreCount = 0;
+		lineNumber = 44;
+		location = Rackspace;
+		modificationTime = 281851523.248434;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	27D36EE310CCB66F0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
+		name = "ListFolderObjectsViewController.m: 35";
+		rLen = 0;
+		rLoc = 960;
+		rType = 0;
+		vrLen = 1581;
+		vrLoc = 478;
+	};
+	27D36EE410CCB66F0047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
+		name = "ListFolderObjectsViewController.m: 35";
+		rLen = 0;
+		rLoc = 960;
+		rType = 0;
+		vrLen = 1578;
+		vrLoc = 478;
+	};
+	27D36EF010CCBB670047F7CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */;
+		name = "ListFolderObjectsViewController.m: 84";
+		rLen = 0;
+		rLoc = 2310;
+		rType = 0;
+		vrLen = 1595;
+		vrLoc = 1018;
 	};
 	27DA9062106C70F600D6A2AA /* en */ = {
 		uiCtxt = {
@@ -3581,7 +4010,7 @@
 		ignoreCount = 0;
 		lineNumber = 81;
 		location = Rackspace;
-		modificationTime = 281830764.411388;
+		modificationTime = 281851504.752983;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -3599,7 +4028,7 @@
 		ignoreCount = 0;
 		lineNumber = 322;
 		location = Rackspace;
-		modificationTime = 281830764.41541;
+		modificationTime = 281851504.757486;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -3617,7 +4046,7 @@
 		ignoreCount = 0;
 		lineNumber = 80;
 		location = Rackspace;
-		modificationTime = 281830764.427052;
+		modificationTime = 281851504.768751;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -3635,7 +4064,7 @@
 		ignoreCount = 0;
 		lineNumber = 366;
 		location = Rackspace;
-		modificationTime = 281830764.430737;
+		modificationTime = 281851504.772951;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -3691,7 +4120,7 @@
 		ignoreCount = 0;
 		lineNumber = 52;
 		location = Rackspace;
-		modificationTime = 281830764.254908;
+		modificationTime = 281851504.600757;
 		originalNumberOfMultipleMatches = 0;
 		state = 2;
 	};
@@ -3849,6 +4278,7 @@
 			278A6C331068789D00AE9827 /* IPGroupsRootViewController.m:39 */,
 			278A6C57106879AE00AE9827 /* FromXMLElementDelegate.m:71 */,
 			278A6CDC10687D5B00AE9827 /* FromXMLElementDelegate.m:142 */,
+			27D36EDF10CCB66D0047F7CB /* ListFolderObjectsViewController.m:44 */,
 		);
 		codeSenseManager = 27B6C62B0FF0B97C006C965F /* Code sense */;
 		executables = (
@@ -4117,6 +4547,46 @@
 			27D36E1B10CC65690047F7CB /* PBXTextBookmark */ = 27D36E1B10CC65690047F7CB /* PBXTextBookmark */;
 			27D36E1F10CC65AB0047F7CB /* PBXTextBookmark */ = 27D36E1F10CC65AB0047F7CB /* PBXTextBookmark */;
 			27D36E2010CC65AB0047F7CB /* PBXTextBookmark */ = 27D36E2010CC65AB0047F7CB /* PBXTextBookmark */;
+			27D36E2E10CC694A0047F7CB /* PBXTextBookmark */ = 27D36E2E10CC694A0047F7CB /* PBXTextBookmark */;
+			27D36E2F10CC694A0047F7CB /* PBXTextBookmark */ = 27D36E2F10CC694A0047F7CB /* PBXTextBookmark */;
+			27D36E3010CC694A0047F7CB /* PBXTextBookmark */ = 27D36E3010CC694A0047F7CB /* PBXTextBookmark */;
+			27D36E3110CC694A0047F7CB /* PBXTextBookmark */ = 27D36E3110CC694A0047F7CB /* PBXTextBookmark */;
+			27D36E3510CC69680047F7CB /* PBXTextBookmark */ = 27D36E3510CC69680047F7CB /* PBXTextBookmark */;
+			27D36E3610CC69680047F7CB /* PBXTextBookmark */ = 27D36E3610CC69680047F7CB /* PBXTextBookmark */;
+			27D36E3710CC697A0047F7CB /* PBXTextBookmark */ = 27D36E3710CC697A0047F7CB /* PBXTextBookmark */;
+			27D36E3C10CC69B70047F7CB /* PBXTextBookmark */ = 27D36E3C10CC69B70047F7CB /* PBXTextBookmark */;
+			27D36E4210CC6A110047F7CB /* PBXTextBookmark */ = 27D36E4210CC6A110047F7CB /* PBXTextBookmark */;
+			27D36E4310CC6A110047F7CB /* PBXTextBookmark */ = 27D36E4310CC6A110047F7CB /* PBXTextBookmark */;
+			27D36E4710CC6A2A0047F7CB /* PBXTextBookmark */ = 27D36E4710CC6A2A0047F7CB /* PBXTextBookmark */;
+			27D36E4E10CC6ACB0047F7CB /* PBXTextBookmark */ = 27D36E4E10CC6ACB0047F7CB /* PBXTextBookmark */;
+			27D36E4F10CC6ACB0047F7CB /* PBXTextBookmark */ = 27D36E4F10CC6ACB0047F7CB /* PBXTextBookmark */;
+			27D36E5010CC6ACB0047F7CB /* PBXTextBookmark */ = 27D36E5010CC6ACB0047F7CB /* PBXTextBookmark */;
+			27D36E5110CC6ACB0047F7CB /* PBXTextBookmark */ = 27D36E5110CC6ACB0047F7CB /* PBXTextBookmark */;
+			27D36E5210CC6ACB0047F7CB /* PBXTextBookmark */ = 27D36E5210CC6ACB0047F7CB /* PBXTextBookmark */;
+			27D36E6610CC6E8E0047F7CB /* PBXTextBookmark */ = 27D36E6610CC6E8E0047F7CB /* PBXTextBookmark */;
+			27D36E9C10CC9BFC0047F7CB /* PBXTextBookmark */ = 27D36E9C10CC9BFC0047F7CB /* PBXTextBookmark */;
+			27D36EA210CC9C570047F7CB /* PBXTextBookmark */ = 27D36EA210CC9C570047F7CB /* PBXTextBookmark */;
+			27D36EA310CC9C570047F7CB /* PBXTextBookmark */ = 27D36EA310CC9C570047F7CB /* PBXTextBookmark */;
+			27D36EA410CC9C570047F7CB /* PBXTextBookmark */ = 27D36EA410CC9C570047F7CB /* PBXTextBookmark */;
+			27D36EAA10CCA0810047F7CB /* PBXTextBookmark */ = 27D36EAA10CCA0810047F7CB /* PBXTextBookmark */;
+			27D36EAC10CCA6910047F7CB /* PBXTextBookmark */ = 27D36EAC10CCA6910047F7CB /* PBXTextBookmark */;
+			27D36EB710CCB4DC0047F7CB /* PBXTextBookmark */ = 27D36EB710CCB4DC0047F7CB /* PBXTextBookmark */;
+			27D36EB810CCB4DC0047F7CB /* PBXTextBookmark */ = 27D36EB810CCB4DC0047F7CB /* PBXTextBookmark */;
+			27D36EB910CCB4DC0047F7CB /* PBXTextBookmark */ = 27D36EB910CCB4DC0047F7CB /* PBXTextBookmark */;
+			27D36EC010CCB57D0047F7CB /* PBXTextBookmark */ = 27D36EC010CCB57D0047F7CB /* PBXTextBookmark */;
+			27D36EC110CCB57D0047F7CB /* PBXTextBookmark */ = 27D36EC110CCB57D0047F7CB /* PBXTextBookmark */;
+			27D36EC210CCB57D0047F7CB /* PBXTextBookmark */ = 27D36EC210CCB57D0047F7CB /* PBXTextBookmark */;
+			27D36EC310CCB57D0047F7CB /* PBXTextBookmark */ = 27D36EC310CCB57D0047F7CB /* PBXTextBookmark */;
+			27D36EC910CCB5A80047F7CB /* PBXTextBookmark */ = 27D36EC910CCB5A80047F7CB /* PBXTextBookmark */;
+			27D36ECC10CCB5C00047F7CB /* PBXTextBookmark */ = 27D36ECC10CCB5C00047F7CB /* PBXTextBookmark */;
+			27D36ECD10CCB5C00047F7CB /* PBXTextBookmark */ = 27D36ECD10CCB5C00047F7CB /* PBXTextBookmark */;
+			27D36ED710CCB6190047F7CB /* PBXTextBookmark */ = 27D36ED710CCB6190047F7CB /* PBXTextBookmark */;
+			27D36EDA10CCB62F0047F7CB /* PBXTextBookmark */ = 27D36EDA10CCB62F0047F7CB /* PBXTextBookmark */;
+			27D36EDB10CCB62F0047F7CB /* PBXTextBookmark */ = 27D36EDB10CCB62F0047F7CB /* PBXTextBookmark */;
+			27D36EDC10CCB6300047F7CB /* PBXTextBookmark */ = 27D36EDC10CCB6300047F7CB /* PBXTextBookmark */;
+			27D36EE310CCB66F0047F7CB /* PBXTextBookmark */ = 27D36EE310CCB66F0047F7CB /* PBXTextBookmark */;
+			27D36EE410CCB66F0047F7CB /* PBXTextBookmark */ = 27D36EE410CCB66F0047F7CB /* PBXTextBookmark */;
+			27D36EF010CCBB670047F7CB /* PBXTextBookmark */ = 27D36EF010CCBB670047F7CB /* PBXTextBookmark */;
 			27DA907D106C724A00D6A2AA = 27DA907D106C724A00D6A2AA /* PBXTextBookmark */;
 			27E0AF1110AA8C57000055A8 = 27E0AF1110AA8C57000055A8 /* PBXTextBookmark */;
 			27E58ED81040583800A4F32C = 27E58ED81040583800A4F32C /* PBXTextBookmark */;
@@ -4589,10 +5059,10 @@
 	};
 	4C9989960FEF48AA005D12B7 /* ListObjectsViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1036, 9856}}";
-			sepNavSelRange = "{582, 0}";
-			sepNavVisRange = "{149, 879}";
-			sepNavWindowFrame = "{{90, 177}, {1095, 663}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1231, 9808}}";
+			sepNavSelRange = "{7680, 0}";
+			sepNavVisRange = "{7271, 646}";
+			sepNavWindowFrame = "{{204, 279}, {1095, 663}}";
 		};
 	};
 }

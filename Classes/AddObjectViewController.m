@@ -13,6 +13,7 @@
 #import "Container.h"
 #import "ListObjectsViewController.h"
 #import "TextFieldCell.h"
+#import "AddTextFileViewController.h"
 
 #define kChoosingFileType 0
 #define kNamingImageFile  1
@@ -268,6 +269,8 @@ UITextField *filenameTextField = nil;
 	if (indexPath.section == 0) {
 		if (indexPath.row == 0) {
 			// TODO: handle text files
+			//AddTextFileViewController *vc = [[AddTextFileViewController alloc] initWithNibName:@"AddTextFileViewController" bundle:nil];
+			//[vc release];
 		} else if (indexPath.row == 1) {
 			if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
 				UIImagePickerController *camera = [[UIImagePickerController alloc] init];		

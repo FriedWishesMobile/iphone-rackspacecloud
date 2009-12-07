@@ -54,6 +54,8 @@
 		27A3C4E51019762500198388 /* RenameServerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A3C4E31019762500198388 /* RenameServerController.xib */; };
 		27D36C5310C8E4DC0047F7CB /* ListFolderObjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */; };
 		27D36C5410C8E4DC0047F7CB /* ListFolderObjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D36C5210C8E4DC0047F7CB /* ListFolderObjectsViewController.xib */; };
+		27D36E2510CC68AB0047F7CB /* AddTextFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D36E2310CC68AB0047F7CB /* AddTextFileViewController.m */; };
+		27D36E2610CC68AB0047F7CB /* AddTextFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D36E2410CC68AB0047F7CB /* AddTextFileViewController.xib */; };
 		27D86F781041DDCA00B805A9 /* ObjectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D86F771041DDCA00B805A9 /* ObjectView.xib */; };
 		27DA9063106C70F600D6A2AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27DA9061106C70F600D6A2AA /* Localizable.strings */; };
 		27FEADA9104A06470042BBFC /* WebFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FEADA7104A06470042BBFC /* WebFileViewController.m */; };
@@ -209,6 +211,9 @@
 		27D36C5010C8E4DC0047F7CB /* ListFolderObjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListFolderObjectsViewController.h; sourceTree = "<group>"; };
 		27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListFolderObjectsViewController.m; sourceTree = "<group>"; };
 		27D36C5210C8E4DC0047F7CB /* ListFolderObjectsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ListFolderObjectsViewController.xib; path = Classes/ListFolderObjectsViewController.xib; sourceTree = "<group>"; };
+		27D36E2210CC68AB0047F7CB /* AddTextFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTextFileViewController.h; sourceTree = "<group>"; };
+		27D36E2310CC68AB0047F7CB /* AddTextFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTextFileViewController.m; sourceTree = "<group>"; };
+		27D36E2410CC68AB0047F7CB /* AddTextFileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTextFileViewController.xib; sourceTree = "<group>"; };
 		27D86F771041DDCA00B805A9 /* ObjectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObjectView.xib; sourceTree = "<group>"; };
 		27DA9062106C70F600D6A2AA /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		27DA906A106C714700D6A2AA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -627,6 +632,9 @@
 			children = (
 				278D8B561013E56F0060DBA1 /* AddObjectViewController.h */,
 				278D8B571013E56F0060DBA1 /* AddObjectViewController.m */,
+				27D36E2210CC68AB0047F7CB /* AddTextFileViewController.h */,
+				27D36E2310CC68AB0047F7CB /* AddTextFileViewController.m */,
+				27D36E2410CC68AB0047F7CB /* AddTextFileViewController.xib */,
 			);
 			name = "Add Object";
 			sourceTree = "<group>";
@@ -1025,6 +1033,7 @@
 				278B71A0108C1D270073C19B /* IconBeta.png in Resources */,
 				2738EF3C10A24A51006EEF21 /* AddContainerViewController.xib in Resources */,
 				27D36C5410C8E4DC0047F7CB /* ListFolderObjectsViewController.xib in Resources */,
+				27D36E2610CC68AB0047F7CB /* AddTextFileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1110,6 +1119,7 @@
 				271ADB31106EECF500066137 /* TextFieldCell.m in Sources */,
 				2738EF3B10A24A51006EEF21 /* AddContainerViewController.m in Sources */,
 				27D36C5310C8E4DC0047F7CB /* ListFolderObjectsViewController.m in Sources */,
+				27D36E2510CC68AB0047F7CB /* AddTextFileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,6 +22,8 @@ NSMutableArray *objectsInFolders = nil;
 NSMutableArray *objectsOutsideFolders = nil;
 NSDictionary *subfolders = nil;
 
+NSMutableArray *stack = nil;
+
 /*
 - (id)initWithStyle:(UITableViewStyle)style {
     // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -32,6 +34,23 @@ NSDictionary *subfolders = nil;
 */
 
 - (void)loadSubfolders {
+	
+	if (stack == nil) {
+		stack = [[NSMutableArray alloc] init];
+	}
+	
+	
+	
+	if (objectsInFolders) {
+		[objectsInFolders release];
+	}
+	if (objectsOutsideFolders) {
+		[objectsOutsideFolders release];
+	}
+	if (subfolders) {
+		[subfolders release];
+	}
+	
 	objectsInFolders = [[NSMutableArray alloc] init];
 	objectsOutsideFolders = [[NSMutableArray alloc] init];
 	
@@ -60,6 +79,10 @@ NSDictionary *subfolders = nil;
 		[subfolders setValue:folder forKey:key];
 	}
 	
+	NSArray *stackContents = [NSArray arrayWithObjects:objectsInFolders, objectsOutsideFolders, subfolders, nil];
+	
+	[stack addObject:stackContents];
+	
 }
 
 - (void)viewDidLoad {
@@ -67,10 +90,8 @@ NSDictionary *subfolders = nil;
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-	self.navigationItem.title = self.title;
-	
-	[self loadSubfolders];
-	
+	self.navigationItem.title = self.title;	
+	[self loadSubfolders];	
 }
 
 /*
@@ -166,7 +187,7 @@ NSDictionary *subfolders = nil;
 		}
 		
 	} else { //if (indexPath.section == kFiles) {	
-		CloudFilesObject *o = (CloudFilesObject *) [self.objects objectAtIndex:indexPath.row];	
+		CloudFilesObject *o = (CloudFilesObject *) [objectsOutsideFolders objectAtIndex:indexPath.row];	
 		NSString *filename = [o.name substringFromIndex:filenamePrefixLength];
 		cell.textLabel.text = filename;
 		cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", o.contentType, [o humanizedBytes]];
@@ -246,6 +267,15 @@ NSDictionary *subfolders = nil;
 	[title release];
 	[objects release];
 	[container release];
+	if (objectsInFolders) {
+		[objectsInFolders release];
+	}
+	if (objectsOutsideFolders) {
+		[objectsOutsideFolders release];
+	}
+	if (subfolders) {
+		[subfolders release];
+	}
     [super dealloc];
 }
 

@@ -10,6 +10,7 @@
 
 @class CFAccount, Container, ListObjectsViewController;
 
+
 @interface AddObjectViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate> {
 	CFAccount *account;
 	Container *container;
