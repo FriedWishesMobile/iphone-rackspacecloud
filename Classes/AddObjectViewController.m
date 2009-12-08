@@ -150,7 +150,7 @@ UITextField *filenameTextField = nil;
 			return 2;
 		}
 	} else {	
-		NSInteger rows = 1;
+		NSInteger rows = 0;
 		if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
 			rows++;
 		}
@@ -170,13 +170,13 @@ UITextField *filenameTextField = nil;
 	}
 	
 	switch (indexPath.row) {
+//		case 0:
+//			cell.textLabel.text = NSLocalizedString(@"Text File", @"Text File button");
+//			break;
 		case 0:
-			cell.textLabel.text = NSLocalizedString(@"Text File", @"Text File button");
-			break;
-		case 1:
 			cell.textLabel.text = NSLocalizedString(@"Image from Photo Library", @"Image from Photo Library button");
 			break;
-		case 2:
+		case 1:
 			cell.textLabel.text = NSLocalizedString(@"Image from Camera", @"Image from Camera button");
 			break;
 		default:
@@ -267,11 +267,12 @@ UITextField *filenameTextField = nil;
 
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	if (indexPath.section == 0) {
+//		if (indexPath.row == 0) {
+//			// TODO: handle text files
+//			//AddTextFileViewController *vc = [[AddTextFileViewController alloc] initWithNibName:@"AddTextFileViewController" bundle:nil];
+//			//[vc release];
+//		} else 
 		if (indexPath.row == 0) {
-			// TODO: handle text files
-			//AddTextFileViewController *vc = [[AddTextFileViewController alloc] initWithNibName:@"AddTextFileViewController" bundle:nil];
-			//[vc release];
-		} else if (indexPath.row == 1) {
 			if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
 				UIImagePickerController *camera = [[UIImagePickerController alloc] init];		
 				camera.delegate = self;
@@ -279,7 +280,7 @@ UITextField *filenameTextField = nil;
 				[self presentModalViewController:camera animated:YES];
 				[camera release];
 			}
-		} else if (indexPath.row == 2) {
+		} else if (indexPath.row == 1) {
 			if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
 				UIImagePickerController *camera = [[UIImagePickerController alloc] init];		
 				camera.delegate = self;
