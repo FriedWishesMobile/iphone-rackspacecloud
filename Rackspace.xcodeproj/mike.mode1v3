@@ -291,7 +291,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 155}, {251, 807}}</string>
+							<string>{{0, 155}, {251, 713}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -303,14 +303,14 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {268, 825}}</string>
+						<string>{{0, 0}, {268, 731}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
 							<real>251</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>421 283 1437 866 0 0 1920 1178 </string>
+						<string>421 377 1246 772 0 0 1920 1178 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -340,7 +340,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>278A4A7E10CE29E6003140D7</string>
+										<string>27200BBE10D084F40042C42F</string>
 										<key>history</key>
 										<array>
 											<string>2786AE080FFC368D002B852B</string>
@@ -467,7 +467,7 @@
 											<string>275CC08E10CCECA700C6031C</string>
 											<string>275CC0AD10CCF53A00C6031C</string>
 											<string>275CC0AE10CCF53A00C6031C</string>
-											<string>275CC0AF10CCF53A00C6031C</string>
+											<string>278A4A7E10CE29E6003140D7</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -479,14 +479,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1164, 820}}</string>
+								<string>{{0, 0}, {973, 726}}</string>
 								<key>RubberWindowFrame</key>
-								<string>421 283 1437 866 0 0 1920 1178 </string>
+								<string>421 377 1246 772 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>820pt</string>
+							<string>726pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -499,9 +499,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 825}, {1164, 0}}</string>
+								<string>{{0, 731}, {973, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>421 283 1437 866 0 0 1920 1178 </string>
+								<string>421 377 1246 772 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -510,7 +510,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>1164pt</string>
+					<string>973pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -525,9 +525,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>278A4A7F10CE29E6003140D7</string>
+				<string>27200BBF10D084F40042C42F</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>278A4A8010CE29E6003140D7</string>
+				<string>27200BC010D084F40042C42F</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -664,10 +664,10 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>27B6C6280FF0B97C006C965F</string>
-		<string>/Users/mike/src/rackspace/iphone-rackspacecloud/Rackspace.xcodeproj</string>
+		<string>/Users/mike/workspace/personal/rackspace/iphone-rackspacecloud/Rackspace.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>421 283 1437 866 0 0 1920 1178 </string>
+	<string>421 377 1246 772 0 0 1920 1178 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -744,7 +744,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>27B6C6280FF0B97C006C965F</string>
-				<string>278A4A8110CE29E6003140D7</string>
+				<string>27200BC110D084F40042C42F</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

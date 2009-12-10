@@ -48,13 +48,19 @@ UITextField *filenameTextField = nil;
 	// e.g. self.myOutlet = nil;
 }
 
-/*
 - (void)viewWillAppear:(BOOL)animated {
 	// overriding so that we can reload the table based on the view controller state
 	[self.tableView reloadData];
+	
+	if (state == kChoosingFileType) {
+		self.uploadButton.alpha = 0.0;
+		self.uploadButton.enabled = NO;
+	} else {
+		self.uploadButton.alpha = 1.0;
+		self.uploadButton.enabled = YES;
+	}
 	[super viewWillAppear:animated];
 }
-*/
 
 #pragma mark -
 #pragma mark Button Handlers
