@@ -114,6 +114,10 @@ NSDictionary *folders = nil;
 	[self hideSpinnerView];
 	
 	NSLog(@"switch status code = %i", response.statusCode);
+	// 202 - fine, but it was already CDN enabled
+	// 201 - it was cdn enabled
+	
+	// POST to disable
 	
 	if (![response isSuccess]) {
 		[self showSaveError:response];
@@ -346,7 +350,7 @@ NSDictionary *folders = nil;
 	if (section == kContainerDetails) {
 		rows = 2;
 	} else if (section == kCDN) {
-		rows = 2;
+		rows = 1;
 	} else if ([folders count] > 0 && section == kFolders) {
 		if (objectsLoaded) {
 			rows = [folders count];

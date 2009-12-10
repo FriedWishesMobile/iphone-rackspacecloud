@@ -158,7 +158,11 @@
 	NSLog(@"update cdn url: %@", [NSString stringWithFormat:@"%@/%@", app.cdnManagementUrl, [self.name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]);
 	
 	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-	[request setHTTPMethod:@"POST"];
+	if (self.cdnEnabled) {
+		[request setHTTPMethod:@"POST"];
+	} else {
+		[request setHTTPMethod:@"PUT"];
+	}
 	
 	[request setValue:self.ttl forHTTPHeaderField:@"X-TTL"];
 	[request setValue:self.cdnEnabled forHTTPHeaderField:@"X-CDN-Enabled"];
