@@ -5,11 +5,11 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>${PRODUCT_NAME}</string>
+	<string>RCBeta1.2v1</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string>Icon.png</string>
+	<string>IconBeta.png</string>
 	<key>CFBundleIdentifier</key>
 	<string>us.greenis.rackspacecloud.iphone</string>
 	<key>CFBundleInfoDictionaryVersion</key>

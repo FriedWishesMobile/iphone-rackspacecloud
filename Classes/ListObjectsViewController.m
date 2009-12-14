@@ -228,7 +228,8 @@ NSDictionary *folders = nil;
 		[self.navigationController pushViewController:vc animated:YES];
 		[vc release];
 		
-	} else { // if (indexPath.section == kFiles) {
+	} else if (indexPath.section == kFiles || indexPath.section == kFolders) {
+		
 		CloudFilesObject *o = (CloudFilesObject *) [unfolderedObjects objectAtIndex:indexPath.row];	
 		ObjectViewController *vc = [[ObjectViewController alloc] initWithNibName:@"ObjectView" bundle:nil];
 		vc.cfObject = o;
