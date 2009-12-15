@@ -14,6 +14,7 @@
 #import "ListObjectsViewController.h"
 #import "TextFieldCell.h"
 #import "AddTextFileViewController.h"
+#import "RoundedRectView.h"
 
 #define kChoosingFileType 0
 #define kNamingImageFile  1
@@ -21,7 +22,7 @@
 
 @implementation AddObjectViewController
 
-@synthesize account, container, listObjectsViewController, tableView, footerView, uploadButton, uploadSpinner;
+@synthesize account, container, listObjectsViewController, tableView, footerView, uploadButton, uploadSpinner, spinnerView;
 
 NSUInteger state = kChoosingFileType;
 BOOL imageIsPng = YES;
@@ -39,6 +40,10 @@ UITextField *filenameTextField = nil;
 	footerView.backgroundColor = [UIColor clearColor];
 	footerView.frame = newFrame;
 	self.tableView.tableFooterView = self.footerView;	// note this will override UITableView's 'sectionFooterHeight' property
+	
+	// show a rounded rect view
+	self.spinnerView = [[RoundedRectView alloc] initWithDefaultFrame];
+	[self.view addSubview:self.spinnerView];
 	
 	[super viewDidLoad];
 }
@@ -63,6 +68,33 @@ UITextField *filenameTextField = nil;
 }
 
 #pragma mark -
+#pragma mark Spinner Methods
+
+- (void)showSpinnerViewInThread {
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	self.tableView.contentOffset = CGPointMake(0, 0);
+	[self.spinnerView show];
+	[pool release];
+}
+
+- (void)hideSpinnerViewInThread {
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	[self.spinnerView hide];
+	[pool release];
+}
+
+- (void)showSpinnerView {
+	self.view.userInteractionEnabled = NO;
+	[NSThread detachNewThreadSelector:@selector(showSpinnerViewInThread) toTarget:self withObject:nil];
+}
+
+- (void)hideSpinnerView {
+	self.view.userInteractionEnabled = YES;
+	[NSThread detachNewThreadSelector:@selector(hideSpinnerViewInThread) toTarget:self withObject:nil];
+}
+
+
+#pragma mark -
 #pragma mark Button Handlers
 
 - (void) cancelButtonPressed:(id)sender {
@@ -71,6 +103,7 @@ UITextField *filenameTextField = nil;
 
 - (void) uploadButtonPressed:(id)sender {
 	
+	[self showSpinnerView];
 	[self.uploadSpinner startAnimating];
 	
 	RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];
@@ -105,6 +138,7 @@ UITextField *filenameTextField = nil;
 	[self.listObjectsViewController refreshFileList];
 	
 	[self.uploadSpinner stopAnimating];
+	[self showSpinnerView];
 	
 	[self dismissModalViewControllerAnimated:YES];
 }
@@ -452,6 +486,7 @@ UITextField *filenameTextField = nil;
 	[footerView release];
 	[uploadButton release];
 	[uploadSpinner release];
+	[spinnerView release];
     [super dealloc];
 }
 

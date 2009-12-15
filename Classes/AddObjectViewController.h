@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class CFAccount, Container, ListObjectsViewController;
+@class CFAccount, Container, ListObjectsViewController, RoundedRectView;
 
 
 @interface AddObjectViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate> {
@@ -19,6 +19,7 @@
 	IBOutlet UIView *footerView;
 	IBOutlet UIButton *uploadButton;
 	IBOutlet UIActivityIndicatorView *uploadSpinner;
+	RoundedRectView *spinnerView;	
 }
 
 @property (nonatomic, retain) CFAccount *account;
@@ -28,6 +29,8 @@
 @property (nonatomic, retain) IBOutlet UIView *footerView;
 @property (nonatomic, retain) IBOutlet UIButton *uploadButton;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *uploadSpinner;
+@property (nonatomic, retain) RoundedRectView *spinnerView;
+
 
 - (void) cancelButtonPressed:(id)sender;
 - (void) uploadButtonPressed:(id)sender;
