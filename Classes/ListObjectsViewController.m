@@ -204,9 +204,6 @@ NSDictionary *folders = nil;
 	RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];
 	[app.window addSubview:iv];
 	
-	// TODO: use this to PUT to Cloud Files
-	//NSData *imageData = UIImagePNGRepresentation(image);
-	
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:3.75];
 	iv.alpha = 0.0;
@@ -485,21 +482,16 @@ NSDictionary *folders = nil;
 			UITableViewCell *cell = (UITableViewCell *) [aTableView dequeueReusableCellWithIdentifier:@"FolderCell"];
 			if (cell == nil) {
 				cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"FolderCell"] autorelease];
-				
-				if (kRackspaceVersion >= 1.1) { // TODO: remove version check across the board
-					cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-				} else {
-					cell.selectionStyle = UITableViewCellSelectionStyleNone;
-				}
+				cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 			}
 			
 			NSString *key = [[folders allKeys] objectAtIndex:indexPath.row];
 			NSInteger count = [[folders objectForKey:key] count];
 			cell.textLabel.text = key;
 			if (count == 1) {
-				cell.detailTextLabel.text = @"1 file"; // TODO: localize
+				cell.detailTextLabel.text = [NSString stringWithFormat:@"1 %@", NSLocalizedString(@"file", @"file")];
 			} else {
-				cell.detailTextLabel.text = [NSString stringWithFormat:@"%i files", count]; // TODO: localize
+				cell.detailTextLabel.text = [NSString stringWithFormat:@"%i %@", count, NSLocalizedString(@"files", @"files")];
 			}
 			
 			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

@@ -104,9 +104,9 @@
 		NSInteger count = [[subfolders objectForKey:key] count];
 		cell.textLabel.text = key;
 		if (count == 1) {
-			cell.detailTextLabel.text = @"1 file"; // TODO: localize
+			cell.detailTextLabel.text = [NSString stringWithFormat:@"1 %@", NSLocalizedString(@"file", @"file")];
 		} else {
-			cell.detailTextLabel.text = [NSString stringWithFormat:@"%i files", count]; // TODO: localize
+			cell.detailTextLabel.text = [NSString stringWithFormat:@"%i %@", count, NSLocalizedString(@"files", @"files")];
 		}
 		
 	} else { //if (indexPath.section == kFiles) {	

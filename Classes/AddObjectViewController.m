@@ -119,7 +119,6 @@ UITextField *filenameTextField = nil;
 	
 	CloudFilesObject *co = [[CloudFilesObject alloc] init];
 	
-	// TODO: get file name from text field!
 	NSString *filename = filenameTextField.text;
 	if (!filename || [filename isEqualToString:@""]) {
 		filename = filenameTextField.placeholder;
@@ -163,7 +162,7 @@ UITextField *filenameTextField = nil;
 		if (section == 0) {
 			return @"Name and Upload File";
 		} else {
-			return @"File Type";
+			return NSLocalizedString(@"File Type", @"Object File Type label");
 		}
 	}
 }
@@ -227,7 +226,6 @@ UITextField *filenameTextField = nil;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)aTableView imageFileCellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	// TODO: allow choice between jpeg and png in second table section
 	
 	if (indexPath.section == 0) {
 		static NSString *CellIdentifier = @"ImageFileCell";
