@@ -25,7 +25,6 @@
 		272EF0AE1015999800DB17A1 /* ServerNameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 272EF0AC1015999800DB17A1 /* ServerNameController.m */; };
 		272EF0AF1015999800DB17A1 /* ServerNameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 272EF0AD1015999800DB17A1 /* ServerNameController.xib */; };
 		2738EF3B10A24A51006EEF21 /* AddContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2738EF3910A24A51006EEF21 /* AddContainerViewController.m */; };
-		2738EF3C10A24A51006EEF21 /* AddContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2738EF3A10A24A51006EEF21 /* AddContainerViewController.xib */; };
 		2743D0991060B22C00EF51D1 /* GroupSpinnerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743D0981060B22C00EF51D1 /* GroupSpinnerCell.m */; };
 		275ACB480FFEFDE200EEB366 /* ObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275ACB470FFEFDE200EEB366 /* ObjectViewController.m */; };
 		27687767105A0A7600E0655C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27687766105A0A7600E0655C /* MediaPlayer.framework */; };
@@ -58,6 +57,7 @@
 		27D36E2610CC68AB0047F7CB /* AddTextFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D36E2410CC68AB0047F7CB /* AddTextFileViewController.xib */; };
 		27D86F781041DDCA00B805A9 /* ObjectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D86F771041DDCA00B805A9 /* ObjectView.xib */; };
 		27DA9063106C70F600D6A2AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27DA9061106C70F600D6A2AA /* Localizable.strings */; };
+		27F9805910E722B500B0B4C6 /* AddContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27F9805810E722B500B0B4C6 /* AddContainerViewController.xib */; };
 		27FEADA9104A06470042BBFC /* WebFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FEADA7104A06470042BBFC /* WebFileViewController.m */; };
 		282CCBFE0DB6C98000C4EA27 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282CCBFD0DB6C98000C4EA27 /* SecondView.xib */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
@@ -147,7 +147,7 @@
 		272EF0AD1015999800DB17A1 /* ServerNameController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ServerNameController.xib; path = Classes/ServerNameController.xib; sourceTree = "<group>"; };
 		2738EF3810A24A51006EEF21 /* AddContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContainerViewController.h; sourceTree = "<group>"; };
 		2738EF3910A24A51006EEF21 /* AddContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContainerViewController.m; sourceTree = "<group>"; };
-		2738EF3A10A24A51006EEF21 /* AddContainerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddContainerViewController.xib; path = Classes/AddContainerViewController.xib; sourceTree = "<group>"; };
+		2738EF3A10A24A51006EEF21 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = Classes/en.lproj/AddContainerViewController.xib; sourceTree = "<group>"; };
 		2743D0971060B22C00EF51D1 /* GroupSpinnerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupSpinnerCell.h; sourceTree = "<group>"; };
 		2743D0981060B22C00EF51D1 /* GroupSpinnerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupSpinnerCell.m; sourceTree = "<group>"; };
 		275ACB460FFEFDE200EEB366 /* ObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectViewController.h; sourceTree = "<group>"; };
@@ -227,6 +227,8 @@
 		27EF49B7106C78BB00EEDAC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LoginView.xib; sourceTree = "<group>"; };
 		27EF49B8106C78BB00EEDAC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		27EF49B9106C78BB00EEDAC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ServerView.xib; sourceTree = "<group>"; };
+		27F9805A10E722BB00B0B4C6 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = Classes/es.lproj/AddContainerViewController.xib; sourceTree = "<group>"; };
+		27F9805B10E722BE00B0B4C6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = Classes/fr.lproj/AddContainerViewController.xib; sourceTree = "<group>"; };
 		27FEADA6104A06470042BBFC /* WebFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebFileViewController.h; sourceTree = "<group>"; };
 		27FEADA7104A06470042BBFC /* WebFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebFileViewController.m; sourceTree = "<group>"; };
 		27FEADA8104A06470042BBFC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = Classes/en.lproj/WebFileViewController.xib; sourceTree = "<group>"; };
@@ -564,7 +566,7 @@
 			isa = PBXGroup;
 			children = (
 				27D36C5210C8E4DC0047F7CB /* ListFolderObjectsViewController.xib */,
-				2738EF3A10A24A51006EEF21 /* AddContainerViewController.xib */,
+				27F9805810E722B500B0B4C6 /* AddContainerViewController.xib */,
 				271ADC2C1070610400066137 /* WebFileViewController.xib */,
 				2793CA561016D56D009EB8C3 /* Edit Server */,
 				272EF0AA1015997900DB17A1 /* Add Server */,
@@ -1031,7 +1033,7 @@
 				271ADC2D1070610400066137 /* WebFileViewController.xib in Resources */,
 				27DA9063106C70F600D6A2AA /* Localizable.strings in Resources */,
 				278B71A0108C1D270073C19B /* IconBeta.png in Resources */,
-				2738EF3C10A24A51006EEF21 /* AddContainerViewController.xib in Resources */,
+				27F9805910E722B500B0B4C6 /* AddContainerViewController.xib in Resources */,
 				27D36C5410C8E4DC0047F7CB /* ListFolderObjectsViewController.xib in Resources */,
 				27D36E2610CC68AB0047F7CB /* AddTextFileViewController.xib in Resources */,
 			);
@@ -1223,6 +1225,16 @@
 				27C9C1E81084452600729797 /* de */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		27F9805810E722B500B0B4C6 /* AddContainerViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2738EF3A10A24A51006EEF21 /* en */,
+				27F9805A10E722BB00B0B4C6 /* es */,
+				27F9805B10E722BE00B0B4C6 /* fr */,
+			);
+			name = AddContainerViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
