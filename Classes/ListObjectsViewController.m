@@ -336,7 +336,7 @@ NSDictionary *folders = nil;
 	} else if (section == kCDN) {
 		return NSLocalizedString(@"Content Delivery Network", @"CDN table section header");
 	} else if ([folders count] > 0 && section == kFolders) {
-		return @"Folders"; // TODO: localize
+		return NSLocalizedString(@"Folders", @"Folders");
 	} else { //if (section == kFiles) {
 		return NSLocalizedString(@"Files", @"Container Files table section header");
 	}

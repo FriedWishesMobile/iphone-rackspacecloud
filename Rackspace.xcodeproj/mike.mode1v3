@@ -268,14 +268,14 @@
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>27DA9061106C70F600D6A2AA</string>
 								<string>2786B0680FFC6B6D002B852B</string>
-								<string>27F9805810E722B500B0B4C6</string>
+								<string>27199C48106B318300944AA9</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>7</integer>
+									<integer>6</integer>
 									<integer>5</integer>
 									<integer>3</integer>
 									<integer>0</integer>
@@ -301,7 +301,7 @@
 							<real>251</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>396 378 1246 772 0 0 1920 1178 </string>
+						<string>424 310 1246 772 0 0 1920 1178 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -331,7 +331,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>27F9806110E7231700B0B4C6</string>
+										<string>27F980B210E84DEC00B0B4C6</string>
 										<key>history</key>
 										<array>
 											<string>2786AE080FFC368D002B852B</string>
@@ -455,10 +455,10 @@
 											<string>278A4BFF10D6013D003140D7</string>
 											<string>27BD8CFE10D76D7D0045E618</string>
 											<string>27F97D9F10DA179B00B0B4C6</string>
-											<string>27F9805110E7225800B0B4C6</string>
-											<string>27F9805310E7225800B0B4C6</string>
 											<string>27F9805F10E722F300B0B4C6</string>
-											<string>27F9805210E7225800B0B4C6</string>
+											<string>27F980AF10E84DEC00B0B4C6</string>
+											<string>27F980B010E84DEC00B0B4C6</string>
+											<string>27F980B110E84DEC00B0B4C6</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -472,7 +472,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {973, 726}}</string>
 								<key>RubberWindowFrame</key>
-								<string>396 378 1246 772 0 0 1920 1178 </string>
+								<string>424 310 1246 772 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -492,7 +492,7 @@
 								<key>Frame</key>
 								<string>{{0, 731}, {973, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>396 378 1246 772 0 0 1920 1178 </string>
+								<string>424 310 1246 772 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -660,7 +660,7 @@
 		<string>/Users/mike/src/rackspace/iphone-rackspacecloud/Rackspace.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>396 378 1246 772 0 0 1920 1178 </string>
+	<string>424 310 1246 772 0 0 1920 1178 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -895,7 +895,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>AddObjectViewController.m</string>
+										<string>ServerViewController.m</string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>

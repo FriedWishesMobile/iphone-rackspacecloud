@@ -158,9 +158,8 @@ UITextField *filenameTextField = nil;
 	if (state == kChoosingFileType) {
 		return NSLocalizedString(@"Choose a file type", @"Choose a file type table section header");
 	} else {
-		// TODO: localize these strings
 		if (section == 0) {
-			return @"Name and Upload File";
+			return NSLocalizedString(@"Name and Upload File", @"Name and Upload File");
 		} else {
 			return NSLocalizedString(@"File Type", @"Object File Type label");
 		}
@@ -232,8 +231,7 @@ UITextField *filenameTextField = nil;
 		TextFieldCell *cell = (TextFieldCell *) [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
 		if (cell == nil) {
 			cell = [[[TextFieldCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier] autorelease];
-			// TODO: localize string
-			cell.textLabel.text = @"File Name";
+			cell.textLabel.text = NSLocalizedString(@"File Name", @"File Name");
 			cell.textField.keyboardType = UIKeyboardTypeDefault;
 			cell.textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
 			cell.textField.returnKeyType = UIReturnKeyDone;
@@ -281,8 +279,7 @@ UITextField *filenameTextField = nil;
 	TextFieldCell *cell = (TextFieldCell *) [aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
 		cell = [[[TextFieldCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier] autorelease];
-		// TODO: localize string
-		cell.textLabel.text = @"File Name";
+		cell.textLabel.text = NSLocalizedString(@"File Name", @"File Name");
 		cell.textField.placeholder = [NSString stringWithFormat:@"upload_%d.txt", [[NSDate date] timeIntervalSince1970]];		
 		cell.textField.keyboardType = UIKeyboardTypeDefault;
 		cell.textField.autocapitalizationType = UITextAutocapitalizationTypeNone;

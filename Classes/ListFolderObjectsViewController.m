@@ -71,7 +71,7 @@
 
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section {
 	if ([subfolders count] > 0 && section == kFolders) {
-		return @"Folders"; // TODO: localize
+		return NSLocalizedString(@"Folders", @"Folders");
 	} else { //if (section == kFiles) {
 		return NSLocalizedString(@"Files", @"Container Files table section header");
 	}
