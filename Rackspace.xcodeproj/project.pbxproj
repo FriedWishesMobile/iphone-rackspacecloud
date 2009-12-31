@@ -51,6 +51,7 @@
 		2793CA5B1016D5BD009EB8C3 /* ResizeServerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2793CA591016D5BD009EB8C3 /* ResizeServerController.xib */; };
 		27A3C4E41019762500198388 /* RenameServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A3C4E21019762500198388 /* RenameServerController.m */; };
 		27A3C4E51019762500198388 /* RenameServerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A3C4E31019762500198388 /* RenameServerController.xib */; };
+		27AA47BC10ED5517002FC137 /* windows.png in Resources */ = {isa = PBXBuildFile; fileRef = 27AA47BB10ED5517002FC137 /* windows.png */; };
 		27D36C5310C8E4DC0047F7CB /* ListFolderObjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D36C5110C8E4DC0047F7CB /* ListFolderObjectsViewController.m */; };
 		27D36C5410C8E4DC0047F7CB /* ListFolderObjectsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D36C5210C8E4DC0047F7CB /* ListFolderObjectsViewController.xib */; };
 		27D36E2510CC68AB0047F7CB /* AddTextFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D36E2310CC68AB0047F7CB /* AddTextFileViewController.m */; };
@@ -197,6 +198,7 @@
 		27A3C4E11019762500198388 /* RenameServerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenameServerController.h; sourceTree = "<group>"; };
 		27A3C4E21019762500198388 /* RenameServerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenameServerController.m; sourceTree = "<group>"; };
 		27A3C4E31019762500198388 /* RenameServerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RenameServerController.xib; path = Classes/RenameServerController.xib; sourceTree = "<group>"; };
+		27AA47BB10ED5517002FC137 /* windows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windows.png; sourceTree = "<group>"; };
 		27C9C1E81084452600729797 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		27C9C2021084473F00729797 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = Classes/de.lproj/WebFileViewController.xib; sourceTree = "<group>"; };
 		27C9C2041084476700729797 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = Classes/de.lproj/ResetPasswordController.xib; sourceTree = "<group>"; };
@@ -893,6 +895,7 @@
 		4C9982EA0FEE132F005D12B7 /* OS Icons */ = {
 			isa = PBXGroup;
 			children = (
+				27AA47BB10ED5517002FC137 /* windows.png */,
 				2786B03E0FFC66D6002B852B /* rhel.png */,
 				4C9982EB0FEE132F005D12B7 /* debian.png */,
 				4C9982EC0FEE132F005D12B7 /* gentoo.png */,
@@ -1036,6 +1039,7 @@
 				27F9805910E722B500B0B4C6 /* AddContainerViewController.xib in Resources */,
 				27D36C5410C8E4DC0047F7CB /* ListFolderObjectsViewController.xib in Resources */,
 				27D36E2610CC68AB0047F7CB /* AddTextFileViewController.xib in Resources */,
+				27AA47BC10ED5517002FC137 /* windows.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

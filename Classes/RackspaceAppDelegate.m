@@ -24,6 +24,7 @@ static UIImage *archImage = nil;
 static UIImage *centosImage = nil;
 static UIImage *fedoraImage = nil;
 static UIImage *rhelImage = nil;
+static UIImage *windowsImage = nil;
 
 @implementation RackspaceAppDelegate
 
@@ -48,7 +49,8 @@ static UIImage *rhelImage = nil;
 	archImage = [[UIImage imageNamed:@"arch.png"] retain];
 	centosImage = [[UIImage imageNamed:@"centos.png"] retain];
 	fedoraImage = [[UIImage imageNamed:@"fedora.png"] retain];
-	rhelImage = [[UIImage imageNamed:@"rhel.png"] retain];	
+	rhelImage = [[UIImage imageNamed:@"rhel.png"] retain];
+	windowsImage = [[UIImage imageNamed:@"windows.png"] retain];
 }
 
 - (UIImage *)imageForServer:(Server *)s {
