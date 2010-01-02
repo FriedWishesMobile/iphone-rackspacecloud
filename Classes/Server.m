@@ -71,8 +71,11 @@
 }
 
 + (Server *)findRemoteWithId:(NSString *)serverId andResponse:(NSError **)aError {
+
+	NSString *now = [[[NSDate date] description] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+
 	RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];	
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@servers/%@.xml", app.computeUrl, serverId]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@servers/%@.xml?now=%@", app.computeUrl, serverId, now]];
 	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
 	
 	Response *res = [ORConnection sendRequest:request withAuthToken:app.authToken];
@@ -87,8 +90,10 @@
 // Find all items 
 + (NSArray *)findAllRemoteWithResponse:(NSError **)aError {
 	
+	NSString *now = [[[NSDate date] description] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+	
 	RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];	
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@servers/detail.xml", app.computeUrl]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@servers/detail.xml?now=%@", app.computeUrl, now]];
 	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
 	
 	Response *res = [ORConnection sendRequest:request withAuthToken:app.authToken];
