@@ -3,7 +3,7 @@
 //  Rackspace
 //
 //  Created by Michael Mayo on 6/21/09.
-//  Copyright 2009 Michael Mayo. All rights reserved.
+//  Copyright 2009 Rackspace Hosting. All rights reserved.
 //
 
 #import "CFAccount.h"
@@ -49,6 +49,9 @@
 	if ([res isError] && aError) {
 		*aError = res.error;
 	}
+	
+	NSLog(@"body length: %i", [res.body length]);
+	
 	return [self performSelector:@selector(fromXMLData:) withObject:res.body];
 }
 

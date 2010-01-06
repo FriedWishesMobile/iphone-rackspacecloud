@@ -184,7 +184,7 @@ static NSMutableArray *activeDelegates;
 		if([url query]){
 			[urlString appendFormat:@"?%@",[url query],nil];
 		}
-		NSLog([NSString stringWithFormat:@"Final URL: %@", urlString]);
+		NSLog(@"Final URL: %@", urlString);
 		[request setURL:[NSURL URLWithString:urlString]];
 	}
 	
