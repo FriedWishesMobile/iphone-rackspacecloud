@@ -44,8 +44,9 @@
 -(Response *)resize;
 -(Response *)confirmResize;
 -(Response *)revertResize;
-+ (Server *)findRemoteWithId:(NSString *)serverId andResponse:(NSError **)aError;
++(Server *)findRemoteWithId:(NSString *)serverId andResponse:(NSError **)aError;
 -(Response *)create;
 -(Response *)saveRemote;
+-(BOOL) isWindows;
 
 @end

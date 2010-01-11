@@ -19,8 +19,8 @@
 #import "ServersRootViewController.h"
 
 #define kServerDetails 0
-#define kFlavor 1
-#define kImage 2
+#define kImage 1
+#define kFlavor 2
 
 @implementation AddServerViewController
 
@@ -78,7 +78,11 @@
 	if (section == kServerDetails) {
 		return 1;
 	} else if (section == kFlavor) {
-		return [app.flavors count];
+		if ([self.server isWindows]) {
+			return [app.flavors count] - 1; // 256 MB isn't valid for windows
+		} else {
+			return [app.flavors count];
+		}
 	} else if (section == kImage) {
 		return [app.images count];
 	} else {
@@ -105,7 +109,12 @@
 	if (indexPath.section == kServerDetails) {
 		return self.nameCell;
 	} else if (indexPath.section == kFlavor) {
-		Flavor *flavor = (Flavor *) [app.flavors objectAtIndex:indexPath.row];
+		Flavor *flavor;
+		if ([self.server isWindows]) {
+			flavor = (Flavor *) [app.flavors objectAtIndex:indexPath.row + 1]; // skip 256 MB for windows
+		} else {
+			flavor = (Flavor *) [app.flavors objectAtIndex:indexPath.row];
+		}
 		flavorCell.textLabel.text = flavor.flavorName;
 		flavorCell.detailTextLabel.text = [NSString stringWithFormat:@"%@MB %@ - %@GB %@", flavor.ram, NSLocalizedString(@"RAM", @"RAM"), flavor.disk, NSLocalizedString(@"Disk", @"Disk")];
 		
@@ -154,7 +163,12 @@
 		[vc release];
 	} else if (indexPath.section == kFlavor) {
 		RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];
-		Flavor *flavor = [app.flavors objectAtIndex:indexPath.row];
+		Flavor *flavor;
+		if ([self.server isWindows]) {
+			flavor = (Flavor *) [app.flavors objectAtIndex:indexPath.row + 1]; // skip 256 MB for windows
+		} else {
+			flavor = (Flavor *) [app.flavors objectAtIndex:indexPath.row];
+		}
 		self.server.flavorId = flavor.flavorId;
 		[aTableView reloadData];
 	} else if (indexPath.section == kImage) {

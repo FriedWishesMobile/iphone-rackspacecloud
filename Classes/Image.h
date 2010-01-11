@@ -28,4 +28,8 @@
 
 + (Image *)findLocalWithImageId:(NSString *)imageId;
 
+// don't fully trust this method, as a backup image could be windows but return NO
+// because it's not one of the Rackspace-provided Windows images
+- (BOOL)isWindows;
+
 @end

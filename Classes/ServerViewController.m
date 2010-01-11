@@ -33,8 +33,31 @@ NSString *rebootMode;
 TextFieldCell *serverNameCell;
 NSString *initialFlavorId;
 
+- (void)loadValidActions {
+	actions = [[NSMutableDictionary alloc] init];
+	[actions setObject:NSLocalizedString(@"Reset Server", @"Server Reset Server button") forKey:@"reset"];
+	if (![self.server isWindows]) {
+		// Windows can't be resized
+		[actions setObject:NSLocalizedString(@"Resize Server", @"Server Resize Server button") forKey:@"resize"];
+	}
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];	
+	
+	NSString *protocol = [defaults stringForKey:@"ssh_app_protocol_preference"];
+	if (!protocol) {
+		protocol = @"ssh://";
+	}
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", protocol, [[server.addresses objectForKey:@"public"] objectAtIndex:0]]];
+	
+	UIApplication *app = [UIApplication sharedApplication];
+	BOOL sshEnabled = [defaults boolForKey:@"ssh_enabled_preference"];
+	
+	if (sshEnabled && [app canOpenURL:url]) {
+		[actions setObject:NSLocalizedString(@"Launch SSH Client", @"Server Launch SSH Client button") forKey:@"ssh"];
+	}
+}
+
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil server:(Server *)aServer {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
 		// make and disable the save button
 		self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Save", @"Save Server button") style:UIBarButtonItemStyleBordered target:self action:@selector(saveButtonPressed:)];
@@ -47,6 +70,10 @@ NSString *initialFlavorId;
 		
 		serverNameCell.textField.keyboardType = UIKeyboardTypeDefault;
 		serverNameCell.textField.delegate = self;
+		
+		self.server = aServer;
+		
+		[self loadValidActions];
     }
     return self;
 }
@@ -107,23 +134,7 @@ NSString *initialFlavorId;
 	} else if (section == kPrivateIPs) {
 		return [[server.addresses objectForKey:@"private"] count];
 	} else if (section == kActions) {
-		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];	
-		
-		
-		NSString *protocol = [defaults stringForKey:@"ssh_app_protocol_preference"];
-		if (!protocol) {
-			protocol = @"ssh://";
-		}
-		NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", protocol, [[server.addresses objectForKey:@"public"] objectAtIndex:0]]];
-		
-		UIApplication *app = [UIApplication sharedApplication];
-		BOOL sshEnabled = [defaults boolForKey:@"ssh_enabled_preference"];
-		
-		if (sshEnabled && [app canOpenURL:url]) {
-			return 3;
-		} else {
-			return 2; // hide the ssh row
-		}
+		return [actions count];
 	} else {
 		return 0;
 	}
@@ -184,7 +195,12 @@ NSString *initialFlavorId;
 		} else if (indexPath.row == 1) {
 			cell.textLabel.text = NSLocalizedString(@"Flavor", @"Server Flavor cell label");
 			cell.detailTextLabel.text = [self.server flavorName];
-			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+			if ([self.server isWindows]) {
+				cell.accessoryType = UITableViewCellAccessoryNone; // windows can't resize
+			} else {
+				cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+			}
+			
 			cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 			
 			// if the server is resizing, disable this
@@ -291,13 +307,14 @@ NSString *initialFlavorId;
 			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 		}
 		
-		if (indexPath.row == 0) {
-			cell.textLabel.text = NSLocalizedString(@"Reset Password", @"Server Reset Password button");
-			cell.textLabel.textColor = [UIColor blackColor];
-			cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-		} else if (indexPath.row == 1) {
-			cell.textLabel.text = NSLocalizedString(@"Resize Server", @"Server Resize Server button");
+		NSArray *actionKeys = [actions allKeys];
+		NSString *actionKey = [actionKeys objectAtIndex:indexPath.row];
+		cell.textLabel.text = [actions objectForKey:actionKey];
+		cell.textLabel.textColor = [UIColor blackColor];
+		cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+		
+		if ([actionKey isEqualToString:@"resize"]) {
 			// if resizing, disable
 			if ([self.server.status isEqualToString:@"QUEUE_RESIZE"] || [self.server.status isEqualToString:@"PREP_RESIZE"] || [self.server.status isEqualToString:@"RESIZE"] || [self.server.status isEqualToString:@"VERIFY_RESIZE"]) {
 				cell.textLabel.textColor = [UIColor grayColor];
@@ -306,16 +323,17 @@ NSString *initialFlavorId;
 			} else {
 				cell.textLabel.textColor = [UIColor blackColor];
 				cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-				cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+				if ([self.server isWindows]) {
+					cell.accessoryType = UITableViewCellAccessoryNone; // windows can't resize
+				} else {
+					cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+				}
 			}
-		} else if (indexPath.row == 2) {
-			cell.textLabel.text = NSLocalizedString(@"Launch SSH Client", @"Server Launch SSH Client button");
-			cell.textLabel.textColor = [UIColor blackColor];
-			cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 		}
+		
 		return cell;
 	}
+	
 	return nil;
 }
 
@@ -343,7 +361,12 @@ NSString *initialFlavorId;
 			}
 		}
 	} else if (indexPath.section == kActions) {
-		if (indexPath.row == 0) {
+		
+		NSArray *actionKeys = [actions allKeys];
+		NSString *actionKey = [actionKeys objectAtIndex:indexPath.row];
+		
+		
+		if ([actionKey isEqualToString:@"reset"]) {
 			// reset password
 			ResetPasswordController *vc = [[ResetPasswordController alloc] initWithNibName:@"ResetPasswordController" bundle:nil];
 			vc.server = self.server;
@@ -351,17 +374,20 @@ NSString *initialFlavorId;
 			[self.navigationController pushViewController:vc animated:YES];
 			[vc release];
 			[aTableView deselectRowAtIndexPath:indexPath animated:NO];
-		} else if (indexPath.row == 1) {
-			// resize server.  if currently resizing, do nothing
-			if (!([self.server.status isEqualToString:@"QUEUE_RESIZE"] || [self.server.status isEqualToString:@"PREP_RESIZE"] || [self.server.status isEqualToString:@"RESIZE"] || [self.server.status isEqualToString:@"VERIFY_RESIZE"])) {
-				ResizeServerController *vc = [[ResizeServerController alloc] initWithNibName:@"ResizeServerController" bundle:nil];
-				vc.server = self.server;
-				vc.serverViewController = self;
-				[self.navigationController pushViewController:vc animated:YES];
-				[vc release];
-				[aTableView deselectRowAtIndexPath:indexPath animated:NO];
+		} else if ([actionKey isEqualToString:@"resize"]) {
+			// no resizing if it's windows
+			if (![self.server isWindows]) {
+				// resize server.  if currently resizing, do nothing
+				if (!([self.server.status isEqualToString:@"QUEUE_RESIZE"] || [self.server.status isEqualToString:@"PREP_RESIZE"] || [self.server.status isEqualToString:@"RESIZE"] || [self.server.status isEqualToString:@"VERIFY_RESIZE"])) {
+					ResizeServerController *vc = [[ResizeServerController alloc] initWithNibName:@"ResizeServerController" bundle:nil];
+					vc.server = self.server;
+					vc.serverViewController = self;
+					[self.navigationController pushViewController:vc animated:YES];
+					[vc release];
+					[aTableView deselectRowAtIndexPath:indexPath animated:NO];
+				}
 			}
-		} else if (indexPath.row == 2) {			
+		} else if ([actionKey isEqualToString:@"ssh"]) {
 			NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];	
 			NSString *protocol = [defaults stringForKey:@"ssh_app_protocol_preference"];			
 			if (!protocol) {
@@ -582,6 +608,7 @@ NSString *initialFlavorId;
 //		[statusCell release];
 	[spinnerView release];
 	[serversRootViewController release];
+	[actions release];
     [super dealloc];
 }
 

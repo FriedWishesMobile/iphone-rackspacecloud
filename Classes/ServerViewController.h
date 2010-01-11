@@ -17,6 +17,7 @@
 	UITableViewCell *statusCell;
 	RoundedRectView *spinnerView;
 	ServersRootViewController *serversRootViewController;
+	NSMutableDictionary *actions;
 }
 
 @property (nonatomic, retain) Server *server;
@@ -25,6 +26,8 @@
 @property (nonatomic, retain) UITableViewCell *statusCell;
 @property (nonatomic, retain) RoundedRectView *spinnerView;
 @property (nonatomic, retain) ServersRootViewController *serversRootViewController;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil server:(Server *)aServer;
 
 - (void) softRebootButtonPressed:(id)sender;
 - (void) hardRebootButtonPressed:(id)sender;

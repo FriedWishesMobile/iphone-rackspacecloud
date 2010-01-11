@@ -169,8 +169,7 @@
 }
 
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	ServerViewController *vc = [[ServerViewController alloc] initWithNibName:@"ServerView" bundle:nil];
-	vc.server = [servers objectAtIndex:indexPath.row];
+	ServerViewController *vc = [[ServerViewController alloc] initWithNibName:@"ServerView" bundle:nil server:[servers objectAtIndex:indexPath.row]];
 	vc.serversRootViewController = self;
 	[self.navigationController pushViewController:vc animated:YES];
 	[vc release];

@@ -73,6 +73,9 @@
 	// remove images that don't have status of ACTIVE
 	for (int i = 0; i < [app.images count]; i++) {
 		Image *image = (Image *) [app.images objectAtIndex:i];
+		
+		//NSLog(@"Image %@ - %@ - %@", image.imageId, image.imageName, image.status);
+		
 		if ([image.status isEqualToString:@"ACTIVE"]) {
 			[newImages addObject:image];
 		}

@@ -56,7 +56,15 @@
 	return image;
 }
 
--(void) dealloc {
+// don't fully trust this method, as a backup image could be windows but return NO
+// because it's not one of the Rackspace-provided Windows images
+- (BOOL) isWindows {	
+	return [self.imageId isEqualToString:@"23"] || [self.imageId isEqualToString:@"24"]
+			|| [self.imageId isEqualToString:@"28"] || [self.imageId isEqualToString:@"29"]
+			|| [self.imageId isEqualToString:@"31"];
+}
+
+- (void) dealloc {
 	[imageId release];
 	[imageName release];
 	[timeStamp release];

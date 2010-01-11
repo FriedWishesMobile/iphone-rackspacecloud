@@ -102,9 +102,8 @@
 
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	if (indexPath.section == kServers) {
-		ServerViewController *vc = [[ServerViewController alloc] initWithNibName:@"ServerView" bundle:nil];
 		RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];		
-		vc.server = [app.servers objectForKey:((Server *)[self.ipGroup.servers objectAtIndex:indexPath.row]).serverId];
+		ServerViewController *vc = [[ServerViewController alloc] initWithNibName:@"ServerView" bundle:nil server:[app.servers objectForKey:((Server *)[self.ipGroup.servers objectAtIndex:indexPath.row]).serverId]];
 		[self.navigationController pushViewController:vc animated:YES];
 		[vc release];
 		[aTableView deselectRowAtIndexPath:indexPath animated:NO];		

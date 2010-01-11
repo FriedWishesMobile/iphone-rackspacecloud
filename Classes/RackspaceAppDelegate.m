@@ -53,43 +53,61 @@ static UIImage *windowsImage = nil;
 	windowsImage = [[UIImage imageNamed:@"windows.png"] retain];
 }
 
-- (UIImage *)imageForServer:(Server *)s {
+- (UIImage *)imageForImageId:(NSString *)imageId {
 	
-	if ([s.imageId isEqualToString:@"2"]) {
+	if ([imageId isEqualToString:@"2"]) {
 		return centosImage;
-	} else if ([s.imageId isEqualToString:@"3"]) {
+	} else if ([imageId isEqualToString:@"3"]) {
 		return gentooImage;
-	} else if ([s.imageId isEqualToString:@"4"]) {
+	} else if ([imageId isEqualToString:@"4"]) {
 		return debianImage;
-	} else if ([s.imageId isEqualToString:@"5"]) {
+	} else if ([imageId isEqualToString:@"5"]) {
 		return fedoraImage;
-	} else if ([s.imageId isEqualToString:@"7"]) {
+	} else if ([imageId isEqualToString:@"7"]) {
 		return centosImage;
-	} else if ([s.imageId isEqualToString:@"8"]) {
+	} else if ([imageId isEqualToString:@"8"]) {
 		return ubuntuImage;
-	} else if ([s.imageId isEqualToString:@"9"]) {
+	} else if ([imageId isEqualToString:@"9"]) {
 		return archImage;
-	} else if ([s.imageId isEqualToString:@"10"]) {
+	} else if ([imageId isEqualToString:@"10"]) {
 		return ubuntuImage;
-	} else if ([s.imageId isEqualToString:@"11"]) {
+	} else if ([imageId isEqualToString:@"11"]) {
 		return ubuntuImage;
-	} else if ([s.imageId isEqualToString:@"12"]) {
+	} else if ([imageId isEqualToString:@"12"]) {
 		return rhelImage;
-	} else if ([s.imageId isEqualToString:@"13"]) {
+	} else if ([imageId isEqualToString:@"13"]) {
 		return archImage;
-	} else if ([s.imageId isEqualToString:@"4056"]) {
+	} else if ([imageId isEqualToString:@"4056"]) {
 		return fedoraImage;
-	} else if ([s.imageId isEqualToString:@"14362"]) {
+	} else if ([imageId isEqualToString:@"14362"]) {
 		return ubuntuImage;
+	} else if ([imageId isEqualToString:@"23"]) {
+		return windowsImage;
+	} else if ([imageId isEqualToString:@"24"]) {
+		return windowsImage;
+	} else if ([imageId isEqualToString:@"28"]) {
+		return windowsImage;
+	} else if ([imageId isEqualToString:@"29"]) {
+		return windowsImage;
+	} else if ([imageId isEqualToString:@"31"]) {
+		return windowsImage;
+	} else if ([imageId isEqualToString:@"14"]) {
+		return rhelImage;
+	} else if ([imageId isEqualToString:@"17"]) {
+		return fedoraImage;
+	} else if ([imageId isEqualToString:@"19"]) {
+		return gentooImage;
+	} else if ([imageId isEqualToString:@"14362"]) {
+		return ubuntuImage;
+	} else if ([imageId isEqualToString:@"187811"]) {
+		return centosImage;
 	} else {		
 		// might be a backup image, so look for the server id in the image
 		// if a server is there, call imageForServer on it
 		
 		RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];
 		
-		s.imageId;
-		
-		Image *image = [Image findLocalWithImageId:s.imageId];
+		Image *image = [Image findLocalWithImageId:imageId];
 		if (image && image.serverId) {
 			
 			// find the image for the serverId
@@ -102,51 +120,12 @@ static UIImage *windowsImage = nil;
 	return nil;
 }
 
+- (UIImage *)imageForServer:(Server *)s {
+	return [self imageForImageId:s.imageId];
+}
+
 - (UIImage *)imageForImage:(Image *)i {
-	
-	if ([i.imageId isEqualToString:@"2"]) {
-		return centosImage;
-	} else if ([i.imageId isEqualToString:@"3"]) {
-		return gentooImage;
-	} else if ([i.imageId isEqualToString:@"4"]) {
-		return debianImage;
-	} else if ([i.imageId isEqualToString:@"5"]) {
-		return fedoraImage;
-	} else if ([i.imageId isEqualToString:@"7"]) {
-		return centosImage;
-	} else if ([i.imageId isEqualToString:@"8"]) {
-		return ubuntuImage;
-	} else if ([i.imageId isEqualToString:@"9"]) {
-		return archImage;
-	} else if ([i.imageId isEqualToString:@"10"]) {
-		return ubuntuImage;
-	} else if ([i.imageId isEqualToString:@"11"]) {
-		return ubuntuImage;
-	} else if ([i.imageId isEqualToString:@"12"]) {
-		return rhelImage;
-	} else if ([i.imageId isEqualToString:@"13"]) {
-		return archImage;
-	} else if ([i.imageId isEqualToString:@"4056"]) {
-		return fedoraImage;
-	} else if ([i.imageId isEqualToString:@"14362"]) {
-		return ubuntuImage;
-	} else {		
-		// might be a backup image, so look for the server id in the image
-		// if a server is there, call imageForServer on it
-		
-		RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];
-		
-		
-		Server *aServer = (Server *) [app.servers objectForKey:i.serverId];
-		Image *image = [Image findLocalWithImageId:aServer.imageId];
-		if (image) { // && image.serverId) {
-			
-			// find the image for the serverId
-			// call imageForServer on that server
-			return [self imageForImage:image];
-		}
-	}		
-	return nil;
+	return [self imageForImageId:i.imageId];
 }
 
 
