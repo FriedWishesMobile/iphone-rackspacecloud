@@ -97,8 +97,8 @@ NSString *initialFlavorId;
 	footerView.frame = newFrame;
 	self.tableView.tableFooterView = self.footerView;	// note this will override UITableView's 'sectionFooterHeight' property
 	
-	// poll if resizing
-	if ([self.server.status isEqualToString:@"BUILD"] || [self.server.status isEqualToString:@"QUEUE_RESIZE"] || [self.server.status isEqualToString:@"PREP_RESIZE"] || [self.server.status isEqualToString:@"RESIZE"]) {
+	// poll if resizing or unknown
+	if ([self.server.status isEqualToString:@"BUILD"] || [self.server.status isEqualToString:@"QUEUE_RESIZE"] || [self.server.status isEqualToString:@"PREP_RESIZE"] || [self.server.status isEqualToString:@"RESIZE"] || [self.server.status isEqualToString:@"UNKNOWN"]) {
 		[NSThread detachNewThreadSelector:@selector(refreshProgress:) toTarget:self withObject:self];
 	}
 	

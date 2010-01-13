@@ -22,8 +22,12 @@
 		CGRect rect = CGRectInset(self.contentView.bounds, 18, 12);
 		rect.origin.x += 75;
 		rect.size.width -= 75; // to prevent scrolling off the side
-		
+		//rect.size.height
+		//labelFont
+				
 		self.textField = [[UITextField alloc] initWithFrame:rect];
+		self.textField.returnKeyType = UIReturnKeyDone;
+		self.textField.font = [UIFont fontWithName:self.textField.font.fontName size:15.0];
 		[self addSubview:self.textField];		
     }
     return self;
