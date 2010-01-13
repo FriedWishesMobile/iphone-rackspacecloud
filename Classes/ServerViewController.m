@@ -56,7 +56,7 @@ NSString *initialFlavorId;
 	}
 }
 
- // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
+// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil server:(Server *)aServer {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
 		// make and disable the save button
@@ -72,6 +72,8 @@ NSString *initialFlavorId;
 		serverNameCell.textField.delegate = self;
 		
 		self.server = aServer;
+
+		flavorName = [self.server flavorName];
 		
 		[self loadValidActions];
     }
@@ -194,7 +196,7 @@ NSString *initialFlavorId;
 			return serverNameCell;
 		} else if (indexPath.row == 1) {
 			cell.textLabel.text = NSLocalizedString(@"Flavor", @"Server Flavor cell label");
-			cell.detailTextLabel.text = [self.server flavorName];
+			cell.detailTextLabel.text = flavorName;
 			if ([self.server isWindows]) {
 				cell.accessoryType = UITableViewCellAccessoryNone; // windows can't resize
 			} else {
@@ -243,6 +245,7 @@ NSString *initialFlavorId;
 					// progress goes up to 33.3%
 					pv.progress = ([self.server.progress intValue] / 3.0 * 0.01);
 					
+					statusCell.detailTextLabel.textColor = [UIColor blackColor];
 					statusCell.detailTextLabel.text = NSLocalizedString(@"Resizing...", @"Server Resizing Status");
 					[statusCell addSubview:pv];
 				} else if ([self.server.status isEqualToString:@"PREP_RESIZE"]) {

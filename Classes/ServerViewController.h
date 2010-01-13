@@ -18,6 +18,7 @@
 	RoundedRectView *spinnerView;
 	ServersRootViewController *serversRootViewController;
 	NSMutableDictionary *actions;
+	NSString *flavorName;
 }
 
 @property (nonatomic, retain) Server *server;
