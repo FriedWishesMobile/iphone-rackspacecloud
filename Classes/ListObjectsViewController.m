@@ -18,6 +18,8 @@
 #import "Response.h"
 #import "TextFieldCell.h"
 #import "ListFolderObjectsViewController.h"
+#import "ContainersRootViewController.h"
+
 
 #define kContainerDetails 0
 #define kCDN 1
@@ -26,7 +28,7 @@
 
 @implementation ListObjectsViewController
 
-@synthesize account, container, containerName, cdnSwitch, logSwitch, spinnerView, objectsContainer, ttlCell;
+@synthesize account, container, containerName, cdnSwitch, logSwitch, spinnerView, objectsContainer, ttlCell, containersRootViewController;
 
 BOOL objectsLoaded = NO;
 NSMutableArray *folderedObjects = nil;
@@ -108,19 +110,19 @@ NSDictionary *folders = nil;
 	} else {
 		self.container.cdnEnabled = @"False";
 	}
-	//Response *response = [self.container save];
-	//Response *response = [self.container create];
-	Response *response = [self.container updateCdnAttributes];
+	Response *response = [self.container updateCdnAttributes:self.containersRootViewController.cdnAccount.containers];
 	[self hideSpinnerView];
 	
 	NSLog(@"switch status code = %i", response.statusCode);
 	// 202 - fine, but it was already CDN enabled
 	// 201 - it was cdn enabled
 	
-	// POST to disable
-	
 	if (![response isSuccess]) {
 		[self showSaveError:response];
+	} else {
+		// refresh the containers list so we'll be sure to use the right http method
+		// for CDN controls in the future
+		[self.containersRootViewController refreshContainerList];
 	}
 }
 
@@ -605,6 +607,7 @@ NSDictionary *folders = nil;
 	if (unfolderedObjects) {
 		[unfolderedObjects release];
 	}
+	[containersRootViewController release];
     [super dealloc];
 }
 

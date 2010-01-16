@@ -138,6 +138,7 @@ BOOL containersLoaded = NO;
 	vc.account = self.account;
 	vc.container = [account.containers objectAtIndex:indexPath.row];
 	vc.containerName = vc.container.name;
+	vc.containersRootViewController = self;
 	[self.navigationController pushViewController:vc animated:YES];
 	[vc release];
 	[aTableView deselectRowAtIndexPath:indexPath animated:NO];		

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class Container, CFAccount, RoundedRectView, TextFieldCell;
+@class Container, CFAccount, RoundedRectView, TextFieldCell, ContainersRootViewController;
 
 @interface ListObjectsViewController : UITableViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIAccelerometerDelegate, UITextFieldDelegate> {
 	NSString *containerName;
@@ -21,6 +21,7 @@
 	RoundedRectView *spinnerView;
 	TextFieldCell *cdnURLCell;
 	TextFieldCell *ttlCell;
+	ContainersRootViewController *containersRootViewController;
 }
 
 @property (nonatomic, retain) NSString *containerName;
@@ -31,6 +32,7 @@
 @property (nonatomic, retain) UISwitch *logSwitch;
 @property (nonatomic, retain) RoundedRectView *spinnerView;
 @property (nonatomic, retain) TextFieldCell *ttlCell;
+@property (nonatomic, retain) ContainersRootViewController *containersRootViewController;
 
 
 - (void)showSpinnerView;

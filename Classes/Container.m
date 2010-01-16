@@ -149,21 +149,30 @@
 	return [ORConnection sendRequest:request withAuthToken:app.authToken];
 }
 
-- (Response *)updateCdnAttributes {
+- (Response *)updateCdnAttributes:(NSArray *)knownCDNContainers {
 	RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];	
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@", app.cdnManagementUrl, [self.name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];	
 	
-	// PUT first time, then POST... kinda weird
-	
-	NSLog(@"update cdn url: %@", [NSString stringWithFormat:@"%@/%@", app.cdnManagementUrl, [self.name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]);
-	
-	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-	if (self.cdnEnabled) {
-		[request setHTTPMethod:@"POST"];
-	} else {
-		[request setHTTPMethod:@"PUT"];
+	// If a container has never been CDN-enabled, you must enable it with a PUT.
+	// After that, you control CDN status with a POST.  To decide which request method to use,
+	// we need a list of CDN containers (which is passed in), and if self.name is 
+	// not in the list, we'll PUT.
+	// Even if the container is not CDN-enabled, we should see it in the containers list if has
+	// been CDN-enabled in the past.
+	NSString *httpMethod = @"PUT";
+	for (int i = 0; i < [knownCDNContainers count]; i++) {
+		Container *c = [knownCDNContainers objectAtIndex:i];
+		if ([c.name isEqualToString:self.name]) {
+			// it has already been CDN-enabled, so we should POST
+			httpMethod = @"POST";
+			break;
+		}
 	}
 	
+	NSLog(@"update cdn url: %@ %@", httpMethod, [NSString stringWithFormat:@"%@/%@", app.cdnManagementUrl, [self.name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]);
+	
+	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+	[request setHTTPMethod:httpMethod];	
 	[request setValue:self.ttl forHTTPHeaderField:@"X-TTL"];
 	[request setValue:self.cdnEnabled forHTTPHeaderField:@"X-CDN-Enabled"];
 	
