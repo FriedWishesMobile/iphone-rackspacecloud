@@ -45,5 +45,6 @@
 -(Response *)save;
 -(Response *)create;
 -(Response *)updateCdnAttributes:(NSArray *)knownCDNContainers;
+-(void)refreshCDNAttributes;
 
 @end

@@ -120,6 +120,10 @@ NSDictionary *folders = nil;
 	if (![response isSuccess]) {
 		[self showSaveError:response];
 	} else {
+		// refresh the container object against the CDN Management URL so we'll be sure to have
+		// the right CDN URI to use for file previews, etc
+		[self.container refreshCDNAttributes];
+		
 		// refresh the containers list so we'll be sure to use the right http method
 		// for CDN controls in the future
 		[self.containersRootViewController refreshContainerList];
@@ -304,15 +308,18 @@ NSDictionary *folders = nil;
 	
 	[self showSpinnerView];
 	
-	Response *response = [self.container updateCdnAttributes];
+	Response *response = [self.container updateCdnAttributes:self.containersRootViewController.cdnAccount.containers];
 	[self hideSpinnerView];
 	
 	NSLog(@"ttl return status code = %i", response.statusCode);
 	
 	if (![response isSuccess]) {
 		[self showSaveError:response];
+	} else {
+		// refresh the container object against the CDN Management URL so we'll be sure to have
+		// the right CDN URI to use for file previews, etc
+		[self.container refreshCDNAttributes];
 	}
-	
 	
 	return YES;
 }

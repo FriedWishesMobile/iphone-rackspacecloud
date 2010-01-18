@@ -149,6 +149,28 @@
 	return [ORConnection sendRequest:request withAuthToken:app.authToken];
 }
 
+- (void)refreshCDNAttributes {
+	RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];	
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@", app.cdnManagementUrl, [self.name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];	
+	
+	NSLog(@"head cdn url: %@ %@", @"HEAD", [NSString stringWithFormat:@"%@/%@", app.cdnManagementUrl, [self.name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]);
+	
+	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+	[request setHTTPMethod:@"HEAD"];	
+	//[request setHTTPBody:[@"" dataUsingEncoding:NSASCIIStringEncoding]];		
+	
+	// look for X-CDN-URI header
+	Response *response = [ORConnection sendRequest:request withAuthToken:app.authToken];
+	
+	if ([response isSuccess]) {
+		self.cdnUrl = [[response headers] objectForKey:@"X-Cdn-Uri"];
+		self.cdnEnabled = [[response headers] objectForKey:@"X-Cdn-Enabled"];
+		self.ttl = [[response headers] objectForKey:@"X-Ttl"];
+		self.logRetention = [[response headers] objectForKey:@"X-Log-Retention"];
+	}
+	
+}
+
 - (Response *)updateCdnAttributes:(NSArray *)knownCDNContainers {
 	RackspaceAppDelegate *app = (RackspaceAppDelegate *) [[UIApplication sharedApplication] delegate];	
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@", app.cdnManagementUrl, [self.name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];	
