@@ -76,7 +76,7 @@ static UIImage *windowsImage = nil;
 	} else if ([imageId isEqualToString:@"12"]) {
 		return rhelImage;
 	} else if ([imageId isEqualToString:@"13"]) {
-		return archImage;
+		return fedoraImage;
 	} else if ([imageId isEqualToString:@"4056"]) {
 		return fedoraImage;
 	} else if ([imageId isEqualToString:@"14362"]) {
