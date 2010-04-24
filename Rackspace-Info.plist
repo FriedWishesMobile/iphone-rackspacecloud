@@ -9,9 +9,9 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string>Icon.png</string>
+	<string>IconBeta.png</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.rackspacecloud.iphone</string>
+	<string>us.greenis.com.rackspacecloud.iphone</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

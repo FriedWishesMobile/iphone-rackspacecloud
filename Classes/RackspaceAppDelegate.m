@@ -41,6 +41,8 @@ static UIImage *windowsImage = nil;
 @synthesize flavors, images, servers;
 @synthesize imageScrollView;
 @synthesize moviePlayer;
+@synthesize isPasswordLocked;
+
 
 - (void)loadOperatingSystemLogos {
 	debianImage = [[UIImage imageNamed:@"debian.png"] retain];

@@ -33,6 +33,8 @@
 	UIScrollView *imageScrollView;
 	
 	MPMoviePlayerController *moviePlayer;
+    BOOL isPasswordLocked;
+
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
@@ -56,6 +58,8 @@
 @property (nonatomic, retain) UIScrollView *imageScrollView;
 
 @property (readwrite, retain) MPMoviePlayerController *moviePlayer;
+
+@property (nonatomic) BOOL isPasswordLocked;
 
 -(void)loadSettings;
 -(void)initAndPlayMovie:(NSURL *)movieURL;

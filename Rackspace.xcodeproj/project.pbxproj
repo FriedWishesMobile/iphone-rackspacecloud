@@ -40,6 +40,56 @@
 		2777BB9E101C57F20043D3C1 /* AddServerFlavorController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2777BB9C101C57F20043D3C1 /* AddServerFlavorController.xib */; };
 		2777BBA2101C57FC0043D3C1 /* AddServerImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2777BBA0101C57FC0043D3C1 /* AddServerImageController.m */; };
 		2777BBA3101C57FC0043D3C1 /* AddServerImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2777BBA1101C57FC0043D3C1 /* AddServerImageController.xib */; };
+		2785B2E611826CAA00592C00 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 2785B2E511826CAA00592C00 /* settings.png */; };
+		2785B2FA11828CC600592C00 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B2F811828CC600592C00 /* SettingsViewController.m */; };
+		2785B2FB11828CC600592C00 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2785B2F911828CC600592C00 /* SettingsViewController.xib */; };
+		2785B31911828DA400592C00 /* UISwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B31811828DA400592C00 /* UISwitchCell.m */; };
+		2785B36D1182900F00592C00 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B3621182900E00592C00 /* AccountViewController.m */; };
+		2785B36E1182900F00592C00 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2785B3631182900E00592C00 /* AccountViewController.xib */; };
+		2785B36F1182900F00592C00 /* LogoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B3651182900F00592C00 /* LogoutViewController.m */; };
+		2785B3701182900F00592C00 /* LogoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2785B3661182900F00592C00 /* LogoutViewController.xib */; };
+		2785B3711182900F00592C00 /* PasswordLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B3681182900F00592C00 /* PasswordLockViewController.m */; };
+		2785B3721182900F00592C00 /* PasswordLockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2785B3691182900F00592C00 /* PasswordLockViewController.xib */; };
+		2785B3731182900F00592C00 /* SetPasswordLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B36B1182900F00592C00 /* SetPasswordLockViewController.m */; };
+		2785B3741182900F00592C00 /* SetPasswordLockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2785B36C1182900F00592C00 /* SetPasswordLockViewController.xib */; };
+		2785B3B7118293BB00592C00 /* ASICloudServersFlavorRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B380118293BB00592C00 /* ASICloudServersFlavorRequest.m */; };
+		2785B3B8118293BB00592C00 /* ASICloudServersFlavorXMLParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B382118293BB00592C00 /* ASICloudServersFlavorXMLParserDelegate.m */; };
+		2785B3B9118293BB00592C00 /* ASICloudServersImageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B385118293BB00592C00 /* ASICloudServersImageRequest.m */; };
+		2785B3BA118293BB00592C00 /* ASICloudServersServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B388118293BB00592C00 /* ASICloudServersServer.m */; };
+		2785B3BB118293BB00592C00 /* ASICloudServersFlavor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B38A118293BB00592C00 /* ASICloudServersFlavor.m */; };
+		2785B3BC118293BB00592C00 /* ASICloudServersImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B38C118293BB00592C00 /* ASICloudServersImage.m */; };
+		2785B3BD118293BB00592C00 /* ASICloudServersServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B38E118293BB00592C00 /* ASICloudServersServerRequest.m */; };
+		2785B3BE118293BB00592C00 /* ASICloudServersServerXMLParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B390118293BB00592C00 /* ASICloudServersServerXMLParserDelegate.m */; };
+		2785B3BF118293BB00592C00 /* ASICloudServersImageXMLParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B392118293BB00592C00 /* ASICloudServersImageXMLParserDelegate.m */; };
+		2785B3C0118293BB00592C00 /* ASICloudServersBackupScheduleXMLParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B394118293BB00592C00 /* ASICloudServersBackupScheduleXMLParserDelegate.m */; };
+		2785B3C1118293BB00592C00 /* ASICloudServersBackupSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B396118293BB00592C00 /* ASICloudServersBackupSchedule.m */; };
+		2785B3C2118293BB00592C00 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B398118293BB00592C00 /* Reachability.m */; };
+		2785B3C3118293BB00592C00 /* ASICloudFilesCDNRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B39B118293BB00592C00 /* ASICloudFilesCDNRequest.m */; };
+		2785B3C4118293BB00592C00 /* ASICloudFilesContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B39D118293BB00592C00 /* ASICloudFilesContainer.m */; };
+		2785B3C5118293BB00592C00 /* ASICloudFilesContainerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B39F118293BB00592C00 /* ASICloudFilesContainerRequest.m */; };
+		2785B3C6118293BB00592C00 /* ASICloudFilesContainerXMLParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B3A1118293BB00592C00 /* ASICloudFilesContainerXMLParserDelegate.m */; };
+		2785B3C7118293BB00592C00 /* ASICloudFilesObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B3A3118293BB00592C00 /* ASICloudFilesObject.m */; };
+		2785B3C8118293BB00592C00 /* ASICloudFilesObjectRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B3A5118293BB00592C00 /* ASICloudFilesObjectRequest.m */; };
+		2785B3C9118293BB00592C00 /* ASICloudFilesRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B3A7118293BB00592C00 /* ASICloudFilesRequest.m */; };
+		2785B3CA118293BB00592C00 /* ASICloudFilesFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B3A9118293BB00592C00 /* ASICloudFilesFolder.m */; };
+		2785B3CB118293BB00592C00 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B3AB118293BB00592C00 /* ASIAuthenticationDialog.m */; };
+		2785B3CC118293BB00592C00 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B3AD118293BB00592C00 /* ASIFormDataRequest.m */; };
+		2785B3CD118293BB00592C00 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B3AF118293BB00592C00 /* ASIHTTPRequest.m */; };
+		2785B3CE118293BB00592C00 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B3B2118293BB00592C00 /* ASIInputStream.m */; };
+		2785B3CF118293BB00592C00 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B3B4118293BB00592C00 /* ASINetworkQueue.m */; };
+		2785B3D0118293BB00592C00 /* ASINSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B3B6118293BB00592C00 /* ASINSStringAdditions.m */; };
+		2785B3E2118293E100592C00 /* SpinnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B3D5118293E100592C00 /* SpinnerViewController.m */; };
+		2785B3E3118293E100592C00 /* SpinnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2785B3D6118293E100592C00 /* SpinnerViewController.xib */; };
+		2785B3E4118293E100592C00 /* UIViewController+SpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B3D8118293E100592C00 /* UIViewController+SpinnerView.m */; };
+		2785B3E5118293E100592C00 /* NSString+Rubyisms.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B3DA118293E100592C00 /* NSString+Rubyisms.m */; };
+		2785B3E6118293E100592C00 /* UIViewController+RackspaceCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B3DC118293E100592C00 /* UIViewController+RackspaceCloud.m */; };
+		2785B3E8118293E100592C00 /* RackspaceCloudSplitViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2785B3E0118293E100592C00 /* RackspaceCloudSplitViewDelegate.m */; };
+		2785B40A118294C300592C00 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785B409118294C300592C00 /* libxml2.dylib */; };
+		2785B410118294E800592C00 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785B40F118294E800592C00 /* CFNetwork.framework */; };
+		2785B414118294F400592C00 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785B413118294F400592C00 /* SystemConfiguration.framework */; };
+		2785B4181182950100592C00 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785B4171182950100592C00 /* MobileCoreServices.framework */; };
+		2785B41C1182950F00592C00 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785B41B1182950F00592C00 /* libz.1.2.3.dylib */; };
+		2785B43E118296EB00592C00 /* SetPasswordLockViewController-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2785B43D118296EB00592C00 /* SetPasswordLockViewController-ipad.xib */; };
 		2786B03F0FFC66D6002B852B /* rhel.png in Resources */ = {isa = PBXBuildFile; fileRef = 2786B03E0FFC66D6002B852B /* rhel.png */; };
 		2786B0600FFC69B8002B852B /* servers.png in Resources */ = {isa = PBXBuildFile; fileRef = 2786B05F0FFC69B8002B852B /* servers.png */; };
 		2786B0670FFC6B5D002B852B /* ServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2786B0660FFC6B5D002B852B /* ServerViewController.m */; };
@@ -178,6 +228,95 @@
 		277EE56B107DC13F00C793A3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/LoginView.xib; sourceTree = "<group>"; };
 		277EE570107DC17F00C793A3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/ServerView.xib; sourceTree = "<group>"; };
 		277EE585107DC2BD00C793A3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		2785B2E511826CAA00592C00 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = SOURCE_ROOT; };
+		2785B2F711828CC600592C00 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		2785B2F811828CC600592C00 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		2785B2F911828CC600592C00 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		2785B31711828DA400592C00 /* UISwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UISwitchCell.h; path = Classes/UISwitchCell.h; sourceTree = SOURCE_ROOT; };
+		2785B31811828DA400592C00 /* UISwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UISwitchCell.m; path = Classes/UISwitchCell.m; sourceTree = SOURCE_ROOT; };
+		2785B3611182900E00592C00 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountViewController.h; path = Classes/AccountViewController.h; sourceTree = SOURCE_ROOT; };
+		2785B3621182900E00592C00 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountViewController.m; path = Classes/AccountViewController.m; sourceTree = SOURCE_ROOT; };
+		2785B3631182900E00592C00 /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AccountViewController.xib; path = Classes/AccountViewController.xib; sourceTree = SOURCE_ROOT; };
+		2785B3641182900F00592C00 /* LogoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogoutViewController.h; path = Classes/LogoutViewController.h; sourceTree = SOURCE_ROOT; };
+		2785B3651182900F00592C00 /* LogoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogoutViewController.m; path = Classes/LogoutViewController.m; sourceTree = SOURCE_ROOT; };
+		2785B3661182900F00592C00 /* LogoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LogoutViewController.xib; path = Classes/LogoutViewController.xib; sourceTree = SOURCE_ROOT; };
+		2785B3671182900F00592C00 /* PasswordLockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PasswordLockViewController.h; path = Classes/PasswordLockViewController.h; sourceTree = SOURCE_ROOT; };
+		2785B3681182900F00592C00 /* PasswordLockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PasswordLockViewController.m; path = Classes/PasswordLockViewController.m; sourceTree = SOURCE_ROOT; };
+		2785B3691182900F00592C00 /* PasswordLockViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PasswordLockViewController.xib; path = Classes/PasswordLockViewController.xib; sourceTree = SOURCE_ROOT; };
+		2785B36A1182900F00592C00 /* SetPasswordLockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetPasswordLockViewController.h; path = Classes/SetPasswordLockViewController.h; sourceTree = SOURCE_ROOT; };
+		2785B36B1182900F00592C00 /* SetPasswordLockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetPasswordLockViewController.m; path = Classes/SetPasswordLockViewController.m; sourceTree = SOURCE_ROOT; };
+		2785B36C1182900F00592C00 /* SetPasswordLockViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SetPasswordLockViewController.xib; path = Classes/SetPasswordLockViewController.xib; sourceTree = SOURCE_ROOT; };
+		2785B37F118293BB00592C00 /* ASICloudServersFlavorRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICloudServersFlavorRequest.h; path = Classes/ASICloudServersFlavorRequest.h; sourceTree = SOURCE_ROOT; };
+		2785B380118293BB00592C00 /* ASICloudServersFlavorRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASICloudServersFlavorRequest.m; path = Classes/ASICloudServersFlavorRequest.m; sourceTree = SOURCE_ROOT; };
+		2785B381118293BB00592C00 /* ASICloudServersFlavorXMLParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICloudServersFlavorXMLParserDelegate.h; path = Classes/ASICloudServersFlavorXMLParserDelegate.h; sourceTree = SOURCE_ROOT; };
+		2785B382118293BB00592C00 /* ASICloudServersFlavorXMLParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASICloudServersFlavorXMLParserDelegate.m; path = Classes/ASICloudServersFlavorXMLParserDelegate.m; sourceTree = SOURCE_ROOT; };
+		2785B384118293BB00592C00 /* ASICloudServersImageRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICloudServersImageRequest.h; path = Classes/ASICloudServersImageRequest.h; sourceTree = SOURCE_ROOT; };
+		2785B385118293BB00592C00 /* ASICloudServersImageRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASICloudServersImageRequest.m; path = Classes/ASICloudServersImageRequest.m; sourceTree = SOURCE_ROOT; };
+		2785B387118293BB00592C00 /* ASICloudServersServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICloudServersServer.h; path = Classes/ASICloudServersServer.h; sourceTree = SOURCE_ROOT; };
+		2785B388118293BB00592C00 /* ASICloudServersServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASICloudServersServer.m; path = Classes/ASICloudServersServer.m; sourceTree = SOURCE_ROOT; };
+		2785B389118293BB00592C00 /* ASICloudServersFlavor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICloudServersFlavor.h; path = Classes/ASICloudServersFlavor.h; sourceTree = SOURCE_ROOT; };
+		2785B38A118293BB00592C00 /* ASICloudServersFlavor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASICloudServersFlavor.m; path = Classes/ASICloudServersFlavor.m; sourceTree = SOURCE_ROOT; };
+		2785B38B118293BB00592C00 /* ASICloudServersImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICloudServersImage.h; path = Classes/ASICloudServersImage.h; sourceTree = SOURCE_ROOT; };
+		2785B38C118293BB00592C00 /* ASICloudServersImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASICloudServersImage.m; path = Classes/ASICloudServersImage.m; sourceTree = SOURCE_ROOT; };
+		2785B38D118293BB00592C00 /* ASICloudServersServerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICloudServersServerRequest.h; path = Classes/ASICloudServersServerRequest.h; sourceTree = SOURCE_ROOT; };
+		2785B38E118293BB00592C00 /* ASICloudServersServerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASICloudServersServerRequest.m; path = Classes/ASICloudServersServerRequest.m; sourceTree = SOURCE_ROOT; };
+		2785B38F118293BB00592C00 /* ASICloudServersServerXMLParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICloudServersServerXMLParserDelegate.h; path = Classes/ASICloudServersServerXMLParserDelegate.h; sourceTree = SOURCE_ROOT; };
+		2785B390118293BB00592C00 /* ASICloudServersServerXMLParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASICloudServersServerXMLParserDelegate.m; path = Classes/ASICloudServersServerXMLParserDelegate.m; sourceTree = SOURCE_ROOT; };
+		2785B391118293BB00592C00 /* ASICloudServersImageXMLParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICloudServersImageXMLParserDelegate.h; path = Classes/ASICloudServersImageXMLParserDelegate.h; sourceTree = SOURCE_ROOT; };
+		2785B392118293BB00592C00 /* ASICloudServersImageXMLParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASICloudServersImageXMLParserDelegate.m; path = Classes/ASICloudServersImageXMLParserDelegate.m; sourceTree = SOURCE_ROOT; };
+		2785B393118293BB00592C00 /* ASICloudServersBackupScheduleXMLParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICloudServersBackupScheduleXMLParserDelegate.h; path = Classes/ASICloudServersBackupScheduleXMLParserDelegate.h; sourceTree = SOURCE_ROOT; };
+		2785B394118293BB00592C00 /* ASICloudServersBackupScheduleXMLParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASICloudServersBackupScheduleXMLParserDelegate.m; path = Classes/ASICloudServersBackupScheduleXMLParserDelegate.m; sourceTree = SOURCE_ROOT; };
+		2785B395118293BB00592C00 /* ASICloudServersBackupSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICloudServersBackupSchedule.h; path = Classes/ASICloudServersBackupSchedule.h; sourceTree = SOURCE_ROOT; };
+		2785B396118293BB00592C00 /* ASICloudServersBackupSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASICloudServersBackupSchedule.m; path = Classes/ASICloudServersBackupSchedule.m; sourceTree = SOURCE_ROOT; };
+		2785B397118293BB00592C00 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Classes/Reachability.h; sourceTree = SOURCE_ROOT; };
+		2785B398118293BB00592C00 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Classes/Reachability.m; sourceTree = SOURCE_ROOT; };
+		2785B39A118293BB00592C00 /* ASICloudFilesCDNRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICloudFilesCDNRequest.h; path = Classes/ASICloudFilesCDNRequest.h; sourceTree = SOURCE_ROOT; };
+		2785B39B118293BB00592C00 /* ASICloudFilesCDNRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASICloudFilesCDNRequest.m; path = Classes/ASICloudFilesCDNRequest.m; sourceTree = SOURCE_ROOT; };
+		2785B39C118293BB00592C00 /* ASICloudFilesContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICloudFilesContainer.h; path = Classes/ASICloudFilesContainer.h; sourceTree = SOURCE_ROOT; };
+		2785B39D118293BB00592C00 /* ASICloudFilesContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASICloudFilesContainer.m; path = Classes/ASICloudFilesContainer.m; sourceTree = SOURCE_ROOT; };
+		2785B39E118293BB00592C00 /* ASICloudFilesContainerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICloudFilesContainerRequest.h; path = Classes/ASICloudFilesContainerRequest.h; sourceTree = SOURCE_ROOT; };
+		2785B39F118293BB00592C00 /* ASICloudFilesContainerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASICloudFilesContainerRequest.m; path = Classes/ASICloudFilesContainerRequest.m; sourceTree = SOURCE_ROOT; };
+		2785B3A0118293BB00592C00 /* ASICloudFilesContainerXMLParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICloudFilesContainerXMLParserDelegate.h; path = Classes/ASICloudFilesContainerXMLParserDelegate.h; sourceTree = SOURCE_ROOT; };
+		2785B3A1118293BB00592C00 /* ASICloudFilesContainerXMLParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASICloudFilesContainerXMLParserDelegate.m; path = Classes/ASICloudFilesContainerXMLParserDelegate.m; sourceTree = SOURCE_ROOT; };
+		2785B3A2118293BB00592C00 /* ASICloudFilesObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICloudFilesObject.h; path = Classes/ASICloudFilesObject.h; sourceTree = SOURCE_ROOT; };
+		2785B3A3118293BB00592C00 /* ASICloudFilesObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASICloudFilesObject.m; path = Classes/ASICloudFilesObject.m; sourceTree = SOURCE_ROOT; };
+		2785B3A4118293BB00592C00 /* ASICloudFilesObjectRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICloudFilesObjectRequest.h; path = Classes/ASICloudFilesObjectRequest.h; sourceTree = SOURCE_ROOT; };
+		2785B3A5118293BB00592C00 /* ASICloudFilesObjectRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASICloudFilesObjectRequest.m; path = Classes/ASICloudFilesObjectRequest.m; sourceTree = SOURCE_ROOT; };
+		2785B3A6118293BB00592C00 /* ASICloudFilesRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICloudFilesRequest.h; path = Classes/ASICloudFilesRequest.h; sourceTree = SOURCE_ROOT; };
+		2785B3A7118293BB00592C00 /* ASICloudFilesRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASICloudFilesRequest.m; path = Classes/ASICloudFilesRequest.m; sourceTree = SOURCE_ROOT; };
+		2785B3A8118293BB00592C00 /* ASICloudFilesFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICloudFilesFolder.h; path = Classes/ASICloudFilesFolder.h; sourceTree = SOURCE_ROOT; };
+		2785B3A9118293BB00592C00 /* ASICloudFilesFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASICloudFilesFolder.m; path = Classes/ASICloudFilesFolder.m; sourceTree = SOURCE_ROOT; };
+		2785B3AA118293BB00592C00 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIAuthenticationDialog.h; path = Classes/ASIAuthenticationDialog.h; sourceTree = SOURCE_ROOT; };
+		2785B3AB118293BB00592C00 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIAuthenticationDialog.m; path = Classes/ASIAuthenticationDialog.m; sourceTree = SOURCE_ROOT; };
+		2785B3AC118293BB00592C00 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIFormDataRequest.h; path = Classes/ASIFormDataRequest.h; sourceTree = SOURCE_ROOT; };
+		2785B3AD118293BB00592C00 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIFormDataRequest.m; path = Classes/ASIFormDataRequest.m; sourceTree = SOURCE_ROOT; };
+		2785B3AE118293BB00592C00 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequest.h; path = Classes/ASIHTTPRequest.h; sourceTree = SOURCE_ROOT; };
+		2785B3AF118293BB00592C00 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIHTTPRequest.m; path = Classes/ASIHTTPRequest.m; sourceTree = SOURCE_ROOT; };
+		2785B3B0118293BB00592C00 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequestConfig.h; path = Classes/ASIHTTPRequestConfig.h; sourceTree = SOURCE_ROOT; };
+		2785B3B1118293BB00592C00 /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIInputStream.h; path = Classes/ASIInputStream.h; sourceTree = SOURCE_ROOT; };
+		2785B3B2118293BB00592C00 /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIInputStream.m; path = Classes/ASIInputStream.m; sourceTree = SOURCE_ROOT; };
+		2785B3B3118293BB00592C00 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASINetworkQueue.h; path = Classes/ASINetworkQueue.h; sourceTree = SOURCE_ROOT; };
+		2785B3B4118293BB00592C00 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASINetworkQueue.m; path = Classes/ASINetworkQueue.m; sourceTree = SOURCE_ROOT; };
+		2785B3B5118293BB00592C00 /* ASINSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASINSStringAdditions.h; path = Classes/ASINSStringAdditions.h; sourceTree = SOURCE_ROOT; };
+		2785B3B6118293BB00592C00 /* ASINSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASINSStringAdditions.m; path = Classes/ASINSStringAdditions.m; sourceTree = SOURCE_ROOT; };
+		2785B3D4118293E100592C00 /* SpinnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpinnerViewController.h; path = Classes/SpinnerViewController.h; sourceTree = SOURCE_ROOT; };
+		2785B3D5118293E100592C00 /* SpinnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpinnerViewController.m; path = Classes/SpinnerViewController.m; sourceTree = SOURCE_ROOT; };
+		2785B3D6118293E100592C00 /* SpinnerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SpinnerViewController.xib; path = Classes/SpinnerViewController.xib; sourceTree = SOURCE_ROOT; };
+		2785B3D7118293E100592C00 /* UIViewController+SpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+SpinnerView.h"; path = "Classes/UIViewController+SpinnerView.h"; sourceTree = SOURCE_ROOT; };
+		2785B3D8118293E100592C00 /* UIViewController+SpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+SpinnerView.m"; path = "Classes/UIViewController+SpinnerView.m"; sourceTree = SOURCE_ROOT; };
+		2785B3D9118293E100592C00 /* NSString+Rubyisms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Rubyisms.h"; path = "Classes/NSString+Rubyisms.h"; sourceTree = SOURCE_ROOT; };
+		2785B3DA118293E100592C00 /* NSString+Rubyisms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Rubyisms.m"; path = "Classes/NSString+Rubyisms.m"; sourceTree = SOURCE_ROOT; };
+		2785B3DB118293E100592C00 /* UIViewController+RackspaceCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+RackspaceCloud.h"; path = "Classes/UIViewController+RackspaceCloud.h"; sourceTree = SOURCE_ROOT; };
+		2785B3DC118293E100592C00 /* UIViewController+RackspaceCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+RackspaceCloud.m"; path = "Classes/UIViewController+RackspaceCloud.m"; sourceTree = SOURCE_ROOT; };
+		2785B3DF118293E100592C00 /* RackspaceCloudSplitViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RackspaceCloudSplitViewDelegate.h; path = Classes/RackspaceCloudSplitViewDelegate.h; sourceTree = SOURCE_ROOT; };
+		2785B3E0118293E100592C00 /* RackspaceCloudSplitViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RackspaceCloudSplitViewDelegate.m; path = Classes/RackspaceCloudSplitViewDelegate.m; sourceTree = SOURCE_ROOT; };
+		2785B3E1118293E100592C00 /* SubstitutableDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubstitutableDetailViewController.h; path = Classes/SubstitutableDetailViewController.h; sourceTree = SOURCE_ROOT; };
+		2785B409118294C300592C00 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		2785B40F118294E800592C00 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		2785B413118294F400592C00 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2785B4171182950100592C00 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2785B41B1182950F00592C00 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		2785B43D118296EB00592C00 /* SetPasswordLockViewController-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "SetPasswordLockViewController-ipad.xib"; path = "Classes/SetPasswordLockViewController-ipad.xib"; sourceTree = "<group>"; };
 		2786B03E0FFC66D6002B852B /* rhel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rhel.png; sourceTree = "<group>"; };
 		2786B05F0FFC69B8002B852B /* servers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = servers.png; sourceTree = "<group>"; };
 		2786B0650FFC6B5D002B852B /* ServerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerViewController.h; sourceTree = "<group>"; };
@@ -376,6 +515,11 @@
 				288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */,
 				276965FF1055D32C00D64A7B /* MessageUI.framework in Frameworks */,
 				27687767105A0A7600E0655C /* MediaPlayer.framework in Frameworks */,
+				2785B40A118294C300592C00 /* libxml2.dylib in Frameworks */,
+				2785B410118294E800592C00 /* CFNetwork.framework in Frameworks */,
+				2785B414118294F400592C00 /* SystemConfiguration.framework in Frameworks */,
+				2785B4181182950100592C00 /* MobileCoreServices.framework in Frameworks */,
+				2785B41C1182950F00592C00 /* libz.1.2.3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +529,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2785B3D3118293E100592C00 /* Utilities */,
+				2785B37B118293BB00592C00 /* ASIHttpRequest */,
 				278D89301013BD330060DBA1 /* Custom Views */,
 				2786B0640FFC6B46002B852B /* View Controllers */,
 				4C3B1EAD0FDC3D9F00AE2133 /* Models */,
@@ -554,6 +700,160 @@
 			name = "View Object";
 			sourceTree = "<group>";
 		};
+		2785B36011828FFD00592C00 /* Settings Actions */ = {
+			isa = PBXGroup;
+			children = (
+				2785B3611182900E00592C00 /* AccountViewController.h */,
+				2785B3621182900E00592C00 /* AccountViewController.m */,
+				2785B3631182900E00592C00 /* AccountViewController.xib */,
+				2785B3641182900F00592C00 /* LogoutViewController.h */,
+				2785B3651182900F00592C00 /* LogoutViewController.m */,
+				2785B3661182900F00592C00 /* LogoutViewController.xib */,
+				2785B3671182900F00592C00 /* PasswordLockViewController.h */,
+				2785B3681182900F00592C00 /* PasswordLockViewController.m */,
+				2785B3691182900F00592C00 /* PasswordLockViewController.xib */,
+				2785B36A1182900F00592C00 /* SetPasswordLockViewController.h */,
+				2785B36B1182900F00592C00 /* SetPasswordLockViewController.m */,
+				2785B36C1182900F00592C00 /* SetPasswordLockViewController.xib */,
+			);
+			name = "Settings Actions";
+			sourceTree = "<group>";
+		};
+		2785B37B118293BB00592C00 /* ASIHttpRequest */ = {
+			isa = PBXGroup;
+			children = (
+				2785B399118293BB00592C00 /* Cloud Files */,
+				2785B397118293BB00592C00 /* Reachability.h */,
+				2785B3AA118293BB00592C00 /* ASIAuthenticationDialog.h */,
+				2785B3AB118293BB00592C00 /* ASIAuthenticationDialog.m */,
+				2785B3AC118293BB00592C00 /* ASIFormDataRequest.h */,
+				2785B3AD118293BB00592C00 /* ASIFormDataRequest.m */,
+				2785B3AE118293BB00592C00 /* ASIHTTPRequest.h */,
+				2785B3AF118293BB00592C00 /* ASIHTTPRequest.m */,
+				2785B3B0118293BB00592C00 /* ASIHTTPRequestConfig.h */,
+				2785B3B1118293BB00592C00 /* ASIInputStream.h */,
+				2785B3B2118293BB00592C00 /* ASIInputStream.m */,
+				2785B3B3118293BB00592C00 /* ASINetworkQueue.h */,
+				2785B3B4118293BB00592C00 /* ASINetworkQueue.m */,
+				2785B3B5118293BB00592C00 /* ASINSStringAdditions.h */,
+				2785B3B6118293BB00592C00 /* ASINSStringAdditions.m */,
+				2785B398118293BB00592C00 /* Reachability.m */,
+				2785B37D118293BB00592C00 /* Cloud Servers */,
+				2785B37C118293BB00592C00 /* Rackspace */,
+			);
+			name = ASIHttpRequest;
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		2785B37C118293BB00592C00 /* Rackspace */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Rackspace;
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		2785B37D118293BB00592C00 /* Cloud Servers */ = {
+			isa = PBXGroup;
+			children = (
+				2785B387118293BB00592C00 /* ASICloudServersServer.h */,
+				2785B388118293BB00592C00 /* ASICloudServersServer.m */,
+				2785B389118293BB00592C00 /* ASICloudServersFlavor.h */,
+				2785B38A118293BB00592C00 /* ASICloudServersFlavor.m */,
+				2785B38B118293BB00592C00 /* ASICloudServersImage.h */,
+				2785B38C118293BB00592C00 /* ASICloudServersImage.m */,
+				2785B38D118293BB00592C00 /* ASICloudServersServerRequest.h */,
+				2785B38E118293BB00592C00 /* ASICloudServersServerRequest.m */,
+				2785B38F118293BB00592C00 /* ASICloudServersServerXMLParserDelegate.h */,
+				2785B390118293BB00592C00 /* ASICloudServersServerXMLParserDelegate.m */,
+				2785B391118293BB00592C00 /* ASICloudServersImageXMLParserDelegate.h */,
+				2785B392118293BB00592C00 /* ASICloudServersImageXMLParserDelegate.m */,
+				2785B393118293BB00592C00 /* ASICloudServersBackupScheduleXMLParserDelegate.h */,
+				2785B394118293BB00592C00 /* ASICloudServersBackupScheduleXMLParserDelegate.m */,
+				2785B395118293BB00592C00 /* ASICloudServersBackupSchedule.h */,
+				2785B396118293BB00592C00 /* ASICloudServersBackupSchedule.m */,
+				2785B386118293BB00592C00 /* Servers */,
+				2785B383118293BB00592C00 /* Images */,
+				2785B37E118293BB00592C00 /* Flavors */,
+			);
+			name = "Cloud Servers";
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		2785B37E118293BB00592C00 /* Flavors */ = {
+			isa = PBXGroup;
+			children = (
+				2785B37F118293BB00592C00 /* ASICloudServersFlavorRequest.h */,
+				2785B380118293BB00592C00 /* ASICloudServersFlavorRequest.m */,
+				2785B381118293BB00592C00 /* ASICloudServersFlavorXMLParserDelegate.h */,
+				2785B382118293BB00592C00 /* ASICloudServersFlavorXMLParserDelegate.m */,
+			);
+			name = Flavors;
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		2785B383118293BB00592C00 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2785B384118293BB00592C00 /* ASICloudServersImageRequest.h */,
+				2785B385118293BB00592C00 /* ASICloudServersImageRequest.m */,
+			);
+			name = Images;
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		2785B386118293BB00592C00 /* Servers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Servers;
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		2785B399118293BB00592C00 /* Cloud Files */ = {
+			isa = PBXGroup;
+			children = (
+				2785B39A118293BB00592C00 /* ASICloudFilesCDNRequest.h */,
+				2785B39B118293BB00592C00 /* ASICloudFilesCDNRequest.m */,
+				2785B39C118293BB00592C00 /* ASICloudFilesContainer.h */,
+				2785B39D118293BB00592C00 /* ASICloudFilesContainer.m */,
+				2785B39E118293BB00592C00 /* ASICloudFilesContainerRequest.h */,
+				2785B39F118293BB00592C00 /* ASICloudFilesContainerRequest.m */,
+				2785B3A0118293BB00592C00 /* ASICloudFilesContainerXMLParserDelegate.h */,
+				2785B3A1118293BB00592C00 /* ASICloudFilesContainerXMLParserDelegate.m */,
+				2785B3A2118293BB00592C00 /* ASICloudFilesObject.h */,
+				2785B3A3118293BB00592C00 /* ASICloudFilesObject.m */,
+				2785B3A4118293BB00592C00 /* ASICloudFilesObjectRequest.h */,
+				2785B3A5118293BB00592C00 /* ASICloudFilesObjectRequest.m */,
+				2785B3A6118293BB00592C00 /* ASICloudFilesRequest.h */,
+				2785B3A7118293BB00592C00 /* ASICloudFilesRequest.m */,
+				2785B3A8118293BB00592C00 /* ASICloudFilesFolder.h */,
+				2785B3A9118293BB00592C00 /* ASICloudFilesFolder.m */,
+			);
+			name = "Cloud Files";
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		2785B3D3118293E100592C00 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2785B3D4118293E100592C00 /* SpinnerViewController.h */,
+				2785B3D5118293E100592C00 /* SpinnerViewController.m */,
+				2785B3D6118293E100592C00 /* SpinnerViewController.xib */,
+				2785B3D7118293E100592C00 /* UIViewController+SpinnerView.h */,
+				2785B3D8118293E100592C00 /* UIViewController+SpinnerView.m */,
+				2785B3D9118293E100592C00 /* NSString+Rubyisms.h */,
+				2785B3DA118293E100592C00 /* NSString+Rubyisms.m */,
+				2785B3DB118293E100592C00 /* UIViewController+RackspaceCloud.h */,
+				2785B3DC118293E100592C00 /* UIViewController+RackspaceCloud.m */,
+				2785B3DF118293E100592C00 /* RackspaceCloudSplitViewDelegate.h */,
+				2785B3E0118293E100592C00 /* RackspaceCloudSplitViewDelegate.m */,
+				2785B3E1118293E100592C00 /* SubstitutableDetailViewController.h */,
+			);
+			name = Utilities;
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
 		2786B0640FFC6B46002B852B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -658,6 +958,11 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				2785B40F118294E800592C00 /* CFNetwork.framework */,
+				2785B413118294F400592C00 /* SystemConfiguration.framework */,
+				2785B4171182950100592C00 /* MobileCoreServices.framework */,
+				2785B41B1182950F00592C00 /* libz.1.2.3.dylib */,
+				2785B43D118296EB00592C00 /* SetPasswordLockViewController-ipad.xib */,
 			);
 			name = Rackspace;
 			sourceTree = "<group>";
@@ -696,6 +1001,7 @@
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765070DF74369002DB57D /* CoreGraphics.framework */,
 				276965FE1055D32C00D64A7B /* MessageUI.framework */,
+				2785B409118294C300592C00 /* libxml2.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -703,6 +1009,8 @@
 		4C3B1D1B0FDA14CA00AE2133 /* Table Cells */ = {
 			isa = PBXGroup;
 			children = (
+				2785B31711828DA400592C00 /* UISwitchCell.h */,
+				2785B31811828DA400592C00 /* UISwitchCell.m */,
 				4C9982250FEE0AA7005D12B7 /* SpinnerCell.h */,
 				4C9982260FEE0AA7005D12B7 /* SpinnerCell.m */,
 				4C9982270FEE0AA7005D12B7 /* DetailSpinnerCell.h */,
@@ -732,6 +1040,10 @@
 		4C3B1D260FDA14DA00AE2133 /* Login and Settings */ = {
 			isa = PBXGroup;
 			children = (
+				2785B36011828FFD00592C00 /* Settings Actions */,
+				2785B2F711828CC600592C00 /* SettingsViewController.h */,
+				2785B2F811828CC600592C00 /* SettingsViewController.m */,
+				2785B2F911828CC600592C00 /* SettingsViewController.xib */,
 				4C3B1D270FDA14F300AE2133 /* LoginViewController.h */,
 				4C3B1D280FDA14F300AE2133 /* LoginViewController.m */,
 			);
@@ -910,6 +1222,7 @@
 		4C9985950FEED9C9005D12B7 /* Tab Bar Icons */ = {
 			isa = PBXGroup;
 			children = (
+				2785B2E511826CAA00592C00 /* settings.png */,
 				2786B05F0FFC69B8002B852B /* servers.png */,
 				4C9985BD0FEEDA25005D12B7 /* cloud-files.png */,
 				4C9985970FEED9D9005D12B7 /* ip-groups.png */,
@@ -1040,6 +1353,14 @@
 				27D36C5410C8E4DC0047F7CB /* ListFolderObjectsViewController.xib in Resources */,
 				27D36E2610CC68AB0047F7CB /* AddTextFileViewController.xib in Resources */,
 				27AA47BC10ED5517002FC137 /* windows.png in Resources */,
+				2785B2E611826CAA00592C00 /* settings.png in Resources */,
+				2785B2FB11828CC600592C00 /* SettingsViewController.xib in Resources */,
+				2785B36E1182900F00592C00 /* AccountViewController.xib in Resources */,
+				2785B3701182900F00592C00 /* LogoutViewController.xib in Resources */,
+				2785B3721182900F00592C00 /* PasswordLockViewController.xib in Resources */,
+				2785B3741182900F00592C00 /* SetPasswordLockViewController.xib in Resources */,
+				2785B3E3118293E100592C00 /* SpinnerViewController.xib in Resources */,
+				2785B43E118296EB00592C00 /* SetPasswordLockViewController-ipad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1126,6 +1447,43 @@
 				2738EF3B10A24A51006EEF21 /* AddContainerViewController.m in Sources */,
 				27D36C5310C8E4DC0047F7CB /* ListFolderObjectsViewController.m in Sources */,
 				27D36E2510CC68AB0047F7CB /* AddTextFileViewController.m in Sources */,
+				2785B2FA11828CC600592C00 /* SettingsViewController.m in Sources */,
+				2785B31911828DA400592C00 /* UISwitchCell.m in Sources */,
+				2785B36D1182900F00592C00 /* AccountViewController.m in Sources */,
+				2785B36F1182900F00592C00 /* LogoutViewController.m in Sources */,
+				2785B3711182900F00592C00 /* PasswordLockViewController.m in Sources */,
+				2785B3731182900F00592C00 /* SetPasswordLockViewController.m in Sources */,
+				2785B3B7118293BB00592C00 /* ASICloudServersFlavorRequest.m in Sources */,
+				2785B3B8118293BB00592C00 /* ASICloudServersFlavorXMLParserDelegate.m in Sources */,
+				2785B3B9118293BB00592C00 /* ASICloudServersImageRequest.m in Sources */,
+				2785B3BA118293BB00592C00 /* ASICloudServersServer.m in Sources */,
+				2785B3BB118293BB00592C00 /* ASICloudServersFlavor.m in Sources */,
+				2785B3BC118293BB00592C00 /* ASICloudServersImage.m in Sources */,
+				2785B3BD118293BB00592C00 /* ASICloudServersServerRequest.m in Sources */,
+				2785B3BE118293BB00592C00 /* ASICloudServersServerXMLParserDelegate.m in Sources */,
+				2785B3BF118293BB00592C00 /* ASICloudServersImageXMLParserDelegate.m in Sources */,
+				2785B3C0118293BB00592C00 /* ASICloudServersBackupScheduleXMLParserDelegate.m in Sources */,
+				2785B3C1118293BB00592C00 /* ASICloudServersBackupSchedule.m in Sources */,
+				2785B3C2118293BB00592C00 /* Reachability.m in Sources */,
+				2785B3C3118293BB00592C00 /* ASICloudFilesCDNRequest.m in Sources */,
+				2785B3C4118293BB00592C00 /* ASICloudFilesContainer.m in Sources */,
+				2785B3C5118293BB00592C00 /* ASICloudFilesContainerRequest.m in Sources */,
+				2785B3C6118293BB00592C00 /* ASICloudFilesContainerXMLParserDelegate.m in Sources */,
+				2785B3C7118293BB00592C00 /* ASICloudFilesObject.m in Sources */,
+				2785B3C8118293BB00592C00 /* ASICloudFilesObjectRequest.m in Sources */,
+				2785B3C9118293BB00592C00 /* ASICloudFilesRequest.m in Sources */,
+				2785B3CA118293BB00592C00 /* ASICloudFilesFolder.m in Sources */,
+				2785B3CB118293BB00592C00 /* ASIAuthenticationDialog.m in Sources */,
+				2785B3CC118293BB00592C00 /* ASIFormDataRequest.m in Sources */,
+				2785B3CD118293BB00592C00 /* ASIHTTPRequest.m in Sources */,
+				2785B3CE118293BB00592C00 /* ASIInputStream.m in Sources */,
+				2785B3CF118293BB00592C00 /* ASINetworkQueue.m in Sources */,
+				2785B3D0118293BB00592C00 /* ASINSStringAdditions.m in Sources */,
+				2785B3E2118293E100592C00 /* SpinnerViewController.m in Sources */,
+				2785B3E4118293E100592C00 /* UIViewController+SpinnerView.m in Sources */,
+				2785B3E5118293E100592C00 /* NSString+Rubyisms.m in Sources */,
+				2785B3E6118293E100592C00 /* UIViewController+RackspaceCloud.m in Sources */,
+				2785B3E8118293E100592C00 /* RackspaceCloudSplitViewDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1291,12 +1649,12 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rackspace Hosting";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Michael Mayo";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "14D56F73-D2D3-4CAC-A840-B3060335BC64";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DACA5EB9-1E28-4322-B9C5-6AC1CC88732D";
 				SDKROOT = iphoneos3.0;
 			};
 			name = Release;
