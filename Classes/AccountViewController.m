@@ -9,7 +9,7 @@
 #import "AccountViewController.h"
 #import "SettingsViewController.h"
 #import "TextFieldCell.h"
-//#import "UIViewController+SpinnerView.h"
+#import "UIViewController+SpinnerView.h"
 
 
 @implementation AccountViewController
@@ -100,11 +100,19 @@
     }
 }
 
-/*
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    if (primaryAccount) {
+        self.navigationItem.title = @"Primary Account";
+    } else if (originalUsername) {
+        self.navigationItem.title = @"Edit Account";
+        self.tableView.tableFooterView = self.footerView;
+    } else {
+        self.navigationItem.title = @"Add Account";
+        [usernameTextField becomeFirstResponder];
+    }
 }
-*/
+
 /*
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
@@ -128,35 +136,31 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 2;
+    return 1;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    if (section == 0) {
-        return @"Username";
-    } else {
-        return @"API Key";
-    }
+    return @"Login Credentials";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 1;
+    return 2;
 }
 
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-	if (indexPath.section == 0) {
+	if (indexPath.row == 0) {
 		static NSString *CellIdentifier = @"UsernameCell";
 		TextFieldCell *cell = (TextFieldCell *)[aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
 		if (cell == nil) {
-			cell = [[[TextFieldCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+			cell = [[[TextFieldCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier] autorelease];
 			usernameTextField = cell.textField;
 			usernameTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
 		}
-		cell.textLabel.text = @"";
+		cell.textLabel.text = @"Username";
 
         if (primaryAccount) {
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -172,13 +176,13 @@
 		static NSString *CellIdentifier = @"APIKeyCell";
 		TextFieldCell *cell = (TextFieldCell *)[aTableView dequeueReusableCellWithIdentifier:CellIdentifier];
 		if (cell == nil) {
-			cell = [[[TextFieldCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+			cell = [[[TextFieldCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier] autorelease];
 			apiKeyTextField = cell.textField;
 			apiKeyTextField.text = @"";
 			apiKeyTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
 			apiKeyTextField.secureTextEntry = YES;
 		}
-		cell.textLabel.text = @""; 
+		cell.textLabel.text = @"API Key"; 
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         
         if (primaryAccount) {

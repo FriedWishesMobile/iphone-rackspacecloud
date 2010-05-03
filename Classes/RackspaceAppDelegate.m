@@ -103,6 +103,8 @@ static UIImage *windowsImage = nil;
 		return ubuntuImage;
 	} else if ([imageId isEqualToString:@"187811"]) {
 		return centosImage;
+    } else if ([imageId isEqualToString:@"49"]) {
+        return ubuntuImage;
 	} else {		
 		// might be a backup image, so look for the server id in the image
 		// if a server is there, call imageForServer on it
